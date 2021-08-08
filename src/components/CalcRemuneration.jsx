@@ -18,6 +18,18 @@ export default function CalcRemuneration() {
       <div>
         Calculadora Simulador de Remuneração
       </div>
+<p>Daata</p>
+<p>Periodo</p>
+
+      <div className="flex flex-col my-4">
+        <TextInput
+          labelDescription='Digite o tipo de faina:' 
+          inputValue={tipoFaina} 
+          onInputChange={handleTipoFaina}
+          placeHolder='C6 para adubo'
+        />
+      </div> 
+
 
 
       <div className="flex flex-col my-4">
@@ -28,6 +40,7 @@ export default function CalcRemuneration() {
           placeHolder='C6 para adubo'
         />
       </div> 
+
 
 
       <div className="flex justify-center">
