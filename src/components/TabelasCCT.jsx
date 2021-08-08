@@ -73,14 +73,18 @@ const rows2 = [
   
 ];
 
-const useStyles = makeStyles({ table: { minWidth: 400, }, });
+const useStyles = makeStyles({ table: { minWidth: 50, }, });
 
 
 export default function TabelaCCT() {
   const classes = useStyles();
   return (
     <>
-      Porto do Rio Grande - Convenção Coletiva de Trabalho (Vigência 2020-2022)
+      <h1>
+        <strong>
+          Porto do Rio Grande - Convenção Coletiva de Trabalho (Vigência 2020-2022)
+        </strong>
+      </h1>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="customized table">
           <TableHead>
@@ -106,7 +110,11 @@ export default function TabelaCCT() {
         </Table>
       </TableContainer>
 
-<h2>TECON Rio Grande - Convenção Coletiva de Trabalho (Vigência 2020-2022)</h2>
+      <h1>
+        <strong>
+          TECON Rio Grande - Convenção Coletiva de Trabalho (Vigência 2020-2022)
+        </strong>
+      </h1>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="customized table">
           <TableHead>                      
@@ -135,7 +143,7 @@ export default function TabelaCCT() {
           </TableBody>
         </Table>
       </TableContainer>
-      <h6>*OBS: Nesta Tabela TODOS os Valores são FINAIS, já incluso Repouso (1,1818%)</h6>
+      <h5>*OBS: Nesta Tabela TODOS os Valores são FINAIS, incluso Repouso (1,1818%)</h5>
     </>
   );
 }

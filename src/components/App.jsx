@@ -7,6 +7,7 @@ import Fainas from "./Fainas";
 import Reports from "./Reports";
 import CalcRemuneration from "./CalcRemuneration";
 import TabelasCCT from "./TabelasCCT";
+import Links from "./Links";
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -16,6 +17,8 @@ import { FiActivity as IconDash } from 'react-icons/fi';
 import { HiOutlineDocumentReport as IconReport } from 'react-icons/hi';
 import { GrWorkshop as IconWorks } from 'react-icons/gr';
 import { MdAttachMoney as IconCCT } from 'react-icons/md';
+import { FiExternalLink as IconLinks } from 'react-icons/fi';
+
 import { useState } from "react";
 
 export default function App() {
@@ -26,30 +29,26 @@ export default function App() {
 
 
   return (
+    <>
     <div className="flex flex-col align-top">
-    <div className="align-top">
-      <Header>
-        Controle de Fainas
-      </Header>
+      <Header/>
     </div>
 
-    <div className="align-center bg-primary">
-      {/* <Main> */}
-        <div className="">
+    <div className="align-center bg-gray-100">
 
           <Tabs  selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
             <TabList>
 
               <Tab>
-                <div className="text-primary flex flex-row space-x-2 p-1">
+                <div className="flex flex-row space-x-2 p-1">
                     <span align="left"><IconDash/></span>
-                    <span align="right">DashBoard</span>
+                    <span align="right">Painel</span>
                 </div>
               </Tab>
               <Tab>
               <div className="text-primary flex flex-row space-x-2 p-1">
                     <span align="left"><IconWorks/></span>
-                    <span align="right">Fainas</span>
+                    <span align="right">Trabalhos</span>
                 </div>
               </Tab>
               <Tab>
@@ -61,7 +60,7 @@ export default function App() {
               <Tab>
               <div className="text-primary flex flex-row space-x-2 p-1">
                     <span align="left"><IconCalc/></span>
-                    <span align="right">Calculadora Remuneração</span>
+                    <span align="right">Calculadora</span>
                 </div>
               </Tab>
               <Tab>
@@ -70,37 +69,55 @@ export default function App() {
                     <span align="right">Tabelas CCT</span>
                 </div>
               </Tab>
+              <Tab>
+              <div className="text-primary flex flex-row space-x-2 p-1">
+                    <span align="left"><IconLinks/></span>
+                    <span align="right">Links</span>
+                </div>
+              </Tab>              
             </TabList>
 
             <TabPanel>
-              <div className="bg-terciary">
+              <div className="flex flex-col space-y-6 p-4 m-4">
                 <DashBoard/>
               </div>
             </TabPanel>
 
             <TabPanel>
-              <Fainas/>
+            <div className="flex flex-col space-y-6 p-4 m-4">
+                <Fainas/>
+              </div>
             </TabPanel>
 
             <TabPanel>
-              <Reports/>
+            <div className="flex flex-col space-y-6 p-4 m-4">
+                <Reports/>
+              </div>
             </TabPanel>
 
             <TabPanel>
-              <CalcRemuneration/>
+            <div className="flex flex-col space-y-6 p-4 m-4">
+                <CalcRemuneration/>
+              </div>
             </TabPanel>
 
             <TabPanel>
-              <TabelasCCT/>
+            <div className="flex flex-col space-y-6 p-4 m-4">
+                <TabelasCCT/>
+              </div>
             </TabPanel>
+            <TabPanel>
+            <div className="flex flex-col space-y-6 p-4 m-4">
+                <Links/>
+              </div>
+            </TabPanel>            
 
           </Tabs>
-        </div>
-      {/* </Main> */}
     </div>
+
     <div className="align-bottom">
       <Footer/>
     </div>
-  </div>
+  </>
   );
 }

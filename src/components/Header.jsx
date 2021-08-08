@@ -3,9 +3,9 @@ export default function Header() {
     <>
     <header>
       <div className="bg-terciary text-white flex justify-between p-2">
-       <span>Estiva</span>
-       <span><strong>Controle de Fainas para TPA's</strong></span>
-       <span>Porto do Rio Grande</span>
+       <span align="left">Estiva</span>
+       <span align="center"><strong>Controle de Remuneração</strong></span>
+       <span align="right">Porto do Rio Grande</span>
       </div>
     </header>
     </>

@@ -2,6 +2,7 @@ import { Button } from '@material-ui/core';
 
 export default function Fainas() {
     return (
+      <>
         <div>
             Fainas Realizadas
             <div className="flex justify-center">
@@ -18,5 +19,6 @@ export default function Fainas() {
               </div>
 
         </div>
+      </>
     )
 }

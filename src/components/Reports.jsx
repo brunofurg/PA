@@ -3,8 +3,10 @@ import { Button } from '@material-ui/core';
 export default function Reports() {
     return (
         <div>
-            Relatórios
-            <div className="flex justify-center">
+            Em construção!!
+
+
+            {/* <div className="flex justify-center">
                 <span>
                   <Button color="primary" variant="contained" >
                     Inserir
@@ -15,7 +17,7 @@ export default function Reports() {
                     Limpar
                   </Button>
                 </span>
-              </div>
+              </div> */}
 
         </div>
     )
