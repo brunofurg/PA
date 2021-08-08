@@ -1,77 +1,81 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import Main from "./Main";
+//import Main from "./Main";
 
 import DashBoard from "./DashBoard";
 import Fainas from "./Fainas";
 import Reports from "./Reports";
 import CalcRemuneration from "./CalcRemuneration";
-import TabelaCCT from "./TabelaCCT";
+import TabelasCCT from "./TabelasCCT";
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
-import { FaCalculator as IconCalc } from 'react-icons/fa';
-import { AiFillDashboard as IconDash } from 'react-icons/ai';
-import { HiDocumentReport as IconReport } from 'react-icons/hi';
+import { BiCalculator as IconCalc } from 'react-icons/bi';
+import { FiActivity as IconDash } from 'react-icons/fi';
+import { HiOutlineDocumentReport as IconReport } from 'react-icons/hi';
 import { GrWorkshop as IconWorks } from 'react-icons/gr';
-import { MdMoneyOff as IconCCT } from 'react-icons/md';
+import { MdAttachMoney as IconCCT } from 'react-icons/md';
+import { useState } from "react";
 
 export default function App() {
-  
-  console.log('Teste no console do navegador');
+  const [tabIndex, setTabIndex] = useState(0);
+  console.log('App');
 
   
 
 
   return (
-    <>
-    <div>
+    <div className="flex flex-col align-top">
+    <div className="align-top">
       <Header>
         Controle de Fainas
       </Header>
     </div>
 
-    <div>
-      <Main>
+    <div className="align-center bg-primary">
+      {/* <Main> */}
+        <div className="">
 
-        <div>
-          <Tabs>
+          <Tabs  selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
             <TabList>
+
               <Tab>
-              <div className="flex flex-row items-center space-y-4">
-                    <IconDash/>
-                    DashBoard
+                <div className="text-primary flex flex-row space-x-2 p-1">
+                    <span align="left"><IconDash/></span>
+                    <span align="right">DashBoard</span>
                 </div>
               </Tab>
               <Tab>
-              <div className="flex flex-row items-center space-y-4">
-                    <IconWorks/>
-                    Fainas
+              <div className="text-primary flex flex-row space-x-2 p-1">
+                    <span align="left"><IconWorks/></span>
+                    <span align="right">Fainas</span>
                 </div>
               </Tab>
               <Tab>
-              <div className="flex flex-row items-center space-y-4">
-                    <IconReport/>
-                    Relatórios
+              <div className="text-primary flex flex-row space-x-2 p-1">
+                    <span align="left"><IconReport/></span>
+                    <span align="right">Relatórios</span>
                 </div>
               </Tab>
               <Tab>
-                <div className="flex flex-row items-center space-y-4">
-                    <IconCalc/>
-                    Calculadora Remuneração
+              <div className="text-primary flex flex-row space-x-2 p-1">
+                    <span align="left"><IconCalc/></span>
+                    <span align="right">Calculadora Remuneração</span>
                 </div>
-                </Tab>
-                <Tab>
-              <div className="flex flex-row items-center space-y-4">
-                    <IconCCT/>
-                    Tabela CCT
+              </Tab>
+              <Tab>
+              <div className="text-primary flex flex-row space-x-2 p-1">
+                    <span align="left"><IconCCT/></span>
+                    <span align="right">Tabelas CCT</span>
                 </div>
               </Tab>
             </TabList>
 
             <TabPanel>
-              <DashBoard/>
+              <div className="bg-terciary">
+                <DashBoard/>
+              </div>
             </TabPanel>
 
             <TabPanel>
@@ -87,21 +91,16 @@ export default function App() {
             </TabPanel>
 
             <TabPanel>
-              <TabelaCCT/>
+              <TabelasCCT/>
             </TabPanel>
+
           </Tabs>
         </div>
-      </Main>
+      {/* </Main> */}
     </div>
-
-    <div>
-      <Footer>
-        Desenvolvido por BsD ® 2021
-      </Footer>
+    <div className="align-bottom">
+      <Footer/>
     </div>
-
-    
-
-    </>
+  </div>
   );
 }

@@ -11,8 +11,8 @@ export default function Fainas() {
                   </Button>
                 </span>
                 <span>
-                  <Button color="secondary" variant="outlined">
-                    Limpar
+                  <Button color="default" variant="contained">
+                    Apagar
                   </Button>
                 </span>
               </div>

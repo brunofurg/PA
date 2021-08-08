@@ -10,11 +10,12 @@ import Paper from '@material-ui/core/Paper';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
+//  backgroundColor: theme.palette.common.black,
+    backgroundColor:  '#0060a4',
+    color: '#FFFFFF',
   },
   body: {
-    fontSize: 14,
+    fontSize: 10,
   },
 }))(TableCell);
 
@@ -29,14 +30,11 @@ const StyledTableRow = withStyles((theme) => ({
 function createData(type, description, minimum, valuecct, valuepayed) {
   return { type, description, minimum, valuecct, valuepayed };
 }
+function createData2(type, ab0, c25, d50, ab100, c125, d150) {
+  return { type, ab0, c25, d50, ab100, c125, d150 };
+}
 
 const rows = [
-//   createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-//   createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-//   createData('Eclair', 262, 16.0, 24, 6.0),
-//   createData('Cupcake', 305, 3.7, 67, 4.3),
-//   createData('Gingerbread', 356, 16.0, 49, 3.9),
-
   createData("A1", "Contêineres Cheios/Vazios, com Engate AUTOMÁTICO e/ou Rampa", 90.00, 5.665, 5.665),
   createData("A2", "Contêineres Cheios/Vazios, com Engate MANUAL", 90.00, 5.665, 5.665),
   createData("A1T", "Tabela de Valores TECON", "Tabela A1T"),
@@ -62,34 +60,42 @@ const rows = [
   
 ];
 
-const useStyles = makeStyles({
-  table: {
-    minWidth: 700,
-  },
-});
+const rows2 = [
+  createData2("Longo Curso - Contêiner CHEIO", 4.2, 5.25, 6.3, 8.4, 10.5, 12.6),
+  createData2("Longo Curso - Contêiner VAZIO", 2.67, 3.33, 4, 5.34, 6.67, 8),
+  createData2("Cabotagem - Contêiner CHEIO", 3.15, 3.94, 4.73, 6.31, 7.88, 9.46),
+  createData2("Cabotagem - Contêiner VAZIO", 2, 2.5, 3.01, 4.01, 5.01, 6.01),
+  createData2("Tranship - Contêiner CHEIO", 2.09, 2.62, 3.14, 4.19, 5.23, 6.28),
+  createData2("Tranship - Contêiner VAZIO", 1.34, 1.68, 2.01, 2.68, 3.35, 4.02),
+  createData2("Diária Produção", 43.02, 53.77, 64.52, 86.03, 107.53, 129.05),
+  createData2("Diária Conexo", 104.75, 130.93, 157.11, 209.47, 261.85, 314,22),
+  
+  
+];
 
+const useStyles = makeStyles({ table: { minWidth: 400, }, });
 
 
 export default function TabelaCCT() {
-    const classes = useStyles();
-
-    return (
-   <>
+  const classes = useStyles();
+  return (
+    <>
+      Porto do Rio Grande - Convenção Coletiva de Trabalho (Vigência 2020-2022)
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="customized table">
           <TableHead>
             <TableRow>
-              <StyledTableCell>Tipo</StyledTableCell>
-              <StyledTableCell align="center">Descrição Faina</StyledTableCell>
-              <StyledTableCell align="center">Diária&nbsp;(R$)</StyledTableCell>
-              <StyledTableCell align="center">Valor CCT&nbsp;(R$)</StyledTableCell>
-              <StyledTableCell align="center">Valor Pago&nbsp;(R$)</StyledTableCell>
+              <StyledTableCell align="right"><strong>Tipo</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>Descrição Faina</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>Diária&nbsp;(R$)</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>Valor CCT&nbsp;(R$)</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>Valor Pago&nbsp;(R$)</strong></StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.map((row) => (
               <StyledTableRow key={row.type}>
-                <StyledTableCell align="right" component="th" scope="row">{row.type}</StyledTableCell>
+                <StyledTableCell align="right" component="th" scope="row"><strong>{row.type}</strong></StyledTableCell>
                 <StyledTableCell align="left">{row.description}</StyledTableCell>
                 <StyledTableCell align="center">{row.minimum}</StyledTableCell>
                 <StyledTableCell align="center">{row.valuecct}</StyledTableCell>
@@ -99,7 +105,37 @@ export default function TabelaCCT() {
           </TableBody>
         </Table>
       </TableContainer>
-   </>
-    );
 
-  }
+<h2>TECON Rio Grande - Convenção Coletiva de Trabalho (Vigência 2020-2022)</h2>
+      <TableContainer component={Paper}>
+        <Table className={classes.table} aria-label="customized table">
+          <TableHead>                      
+            <TableRow>
+              <StyledTableCell align="center"><strong>A1T - Tabela TECON</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>A/B</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>C+25%</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>D+50%</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>A/B+100%</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>C+125%</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>D+150%</strong></StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows2.map((row) => (
+              <StyledTableRow key={row.type}>
+                <StyledTableCell align="right" component="th" scope="row">{row.type}</StyledTableCell>
+                <StyledTableCell align="center">{row.ab0}</StyledTableCell>
+                <StyledTableCell align="center">{row.c25}</StyledTableCell>
+                <StyledTableCell align="center">{row.d50}</StyledTableCell>
+                <StyledTableCell align="center">{row.ab100}</StyledTableCell>
+                <StyledTableCell align="center">{row.c125}</StyledTableCell>
+                <StyledTableCell align="center">{row.d150}</StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <h6>*OBS: Nesta Tabela TODOS os Valores são FINAIS, já incluso Repouso (1,1818%)</h6>
+    </>
+  );
+}

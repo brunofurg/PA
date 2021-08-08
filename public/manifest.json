@@ -1,6 +1,6 @@
 {
-  "short_name": "Projeto Base",
-  "name": "Projeto Base - Módulo \"React I\"",
+  "short_name": "PA - Controle de Fainas",
+  "name": "PA - Controle \"Fainas\"",
   "icons": [
     {
       "src": "favicon.ico",
@@ -11,5 +11,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#428bca"
 }

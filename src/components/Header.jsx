@@ -1,15 +1,13 @@
-export default function Header({ children, size }) {
-  let fontSize = 'text-xl';
-
-  if (size === 'large') {
-    fontSize = 'text-2xl';
-  }
-
+export default function Header() {
   return (
+    <>
     <header>
-      <div className="bg-blue-200 mx-auto p-4">
-        <h1 className={`text-center font-semibold ${fontSize}`}>{children}</h1>
+      <div className="bg-terciary text-white flex justify-between p-2">
+       <span>Estiva</span>
+       <span><strong>Controle de Fainas para TPA's</strong></span>
+       <span>Porto do Rio Grande</span>
       </div>
     </header>
+    </>
   );
 }
