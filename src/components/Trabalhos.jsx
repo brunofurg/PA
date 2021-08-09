@@ -1,6 +1,6 @@
 import { Button } from '@material-ui/core';
 
-export default function Fainas() {
+export default function Trabalhos() {
     return (
       <>
         <div>
@@ -13,7 +13,7 @@ export default function Fainas() {
                 </span>
                 <span>
                   <Button color="default" variant="contained">
-                    Apagar
+                    Editar
                   </Button>
                 </span>
               </div>

@@ -1,11 +1,10 @@
 import Header from "./Header";
 import Footer from "./Footer";
-//import Main from "./Main";
 
-import DashBoard from "./DashBoard";
-import Fainas from "./Fainas";
+import Painel from "./Painel";
+import Trabalhos from "./Trabalhos";
 import Reports from "./Reports";
-import CalcRemuneration from "./CalcRemuneration";
+import Calculadora from "./Calculadora";
 import TabelasCCT from "./TabelasCCT";
 import Links from "./Links";
 
@@ -24,18 +23,13 @@ import { useState } from "react";
 export default function App() {
   const [tabIndex, setTabIndex] = useState(0);
   console.log('App');
-
-  
-
-
   return (
-    <>
-    <div className="flex flex-col align-top">
-      <Header/>
-    </div>
-
-    <div className="align-center bg-gray-100">
-
+  <>
+  <div className="flex flex-col content-evenly">
+      <div className="flex flex-col align-top">
+         <Header/>
+      </div>
+      <div className="align-center bg-gray-100">
           <Tabs  selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
             <TabList>
 
@@ -79,13 +73,13 @@ export default function App() {
 
             <TabPanel>
               <div className="flex flex-col space-y-6 p-4 m-4">
-                <DashBoard/>
+                <Painel/>
               </div>
             </TabPanel>
 
             <TabPanel>
             <div className="flex flex-col space-y-6 p-4 m-4">
-                <Fainas/>
+                <Trabalhos/>
               </div>
             </TabPanel>
 
@@ -97,7 +91,7 @@ export default function App() {
 
             <TabPanel>
             <div className="flex flex-col space-y-6 p-4 m-4">
-                <CalcRemuneration/>
+                <Calculadora/>
               </div>
             </TabPanel>
 
@@ -115,9 +109,10 @@ export default function App() {
           </Tabs>
     </div>
 
-    <div className="align-bottom">
+    <div className="justify-self-end">
       <Footer/>
     </div>
+  </div>
   </>
   );
 }

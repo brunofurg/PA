@@ -1,4 +1,4 @@
-export default function DashBoard() {
+export default function Painel() {
     return (
         <div>
             Dashboard

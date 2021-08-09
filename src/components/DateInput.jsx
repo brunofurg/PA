@@ -1,12 +1,9 @@
-import { getNewId } from '../services/idService';
-
-export default function TextInput({
+export default function DateInput({
   labelDescription = 'Descrição do label:',
-  inputValue = 'Valor padrão do input',
+  inputValue = '2021-04-30',
   onInputChange = null,
-  id = getNewId(),
+  id = 'id_do_input_date',
   autoFocus = false,
-  placeHolder,
 }) {
   function handleInputChange({ currentTarget }) {
     if (onInputChange) {
@@ -17,18 +14,17 @@ export default function TextInput({
 
   return (
     <div className="flex flex-col my-4">
-      <label className="mb-2" htmlFor={id}>
+      <label className="mb-1" htmlFor={id}>
         {labelDescription}
       </label>
 
       <input
         autoFocus={autoFocus}
         id={id}
-        className="border p-2"
-        type="text"
+        className="border p-1"
+        type="date"
         value={inputValue}
         onChange={handleInputChange}
-        placeholder={placeHolder}
       />
     </div>
   );
