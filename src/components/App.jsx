@@ -9,7 +9,7 @@ export default function App() {
   
   useEffect(function() {
     function posicaoScroll() {
-      if (window.scrollY > 30) {
+      if (window.scrollY > 10) {
         setAtivaCor(true);
       }
       else {
@@ -20,12 +20,12 @@ export default function App() {
   }, []);
   return (
   <>
-  <div className="text-sm justify-evenly">
-      <div className="align-top w-screen h-6">
-         <Header acao={ativaCor} className="border-2 fixed border-blue-400"/>
+  <div className="text-sm mt-0 flex flex-col">
+      <div className="align-top w-screen fixed">
+         <Header acao={ativaCor}/>
       </div>
  
-      <div className="bg-blue-800 border-2 mt-10 border-red-600">
+      <div className="bg-blue-800 border-2 border-red-600 inline mt-9 align-middle justify-center">
          <Section/>
       </div>
       

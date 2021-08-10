@@ -7,6 +7,10 @@ import imgPeriodo from '../images/lineup.png';
 import imgRelacao from '../images/fundeado.png';
 import imgCct from '../images/operacao.png';
 import imgAct from '../images/esperado.png';
+
+import cctSindop from '../docs/cct-sindop.pdf'
+import actTecon from '../docs/act-tecon.pdf'
+
 //import imgShip from './images/porto-image.png';
 
 // import { FaShip as IconShip } from 'react-icons/fa';
@@ -115,12 +119,12 @@ export default function Links() {
 
             <div className="flex flex-row justify-around align-middle border-2">
                 <span className="bg-blue-300 border-2 border-blue-500 rounded-full self-center ">
-                    <a href='././docs/cct-sindop.pdf' target="_blank" rel="noreferrer">
+                    <a href={cctSindop} target="_blank" rel="noreferrer">
                         <img src={imgCct} alt="Convenção Coletiva Sindop" width="150px" height="150px"/>
                     </a>
                 </span>
                 <span className="bg-blue-300 border-2 border-blue-500 rounded-full self-center ">
-                    <a href='././docs/act-tecon.pdf' rel="noreferrer">
+                    <a href={actTecon} rel="noreferrer">
                         <img src={imgAct} alt="Acordo Coletivo Tecon" width="150px" height="150px"/>
                     </a>
                 </span>
