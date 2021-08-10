@@ -3,7 +3,7 @@
 export default function Reports() {
     return (
         <div>
-            Em construção!!
+            Em construção
 
 
             {/* <div className="flex justify-center">

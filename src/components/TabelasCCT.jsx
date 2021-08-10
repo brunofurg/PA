@@ -1,4 +1,3 @@
-import React from 'react';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -34,6 +33,14 @@ function createData2(type, ab0, c25, d50, ab100, c125, d150) {
   return { type, ab0, c25, d50, ab100, c125, d150 };
 }
 
+function createData3(base, aliquota, deduzir) {
+  return { base, aliquota, deduzir };
+}
+
+function createData4(base, aliquota) {
+  return { base, aliquota };
+}
+
 const rows = [
   createData("A1", "Contêineres Cheios/Vazios, com Engate AUTOMÁTICO e/ou Rampa", 90.00, 5.665, 5.665),
   createData("A2", "Contêineres Cheios/Vazios, com Engate MANUAL", 90.00, 5.665, 5.665),
@@ -57,7 +64,6 @@ const rows = [
   createData("C5", "Produtos Minerais/Químicos, em Equipamento Semi-automático", 96.76, 0.1877, 0.18876945),
   createData("C6", "Produtos Minerais/Químicos, em Equipamento Automático e/ou Grab", 96.76, 0.1872, 0.262626593),
   createData("C7", "Cavaco de Madeira", 96.76, 0.1872, 0.0573000989),
-  
 ];
 
 const rows2 = [
@@ -68,9 +74,22 @@ const rows2 = [
   createData2("Tranship - Contêiner CHEIO", 2.09, 2.62, 3.14, 4.19, 5.23, 6.28),
   createData2("Tranship - Contêiner VAZIO", 1.34, 1.68, 2.01, 2.68, 3.35, 4.02),
   createData2("Diária Produção", 43.02, 53.77, 64.52, 86.03, 107.53, 129.05),
-  createData2("Diária Conexo", 104.75, 130.93, 157.11, 209.47, 261.85, 314,22),
-  
-  
+  createData2("Diária Conexo", 104.75, 130.93, 157.11, 209.47, 261.85, 314,22),  
+];
+
+const rows3 = [
+  createData3("Até R$1.903,98", "-", "-"),
+  createData3("De R$1.903,99 a R$2.826,65", 7.5, 142.8),
+  createData3("De R$2.826,66 a R$3.751,05", 15, 354.8),
+  createData3("De R$3.751,06 a R$4.664,68", 22.5, 636.13),
+  createData3("Acima de R$4.664,68", 27.5, 869.36), 
+
+];
+const rows4 = [
+  createData4("Até R$1.100", 7.5),
+  createData4("De R$1.100 a R$2.203,48", 9),
+  createData4("De R$2.203,49 a R$3.305,22", 12),
+  createData4("De R$3.305,22 até R$6.433,57", 14), 
 ];
 
 const useStyles = makeStyles({ table: { minWidth: 50, }, });
@@ -80,16 +99,14 @@ export default function TabelaCCT() {
   const classes = useStyles();
   return (
     <>
-      <h1>
-        <strong>
-          Porto do Rio Grande - Convenção Coletiva de Trabalho (Vigência 2020-2022)
-        </strong>
-      </h1>
       <TableContainer component={Paper}>
+        <div className="bg-gray-300 align-middle justify-center font-bold">
+          Porto do Rio Grande - Convenção Coletiva de Trabalho (Vigência 2020-2022)
+        </div>
         <Table className={classes.table} aria-label="customized table">
           <TableHead>
             <TableRow>
-              <StyledTableCell align="right"><strong>Tipo</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>Tipo</strong></StyledTableCell>
               <StyledTableCell align="center"><strong>Descrição Faina</strong></StyledTableCell>
               <StyledTableCell align="center"><strong>Diária&nbsp;(R$)</strong></StyledTableCell>
               <StyledTableCell align="center"><strong>Valor CCT&nbsp;(R$)</strong></StyledTableCell>
@@ -99,7 +116,7 @@ export default function TabelaCCT() {
           <TableBody>
             {rows.map((row) => (
               <StyledTableRow key={row.type}>
-                <StyledTableCell align="right" component="th" scope="row"><strong>{row.type}</strong></StyledTableCell>
+                <StyledTableCell align="center" component="th" scope="row"><strong>{row.type}</strong></StyledTableCell>
                 <StyledTableCell align="left">{row.description}</StyledTableCell>
                 <StyledTableCell align="center">{row.minimum}</StyledTableCell>
                 <StyledTableCell align="center">{row.valuecct}</StyledTableCell>
@@ -110,12 +127,10 @@ export default function TabelaCCT() {
         </Table>
       </TableContainer>
 
-      <h1>
-        <strong>
-          TECON Rio Grande - Convenção Coletiva de Trabalho (Vigência 2020-2022)
-        </strong>
-      </h1>
       <TableContainer component={Paper}>
+        <div className="bg-gray-300 align-middle justify-center font-bold">
+          TECON Rio Grande - Acordo Coletivo de Trabalho (Vigência 2020-2022)
+        </div>
         <Table className={classes.table} aria-label="customized table">
           <TableHead>                      
             <TableRow>
@@ -142,8 +157,61 @@ export default function TabelaCCT() {
             ))}
           </TableBody>
         </Table>
+        <p className="text-xs">*OBS: Nesta tabela os Valores estão com RSR incluso (18,18%)</p>
       </TableContainer>
-      <h5>*OBS: Nesta Tabela TODOS os Valores são FINAIS, incluso Repouso (1,1818%)</h5>
+     
+
+      <TableContainer component={Paper}>
+       <div className="bg-gray-300 align-middle justify-center font-bold">
+          Tabela Imposto de Renda (Vigência desde 2015 - Lei 13.149/2015)
+        </div>
+        <Table className={classes.table} aria-label="customized table">
+          <TableHead>                      
+            <TableRow>
+              <StyledTableCell align="center"><strong>Base de Cálculo (R$)</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>Alíquota (%)</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>Parcela a deduzir do IR (R$)</strong></StyledTableCell>
+
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows3.map((row) => (
+              <StyledTableRow key={row.base}>
+                <StyledTableCell align="center" component="th" scope="row">{row.base}</StyledTableCell>
+                <StyledTableCell align="center">{row.aliquota}</StyledTableCell>
+                <StyledTableCell align="center">{row.deduzir}</StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+
+
+      <TableContainer component={Paper}>
+      <div className="bg-gray-300 align-middle justify-center font-bold">
+          Tabela INSS (Vigência desde 01/01/2021)
+        </div>
+        <Table className={classes.table} aria-label="customized table">
+          <TableHead>                      
+            <TableRow>
+              <StyledTableCell align="center"><strong>Base de Cálculo (R$)</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>Alíquota (%)</strong></StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows4.map((row) => (
+              <StyledTableRow key={row.base}>
+                <StyledTableCell align="center" component="th" scope="row">{row.base}</StyledTableCell>
+                <StyledTableCell align="center">{row.aliquota}</StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+
+
+
+
     </>
   );
 }
