@@ -98,7 +98,7 @@
 
 
 import { Button } from '@material-ui/core';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 
 import TextInput from "./TextInput";
 import DateInput from "./DateInput";
@@ -124,7 +124,7 @@ export default function Calculadora() {
   
 
   return (
-    <>
+    <Fragment>
       <div className="border-2 border-gray-500 flex flex-col align-middle justify-around">
         <strong className="bg-gray-400 text-center align-middle">Simulador de Remuneração</strong>
         <div className="border-2 border-red-300 flex flex-row justify-evenly my-2">
@@ -181,6 +181,6 @@ export default function Calculadora() {
           </span>
         </div>
       </div>
-    </>
+    </Fragment>
   )
 }

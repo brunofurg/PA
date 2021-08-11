@@ -126,16 +126,16 @@ import { GrWorkshop as IconWorks } from 'react-icons/gr';
 import { MdAttachMoney as IconCCT } from 'react-icons/md';
 import { FiExternalLink as IconLinks } from 'react-icons/fi';
 
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 export default function Section() {
     const [tabIndex, setTabIndex] = useState(0);
     return (
-        <>
+        <Fragment>
             <div className="items-cemter text-secondary">
                 <Tabs  selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
-                    <TabList>
-                        <div className="flex flex-row flex-wrap align-middle text-center text-sm">
+                    <div className="flex flex-row flex-wrap align-middle text-center text-sm">
+                        <TabList>
                             <Tab>
                                 <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
                                     <span align="left"><IconDash/></span>
@@ -172,10 +172,9 @@ export default function Section() {
                                     <span align="right">Links</span>
                                 </div>
                             </Tab> 
-                        </div>
-                    </TabList>
-
-                    <div className="bg-white text-black border-2 border-blue-500 flex flex-col align-middle text-justify justify-items-center space-y-6 p-4">
+                        </TabList>
+                    </div>
+                    <div className="bg-white text-black border-2 border-blue-500 align-top flex flex-col text-justify justify-items-center p-2">
                         <TabPanel>
                             <Painel/>
                         </TabPanel>
@@ -198,7 +197,7 @@ export default function Section() {
                     </div>
                 </Tabs>
             </div>
-        </>
+    </Fragment>
     )
 }
 

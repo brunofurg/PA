@@ -1,8 +1,9 @@
 import { Button } from '@material-ui/core';
+import { Fragment } from 'react';
 
 export default function Trabalhos() {
     return (
-      <>
+      <Fragment>
         <div>
             Fainas Realizadas
             <div className="flex justify-center">
@@ -19,6 +20,6 @@ export default function Trabalhos() {
               </div>
 
         </div>
-      </>
+      </Fragment>
     )
 }

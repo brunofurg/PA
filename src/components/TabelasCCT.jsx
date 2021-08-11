@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -6,6 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -98,7 +100,7 @@ const useStyles = makeStyles({ table: { minWidth: 50, }, });
 export default function TabelaCCT() {
   const classes = useStyles();
   return (
-    <>
+    <Fragment>
       <TableContainer component={Paper}>
         <div className="bg-gray-300 align-middle justify-center font-bold">
           Porto do Rio Grande - Convenção Coletiva de Trabalho (Vigência 2020-2022)
@@ -212,6 +214,6 @@ export default function TabelaCCT() {
 
 
 
-    </>
+    </Fragment>
   );
 }
