@@ -126,7 +126,7 @@ export default function TabelaCCT() {
           </TableBody>
         </Table>
       </TableContainer>
-
+<br/>
       <TableContainer component={Paper}>
         <div className="bg-gray-300 align-middle justify-center font-bold">
           TECON Rio Grande - Acordo Coletivo de Trabalho (Vigência 2020-2022)
@@ -159,7 +159,7 @@ export default function TabelaCCT() {
         </Table>
         <p className="text-xs">*OBS: Nesta tabela os Valores estão com RSR incluso (18,18%)</p>
       </TableContainer>
-     
+  <br/>   
 
       <TableContainer component={Paper}>
        <div className="bg-gray-300 align-middle justify-center font-bold">
@@ -186,7 +186,7 @@ export default function TabelaCCT() {
         </Table>
       </TableContainer>
 
-
+<br/>
       <TableContainer component={Paper}>
       <div className="bg-gray-300 align-middle justify-center font-bold">
           Tabela INSS (Vigência desde 01/01/2021)

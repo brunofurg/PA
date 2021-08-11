@@ -8,6 +8,12 @@ import imgRelacao from '../images/fundeado.png';
 import imgCct from '../images/operacao.png';
 import imgAct from '../images/esperado.png';
 
+import svgShip1 from '../images/boat.svg';
+import svgShip2 from '../images/cargo-ship.svg';
+import svgShip3 from '../images/ocean-transportation.svg';
+//import svgShip4 from '../images/desenho.svg';
+
+
 import cctSindop from '../docs/cct-sindop.pdf'
 import actTecon from '../docs/act-tecon.pdf'
 
@@ -21,56 +27,55 @@ export default function Links() {
     return (
         <>
         <IconContext.Provider value={{ color:'red', classname:'react-icons', style: { verticalAlign: 'middle' } }}>
-        <div className="flex flex-col align-middle justify-items-cemter space-y-8 p-4 m-2">
+        <div className="border-2 border-gray-600 flex flex-col align-middle justify-items-cemter space-y-8 p-4 m-2">
             
-            <div className="flex flex-row align-middle justify-around border-2 text-center">
-                <span className="place-self-center rounded m-1">
+            <div className="border-2 border-blue-500 flex flex-row align-middle justify-evenly text-center">
+                <span className="border-2 border-yellow-600 place-self-center rounded m-1">
                     <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/cais-virtual/_action/index/cd_usuario/publico' target="_blank" rel="noreferrer">
                         <img src={imgPorto} alt="Porto do Rio Grande - Cais Virtual" width="150px" height="150px"/>
                     </a>
                 </span>
-                <div className="flex flex-col align-middle text-center text-xs flex-wrap">
-                    <div className="align-middle text-center">
+                <div className="border-2 border-green-500 flex flex-col align-middle text-center text-xs flex-wrap">
+                    <div className="border-2 border-pink-600 align-middle text-center">
                         <p>Movimentação Portuária:</p>
                     </div>  
 
-                    <div className="bg-gray-200 flex flex-row flex-wrap">
-                        <span className="bg-yellow-300 rounded p-1 m-1">
-                            <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/porto-gerencial/_controller/navios-situacao/_action/relatorio/cd_usuario/publico/param_situacao/3/param__rel_metodo/pdf' label="Esperado" target="_blank" rel="noreferrer">
-                                {/* <IconShip className="bg-purple-400 text-center"/> */}
-                                <p>Esperado</p>
-                            </a>
-                        </span>
+                    <div className="bg-gray-200 flex flex-col flex-wrap">
+                        <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/porto-gerencial/_controller/navios-situacao/_action/relatorio/cd_usuario/publico/param_situacao/3/param__rel_metodo/pdf' label="Esperado" target="_blank" rel="noreferrer">
+                            <span className="bg-yellow-400 align-middle flex flex-row justify-between rounded space-x-2 p-1 m-1">
+                                <img src={svgShip1} alt="OGMO/RG" width="30" height="30"/>
+                                <p className="self-center">Esperado</p>
+                            </span>
+                        </a>
 
 
-                        <span className="bg-red-600 rounded p-1 m-1">
-                            <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/porto-gerencial/_controller/navios-situacao/_action/relatorio/cd_usuario/publico/param_situacao/4/param__rel_metodo/pdf' label="Programado" target="_blank" rel="noreferrer">
-                                {/* <IconShip/> */}
-                                <p>Programado</p>
-                            </a>
-                        </span>
+                        <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/porto-gerencial/_controller/navios-situacao/_action/relatorio/cd_usuario/publico/param_situacao/4/param__rel_metodo/pdf' label="Programado" target="_blank" rel="noreferrer">
+                            <span className="bg-red-600 align-middle flex flex-row justify-between rounded space-x-2 p-1 m-1">
+                                <img src={svgShip1} alt="OGMO/RG" width="30" height="30"/>
+                                <p className="self-center">Programado</p>
+                            </span>
+                        </a>
 
+                        <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/porto-gerencial/_controller/navios-situacao/_action/relatorio/cd_usuario/publico/param_situacao/0/param__rel_metodo/pdf' label="Operação" target="_blank" rel="noreferrer">
+                            <span className="bg-blue-500 align-middle flex flex-row justify-between rounded space-x-2 p-1 m-1">
+                                <img src={svgShip1} alt="OGMO/RG" width="30" height="30"/>
+                                <p className="self-center">Operação</p>
+                            </span>
+                        </a>
 
-                        <span className="bg-blue-500 rounded p-1 m-1">
-                            <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/porto-gerencial/_controller/navios-situacao/_action/relatorio/cd_usuario/publico/param_situacao/0/param__rel_metodo/pdf' label="Operação" target="_blank" rel="noreferrer">
-                                {/* <IconShip/> */}
-                                <p>Operação</p>
-                            </a>
-                        </span>
+                        <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/porto-gerencial/_controller/navios-situacao/_action/relatorio/cd_usuario/publico/param_situacao/2/param__rel_metodo/pdf' label="Fundeado" target="_blank" rel="noreferrer">
+                            <span className="bg-green-600 align-middle flex flex-row justify-between rounded space-x-2 p-1 m-1">
+                                <img src={svgShip1} alt="OGMO/RG" width="30" height="30"/>
+                                <p className="self-center">Fundeado</p>
+                            </span>
+                        </a>
 
-                        <span className="bg-green-600 rounded p-1 m-1">
-                            <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/porto-gerencial/_controller/navios-situacao/_action/relatorio/cd_usuario/publico/param_situacao/2/param__rel_metodo/pdf' label="Fundeado" target="_blank" rel="noreferrer">
-                                {/* <IconShip/> */}
-                                <p>Fundeado</p>
-                            </a>
-                        </span>
-
-                        <span className="bg-pink-400 rounded p-1 m-1">
-                            <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/rel-lineup/_action/index/cd_usuario/publico/' label="LineUp" target="_blank" rel="noreferrer">
-                                {/* <IconShip/> */}
-                                <p>LineUp</p>
-                            </a>
-                        </span>
+                        <a href='ttp://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/rel-lineup/_action/index/cd_usuario/publico/' label="LineUp" target="_blank" rel="noreferrer">
+                            <span className="bg-pink-400 align-middle flex flex-row justify-between rounded space-x-2 p-1 m-1">
+                                <img src={svgShip1} alt="OGMO/RG" width="30" height="30"/>
+                                <p className="self-center">LineUp</p>
+                            </span>
+                        </a>
 
                     </div>
                 </div>  
