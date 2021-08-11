@@ -6,11 +6,35 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="200"
    height="200"
    viewBox="0 0 52.916665 52.916668"
    version="1.1"
-   id="svg19319">
+   id="svg19319"
+   sodipodi:docname="img_Porto.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1883"
+     inkscape:window-height="1136"
+     id="namedview29"
+     showgrid="false"
+     inkscape:zoom="0.98603159"
+     inkscape:cx="179.59184"
+     inkscape:cy="121.76871"
+     inkscape:window-x="37"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg19319" />
   <metadata
      id="metadata29">
     <rdf:RDF>
@@ -19,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -156,6 +180,7 @@
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(0.98529793,0,0,0.98529793,-212.64001,-115.80237)" />
     <linearGradient
+       inkscape:collect="always"
        xlink:href="#linearGradient2596"
        id="linearGradient44"
        gradientUnits="userSpaceOnUse"
@@ -164,6 +189,7 @@
        x2="269.52957"
        y2="144.38864" />
     <linearGradient
+       inkscape:collect="always"
        xlink:href="#linearGradient1998"
        id="linearGradient46"
        gradientUnits="userSpaceOnUse"
@@ -172,6 +198,7 @@
        x2="265.15408"
        y2="144.69215" />
     <linearGradient
+       inkscape:collect="always"
        xlink:href="#linearGradient2596"
        id="linearGradient48"
        gradientUnits="userSpaceOnUse"
@@ -181,6 +208,7 @@
        x2="269.52957"
        y2="144.38864" />
     <linearGradient
+       inkscape:collect="always"
        xlink:href="#linearGradient1998"
        id="linearGradient50"
        gradientUnits="userSpaceOnUse"
