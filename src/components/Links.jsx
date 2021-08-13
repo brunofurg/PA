@@ -30,15 +30,15 @@ export default function Links() {
             
             <div className="flex flex-row align-middle justify-evenly text-center">
                 <span className="place-self-center rounded m-1">
-                <p className="align-top">PortoWeb</p>
+                <p className="align-top text-center">PortoWeb</p>
                     <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/cais-virtual/_action/index/cd_usuario/publico' target="_blank" rel="noreferrer">
                     <img src={imgPorto} alt="Porto do Rio Grande - Cais Virtual" width="100" height="100"/>
                         {/* Porto do Rio Grande - Cais Virtual */}
 
                     </a>
                 </span>
-                <div className="border-2 border-green-500 flex flex-col align-middle text-center text-xs flex-wrap">
-                    <div className="border-2 border-pink-600 align-middle text-center">
+                <div className="flex flex-col align-middle text-center text-xs flex-wrap">
+                    <div className="align-middle text-center">
                         <p>Movimentação Portuária:</p>
                     </div>  
 
@@ -83,24 +83,31 @@ export default function Links() {
                 </div>  
             </div>    
 
-            <div className="flex flex-row justify-evenly align-middle">
-            <p className="align-top">Habilitação:</p>
-                    <a href='http://www.ogmo-rg.com.br/habilitacao-eletronica' target="_blank" rel="noreferrer">
-                        <img src={imgOgmo}  alt="OGMO/RG" width="100" height="100"/>
-                     </a>
-                    <a href='https://www.rgpilots.com.br/atalaia' target="_blank" rel="noreferrer">
-                        <img src={imgPraticagen} alt="Praticagem - RGPilots" width="100" height="100"/> 
-                    </a>
-                    <a href='http://www.teconline.com.br/programacao-navios' target="_blank" rel="noreferrer">
-                        <img src={imgTecon} alt="Tecon Rio Grande" width="100" height="100"/>
-                    </a>
-                    <a href='https://www.marinetraffic.com/en/ais/details/ports/17380/Brazil_port:RIO%20GRANDE' target="_blank" rel="noreferrer">
-                        <img src={imgMarine} alt="Marine Traffic - Porto do Rio Grande" width="100" height="100"/>
-                    </a>
+            <div className="flex flex-col align-middle">
+            <div>
+                <p className="align-center text-center p-2">
+                    Habilitação:
+                </p>
             </div>
+            <div className="flex flex-row  justify-evenly align-middle">
+                <a href='http://www.ogmo-rg.com.br/habilitacao-eletronica' target="_blank" rel="noreferrer">
+                    <img src={imgOgmo}  alt="OGMO/RG" width="100" height="100"/>
+                </a>
+                <a href='https://www.rgpilots.com.br/atalaia' target="_blank" rel="noreferrer">
+                    <img src={imgPraticagen} alt="Praticagem - RGPilots" width="100" height="100"/> 
+                </a>
+                <a href='http://www.teconline.com.br/programacao-navios' target="_blank" rel="noreferrer">
+                    <img src={imgTecon} alt="Tecon Rio Grande" width="100" height="100"/>
+                </a>
+                <a href='https://www.marinetraffic.com/en/ais/details/ports/17380/Brazil_port:RIO%20GRANDE' target="_blank" rel="noreferrer">
+                    <img src={imgMarine} alt="Marine Traffic - Porto do Rio Grande" width="100" height="100"/>
+                </a>
+            </div>
+        </div>
 
-            <div className="flex flex-row justify-evenly align-middle">
-                <p className="align-top">Previsão:</p>
+            <div className="flex flex-col align-middle">
+                <div><p className="align-center text-center">Previsão do Tempo:</p></div>
+                <div className="flex flex-row  justify-evenly align-middle">
                <a href='https://www.accuweather.com/pt/br/rio-grande/35734/weather-forecast/35734' target="_blank" rel="noreferrer">
                     <img src={imgAccuweather} alt="Accuweather" width="100" height="100"/>
                 </a>
@@ -113,38 +120,63 @@ export default function Links() {
                 <a href='https://www.windguru.cz/21694' target="_blank" rel="noreferrer">
                     <img src={imgWindguru} alt="WindGuru" width="100" height="100"/>
                 </a>
-            </div>  
-
-            <div className="flex flex-row justify-evenly align-middle">
-            <p className="align-middle left-5">Documentos:</p>
-               <span className="rounded-full self-center ">
-                    <a href='https://drive.google.com/drive/folders/1bSPnOw2bLF2-B_OFObsPpYNmMxmOFSHt?usp=sharing' target="_blank" rel="noreferrer">
-                        <img src={imgDrive} alt="Pasta compartilhada" width="100" height="100"/>
-                    </a>
-                </span>            
             </div>
 
 
 
+            </div>
             <div className="flex flex-row justify-evenly align-middle">
-                    <a href='./periodo' target="_blank" rel="noreferrer">
-                        <img src={imgSindestiva} alt="Periodo Cadastro" width="100" height="100"/>
-                    </a>
-                    <a href='./relacao' target="_blank" rel="noreferrer">
-                        <img src={imgSindestiva} alt="Relação Estivadores Rio Grande" width="100" height="100"/>
-                    </a>
-                    <a href={cctSindop} target="_blank" rel="noreferrer">
-                        <img src={imgSindestiva} alt="Convenção Coletiva Sindop" width="100" height="100"/>
-                    </a>
-                    <a href={actTecon} rel="noreferrer">
-                        <img src={imgSindestiva} alt="Acordo Coletivo Tecon" width="100" height="100"/>
-                    </a>
+                <div className="flex flex-col items-center justify-center space-y-6" >
+                    <span className="align-middle self-start text-center">
+                        Pasta Compartilhada:
+                    </span>
+                    <span className="rounded-full self-center">
+                        <a href='https://drive.google.com/drive/folders/1bSPnOw2bLF2-B_OFObsPpYNmMxmOFSHt?usp=sharing' target="_blank" rel="noreferrer">
+                            <img src={imgDrive} alt="Pasta compartilhada" width="100" height="100"/>
+                        </a>
+                    </span>            
+                </div>
+
+
+
+
+
+
+           
+                <div className="flex flex-col justify-evenly align-middle">
+                    <span className="align-middle text-center">
+                        Listas:
+                    </span>
+                    <span className="m-2">
+                        <a href='./periodo' target="_blank" rel="noreferrer">
+                            <img src={imgSindestiva} alt="Periodo Cadastro" width="100" height="100"/>
+                        </a>
+                    </span>
+                    <span className="m-2">
+                        <a href='./relacao' target="_blank" rel="noreferrer">
+                            <img src={imgSindestiva} alt="Relação Estivadores Rio Grande" width="100" height="100"/>
+                        </a>
+                    </span>
+                </div>
+                <div className="flex flex-col justify-evenly align-middle">
+                    <span className="align-middle text-center">
+                        Documentos:
+                    </span>
+                    <span className="m-2">
+                        <a href={cctSindop} target="_blank" rel="noreferrer">
+                            <img src={imgSindestiva} alt="Convenção Coletiva Sindop" width="100" height="100"/>
+                        </a>
+                    </span>
+                    <span className="m-2">
+                        <a href={actTecon} rel="noreferrer">
+                            <img src={imgSindestiva} alt="Acordo Coletivo Tecon" width="100" height="100"/>
+                        </a>
+                    </span>
+                </div>
+
             </div>
 
-
-
-
-        </div>
+        </div>  
         </IconContext.Provider>
     </Fragment>
     )

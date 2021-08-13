@@ -61,11 +61,11 @@ export default function App() {
   return (
   <>
   <div className="text-sm mt-0 flex flex-col">
-      <div className="border-2 border-green-600 align-top w-screen fixed">
+      <div className="border-2 border-green-600 items-center w-screen fixed">
          <Header acao={ativaCor}/>
       </div>
  
-      <div className="border-2 border-purple-500 inline mt-9 align-middle justify-center">
+      <div className="border-2 border-purple-500 inline mt-14 align-middle justify-center">
          <Section/>
       </div>
       

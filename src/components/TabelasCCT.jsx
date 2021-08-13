@@ -45,8 +45,8 @@ function createData4(base, aliquota) {
 
 const rows = [
   createData("A1", "Contêineres Cheios/Vazios, com Engate AUTOMÁTICO e/ou Rampa", 90.00, 5.665, 5.665),
+  createData("A1T", "Tabela de Valores TECON", "Tabela A1T", "", "Tabela A1T"),
   createData("A2", "Contêineres Cheios/Vazios, com Engate MANUAL", 90.00, 5.665, 5.665),
-  createData("A1T", "Tabela de Valores TECON", "Tabela A1T"),
   createData("B1", "Cargas Avulsas", 90.00, 1.1669, 1.1737419),
   createData("B2", "Cargas Unitizadas (Incluindo Madeira Serrada Cintada e Big Bags", 90.00, 0.6595, 0.66338295),
   createData("B3", "Cargas Unitizadas com Dimensões Padronizadas", 100.00, 0.2551, 0.2424),
@@ -103,7 +103,7 @@ export default function TabelaCCT() {
     <Fragment>
       <TableContainer component={Paper}>
         <div className="bg-gray-300 align-middle justify-center font-bold">
-          Porto do Rio Grande - Convenção Coletiva de Trabalho (Vigência 2020-2022)
+          Convenção Coletiva de Trabalho SINDOP (Vigência 2020-2022)
         </div>
         <Table className={classes.table} aria-label="customized table">
           <TableHead>
@@ -111,8 +111,8 @@ export default function TabelaCCT() {
               <StyledTableCell align="center"><strong>Tipo</strong></StyledTableCell>
               <StyledTableCell align="center"><strong>Descrição Faina</strong></StyledTableCell>
               <StyledTableCell align="center"><strong>Diária&nbsp;(R$)</strong></StyledTableCell>
-              <StyledTableCell align="center"><strong>Valor CCT&nbsp;(R$)</strong></StyledTableCell>
-              <StyledTableCell align="center"><strong>Valor Pago&nbsp;(R$)</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>Valor Sindop&nbsp;(R$)</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>Valor Sintermar&nbsp;(R$)</strong></StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -131,7 +131,7 @@ export default function TabelaCCT() {
 <br/>
       <TableContainer component={Paper}>
         <div className="bg-gray-300 align-middle justify-center font-bold">
-          TECON Rio Grande - Acordo Coletivo de Trabalho (Vigência 2020-2022)
+          Acordo Coletivo de Trabalho TECON Rio Grande (Vigência 2020-2022)
         </div>
         <Table className={classes.table} aria-label="customized table">
           <TableHead>                      
