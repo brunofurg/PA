@@ -102,15 +102,19 @@ import { Fragment, useState } from 'react';
 
 import TextInput from "./TextInput";
 import DateInput from "./DateInput";
-import DateNow from "./DateNow";
 import RadioButton from './RadioButton';
 import TypeChoice from './TypeChoice';
-//import ControlledOpenSelect from './ControlledOpenSelect'
+//import SelectFaina from "./SelectFaina";
 
 export default function Calculadora() {
   const [typeFaina, setTypeFaina] = useState('');
-  const [dayFaina, setDayFaina] = useState(DateNow);
+  const [dayFaina, setDayFaina] = useState('');
   const [shiftWork, setShiftWork] = useState(false);
+
+
+  //const [faina, setFaina] = useState('');
+
+
 
   function handleTypeFaina(newTipo) {
     setTypeFaina(newTipo);
@@ -121,7 +125,14 @@ export default function Calculadora() {
   function handleSetShift(newTipo) {
     setShiftWork(newTipo);
   }
-  
+
+  // function handleSelectChange(newTipo) {
+  //   setFaina(newTipo);
+  // }
+
+
+
+
 
   return (
     <Fragment>
@@ -153,8 +164,13 @@ export default function Calculadora() {
             />  
           </span>
           {/* <span>
-            <ControlledOpenSelect/>
+          <SelectFaina
+              labelDescription='Digite o tipo de faina:' 
+              selectValue={faina} 
+              onSelectChange={handleSelectChange}
+            />  
           </span> */}
+
         </div>
 
 

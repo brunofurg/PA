@@ -144,6 +144,12 @@ export default function Section() {
                             </Tab>
                             <Tab>
                                 <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
+                                    <span align="left"><IconCalc/></span>
+                                    <span align="right">Calculadora</span>
+                                </div>
+                            </Tab>
+                            <Tab>
+                                <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
                                     <span align="left"><IconWorks/></span>
                                     <span align="right">Trabalhos</span>
                                 </div>
@@ -152,12 +158,6 @@ export default function Section() {
                                 <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
                                     <span align="left"><IconReport/></span>
                                     <span align="right">Relatórios</span>
-                                </div>
-                            </Tab>
-                            <Tab>
-                                <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
-                                    <span align="left"><IconCalc/></span>
-                                    <span align="right">Calculadora</span>
                                 </div>
                             </Tab>
                             <Tab>
@@ -174,18 +174,18 @@ export default function Section() {
                             </Tab> 
                         </TabList>
                     </div>
-                    <div className="bg-white text-black border-2 border-blue-500 align-top flex flex-col text-justify justify-items-center p-2">
+                    <div className="bg-white text-black border-2 border-blue-500 rounded-md align-top flex flex-col text-justify justify-items-center p-2">
                         <TabPanel>
                             <Painel/>
+                        </TabPanel>
+                        <TabPanel>
+                            <Calculadora/>
                         </TabPanel>
                         <TabPanel>
                             <Trabalhos/>
                         </TabPanel>
                         <TabPanel>
                             <Reports/>
-                        </TabPanel>
-                        <TabPanel>
-                            <Calculadora/>
                         </TabPanel>
                         <TabPanel>
                             <TabelasCCT/>

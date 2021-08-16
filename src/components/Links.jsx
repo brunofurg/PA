@@ -4,10 +4,13 @@ import  { Fragment } from 'react';
 import imgPorto from '../images/imgPorto.svg';
 import imgOgmo from '../images/imgOgmo.svg';
 import imgTecon from '../images/imgTecon.svg';
-import imgSindestiva from '../images/imgSindestiva.svg';
+import imgRelacao from '../images/imgRelacao.svg';
+import imgCalendario from '../images/imgCalendario.svg';
 import imgPraticagen from '../images/imgPraticagem.svg';
 import imgDrive from '../images/imgDrive.svg';
 import imgMarine from '../images/imgMarinetraffic.svg';
+import imgCctSindop from '../images/img_CctSindop.svg';
+import imgActTecon from '../images/img_ActTecon.svg';
 
 import imgAccuweather from '../images/imgAccuweather.svg';
 import imgWindguru from '../images/imgWindguru.svg';
@@ -19,7 +22,8 @@ import svgShip1 from '../images/boat.svg';
 
 import cctSindop from '../docs/cct-sindop.pdf'
 import actTecon from '../docs/act-tecon.pdf'
-
+import relacaoEstiva from '../docs/relacao.pdf'
+import calendarioEstiva from '../docs/calendario.pdf'
 import { IconContext } from "react-icons";
 
 export default function Links() {
@@ -148,13 +152,13 @@ export default function Links() {
                         Listas:
                     </span>
                     <span className="m-2">
-                        <a href='./periodo' target="_blank" rel="noreferrer">
-                            <img src={imgSindestiva} alt="Periodo Cadastro" width="100" height="100"/>
+                        <a href={calendarioEstiva} target="_blank" rel="noreferrer">
+                            <img src={imgCalendario} alt="Periodo Cadastro" width="100" height="100"/>
                         </a>
                     </span>
                     <span className="m-2">
-                        <a href='./relacao' target="_blank" rel="noreferrer">
-                            <img src={imgSindestiva} alt="Relação Estivadores Rio Grande" width="100" height="100"/>
+                        <a href={relacaoEstiva} target="_blank" rel="noreferrer">
+                            <img src={imgRelacao} alt="Relação Estivadores Rio Grande" width="100" height="100"/>
                         </a>
                     </span>
                 </div>
@@ -164,12 +168,12 @@ export default function Links() {
                     </span>
                     <span className="m-2">
                         <a href={cctSindop} target="_blank" rel="noreferrer">
-                            <img src={imgSindestiva} alt="Convenção Coletiva Sindop" width="100" height="100"/>
+                            <img src={imgCctSindop} alt="Convenção Coletiva Sindop" width="100" height="100"/>
                         </a>
                     </span>
                     <span className="m-2">
                         <a href={actTecon} rel="noreferrer">
-                            <img src={imgSindestiva} alt="Acordo Coletivo Tecon" width="100" height="100"/>
+                            <img src={imgActTecon} alt="Acordo Coletivo Tecon" width="100" height="100"/>
                         </a>
                     </span>
                 </div>

@@ -28,8 +28,8 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData(type, description, minimum, valuecct, valuepayed) {
-  return { type, description, minimum, valuecct, valuepayed };
+function createData(type, description, minSindop, valueSindop, minSintermar, valueSintermar) {
+  return { type, description, minSindop, valueSindop, minSintermar, valueSintermar };
 }
 function createData2(type, ab0, c25, d50, ab100, c125, d150) {
   return { type, ab0, c25, d50, ab100, c125, d150 };
@@ -44,28 +44,28 @@ function createData4(base, aliquota) {
 }
 
 const rows = [
-  createData("A1", "Contêineres Cheios/Vazios, com Engate AUTOMÁTICO e/ou Rampa", 90.00, 5.665, 5.665),
-  createData("A1T", "Tabela de Valores TECON", "Tabela A1T", "", "Tabela A1T"),
-  createData("A2", "Contêineres Cheios/Vazios, com Engate MANUAL", 90.00, 5.665, 5.665),
-  createData("B1", "Cargas Avulsas", 90.00, 1.1669, 1.1737419),
-  createData("B2", "Cargas Unitizadas (Incluindo Madeira Serrada Cintada e Big Bags", 90.00, 0.6595, 0.66338295),
-  createData("B3", "Cargas Unitizadas com Dimensões Padronizadas", 100.00, 0.2551, 0.2424),
-  createData("B4/B13", "Toras de Madeira Cintadas e/ou Bobinas de Aço", 100.00, 0.5448, 0.7197),
-  createData("B5", "Volumes Indivisíveis Acima de 1000Kg", 100.00, 0.9059, 0.9059),
-  createData("B6", "Cargas Avulsas em Navio com Rampa", 90.00, 1.1669, 0.849296401),
-  createData("B7", "Cargas Unitizadas em Navio com Rampa", 90.00, 0.6595, 0.66338295),
-  createData("B8", "Veículos em Geral, em Navio com Rampa", 90.00, 2.9427, 2.960058),
-  createData("B9", "Veículos de Passeio e Utilitários, em Navio com Rampa", 128.64, 1.6771, 1.6868505),
-  createData("B10", "Cargas Frigoríficas", 101.84, 1.0036, 1.0562),
-  createData("B11", "Cargas Vivas", 90.00, 0.208, 0.2092125),
-  createData("B90", "Conexo", 122.22),			
-  createData("C1", "Produtos Agrícolas e Derivados, em Equipamento Manual", 90.00, 0.4241, 0.4265544),
-  createData("C2", "Produtos Agrícolas e Derivados, em Equipamento Mecânico ou Semi-automático", 90.00, 0.0978, 0.9838965),
-  createData("C3", "Produtos Agrícolas e Derivados, em Equipamento Automático", 90.00, 0.075, 0.849296401),
-  createData("C4", "Produtos Minerais/Químicos, em Equipamento Manual", 96.76, 0.4155, 0.4179468),
-  createData("C5", "Produtos Minerais/Químicos, em Equipamento Semi-automático", 96.76, 0.1877, 0.18876945),
-  createData("C6", "Produtos Minerais/Químicos, em Equipamento Automático e/ou Grab", 96.76, 0.1872, 0.262626593),
-  createData("C7", "Cavaco de Madeira", 96.76, 0.1872, 0.0573000989),
+  createData("A1", "Contêineres Cheios/Vazios, com Engate AUTOMÁTICO e/ou Rampa", 132.2, 1.1974, "Tabela A1T"),
+  createData("A1T", "Tabela de Valores TECON", "Tabela A1T", "", ""),
+  createData("A2", "Contêineres Cheios/Vazios, com Engate MANUAL", 132.20, 5.665, "", ""),
+  createData("B1", "Cargas Avulsas", 90.00, 1.1669, "", ""),
+  createData("B2", "Cargas Unitizadas (Incluindo Madeira Serrada Cintada e Big Bags", 90.00, 0.6595, "", ""),
+  createData("B3", "Cargas Unitizadas com Dimensões Padronizadas", 132.2, 0.3205, "", ""),
+  createData("B4/B13", "Toras de Madeira Cintadas e/ou Bobinas de Aço", 199.42, 0.9513, "", ""),
+  createData("B5", "Volumes Indivisíveis Acima de 1000Kg", 100.00, 0.9059, "", ""),
+  createData("B6", "Cargas Avulsas em Navio com Rampa", 90.00, 1.1669, "", ""),
+  createData("B7", "Cargas Unitizadas em Navio com Rampa", 90.00, 0.6595, "", ""),
+  createData("B8", "Veículos em Geral, em Navio com Rampa", 90.00, 2.9427, "", ""),
+  createData("B9", "Veículos de Passeio e Utilitários, em Navio com Rampa", 128.64, 1.677, "", ""),
+  createData("B10", "Cargas Frigoríficas", 101.84, 1.0036, "", ""),
+  createData("B11", "Cargas Vivas", 90.00, 0.208, "", ""),
+  createData("B90", "Conexo", 161.57, "", "", ""),			
+  createData("C1", "Produtos Agrícolas e Derivados, em Equipamento Manual", 90.00, 0.4241, "", ""),
+  createData("C2", "Produtos Agrícolas e Derivados, em Equipamento Mecânico ou Semi-automático", 90.00, 0.0978, "", ""),
+  createData("C3", "Produtos Agrícolas e Derivados, em Equipamento Automático", 119.62, 0.0990, 214.81, 0.0684),
+  createData("C4", "Produtos Minerais/Químicos, em Equipamento Manual", 96.76, 0.4155, "", ""),
+  createData("C5", "Produtos Minerais/Químicos, em Equipamento Semi-automático", 96.76, 0.1877, "", ""),
+  createData("C6", "Produtos Minerais/Químicos, em Equipamento Automático e/ou Grab", 121.36, 0.2475, "", ""),
+  createData("C7", "Cavaco de Madeira", 96.76, 0.1872, 0.0573000989, ""),
 ];
 
 const rows2 = [
@@ -102,7 +102,7 @@ export default function TabelaCCT() {
   return (
     <Fragment>
       <TableContainer component={Paper}>
-        <div className="bg-gray-300 align-middle justify-center font-bold">
+        <div className="bg-gray-300 align-middle justify-items-center font-bold">
           Convenção Coletiva de Trabalho SINDOP (Vigência 2020-2022)
         </div>
         <Table className={classes.table} aria-label="customized table">
@@ -110,8 +110,9 @@ export default function TabelaCCT() {
             <TableRow>
               <StyledTableCell align="center"><strong>Tipo</strong></StyledTableCell>
               <StyledTableCell align="center"><strong>Descrição Faina</strong></StyledTableCell>
-              <StyledTableCell align="center"><strong>Diária&nbsp;(R$)</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>Diária Sindop&nbsp;(R$)</strong></StyledTableCell>
               <StyledTableCell align="center"><strong>Valor Sindop&nbsp;(R$)</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>Diária Sintermar&nbsp;(R$)</strong></StyledTableCell>              
               <StyledTableCell align="center"><strong>Valor Sintermar&nbsp;(R$)</strong></StyledTableCell>
             </TableRow>
           </TableHead>
@@ -120,9 +121,10 @@ export default function TabelaCCT() {
               <StyledTableRow key={row.type}>
                 <StyledTableCell align="center" component="th" scope="row"><strong>{row.type}</strong></StyledTableCell>
                 <StyledTableCell align="left">{row.description}</StyledTableCell>
-                <StyledTableCell align="center">{row.minimum}</StyledTableCell>
-                <StyledTableCell align="center">{row.valuecct}</StyledTableCell>
-                <StyledTableCell align="center">{row.valuepayed}</StyledTableCell>
+                <StyledTableCell align="center">{row.minSindop}</StyledTableCell>
+                <StyledTableCell align="center">{row.valueSindop}</StyledTableCell>
+                <StyledTableCell align="center">{row.minSintermar}</StyledTableCell>
+                <StyledTableCell align="center">{row.valueSintermar}</StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
@@ -130,7 +132,7 @@ export default function TabelaCCT() {
       </TableContainer>
 <br/>
       <TableContainer component={Paper}>
-        <div className="bg-gray-300 align-middle justify-center font-bold">
+        <div className="bg-gray-300 align-middle justify-items-center font-bold">
           Acordo Coletivo de Trabalho TECON Rio Grande (Vigência 2020-2022)
         </div>
         <Table className={classes.table} aria-label="customized table">
