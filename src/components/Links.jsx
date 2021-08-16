@@ -35,7 +35,7 @@ export default function Links() {
             <div className="flex flex-row align-middle justify-evenly text-center">
                 <span className="place-self-center rounded m-1">
                 <p className="align-top text-center">PortoWeb</p>
-                    <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/cais-virtual/_action/index/cd_usuario/publico' target="_blank" rel="noreferrer">
+                    <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/cais-virtual/_action/index/cd_usuario/publico' target="_blank" className="hover:scale-120" rel="noreferrer">
                     <img src={imgPorto} alt="Porto do Rio Grande - Cais Virtual" width="100" height="100"/>
                         {/* Porto do Rio Grande - Cais Virtual */}
 
@@ -76,7 +76,7 @@ export default function Links() {
                             </span>
                         </a>
 
-                        <a href='ttp://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/rel-lineup/_action/index/cd_usuario/publico/' label="LineUp" target="_blank" rel="noreferrer">
+                        <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/rel-lineup/_action/index/cd_usuario/publico/' label="LineUp" target="_blank" rel="noreferrer">
                             <span className="bg-pink-400 align-middle flex flex-row justify-between rounded space-x-2 p-1 m-1">
                                 <img src={svgShip1} alt="OGMO/RG" width="30" height="30"/>
                                 <p className="self-center">LineUp</p>

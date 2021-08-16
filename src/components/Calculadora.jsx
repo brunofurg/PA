@@ -137,7 +137,7 @@ export default function Calculadora() {
   return (
     <Fragment>
       <div className="border-2 border-gray-500 flex flex-col align-middle justify-around">
-        <strong className="bg-gray-400 text-center align-middle">Simulador de Remuneração</strong>
+        <strong className="bg-gray-400 text-center align-middle">Calculadora de Remuneração</strong>
         <div className="border-2 border-red-300 flex flex-row justify-evenly my-2">
           <span>   
             <DateInput
