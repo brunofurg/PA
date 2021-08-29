@@ -60,14 +60,14 @@
      inkscape:label="background"
      style="opacity:1">
     <ellipse
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.96632;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path851"
        cx="48.357815"
        cy="16.293196"
        rx="23.301504"
        ry="21.82416" />
     <path
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.81675;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 47.545041,39.892597 C 38.448276,39.99287 28.974297,43.582371 21.948292,49.361337 15.60671,54.577357 9.0916941,68.478185 10.257442,69.77806 21.328099,82.122465 35.510691,86.60969 48.286296,86.645689 62.555006,86.685896 69.044602,84.582548 86.752938,70.66939 83.294056,52.129337 62.403838,39.946818 47.545041,39.892597 Z"
        id="path859"
        sodipodi:nodetypes="cssscc" />

@@ -110,11 +110,12 @@
 
 
 import Painel from "./Painel";
-import Trabalhos from "./Trabalhos";
+//import Trabalhos from "./Trabalhos";
 import Reports from "./Reports";
 import Calculadora from "./Calculadora";
 import TabelasCCT from "./TabelasCCT";
 import Links from "./Links";
+import FlashCardsPage from "./FlashCards/FlashCardsPage";
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -174,7 +175,7 @@ export default function Section() {
                             </Tab> 
                         </TabList>
                     </div>
-                    <div className="bg-white text-black border-2 border-blue-500 rounded-md align-top flex flex-col text-justify justify-items-center p-2">
+                    <div className="bg-white text-black border-1 border-blue-500 rounded-md align-top flex flex-col text-justify justify-items-center p-2">
                         <TabPanel>
                             <Painel/>
                         </TabPanel>
@@ -182,7 +183,7 @@ export default function Section() {
                             <Calculadora/>
                         </TabPanel>
                         <TabPanel>
-                            <Trabalhos/>
+                            <FlashCardsPage/>
                         </TabPanel>
                         <TabPanel>
                             <Reports/>

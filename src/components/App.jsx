@@ -21,16 +21,16 @@ export default function App() {
   return (
   <Fragment>
   <div className="text-sm mt-0 flex flex-col">
-      <div className="border-2 border-green-600 items-center w-screen fixed">
+      <div className="items-center w-screen fixed">
          <Header acao={ativaCor}/>
       </div>
  
-      <div className="border-2 border-purple-500 inline mt-14 align-middle justify-center">
+      <div className="border-2 border-purple-500 inline mt-16 align-middle justify-center">
          <Section/>
       </div>
       
 
-      <div className="border-2 border-yellow-600 bottom-0 align-middle justify-items-center">
+      <div className="bottom-0 align-middle justify-items-center">
       <Footer/>
      </div>
   </div>
