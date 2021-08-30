@@ -16,7 +16,7 @@ import Loading from '../Loading';
 import Main from '../Main';
 import RadioButton from '../RadioButton';
 
-import { helperShuffleArray } from '../../helpers/arrayHelpers';
+// import { helperShuffleArray } from '../../helpers/arrayHelpers';
 
 import {
   apiCreateFlashCard,
@@ -58,11 +58,11 @@ export default function FlashCardsPage() {
     getAllCards();
   }, []);
 
-  function handleShuffle() {
-    const shuffledCards = helperShuffleArray(studyCards);
+  // function handleShuffle() {
+  //   const shuffledCards = helperShuffleArray(studyCards);
 
-    setStudyCards(shuffledCards);
-  }
+  //   setStudyCards(shuffledCards);
+  // }
 
   useEffect(() => {
     setStudyCards(allCards.map(card => ({ ...card, showTitle: true })));
@@ -184,6 +184,7 @@ export default function FlashCardsPage() {
             <Tab>Estudo</Tab>
           </TabList>
 
+{/* Listagem */}
           <TabPanel>
             {allCards.map(flashCard => {
               return (
@@ -198,6 +199,7 @@ export default function FlashCardsPage() {
             })}
           </TabPanel>
 
+{/* Cadastro */}
           <TabPanel>
             <div className="my-4">
               <Button onButtonClick={handleNewFlashCard}>
@@ -210,10 +212,11 @@ export default function FlashCardsPage() {
             </FlashCardForm>
           </TabPanel>
 
+{/* Estudo */}
           <TabPanel>
-            <div className="text-center mb-4">
+            {/* <div className="text-center mb-4">
               <Button onButtonClick={handleShuffle}>Embaralhar cards</Button>
-            </div>
+            </div> */}
 
             <div className="flex flex-row items-center justify-center space-x-4 m-4">
               <RadioButton
@@ -222,7 +225,7 @@ export default function FlashCardsPage() {
                 buttonChecked={radioButtonShowTitle}
                 onButtonClick={handleRadioShowTitleClick}
               >
-                Mostrar título
+                Mostrar resumo
               </RadioButton>
 
               <RadioButton
@@ -231,7 +234,7 @@ export default function FlashCardsPage() {
                 buttonChecked={!radioButtonShowTitle}
                 onButtonClick={handleRadioShowDescriptionClick}
               >
-                Mostrar descrição
+                Mostrar valores
               </RadioButton>
             </div>
 
@@ -250,6 +253,8 @@ export default function FlashCardsPage() {
               })}
             </FlashCards>
           </TabPanel>
+
+
         </Tabs>
       </>
     );
