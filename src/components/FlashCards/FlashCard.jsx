@@ -1,7 +1,7 @@
 import {
-  AiOutlineEdit as EditIcon,
-  AiOutlineDelete as DeleteIcon,
-} from 'react-icons/ai';
+  RiPencilLine as EditIcon,
+  RiDeleteBin7Line as DeleteIcon,
+} from 'react-icons/ri';
 
 export default function FlashCard({
   id,

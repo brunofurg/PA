@@ -97,16 +97,16 @@ export default function Links() {
             </div>
             <div className="flex flex-row  justify-evenly align-middle">
                 <a href='http://www.ogmo-rg.com.br/habilitacao-eletronica' target="_blank" rel="noreferrer">
-                    <img src={imgOgmo} alt="OGMO/RG" title="OGMO/RG" width="100" height="100"/>
+                    <img src={imgOgmo} alt="OGMO/RG" title="OGMO/RG" width="80" height="80"/>
                 </a>
                 <a href='https://www.rgpilots.com.br/atalaia' target="_blank" rel="noreferrer">
-                    <img src={imgPraticagen} alt="Praticagem - RGPilots" title="Praticagem - RGPilots" width="100" height="100"/> 
+                    <img src={imgPraticagen} alt="Praticagem - RGPilots" title="Praticagem - RGPilots" width="80" height="80"/> 
                 </a>
                 <a href='http://www.teconline.com.br/programacao-navios' target="_blank" rel="noreferrer">
-                    <img src={imgTecon} alt="Tecon Rio Grande" title="Tecon Rio Grande" width="100" height="100"/>
+                    <img src={imgTecon} alt="Tecon Rio Grande" title="Tecon Rio Grande" width="80" height="80"/>
                 </a>
                 <a href='https://www.marinetraffic.com/en/ais/details/ports/17380/Brazil_port:RIO%20GRANDE' target="_blank" rel="noreferrer">
-                    <img src={imgMarine} alt="Marine Traffic - Porto do Rio Grande" title="Marine Traffic - Porto do Rio Grande" width="100" height="100"/>
+                    <img src={imgMarine} alt="Marine Traffic - Porto do Rio Grande" title="Marine Traffic - Porto do Rio Grande" width="80" height="80"/>
                 </a>
             </div>
         </div>
@@ -115,16 +115,16 @@ export default function Links() {
                 <div><p className="align-center text-center">Previsão do Tempo:</p></div>
                 <div className="flex flex-row  justify-evenly align-middle">
                <a href='https://www.accuweather.com/pt/br/rio-grande/35734/weather-forecast/35734' target="_blank" rel="noreferrer">
-                    <img src={imgAccuweather} alt="AccuWeather" title="AccuWeather" width="100" height="100"/>
+                    <img src={imgAccuweather} alt="AccuWeather" title="AccuWeather" width="80" height="80"/>
                 </a>
                 <a href='https://www.climatempo.com.br/previsao-do-tempo/agora/cidade/364/riogrande-rs' target="_blank" rel="noreferrer">
-                <img src={imgClimatempo} alt="ClimaTempo" title="ClimaTempo" width="100" height="100"/>
+                <img src={imgClimatempo} alt="ClimaTempo" title="ClimaTempo" width="80" height="80"/>
                 </a>
                 <a href='https://tempo.cptec.inpe.br/rs/rio-grande' target="_blank" rel="noreferrer">
-                    <img src={imgCptec} alt="CPTEC INPE" title="CPTEC INPE" width="100" height="100"/>
+                    <img src={imgCptec} alt="CPTEC INPE" title="CPTEC INPE" width="80" height="80"/>
                 </a>
                 <a href='https://www.windguru.cz/21694' target="_blank" rel="noreferrer">
-                    <img src={imgWindguru} alt="WindGuru" title="WindGuru" width="100" height="100"/>
+                    <img src={imgWindguru} alt="WindGuru" title="WindGuru" width="80" height="80"/>
                 </a>
             </div>
 
@@ -138,7 +138,7 @@ export default function Links() {
                     </span>
                     <span className="rounded-full self-center">
                         <a href='https://drive.google.com/drive/folders/1bSPnOw2bLF2-B_OFObsPpYNmMxmOFSHt?usp=sharing' target="_blank" rel="noreferrer">
-                            <img src={imgDrive} alt="Pasta compartilhada" title="Pasta Compartilhada" width="100" height="100"/>
+                            <img src={imgDrive} alt="Pasta compartilhada" title="Pasta Compartilhada" width="80" height="80"/>
                         </a>
                     </span>            
                 </div>
@@ -150,12 +150,12 @@ export default function Links() {
                     </span>
                     <span className="m-2">
                         <a href={calendarioEstiva} target="_blank" rel="noreferrer">
-                            <img src={imgCalendario} alt="Calendário" title="Calendário" width="100" height="100"/>
+                            <img src={imgCalendario} alt="Calendário" title="Calendário" width="80" height="80"/>
                         </a>
                     </span>
                     <span className="m-2">
                         <a href={relacaoEstiva} target="_blank" rel="noreferrer">
-                            <img src={imgRelacao} alt="Relação Estivadores Rio Grande" title="Relação Estivadores Rio Grande" width="100" height="100"/>
+                            <img src={imgRelacao} alt="Relação Estivadores Rio Grande" title="Relação Estivadores Rio Grande" width="80" height="80"/>
                         </a>
                     </span>
                 </div>
@@ -165,12 +165,12 @@ export default function Links() {
                     </span>
                     <span className="m-2">
                         <a href={cctSindop} target="_blank" rel="noreferrer">
-                            <img src={imgCctSindop} alt="Convenção Coletiva SINDOP" title="Convenção Coletiva SINDOP" width="100" height="100"/>
+                            <img src={imgCctSindop} alt="Convenção Coletiva SINDOP" title="Convenção Coletiva SINDOP" width="80" height="80"/>
                         </a>
                     </span>
                     <span className="m-2">
                         <a href={actTecon} rel="noreferrer">
-                            <img src={imgActTecon} alt="Acordo Coletivo Tecon" title="Acordo Coletivo Tecon" width="100" height="100"/>
+                            <img src={imgActTecon} alt="Acordo Coletivo Tecon" title="Acordo Coletivo Tecon" width="80" height="80"/>
                         </a>
                     </span>
                 </div>
