@@ -16,16 +16,16 @@ export default function Header({acao}) {
       params: {
         lat: latitude,
         lon: longitude,
-        appid: 'a55f1f38fa31178748adc8e3e1c5ceef',
-        // process.env.REACT_APP_OPEN_WEATHER_KEY,
+        appid: process.env.REACT_APP_OPEN_WEATHER_KEY,
         lang: 'pt',
         units: 'metric'
       }
     });
-    setTemperature(res.data.main.temp);
+    setTemperature(res.data.main.temp.toFixed(1));
     setWeather(res.data.weather[0].description);
+    // console.log(res.data);
+    // console.log(res.data.weather[0].main);
   }
-  getWeather('-32.0425', '-52.1196');
 
   const cityPort = "Rio Grande";
   
@@ -34,9 +34,7 @@ export default function Header({acao}) {
   const minute = now.getMinutes().toString();
   const timeNow = `${hour}:${minute}` ;
 
-  // const temperature = weather;
-
-
+  getWeather('-32.0425', '-52.1196');
 
   return (
     <>
