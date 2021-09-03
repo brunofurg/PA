@@ -56,7 +56,7 @@ export default function FlashCardForm({
     clearFields();
   }
 
-  const backgroundClassName = createMode ? 'bg-green-100' : 'bg-yellow-100';
+  const backgroundClassName = createMode ? 'bg-gray-200' : 'bg-blue-200';
 
   return (
     <form
@@ -64,7 +64,7 @@ export default function FlashCardForm({
       onSubmit={handleFormSubmit}
       onReset={handleFormReset}
     >
-      <h2 className="text-center font-semibold">Manutenção de Flash Cards</h2>
+      <h2 className="text-center font-semibold">Calculadora de Remuneração</h2>
 
       <TextInput
         labelDescription="Título:"
@@ -86,7 +86,7 @@ export default function FlashCardForm({
           </Button>
 
           <Button colorClass="bg-green-300" type="submit">
-            Salvar
+            Incluir
           </Button>
         </div>
       </div>

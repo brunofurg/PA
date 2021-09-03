@@ -28,6 +28,7 @@ import {
 export default function FlashCardsPage() {
   // Back End
   const [allCards, setAllCards] = useState([]);
+  const [allWorks, setAllWorks] = useState([]);
 
   // Exclusivo para "Estudo"
   const [studyCards, setStudyCards] = useState([]);
@@ -46,6 +47,7 @@ export default function FlashCardsPage() {
         const backEndAllCards = await apiGetAllFlashCards();
 
         setAllCards(backEndAllCards);
+        setAllWorks(backEndAllCards);
 
         setTimeout(() => {
           setLoading(false);
@@ -58,11 +60,6 @@ export default function FlashCardsPage() {
     getAllCards();
   }, []);
 
-  // function handleShuffle() {
-  //   const shuffledCards = helperShuffleArray(studyCards);
-
-  //   setStudyCards(shuffledCards);
-  // }
 
   useEffect(() => {
     setStudyCards(allCards.map(card => ({ ...card, showTitle: true })));
@@ -102,9 +99,10 @@ export default function FlashCardsPage() {
 
       // Front End
       setAllCards(allCards.filter(card => card.id !== cardId));
+      setAllWorks(allWorks.filter(card => card.id !== cardId));
 
       setError('');
-      toast.success('Card excluído com sucesso!');
+      toast.success(`Trabalho "${cardId.title}" excluído com sucesso!`);
     } catch (error) {
       setError(error.message);
     }
@@ -130,12 +128,13 @@ export default function FlashCardsPage() {
       try {
         // Back End
         const newFlashCard = await apiCreateFlashCard(title, description);
-
+        const newWorkCard = await apiCreateFlashCard(title, description);
         // Front End
         setAllCards([...allCards, newFlashCard]);
+        setAllWorks([...allWorks, newWorkCard]);
 
         setError('');
-        toast.success(`Card "${title}" incluído com sucesso!`);
+        toast.success(`"${title}" incluído com sucesso!`);
       } catch (error) {
         setError(error.message);
       }
@@ -154,10 +153,19 @@ export default function FlashCardsPage() {
           })
         );
 
+        setAllWorks(
+          allWorks.map(card => {
+            if (card.id === selectedFlashCard.id) {
+              return { ...card, title, description };
+            }
+            return card;
+          })
+        );
+
         setSelectedFlashCard(null);
         setCreateMode(true);
         setError('');
-        toast.success(`Card "${title}" alterado com sucesso!`);
+        toast.success(`"${title}" alterado com sucesso!`);
       } catch (error) {
         setError(error.message);
       }
@@ -180,8 +188,8 @@ export default function FlashCardsPage() {
         <Tabs selectedIndex={selectedTab} onSelect={handleTabSelect}>
           <TabList>
             <Tab>Listagem</Tab>
-            <Tab>Cadastro</Tab>
-            <Tab>Estudo</Tab>
+            <Tab>Inserir</Tab>
+            <Tab>Trabalhos</Tab>
           </TabList>
 
 {/* Listagem */}
@@ -203,7 +211,7 @@ export default function FlashCardsPage() {
           <TabPanel>
             <div className="my-4">
               <Button onButtonClick={handleNewFlashCard}>
-                Novo flash card
+                Novo Trabalho
               </Button>
             </div>
 
@@ -214,9 +222,6 @@ export default function FlashCardsPage() {
 
 {/* Estudo */}
           <TabPanel>
-            {/* <div className="text-center mb-4">
-              <Button onButtonClick={handleShuffle}>Embaralhar cards</Button>
-            </div> */}
 
             <div className="flex flex-row items-center justify-center space-x-4 m-4">
               <RadioButton
@@ -238,20 +243,38 @@ export default function FlashCardsPage() {
               </RadioButton>
             </div>
 
+
+
+
+{allWorks.map(workCard => {
+              return (
             <FlashCards>
               {studyCards.map(({ id, title, description, showTitle }) => {
                 return (
                   <FlashCard
-                    key={id}
+                    key={workCard.id}
                     id={id}
                     title={title}
                     description={description}
-                    showFlashCardTitle={showTitle}
+                    showFlashCardTitle={showTitle}               
+                    // keyId={workCard.id}
+                    onDelete={handleDeleteFlashCard}
+                    onEdit={handleEditFlashCard}
                     onToggleFlashCard={handleToggleFlashCard}
-                  />
+                  >
+                     {workCard}
+                </FlashCard>
                 );
+
               })}
+
+
             </FlashCards>
+
+);
+})}
+
+
           </TabPanel>
 
 
@@ -260,7 +283,7 @@ export default function FlashCardsPage() {
     );
   }
 
-  console.log(process.env.NODE_ENV);
+  // console.log(process.env.NODE_ENV);
 
   return (
     <>

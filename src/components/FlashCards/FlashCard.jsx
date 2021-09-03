@@ -4,7 +4,9 @@ import {
 } from 'react-icons/ri';
 
 export default function FlashCard({
+  children: workCard,
   id,
+  // keyId,
   title = 'Título do card',
   description = 'Descrição do card, que pode conter mais palavras que o título',
   showFlashCardTitle = true,
@@ -12,21 +14,28 @@ export default function FlashCard({
   onDelete = null,
   onEdit = null,
 }) {
+
+  //const { title, description } = workCard;
+
   function handleCardClick() {
     if (onToggleFlashCard) {
+      console.log(id);
       onToggleFlashCard(id);
     }
   }
 
   function handleDeleteIconClick() {
     if (onDelete) {
-      onDelete(id);
+      console.log(workCard.id);
+      onDelete(workCard.id);
+
     }
   }
 
   function handleEditIconClick() {
     if (onEdit) {
-      onEdit(id);
+      console.log(workCard);
+      onEdit(workCard);
     }
   }
 
@@ -35,7 +44,7 @@ export default function FlashCard({
   return (
     <>
     <div
-      className={`border-2 shadow-lg p-4 m-2 rounded-lg flex flex-row items-center justify-between ${fontSizeClassName}`}
+      className={`border-2 border-green-400 shadow-lg p-4 m-2 rounded-lg flex flex-row items-center justify-between ${fontSizeClassName}`}
       style={{ fontFamily: "'JetBrains Mono', monospace" }}
       
     >

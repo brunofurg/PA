@@ -12,6 +12,7 @@ export default function FlashCardItem({
 
   function handleDeleteIconClick() {
     if (onDelete) {
+      console.log(flashCard.id);
       onDelete(flashCard.id);
     }
   }
@@ -19,6 +20,7 @@ export default function FlashCardItem({
   function handleEditIconClick() {
     if (onEdit) {
       onEdit(flashCard);
+      
     }
   }
 
