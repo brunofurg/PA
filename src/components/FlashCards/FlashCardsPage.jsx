@@ -156,6 +156,7 @@ export default function FlashCardsPage() {
         setAllWorks(
           allWorks.map(card => {
             if (card.id === selectedFlashCard.id) {
+
               return { ...card, title, description };
             }
             return card;

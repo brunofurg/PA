@@ -7,11 +7,11 @@ import { useEffect, useState } from 'react';
 
 
 export default function Header({acao}) {
-  const [location, setLocation] = useState(false);
+  const [temperature, setTemperature] = useState(false);
   const [weather, setWeather] = useState(false);
 
 
-  let getWeather =  async (lat, long) => {
+  let getWeather =  async () => {
     let res = await axios.get("http://api.openweathermap.org/data/2.5/weather", {
       params: {
         lat: '-32.0425',
@@ -21,14 +21,13 @@ export default function Header({acao}) {
         units: 'metric'
       }
     });
-    setWeather(res.data.main.temp);
-    console.log(res.data);
+    setTemperature(res.data.main.temp);
+    setWeather(res.data.weather[0].description);
   }
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
       getWeather(position.coords.latitude, position.coords.longitude);
-      setLocation(true)
   })
 }, [])
 
@@ -40,7 +39,7 @@ export default function Header({acao}) {
   const minute = now.getMinutes().toString();
   const timeNow = `${hour}:${minute}` ;
 
-  const temperature = weather;
+  // const temperature = weather;
 
 
 
@@ -51,7 +50,7 @@ export default function Header({acao}) {
        <span> 
          <img src={imgLogo} title="PortoNaTela" className="shadow-lg" alt="PortoNaTela" width="75" height="75"/>
        </span>
-       <span title={`${cityPort} - ${temperature}°C - ${timeNow}`} className="bg-secondary shadow-lg rounded-full p-2 hover:bg-primary hover:shadow-inner ">
+       <span title={`${cityPort} - ${timeNow} - ${temperature}°C - ${weather}`} className="bg-secondary shadow-lg rounded-full p-2 hover:bg-primary hover:shadow-inner ">
         <strong>
           {`${temperature}°C - ${timeNow}`}
         </strong>
