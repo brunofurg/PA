@@ -3,7 +3,7 @@ import iconNotifications from '../images/iconNotifications.svg';
 import iconUser from '../images/iconUser.svg'
 import iconMenu from '../images/iconMenu.svg'
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 
 export default function Header({acao}) {
@@ -11,12 +11,13 @@ export default function Header({acao}) {
   const [weather, setWeather] = useState(false);
 
 
-  let getWeather =  async () => {
+  let getWeather =  async (latitude, longitude) => {
     let res = await axios.get("http://api.openweathermap.org/data/2.5/weather", {
       params: {
-        lat: '-32.0425',
-        lon: '-52.1196',
-        appid: process.env.REACT_APP_OPEN_WEATHER_KEY,
+        lat: latitude,
+        lon: longitude,
+        appid: 'a55f1f38fa31178748adc8e3e1c5ceef',
+        // process.env.REACT_APP_OPEN_WEATHER_KEY,
         lang: 'pt',
         units: 'metric'
       }
@@ -24,13 +25,7 @@ export default function Header({acao}) {
     setTemperature(res.data.main.temp);
     setWeather(res.data.weather[0].description);
   }
-
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      getWeather(position.coords.latitude, position.coords.longitude);
-  })
-}, [])
-
+  getWeather('-32.0425', '-52.1196');
 
   const cityPort = "Rio Grande";
   
