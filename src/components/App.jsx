@@ -5,18 +5,21 @@ import Footer from "./Footer";
 import { Fragment, useEffect, useState } from "react";
 
 export default function App() {
-  const [ativaCor, setAtivaCor] = useState(false);
+  const [ativaCor, setAtivaCor] = useState(true);
  
   useEffect(function() {
     function posicaoScroll() {
       if (window.scrollY > 10) {
         setAtivaCor(true);
+        console.log("true");
       }
       else {
         setAtivaCor(false);
+        console.log("false");
       }
     }
     window.addEventListener('scroll', posicaoScroll);
+    console.log("scrolling");
   }, []);
   return (
   <Fragment>

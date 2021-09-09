@@ -2,6 +2,8 @@ import * as React from 'react';
 import  { Fragment } from 'react';
 
 import imgPorto from '../images/imgPorto.svg';
+import imgPortoMap from '../images/portoMap.svg';
+
 import imgOgmo from '../images/imgOgmo.svg';
 import imgTecon from '../images/imgTecon.svg';
 import imgRelacao from '../images/imgRelacao.svg';
@@ -12,9 +14,10 @@ import imgMarine from '../images/imgMarinetraffic.svg';
 import imgCctSindop from '../images/imgCctSindop.svg';
 import imgActTecon from '../images/imgActTecon.svg';
 
+
 import imgAccuweather from '../images/imgAccuweather.svg';
 import imgWindguru from '../images/imgWindguru.svg';
-import imgCptec from '../images/imgCptec.svg';
+import imgWeather from '../images/imgWeather.svg';
 import imgClimatempo from '../images/imgClimatempo.svg';
 
 
@@ -32,6 +35,7 @@ export default function Links() {
         <div className="flex flex-col align-middle justify-items-cemter space-y-8 p-4 m-2">
             
             <div className="flex flex-row align-middle justify-evenly text-center">
+            {/* <img src={imgPortoMap} alt="Porto do Rio Grande - Cais Virtual" title="Porto do Rio Grande - Cais Virtual" width="100" height="100"/> */}
                 <span className="rounded-full hover:shadow-lg place-self-center m-1">
                 <p className="align-top text-center">Cais Virtual</p>
                     <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/cais-virtual/_action/index/cd_usuario/publico' target="_blank" className="hover:scale-120" rel="noreferrer">
@@ -118,8 +122,8 @@ export default function Links() {
                 <a className="rounded-full hover:shadow-lg" href='https://www.climatempo.com.br/previsao-do-tempo/agora/cidade/364/riogrande-rs' target="_blank" rel="noreferrer">
                 <img src={imgClimatempo} alt="ClimaTempo" title="ClimaTempo" width="80" height="80"/>
                 </a>
-                <a className="rounded-full hover:shadow-lg" href='https://tempo.cptec.inpe.br/rs/rio-grande' target="_blank" rel="noreferrer">
-                    <img src={imgCptec} alt="CPTEC INPE" title="CPTEC INPE" width="80" height="80"/>
+                <a className="rounded-full hover:shadow-lg" href='https://weather.com/pt-BR/weather/today/l/2abed6966d03d537defe664c29a8c35e33a01bbd8307facf6c92cfd7a9e48ba5' target="_blank" rel="noreferrer">
+                    <img src={imgWeather} alt="Weather.com" title="Weather.com" width="80" height="80"/>
                 </a>
                 <a className="rounded-full hover:shadow-lg" href='https://www.windguru.cz/21694' target="_blank" rel="noreferrer">
                     <img src={imgWindguru} alt="WindGuru" title="WindGuru" width="80" height="80"/>

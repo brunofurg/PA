@@ -4,12 +4,23 @@ import iconUser from '../images/iconUser.svg'
 import iconMenu from '../images/iconMenu.svg'
 import axios from 'axios';
 import { useState } from 'react';
-
+import './Header.css';
 
 export default function Header({acao}) {
   const [temperature, setTemperature] = useState(false);
   const [weather, setWeather] = useState(false);
 
+  function leftPad(value, count = 2, char = '0') {
+    let leftPad = value;
+
+    if (value.length < count) {
+      for (let i = 0; i < count - value.length; i++) {
+        leftPad = char + leftPad;
+      }
+    }
+
+    return leftPad;
+  }
 
   let getWeather =  async (latitude, longitude) => {
     let res = await axios.get("http://api.openweathermap.org/data/2.5/weather", {
@@ -23,23 +34,28 @@ export default function Header({acao}) {
     });
     setTemperature(res.data.main.temp.toFixed(1));
     setWeather(res.data.weather[0].description);
-    // console.log(res.data);
+    console.log(res.data);
     // console.log(res.data.weather[0].main);
   }
 
   const cityPort = "Rio Grande";
   
   const now = new Date();
-  const hour = now.getHours().toString();
-  const minute = now.getMinutes().toString();
+  //const hour = now.getHours().toString();
+  const hour = leftPad(now.getHours().toString());
+  const minute = leftPad(now.getMinutes().toString());
+  //const minute = now.getMinutes().toString();
   const timeNow = `${hour}:${minute}` ;
 
   getWeather('-32.0425', '-52.1196');
 
+
+if (temperature === false) { return "..." }
+
   return (
     <>
-    <header className={ acao ? 'ativaCor' : ''}>
-      <div className="bg-terciary text-white items-center flex flex-row justify-between p-2">
+    <header className={ acao ? 'bg-terciary' : 'bg-primary'}>
+      <div className="text-white items-center flex flex-row justify-between p-2">
        <span> 
          <img src={imgLogo} title="PortoNaTela" className="shadow-lg" alt="PortoNaTela" width="75" height="75"/>
        </span>
