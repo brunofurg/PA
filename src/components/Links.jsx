@@ -2,7 +2,7 @@ import * as React from 'react';
 import  { Fragment } from 'react';
 
 import imgPorto from '../images/imgPorto.svg';
-import imgPortoMap from '../images/portoMap.svg';
+//import imgPortoMap from '../images/portoMap.svg';
 
 import imgOgmo from '../images/imgOgmo.svg';
 import imgTecon from '../images/imgTecon.svg';
@@ -28,15 +28,15 @@ import actTecon from '../docs/act-tecon.pdf'
 import relacaoEstiva from '../docs/relacao.pdf'
 import calendarioEstiva from '../docs/calendario.pdf'
 import { IconContext } from "react-icons";
+import './Links.css';
 
 export default function Links() {
     return (
     <Fragment>
         <div className="flex flex-col align-middle justify-items-cemter space-y-8 p-4 m-2">
             
-            <div className="flex flex-row align-middle justify-evenly text-center">
-            {/* <img src={imgPortoMap} alt="Porto do Rio Grande - Cais Virtual" title="Porto do Rio Grande - Cais Virtual" width="100" height="100"/> */}
-                <span className="rounded-full hover:shadow-lg place-self-center m-1">
+            <div className="flex flex-row align-middle justify-around">
+               <span className="element hover:shadow-lg rounded-lg place-self-center m-1">
                 <p className="align-top text-center">Cais Virtual</p>
                     <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/cais-virtual/_action/index/cd_usuario/publico' target="_blank" className="hover:scale-120" rel="noreferrer">
                      <img src={imgPorto} alt="Porto do Rio Grande - Cais Virtual" title="Porto do Rio Grande - Cais Virtual" width="100" height="100"/>

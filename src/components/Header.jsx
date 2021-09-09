@@ -34,18 +34,16 @@ export default function Header({acao}) {
     });
     setTemperature(res.data.main.temp.toFixed(1));
     setWeather(res.data.weather[0].description);
-    console.log(res.data);
-    // console.log(res.data.weather[0].main);
+    //console.log(res.data);
+    //console.log(res.data.weather[0].main);
   }
 
   const cityPort = "Rio Grande";
   
   const now = new Date();
-  //const hour = now.getHours().toString();
   const hour = leftPad(now.getHours().toString());
   const minute = leftPad(now.getMinutes().toString());
-  //const minute = now.getMinutes().toString();
-  const timeNow = `${hour}:${minute}` ;
+  const timeNow = `${hour}:${minute}`;
 
   getWeather('-32.0425', '-52.1196');
 

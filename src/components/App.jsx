@@ -1,6 +1,7 @@
 import Header from "./Header";
 import Section from "./Section";
 import Footer from "./Footer";
+import './App.css';
 
 import { Fragment, useEffect, useState } from "react";
 
@@ -11,20 +12,21 @@ export default function App() {
     function posicaoScroll() {
       if (window.scrollY > 10) {
         setAtivaCor(true);
-        console.log("true");
+        //console.log("true");
       }
       else {
         setAtivaCor(false);
-        console.log("false");
+        //console.log("false");
       }
     }
     window.addEventListener('scroll', posicaoScroll);
-    console.log("scrolling");
+    //console.log("scrolling");
   }, []);
   return (
   <Fragment>
   <div className="text-sm mt-0 flex flex-col">
-      <div className="items-center w-screen fixed">
+      {/* <div className="items-center w-screen fixed"> */}
+      <div>
          <Header acao={ativaCor}/>
       </div>
  
