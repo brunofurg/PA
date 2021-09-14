@@ -23,7 +23,7 @@ import imgClimatempo from '../images/imgClimatempo.svg';
 
 import svgShip1 from '../images/boat.svg';
 
-import cctSindop from '../docs/cct-sindop.pdf'
+//import cctSindop from '../docs/cct-sindop.pdf'
 import actTecon from '../docs/act-tecon.pdf'
 import relacaoEstiva from '../docs/relacao.pdf'
 import calendarioEstiva from '../docs/calendario.pdf'
@@ -168,7 +168,7 @@ export default function Links() {
                         CCT Sindop:
                     </span>
 
-                        <a className="rounded-full hover:shadow-lg m-2" href={cctSindop} target="_blank" rel="noreferrer" >
+                        <a className="rounded-full hover:shadow-lg m-2" href="https://drive.google.com/drive/folders/1N8ZQn7UVmZWGQ2K1q2FuntKPGyIksyfB" target="_blank" rel="noreferrer" >
                             <img src={imgCctSindop} alt="Convenção Coletiva SINDOP" title="Convenção Coletiva SINDOP" width="80" height="80" />
                         </a>
                         <span className="align-middle text-center">

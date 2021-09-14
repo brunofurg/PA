@@ -19,20 +19,24 @@ export default function FlashCardItem({
 
   function handleEditIconClick() {
     if (onEdit) {
+      console.log(flashCard);
       onEdit(flashCard);
-      
     }
   }
 
   return (
-    <div className="border p-2 m-2">
+    <div className="border border-gray-500 shadow-lg rounded-lg p-4 m-2">
       <ul className="flex flex-col space-y-4">
         <li>
-          <strong>Título:</strong> <span>{title}</span>
+          <span>
+            {title}
+          </span>
         </li>
 
         <li>
-          <strong>Descrição:</strong> <span>{description}</span>
+          <span>
+            {description}
+          </span>
         </li>
       </ul>
 
