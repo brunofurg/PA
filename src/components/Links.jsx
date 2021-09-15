@@ -126,46 +126,31 @@ export default function Links() {
 
 
             </div>
-            <div className="flex flex-row justify-evenly align-middle">
-                <div className="flex flex-col items-center justify-center space-y-6 border-2 p-2 rounded-3xl" >
-                    <span className="align-middle self-start text-center">
-                        Pasta Compartilhada:
-                    </span>
-                    <span className="rounded-full hover:shadow-lg self-center" >
+            <div className="border-2 p-2 flex flex-row justify-around align-middle rounded-3xl">
+                    <span className="flex flex-row text-center justify-center" >
                         <a href='https://drive.google.com/drive/folders/1E0WK6rexk5gVxRc3KPYK4ECnc4oBqs0Z' target="_blank" rel="noreferrer" >
-                            <img src={imgDrive} alt="Pasta compartilhada" title="Pasta Compartilhada" width="80" height="80" />
+                            <img className="rounded-full hover:shadow-lg" src={imgDrive} alt="Pasta compartilhada" title="Pasta Compartilhada" width="80" height="80" />
+                            <p>Pasta</p><p>Compartilhada</p>
                         </a>
                     </span>            
-                </div>
-
-         
-                <div className="flex flex-col justify-evenly align-middle border-2 p-2 rounded-3xl">
-                    <span className="align-middle text-center">
-                        Calendário:
-                    </span>
-
-                        <a className="rounded-full hover:shadow-lg m-2" href={calendarioEstiva} target="_blank" rel="noreferrer" >
-                            <img src={imgCalendario} alt="Calendário" title="Calendário" width="80" height="80" />
+                    <span className="flex flex-row text-center justify-center">
+                        <a href={calendarioEstiva} target="_blank" rel="noreferrer" >
+                            <img className="rounded-full hover:shadow-lg" src={imgCalendario} alt="Calendário" title="Calendário" width="80" height="80" />
+                            <p>Calendário</p>
                         </a>
-                        <span className="align-middle text-center">
-                        Relação:
-                    </span>
-
-                        <a className="rounded-full hover:shadow-lg m-2" href={relacaoEstiva} target="_blank" rel="noreferrer" >
-                            <img src={imgRelacao} alt="Relação Estivadores" title="Relação Estivadores Rio Grande" width="80" height="80" />
+                   </span>
+                   <span className="flex flex-row text-center justify-center">
+                        <a href={relacaoEstiva} target="_blank" rel="noreferrer" >
+                            <img className="rounded-full hover:shadow-lg" src={imgRelacao} alt="Quadro Estivadores" title="Quadro Estivadores" width="80" height="80" />
+                            <p>Lista</p>
                         </a>
-
-                </div>
-                <div className="flex flex-col justify-center items-center align-middle border-2 p-2 space-y-6 rounded-3xl">
-                    <span className="align-middle text-center">
-                        Acordos Convenções:
                     </span>
-                    <span className="rounded-full hover:shadow-lg m-2">
+                    <span className="flex flex-row text-center justify-center flex-wrap">
                         <a href="https://drive.google.com/drive/folders/1N8ZQn7UVmZWGQ2K1q2FuntKPGyIksyfB" target="_blank" rel="noreferrer" >
-                            <img src={imgSindestiva} alt="Convenção Coletiva SINDOP" title="Convenção Coletiva SINDOP" width="80" height="80" />
+                            <img className="rounded-full hover:shadow-lg" src={imgSindestiva} alt="Acordos e Convenções" title="Acordos e Convenções" width="80" height="80" />
+                            <p>Acordos</p><p> Convenções</p>
                         </a>
                     </span>
-                </div>
 
             </div>
 

@@ -87,7 +87,10 @@ export default function Section() {
     function handleTabSelect(tabIndex) {
       setSelectedTab(tabIndex);
     }
-  
+    function handleImport() {
+      console.log("pdf");
+    }
+
     async function handlePersist(title, description) {
       if (createMode) {
         try {
@@ -187,9 +190,12 @@ export default function Section() {
                         </TabPanel>
 
                         <TabPanel>
-                            <div className="my-4">
+                            <div className="flex flex-row justify-around my-4">
                                 <Button onButtonClick={handleNewFlashCard}>
                                     Novo Trabalho
+                                </Button>
+                                <Button onButtonClick={handleImport}>
+                                    Importar Analítico
                                 </Button>
                             </div>
                             <FlashCardForm createMode={createMode} onPersist={handlePersist}>
