@@ -29,10 +29,10 @@ export default function Links() {
         <div className="flex flex-col align-middle justify-items-cemter space-y-8 p-4 m-2">
             
             <div className="flex flex-row align-middle justify-around">
-               <span className="hover:shadow-lg rounded-lg place-self-center m-1">
+               <span className="place-self-center m-1">
                 <p className="align-top text-center">Cais Virtual</p>
                     <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/cais-virtual/_action/index/cd_usuario/publico' target="_blank" className="hover:scale-120" rel="noreferrer">
-                     <img src={imgPorto} alt="Porto do Rio Grande - Cais Virtual" title="Porto do Rio Grande - Cais Virtual" width="100" height="100"/>
+                     <img className="rounded-full hover:shadow-lg" src={imgPorto} alt="Porto do Rio Grande - Cais Virtual" title="Porto do Rio Grande - Cais Virtual" width="100" height="100"/>
                     </a>
                 </span>
                 <IconContext.Provider value={{ color:'green', classname:'react-icons', style: { verticalAlign: 'middle' } }}>
