@@ -4,7 +4,6 @@ import iconUser from '../images/iconUser.svg'
 import iconMenu from '../images/iconMenu.svg'
 import axios from 'axios';
 import { useState } from 'react';
-import './Header.css';
 
 export default function Header({acao}) {
   const [temperature, setTemperature] = useState(false);
@@ -64,10 +63,10 @@ if (temperature === false) { return "..." }
       </span>
       <div className="mr-2">
        <span className="flex flex-row space-x-4 text-lg">
-          <span className="shadow-lg hover:shadow-inner rounded-full p-2 hover:bg-secondary " hidden> 
+          <span className="shadow-lg hover:shadow-inner rounded-full p-2 hover:bg-secondary " > 
              <img src={iconNotifications} alt="Notifications" title="Notificações" width="25" height="25" />
            </span>
-           <span className="shadow-lg hover:shadow-inner rounded-full p-2 hover:bg-secondary " hidden> 
+           <span className="shadow-lg hover:shadow-inner rounded-full p-2 hover:bg-secondary " > 
              <img src={iconUser} alt="User" title="Configurações de usuário" width="25" height="25" />
            </span>
            <span className="shadow-lg hover:shadow-inner rounded-full p-2 hover:bg-secondary "> 

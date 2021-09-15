@@ -2,7 +2,6 @@ import * as React from 'react';
 import  { Fragment } from 'react';
 
 import imgPorto from '../images/imgPorto.svg';
-//import imgPortoMap from '../images/portoMap.svg';
 
 import imgOgmo from '../images/imgOgmo.svg';
 import imgTecon from '../images/imgTecon.svg';
@@ -11,24 +10,18 @@ import imgCalendario from '../images/imgCalendario.svg';
 import imgPraticagen from '../images/imgPraticagem.svg';
 import imgDrive from '../images/imgDrive.svg';
 import imgMarine from '../images/imgMarinetraffic.svg';
-import imgCctSindop from '../images/imgCctSindop.svg';
-import imgActTecon from '../images/imgActTecon.svg';
-
+import imgSindestiva from '../images/imgSindestiva.svg';
 
 import imgAccuweather from '../images/imgAccuweather.svg';
 import imgWindguru from '../images/imgWindguru.svg';
 import imgWeather from '../images/imgWeather.svg';
 import imgClimatempo from '../images/imgClimatempo.svg';
 
-
 import svgShip1 from '../images/boat.svg';
 
-//import cctSindop from '../docs/cct-sindop.pdf'
-import actTecon from '../docs/act-tecon.pdf'
 import relacaoEstiva from '../docs/relacao.pdf'
 import calendarioEstiva from '../docs/calendario.pdf'
 import { IconContext } from "react-icons";
-import './Links.css';
 
 export default function Links() {
     return (
@@ -36,7 +29,7 @@ export default function Links() {
         <div className="flex flex-col align-middle justify-items-cemter space-y-8 p-4 m-2">
             
             <div className="flex flex-row align-middle justify-around">
-               <span className="element hover:shadow-lg rounded-lg place-self-center m-1">
+               <span className="hover:shadow-lg rounded-lg place-self-center m-1">
                 <p className="align-top text-center">Cais Virtual</p>
                     <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/cais-virtual/_action/index/cd_usuario/publico' target="_blank" className="hover:scale-120" rel="noreferrer">
                      <img src={imgPorto} alt="Porto do Rio Grande - Cais Virtual" title="Porto do Rio Grande - Cais Virtual" width="100" height="100"/>
@@ -139,7 +132,7 @@ export default function Links() {
                         Pasta Compartilhada:
                     </span>
                     <span className="rounded-full hover:shadow-lg self-center" >
-                        <a href='https://drive.google.com/drive/folders/1bSPnOw2bLF2-B_OFObsPpYNmMxmOFSHt?usp=sharing' target="_blank" rel="noreferrer" >
+                        <a href='https://drive.google.com/drive/folders/1E0WK6rexk5gVxRc3KPYK4ECnc4oBqs0Z' target="_blank" rel="noreferrer" >
                             <img src={imgDrive} alt="Pasta compartilhada" title="Pasta Compartilhada" width="80" height="80" />
                         </a>
                     </span>            
@@ -163,23 +156,15 @@ export default function Links() {
                         </a>
 
                 </div>
-                <div className="flex flex-col justify-evenly align-middle border-2 p-2 rounded-3xl">
+                <div className="flex flex-col justify-center items-center align-middle border-2 p-2 space-y-6 rounded-3xl">
                     <span className="align-middle text-center">
-                        CCT Sindop:
+                        Acordos Convenções:
                     </span>
-
-                        <a className="rounded-full hover:shadow-lg m-2" href="https://drive.google.com/drive/folders/1N8ZQn7UVmZWGQ2K1q2FuntKPGyIksyfB" target="_blank" rel="noreferrer" >
-                            <img src={imgCctSindop} alt="Convenção Coletiva SINDOP" title="Convenção Coletiva SINDOP" width="80" height="80" />
+                    <span className="rounded-full hover:shadow-lg m-2">
+                        <a href="https://drive.google.com/drive/folders/1N8ZQn7UVmZWGQ2K1q2FuntKPGyIksyfB" target="_blank" rel="noreferrer" >
+                            <img src={imgSindestiva} alt="Convenção Coletiva SINDOP" title="Convenção Coletiva SINDOP" width="80" height="80" />
                         </a>
-                        <span className="align-middle text-center">
-                        ACT Tecon:
-                    </span>                        
-
-                        <a className="rounded-full hover:shadow-lg m-2" href={actTecon} rel="noreferrer" >
-                            <img src={imgActTecon} alt="Acordo Coletivo Tecon" title="Acordo Coletivo Tecon" width="80" height="80" />
-                        </a>
-
-
+                    </span>
                 </div>
 
             </div>

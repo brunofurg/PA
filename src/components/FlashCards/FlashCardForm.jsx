@@ -4,9 +4,6 @@ import { useEffect, useState } from 'react';
 import Button from '../Button';
 import Error from '../Error';
 
-
-//import { Button } from '@material-ui/core';
-// import { Fragment, useState } from 'react';
 import DateInput from "../DateInput";
 import RadioButton from '../RadioButton';
 import TypeChoice from '../TypeChoice';
