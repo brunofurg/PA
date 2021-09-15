@@ -154,7 +154,7 @@ export default function Section() {
                             <Tab>
                                 <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
                                     <span align="left"><IconCalc/></span>
-                                    <span align="right">Calculadora</span>
+                                    <span align="right">Inserir</span>
                                 </div>
                             </Tab>
                             <Tab>
@@ -204,7 +204,48 @@ export default function Section() {
                         </TabPanel>
 
                         <TabPanel>
-                            {allCards.map(flashCard => {
+                          <div>
+                            <div>
+                              <Button>
+                                Jan
+                              </Button>
+                              <Button>
+                                Fev
+                              </Button>
+                              <Button>
+                                Mar
+                              </Button>
+                              <Button>
+                                Abr
+                              </Button>
+                              <Button>
+                                Mai
+                              </Button>
+                              <Button>
+                                Jun
+                              </Button>
+                              <Button>
+                                Jul
+                              </Button>
+                              <Button>
+                                Ago
+                              </Button>
+                              <Button>
+                                Set
+                              </Button>
+                              <Button>
+                                Out
+                              </Button>
+                              <Button>
+                                Nov
+                              </Button>
+                              <Button>
+                                Dez
+                              </Button>
+                            </div>
+
+                            <div>
+                              {allCards.map(flashCard => {
                                 return (
                                     <FlashCardItem
                                         key={flashCard.id}
@@ -213,8 +254,30 @@ export default function Section() {
                                     >
                                         {flashCard}
                                     </FlashCardItem>
-                                );
-                              })}
+                                  );
+                                })}
+                             </div>
+
+                             <div className="border border-red-400 flex flex-row items-center justify-evenly align-middle">
+                                <div className="border border-yellow-500 rounded-3xl">
+                                  Bruto: 7087,09
+                                </div>
+                                <div className="border border-green-400 rounded-3xl">
+                                  Líquido: 5067,89
+                                </div>
+                                <div className="border border-pink-400 rounded-3xl">
+                                  Férias: 67,89
+                                </div>
+                                <div className="border border-purple-200 rounded-3xl">
+                                  13°: 76,87
+                                </div>
+                                <div className="border border-gray-400 rounded-3xl">
+                                  FGTS: 42,22
+                                </div>
+
+
+                             </div>
+                          </div>
                         </TabPanel> 
                         <TabPanel>
                             <Reports/>

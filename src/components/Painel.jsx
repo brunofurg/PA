@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-
+import CallChart from "./CallChart.js";
 
 export default function Painel() {
     return (
@@ -7,6 +7,7 @@ export default function Painel() {
         <div>
             <div>
                Dashboard
+               <CallChart/>
             </div>
         </div>
     </Fragment>

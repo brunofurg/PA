@@ -105,23 +105,9 @@ export default function FlashCardForm({
         onTextAreaChange={handleDescriptionChange}
       />
 
-      <div className="flex items-center justify-between">
-        {error.trim() !== '' ? <Error>{error}</Error> : <span>&nbsp;</span>}
 
-        <div>
-          <Button colorClass="bg-red-200" type="reset">
-            Limpar
-          </Button>
-
-          <Button colorClass="bg-green-300" type="submit">
-            Incluir
-          </Button>
-        </div>
-      </div>
 <div>
-<div className="border-2 border-gray-500 flex flex-col align-middle justify-around">
-        <strong className="bg-gray-400 text-center align-middle">Calculadora de Remuneração</strong>
-        <div className="border-2 border-red-300 flex flex-row justify-evenly my-2">
+    <div className="border-2 border-red-300 flex flex-row justify-evenly my-2">
           <span>   
             <DateInput
                 labelDescription='Selecione o dia:' 
@@ -162,26 +148,21 @@ export default function FlashCardForm({
           <TypeChoice/>
         </div> 
 
+     
+        <div className="flex items-center justify-between">
+        {error.trim() !== '' ? <Error>{error}</Error> : <span>&nbsp;</span>}
+             <div>
+          <Button colorClass="bg-red-200" type="reset">
+            Limpar
+          </Button>
 
-        <div className="flex flex-row justify-center mb-5 space-x-10">
-          <span>
-            <Button color="primary" variant="contained" >
-              Calcular
-            </Button>
-          </span>
-          <span>
-            <Button color="secondary" variant="contained" >
-              Inserir
-            </Button>
-          </span>        
-          <span>
-            <Button color="inherit" variant="outlined">
-              Limpar
-            </Button>
-          </span>
+          <Button colorClass="bg-green-300" type="submit">
+            Incluir
+          </Button>
         </div>
+        </div>
+      
       </div>
-</div>
 
 
     </form>
