@@ -18,17 +18,20 @@ class CallChart extends Component {
     // Ajax calls here
     this.setState({
       chartData:{
-        labels: ['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
+        labels: ['Tecon', 'Sagres', 'Vanzin', 'AGM', 'Termasa', 'CTIL', 'Livenport', 'Bianchini', 'Serra Morena'],
         datasets:[
           {
-            label:'Population',
+            label:'Rendimentos/Operador',
             data:[
-              617594,
-              181045,
-              153060,
-              106519,
-              105162,
-              95072
+              950,
+              600,
+              1250,
+              3200,
+              1550,
+              100,
+              450,
+              850,
+              2000
             ],
             backgroundColor:[
               'rgba(79, 129, 189, 1.0)',

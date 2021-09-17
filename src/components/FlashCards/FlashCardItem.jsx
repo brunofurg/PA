@@ -1,7 +1,7 @@
 import {
-  AiOutlineEdit as EditIcon,
-  AiOutlineDelete as DeleteIcon,
-} from 'react-icons/ai';
+  RiEdit2Line as EditIcon,
+  RiDeleteBin3Line as DeleteIcon,
+} from 'react-icons/ri';
 
 export default function FlashCardItem({
   children: flashCard,
@@ -25,7 +25,7 @@ export default function FlashCardItem({
   }
 
   return (
-    <div className="border border-gray-500 shadow-lg rounded-lg p-4 m-2">
+    <div className="border border-gray-500 shadow-lg rounded-lg p-2 mt-2 mb-4 hover:shadow-inline hover:border-opacity-5">
       <ul className="flex flex-col space-y-4">
         <li>
           <span>
@@ -43,13 +43,13 @@ export default function FlashCardItem({
       <div className="mt-4 flex flex-row items-center justify-end space-x-4">
         <EditIcon
           onClick={handleEditIconClick}
-          className="cursor-pointer"
+          className="cursor-pointer hover:text-yellow-500"
           size={24}
         />
 
         <DeleteIcon
           onClick={handleDeleteIconClick}
-          className="cursor-pointer"
+          className="cursor-pointer hover:text-red-500"
           size={24}
         />
       </div>

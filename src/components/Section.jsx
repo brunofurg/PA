@@ -2,6 +2,7 @@ import Painel from "./Painel";
 import Reports from "./Reports";
 import TabelasCCT from "./TabelasCCT";
 import Links from "./Links";
+//import MonthDisplay from "./MonthDisplay";
 
 import FlashCardForm from './FlashCards/FlashCardForm';
 import FlashCardItem from './FlashCards/FlashCardItem';
@@ -79,10 +80,10 @@ export default function Section() {
       setSelectedFlashCard(card);
     }
   
-    function handleNewFlashCard() {
-      setCreateMode(true);
-      setSelectedFlashCard(null);
-    }
+    // function handleNewFlashCard() {
+    //   setCreateMode(true);
+    //   setSelectedFlashCard(null);
+    // }
   
     function handleTabSelect(tabIndex) {
       setSelectedTab(tabIndex);
@@ -143,7 +144,7 @@ export default function Section() {
         mainJsx = (
           <>
             <Tabs selectedIndex={selectedTab} onSelect={handleTabSelect}>
-                 <div className="flex flex-row flex-wrap align-middle text-center text-sm">
+                 <div className="flex flex-row flex-wrap justify-between align-middle text-center text-xs">
                         <TabList>
                             <Tab>
                                 <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
@@ -154,7 +155,7 @@ export default function Section() {
                             <Tab>
                                 <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
                                     <span align="left"><IconCalc/></span>
-                                    <span align="right">Inserir</span>
+                                    <span align="right">Calculadora</span>
                                 </div>
                             </Tab>
                             <Tab>
@@ -184,20 +185,18 @@ export default function Section() {
                         </TabList>
                     </div>
 
-                    <div className="bg-white text-black border-1 border-blue-500 rounded-md align-top flex flex-col text-justify justify-items-center p-2">
+                    <div className="align-top flex flex-col text-justify justify-items-center">
                         <TabPanel>
                             <Painel/>
                         </TabPanel>
 
                         <TabPanel>
-                            <div className="flex flex-row justify-around my-4">
+                            {/* <div className="border border-pink-400 flex flex-row justify-around my-4">
                                 <Button onButtonClick={handleNewFlashCard}>
                                     Novo Trabalho
                                 </Button>
-                                <Button onButtonClick={handleImport}>
-                                    Importar Analítico
-                                </Button>
-                            </div>
+                            </div> */}
+
                             <FlashCardForm createMode={createMode} onPersist={handlePersist}>
                                 {selectedFlashCard}
                             </FlashCardForm>
@@ -205,46 +204,32 @@ export default function Section() {
 
                         <TabPanel>
                           <div>
-                            <div>
-                              <Button>
-                                Jan
-                              </Button>
-                              <Button>
-                                Fev
-                              </Button>
-                              <Button>
-                                Mar
-                              </Button>
-                              <Button>
-                                Abr
-                              </Button>
-                              <Button>
-                                Mai
-                              </Button>
-                              <Button>
-                                Jun
-                              </Button>
-                              <Button>
-                                Jul
-                              </Button>
-                              <Button>
-                                Ago
-                              </Button>
-                              <Button>
-                                Set
-                              </Button>
-                              <Button>
-                                Out
-                              </Button>
-                              <Button>
-                                Nov
-                              </Button>
-                              <Button>
-                                Dez
-                              </Button>
+                            <div className="border border-purple-400 flex flex-row justify-between items-center" >
+                              <span>
+                                1
+                                2
+                                3
+                                4
+                                5
+                                6
+                                7
+                                8
+                                9
+                                10
+                                11
+                                12
+                                
+                                {/* <MonthDisplay /> */}
+                              </span>
+                              <span>
+                              <Button onButtonClick={handleImport}>
+                                    Importar Analítico
+                                </Button>
+                              </span>
                             </div>
 
                             <div>
+
                               {allCards.map(flashCard => {
                                 return (
                                     <FlashCardItem
@@ -258,23 +243,27 @@ export default function Section() {
                                 })}
                              </div>
 
-                             <div className="border border-red-400 flex flex-row items-center justify-evenly align-middle">
-                                <div className="border border-yellow-500 rounded-3xl">
-                                  Bruto: 7087,09
+                             <div className="border border-gray-600 bg-gray-200 flex flex-col items-center justify-between align-middle p-2 ">
+                             <div>
+                                 Setembro 2021
+                              </div>
+                              <div className="flex flex-row items-center justify-between align-middle">
+                                <div className="border bg-gray-100 hover:bg-white shadow-lg p-2 m-1 rounded-md">
+                                  <strong>Bruto:</strong> 7087,09
                                 </div>
-                                <div className="border border-green-400 rounded-3xl">
-                                  Líquido: 5067,89
+                                <div className="border bg-gray-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                  <strong>Líquido:</strong> 5067,89
                                 </div>
-                                <div className="border border-pink-400 rounded-3xl">
-                                  Férias: 67,89
+                                <div className="border bg-gray-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                  <strong>Férias:</strong> 67,89
                                 </div>
-                                <div className="border border-purple-200 rounded-3xl">
-                                  13°: 76,87
+                                <div className="border bg-gray-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                  <strong>13°:</strong> 76,87
                                 </div>
-                                <div className="border border-gray-400 rounded-3xl">
-                                  FGTS: 42,22
+                                <div className="border bg-gray-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                  <strong>FGTS:</strong> 42,22
                                 </div>
-
+</div>
 
                              </div>
                           </div>

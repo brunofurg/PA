@@ -6,7 +6,6 @@ import Error from '../Error';
 
 import DateInput from "../DateInput";
 import RadioButton from '../RadioButton';
-import TypeChoice from '../TypeChoice';
 
 
 export default function FlashCardForm({
@@ -16,12 +15,19 @@ export default function FlashCardForm({
 }) {
   const [title, setTitle] = useState(flashCard?.title || '');
   const [description, setDescription] = useState(flashCard?.description || '');
+  
+  const [dayWork, setDayWork] = useState(flashCard?.infoWork.dia || '');
+  const [shiftWork, setShiftWork] = useState(flashCard?.infoWork.turno || '');
+  const [typeFaina, setTypeFaina] = useState(flashCard?.inputValues._tipo || '');
+  const [weightTotal, setWeightTotal] = useState(flashCard?.inputValues._pesoMovimentado || '');
+  
+  
   const [error, setError] = useState('');
 
 
-  const [typeFaina, setTypeFaina] = useState('');
-  const [dayFaina, setDayFaina] = useState('');
-  const [shiftWork, setShiftWork] = useState(false);
+  //const [typeFaina, setTypeFaina] = useState('');
+  //const [dayFaina, setDayFaina] = useState('');
+  //const [shiftWork, setShiftWork] = useState(false);
 
 
   useEffect(() => {
@@ -74,14 +80,16 @@ export default function FlashCardForm({
   function handleTypeFaina(newTipo) {
     setTypeFaina(newTipo);
   }
-  function handleDayFaina(newTipo) {
-    setDayFaina(newTipo);
+  function handleDayWork(newTipo) {
+    setDayWork(newTipo);
   }
   function handleSetShift(newTipo) {
     setShiftWork(newTipo);
   }
 
-
+  function handleWeightTotal(newTipo) {
+    setWeightTotal(newTipo);
+  }
 
 
   const backgroundClassName = createMode ? 'bg-gray-200' : 'bg-blue-200';
@@ -95,43 +103,46 @@ export default function FlashCardForm({
       <h2 className="text-center font-semibold">Calculadora de Remuneração</h2>
 
       <TextInput
-        labelDescription="Título:"
+        labelDescription="Navio:"
         inputValue={title}
         onInputChange={handleTitleChange}
       />
       <TextArea
-        labelDescription="Descrição:"
+        labelDescription="Observações:"
         textAreaValue={description}
         onTextAreaChange={handleDescriptionChange}
       />
 
 
 <div>
-    <div className="border-2 border-red-300 flex flex-row justify-evenly my-2">
-          <span>   
-            <DateInput
-                labelDescription='Selecione o dia:' 
-                inputValue={dayFaina} 
-                onInputChange={handleDayFaina}
-            />
-          </span>
+    <div className="border-2 border-red-300 flex flex-row justify-evenly items-center align-middle my-2">
           <span>
             <div className="border-2 border-red-400 flex flex-col items-center align-middle"> 
                 <p>Período:</p>
-                <RadioButton buttonChecked={!shiftWork} onButtonClick={handleSetShift} name="shiftChoose">A</RadioButton>
-                <RadioButton buttonChecked={!shiftWork} onButtonClick={handleSetShift} name="shiftChoose">B</RadioButton>
-                <RadioButton buttonChecked={!shiftWork} onButtonClick={handleSetShift} name="shiftChoose">C</RadioButton>
-                <RadioButton buttonChecked={!shiftWork} onButtonClick={handleSetShift} name="shiftChoose">D</RadioButton>
+                <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">A</RadioButton>
+                <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">B</RadioButton>
+                <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">C</RadioButton>
+                <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">D</RadioButton>
             </div> 
           </span>
-          <span>   
-            <TextInput
-              labelDescription='Digite o tipo de faina:' 
-              inputValue={typeFaina} 
-              onInputChange={handleTypeFaina}
-              placeHolder='C6 para adubo'
-            />  
-          </span>
+
+          <div>
+            <span>   
+              <DateInput
+                  labelDescription='Selecione o dia:' 
+                  inputValue={dayWork} 
+                  onInputChange={handleDayWork}
+              />
+            </span>
+            <span>   
+              <TextInput
+                labelDescription='Digite o tipo de faina:' 
+                inputValue={typeFaina} 
+                onInputChange={handleTypeFaina}
+                placeHolder='C6 para adubo'
+              />  
+            </span>
+          </div>
           {/* <span>
           <SelectFaina
               labelDescription='Digite o tipo de faina:' 
@@ -144,14 +155,26 @@ export default function FlashCardForm({
         </div>
 
 
-        <div className="flex flex-row align-middle justify-items-center my-2">
-          <TypeChoice/>
+        <div className="border border-green-400 flex flex-row align-middle justify-items-center my-2">
+        <span>
+                <TextInput
+                  labelDescription='Digite o peso movimentado:' 
+                  inputValue={weightTotal} 
+                  onInputChange={handleWeightTotal}
+                  placeHolder='Somente números'
+                />
+              </span>  
+
         </div> 
 
      
-        <div className="flex items-center justify-between">
+        <div className="border border-pink-400 flex items-center justify-between">
         {error.trim() !== '' ? <Error>{error}</Error> : <span>&nbsp;</span>}
+            
              <div>
+             <Button colorClass="rounded-lg font-bold p-2 bg-yellow-400" >
+            +
+          </Button>
           <Button colorClass="bg-red-200" type="reset">
             Limpar
           </Button>

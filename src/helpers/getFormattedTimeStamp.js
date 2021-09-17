@@ -1,7 +1,7 @@
 /**
  * Formatação de data/hora
  */
-function getFormattedTimeStamp() {
+export default function getFormattedTimeStamp() {
   function leftPad(value, count = 2, char = '0') {
     let leftPad = value;
 
@@ -25,5 +25,3 @@ function getFormattedTimeStamp() {
 
   return `${day}/${month}/${year} ${hour}:${minute}:${second}.${millisecond}`;
 }
-
-export { getFormattedTimeStamp };
