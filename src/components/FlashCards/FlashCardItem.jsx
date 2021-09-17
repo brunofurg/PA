@@ -1,7 +1,6 @@
-import {
-  RiEdit2Line as EditIcon,
-  RiDeleteBin3Line as DeleteIcon,
-} from 'react-icons/ri';
+import { RiDeleteBin3Line as DeleteIcon } from 'react-icons/ri';
+//RiEdit2Line as EditIcon,
+import { FaEdit as EditIcon } from 'react-icons/fa';
 
 export default function FlashCardItem({
   children: flashCard,
@@ -44,7 +43,7 @@ export default function FlashCardItem({
         <EditIcon
           onClick={handleEditIconClick}
           className="cursor-pointer hover:text-yellow-500"
-          size={24}
+          size={20}
         />
 
         <DeleteIcon

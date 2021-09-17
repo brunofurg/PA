@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import Button from '../Button';
 import Error from '../Error';
 
+import { BsPlusCircle as IconPlus } from 'react-icons/bs';
+
 import DateInput from "../DateInput";
 import RadioButton from '../RadioButton';
 
@@ -170,18 +172,21 @@ export default function FlashCardForm({
      
         <div className="border border-pink-400 flex items-center justify-between">
         {error.trim() !== '' ? <Error>{error}</Error> : <span>&nbsp;</span>}
-            
-             <div>
-             <Button colorClass="rounded-lg font-bold p-2 bg-yellow-400" >
-            +
-          </Button>
-          <Button colorClass="bg-red-200" type="reset">
+            <div className="flex flex-row items-center space-x-2">
+             {/* <Button colorClass="rounded-lg font-bold p-2 bg-yellow-400" >+</Button> */}
+<span>
+            <IconPlus className="hover:bg-blue-200 rounded-full" size={30}/>
+</span>
+<span>
+
+          <Button colorClass="bg-red-200 hover:bg-red-300" type="reset">
             Limpar
           </Button>
 
-          <Button colorClass="bg-green-300" type="submit">
+          <Button colorClass="bg-green-300 hover:bg-green-400" type="submit">
             Incluir
           </Button>
+          </span>
         </div>
         </div>
       

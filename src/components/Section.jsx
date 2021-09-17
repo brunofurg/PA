@@ -26,11 +26,14 @@ import {
 } from '../services/apiService';
 
 import { BiCalculator as IconCalc } from 'react-icons/bi';
-import { FiActivity as IconDash } from 'react-icons/fi';
+import { AiOutlineLineChart as IconDash } from 'react-icons/ai';
 import { HiOutlineDocumentReport as IconReport } from 'react-icons/hi';
-import { GrWorkshop as IconWorks } from 'react-icons/gr';
+//GrWorkshop
+//GiPikeman
+import { GiShipBow as IconWorks } from 'react-icons/gi';
 import { MdAttachMoney as IconCCT } from 'react-icons/md';
 import { FiExternalLink as IconLinks } from 'react-icons/fi';
+import { FiChevronsLeft as IconReturn } from 'react-icons/fi';
 
 import { useEffect, useState } from "react";
 
@@ -148,37 +151,37 @@ export default function Section() {
                         <TabList>
                             <Tab>
                                 <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
-                                    <span align="left"><IconDash/></span>
+                                    <span align="left"><IconDash size={16} /></span>
                                     <span align="right">Painel</span>
                                 </div>
                             </Tab>
                             <Tab>
                                 <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
-                                    <span align="left"><IconCalc/></span>
+                                    <span align="left"><IconCalc size={16} /></span>
                                     <span align="right">Calculadora</span>
                                 </div>
                             </Tab>
                             <Tab>
                                 <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
-                                    <span align="left"><IconWorks/></span>
+                                    <span align="left"><IconWorks size={16} /></span>
                                     <span align="right">Trabalhos</span>
                                 </div>
                             </Tab>
                             <Tab>
                                 <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
-                                    <span align="left"><IconReport/></span>
+                                    <span align="left"><IconReport size={16} /></span>
                                     <span align="right">Relatórios</span>
                                 </div>
                             </Tab>
                             <Tab>
                                 <div className="align-middle text-center flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
-                                    <span align="left"><IconCCT/></span>
+                                    <span align="left"><IconCCT size={16} /></span>
                                     <span align="right">Tabelas</span>
                                 </div>
                             </Tab>
                             <Tab>
                                 <div className="align-middle text-center flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
-                                    <span align="left"><IconLinks/></span>
+                                    <span align="left"><IconLinks size={16} /></span>
                                     <span align="right">Links</span>
                                 </div>
                             </Tab> 
@@ -205,9 +208,10 @@ export default function Section() {
                         <TabPanel>
                           <div>
                             <div className="border border-purple-400 flex flex-row justify-around items-center" >
+                              <span>
+                                <IconReturn size={18}/>
+                              </span>
                               <span className="text-center">
-                                Anterior
-                                |
                                 04-21
                                 |
                                 05-21                                
