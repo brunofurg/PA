@@ -35,14 +35,13 @@ function createData2(type, ab0, c25, d50, ab100, c125, d150) {
   return { type, ab0, c25, d50, ab100, c125, d150 };
 }
 
-function createData3(base, aliquota, deduzir) {
-  return { base, aliquota, deduzir };
-}
-
-function createData4(base, aliquota) {
+function createData3(base, aliquota) {
   return { base, aliquota };
 }
 
+function createData4(base, aliquota, deduzir) {
+  return { base, aliquota, deduzir };
+}
 
 const rows = [
   createData("A1", "Contêneires cheios/vazios, com engate automático e/ou rampa", 100.68, 6.3368, 105.96, 6.6703),
@@ -74,30 +73,30 @@ const rows = [
 ];
 
 const rows2 = [
-  createData2("Longo Curso - Contêiner CHEIO", 4.2, 5.25, 6.3, 8.4, 10.5, 12.6),
-  createData2("Longo Curso - Contêiner VAZIO", 2.67, 3.33, 4, 5.34, 6.67, 8),
-  createData2("Cabotagem - Contêiner CHEIO", 3.15, 3.94, 4.73, 6.31, 7.88, 9.46),
-  createData2("Cabotagem - Contêiner VAZIO", 2, 2.5, 3.01, 4.01, 5.01, 6.01),
-  createData2("Tranship - Contêiner CHEIO", 2.09, 2.62, 3.14, 4.19, 5.23, 6.28),
-  createData2("Tranship - Contêiner VAZIO", 1.34, 1.68, 2.01, 2.68, 3.35, 4.02),
+  createData2("Longo Curso Cheio", 4.2, 5.25, 6.3, 8.4, 10.5, 12.6),
+  createData2("Longo Curso Vazio", 2.67, 3.33, 4, 5.34, 6.67, 8),
+  createData2("Cabotagem Cheio", 3.15, 3.94, 4.73, 6.31, 7.88, 9.46),
+  createData2("Cabotagem Vazio", 2, 2.5, 3.01, 4.01, 5.01, 6.01),
+  createData2("Tranship Cheio", 2.09, 2.62, 3.14, 4.19, 5.23, 6.28),
+  createData2("Tranship Vazio", 1.34, 1.68, 2.01, 2.68, 3.35, 4.02),
   createData2("Diária Produção", 43.02, 53.77, 64.52, 86.03, 107.53, 129.05),
   createData2("Diária Conexo", 104.75, 130.93, 157.11, 209.47, 261.85, 314,22),  
 ];
-
 const rows3 = [
-  createData3("Até R$1.903,98", "-", "-"),
-  createData3("De R$1.903,99 a R$2.826,65", 7.5, 142.8),
-  createData3("De R$2.826,66 a R$3.751,05", 15, 354.8),
-  createData3("De R$3.751,06 a R$4.664,68", 22.5, 636.13),
-  createData3("Acima de R$4.664,68", 27.5, 869.36), 
-
+  createData3("Até R$1.100", 7.5),
+  createData3("De R$1.100 a R$2.203,48", 9),
+  createData3("De R$2.203,49 a R$3.305,22", 12),
+  createData3("De R$3.305,22 até R$6.433,57", 14), 
 ];
 const rows4 = [
-  createData4("Até R$1.100", 7.5),
-  createData4("De R$1.100 a R$2.203,48", 9),
-  createData4("De R$2.203,49 a R$3.305,22", 12),
-  createData4("De R$3.305,22 até R$6.433,57", 14), 
+  createData4("Até R$1.903,98", "-", "-"),
+  createData4("De R$1.903,99 a R$2.826,65", 7.5, 142.8),
+  createData4("De R$2.826,66 a R$3.751,05", 15, 354.8),
+  createData4("De R$3.751,06 a R$4.664,68", 22.5, 636.13),
+  createData4("Acima de R$4.664,68", 27.5, 869.36), 
+
 ];
+
 
 const useStyles = makeStyles({ table: { minWidth: 50, }, });
 
@@ -168,6 +167,33 @@ export default function TabelaCCT() {
         </Table>
         <p className="text-xs">*OBS: Nesta tabela os Valores estão com RSR incluso (18,18%)</p>
       </TableContainer>
+ 
+ 
+ 
+<br/>
+      <TableContainer component={Paper}>
+      <div className="bg-gray-300 align-middle justify-center font-bold">
+          Tabela INSS (Vigência desde 01/01/2021)
+        </div>
+        <Table className={classes.table} aria-label="customized table">
+          <TableHead>                      
+            <TableRow>
+              <StyledTableCell align="center"><strong>Base de Cálculo (R$)</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>Alíquota (%)</strong></StyledTableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows3.map((row) => (
+              <StyledTableRow key={row.base}>
+                <StyledTableCell align="center" component="th" scope="row">{row.base}</StyledTableCell>
+                <StyledTableCell align="center">{row.aliquota}</StyledTableCell>
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+
+
   <br/>   
 
       <TableContainer component={Paper}>
@@ -184,7 +210,7 @@ export default function TabelaCCT() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows3.map((row) => (
+            {rows4.map((row) => (
               <StyledTableRow key={row.base}>
                 <StyledTableCell align="center" component="th" scope="row">{row.base}</StyledTableCell>
                 <StyledTableCell align="center">{row.aliquota}</StyledTableCell>
@@ -194,30 +220,6 @@ export default function TabelaCCT() {
           </TableBody>
         </Table>
       </TableContainer>
-
-<br/>
-      <TableContainer component={Paper}>
-      <div className="bg-gray-300 align-middle justify-center font-bold">
-          Tabela INSS (Vigência desde 01/01/2021)
-        </div>
-        <Table className={classes.table} aria-label="customized table">
-          <TableHead>                      
-            <TableRow>
-              <StyledTableCell align="center"><strong>Base de Cálculo (R$)</strong></StyledTableCell>
-              <StyledTableCell align="center"><strong>Alíquota (%)</strong></StyledTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows4.map((row) => (
-              <StyledTableRow key={row.base}>
-                <StyledTableCell align="center" component="th" scope="row">{row.base}</StyledTableCell>
-                <StyledTableCell align="center">{row.aliquota}</StyledTableCell>
-              </StyledTableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-
 
 
 
