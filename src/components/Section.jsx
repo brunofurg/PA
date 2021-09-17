@@ -204,20 +204,21 @@ export default function Section() {
 
                         <TabPanel>
                           <div>
-                            <div className="border border-purple-400 flex flex-row justify-between items-center" >
-                              <span>
-                                1
-                                2
-                                3
-                                4
-                                5
-                                6
-                                7
-                                8
-                                9
-                                10
-                                11
-                                12
+                            <div className="border border-purple-400 flex flex-row justify-around items-center" >
+                              <span className="text-center">
+                                Anterior
+                                |
+                                04-21
+                                |
+                                05-21                                
+                                |
+                                06-21
+                                |
+                                07-21
+                                |
+                                08-21
+                                |
+                                09-21
                                 
                                 {/* <MonthDisplay /> */}
                               </span>
