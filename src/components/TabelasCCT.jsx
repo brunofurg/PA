@@ -43,29 +43,34 @@ function createData4(base, aliquota) {
   return { base, aliquota };
 }
 
+
 const rows = [
-  createData("A1", "Contêineres Cheios/Vazios, com Engate AUTOMÁTICO e/ou Rampa", 132.2, 1.1974, "Tabela A1T"),
-  createData("A1T", "Tabela de Valores TECON", "Tabela A1T", "", ""),
-  createData("A2", "Contêineres Cheios/Vazios, com Engate MANUAL", 132.20, 5.665, "", ""),
-  createData("B1", "Cargas Avulsas", 90.00, 1.1669, "", ""),
-  createData("B2", "Cargas Unitizadas (Incluindo Madeira Serrada Cintada e Big Bags", 90.00, 0.6595, "", ""),
-  createData("B3", "Cargas Unitizadas com Dimensões Padronizadas", 132.2, 0.3205, "", ""),
-  createData("B4/B13", "Toras de Madeira Cintadas e/ou Bobinas de Aço", 199.42, 0.9513, "", ""),
-  createData("B5", "Volumes Indivisíveis Acima de 1000Kg", 100.00, 0.9059, "", ""),
-  createData("B6", "Cargas Avulsas em Navio com Rampa", 90.00, 1.1669, "", ""),
-  createData("B7", "Cargas Unitizadas em Navio com Rampa", 90.00, 0.6595, "", ""),
-  createData("B8", "Veículos em Geral, em Navio com Rampa", 90.00, 2.9427, "", ""),
-  createData("B9", "Veículos de Passeio e Utilitários, em Navio com Rampa", 128.64, 1.677, "", ""),
-  createData("B10", "Cargas Frigoríficas", 101.84, 1.0036, "", ""),
-  createData("B11", "Cargas Vivas", 90.00, 0.208, "", ""),
-  createData("B90", "Conexo", 161.57, "", "", ""),			
-  createData("C1", "Produtos Agrícolas e Derivados, em Equipamento Manual", 90.00, 0.4241, "", ""),
-  createData("C2", "Produtos Agrícolas e Derivados, em Equipamento Mecânico ou Semi-automático", 90.00, 0.0978, "", ""),
-  createData("C3", "Produtos Agrícolas e Derivados, em Equipamento Automático", 119.62, 0.0990, 214.81, 0.0684),
-  createData("C4", "Produtos Minerais/Químicos, em Equipamento Manual", 96.76, 0.4155, "", ""),
-  createData("C5", "Produtos Minerais/Químicos, em Equipamento Semi-automático", 96.76, 0.1877, "", ""),
-  createData("C6", "Produtos Minerais/Químicos, em Equipamento Automático e/ou Grab", 121.36, 0.2475, "", ""),
-  createData("C7", "Cavaco de Madeira", 96.76, 0.1872, 0.0573000989, ""),
+  createData("A1", "Contêneires cheios/vazios, com engate automático e/ou rampa", 100.68, 6.3368, 105.96, 6.6703),
+  createData("A1T", "Tabela de Valores TECON", "", "Tabela A1T", ""),
+  createData("A2", "Contêneires cheios/vazios, com engate automático manual", 100.68, 6.3368, 105.96, 6.6703),
+  createData("B1", "Carga Avulsas", 100.68, 6.3368, 105.96, 6.6703),
+  createData("B2", "Cargas Unitizadas (Incluindo Madeiras Serrada Cintada e Big Bags)", 100.68, 0.7378, 105.96, 0.7766),
+  createData("B3", "Cargas Unitizadas com Dimensões Padronizadas, em Navio Especializado", 111.86, 0.2712, 117.97, 0.2855),
+  createData("B4", "Toras de Madeira Cintadas e/ou Bobinas de Aço", 100.68, 0.6094, 105.96, 0.6416),
+  createData("B5", "Volume Indivisiveis Acima de 1000 Kg - Navio Convencional ", 111.86, 1.0133, 117.97, 1.0666),
+  createData("B6", "cargas Avulsas em Navio com Rampa", 100.68, 1.3054, 105,96, 1.3741),
+  createData("B7", "Cargas Unitizadas em Navio com Rampa", 100.68, 0.7378, 105.96, 0.7766),
+  createData("B8", "Veículos em Geral, em Navio com Rampa", 136.71, 3.2915, 143.90, 3.4652),
+  createData("B9", "Veículos de Passeio E Utilitários, em Navio com Rampa", 108.24, 1.8760, 113.92, 1.9636),
+  createData("B10", "Cargas Frigoríficas - Unitizadas", 100.68, 1.1228, 105.96, 1.1815),
+  createData("B11", "Cargas Vivas", 100.68, 0.2327, 105.96, 0.2447),
+  createData("B12", "Toras de Madeira Longa com Spreader Manual", 167.79, 0.6170, 177.47, 0.6548),
+  createData("B13", "Toras de Madeira Longa com Spreader Automático", 167.79, 0.8051, 177.47, 0.8452),
+  createData("B14", "Mercadorias Diversas em Estaleiro - Break Bulk", 111.86, 0.2094, 117.97, 0.7957),
+  createData("B15", "Mercadorias Diversas em Estaleiro - Projetos", 111.86, 0.2852, 117.97, 0.3005),
+  createData("B90", "Conexo", 136.71, "", 143.90, ""),			
+  createData("C1", "Produtos Agrícolas e Derivados, em Equipamento Manual", 100.68, 0.4744, 105.96, 0.4993),
+  createData("C2", "Produtos Agrícolas e Derivados, em Equipamento Mecânico", 100.68, 0.7579, 105.96, 0.1140),
+  createData("C3", "Produtos Agrícolas e Derivados, em Equipamento Automático", 100.68, 0.0839, 105,96, 0.0883),
+  createData("C4", "Produtos Minerais/Químicos, em Equipamento Manual", 100.68, 0.4648, 105.96, 0.4886),
+  createData("C5", "Produtos Minerais/Químicos, em Equipamento Semi-Automático", 100.68, 0.2100, 105,96, 0.2210),
+  createData("C6", "Produtos Minerais/Químicos, em Equipamento Automático e/ou Grab", 100.68, 0.2094, 105.96, 0.2206),
+  createData("C7", "Cavaco Madeira", 100.68, 0.0611, 105,96, 0.0641),
 ];
 
 const rows2 = [
@@ -110,10 +115,10 @@ export default function TabelaCCT() {
             <TableRow>
               <StyledTableCell align="center"><strong>Tipo</strong></StyledTableCell>
               <StyledTableCell align="center"><strong>Descrição Faina</strong></StyledTableCell>
-              <StyledTableCell align="center"><strong>Diária Sindop&nbsp;(R$)</strong></StyledTableCell>
-              <StyledTableCell align="center"><strong>Valor Sindop&nbsp;(R$)</strong></StyledTableCell>
-              <StyledTableCell align="center"><strong>Diária Sintermar&nbsp;(R$)</strong></StyledTableCell>              
-              <StyledTableCell align="center"><strong>Valor Sintermar&nbsp;(R$)</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>Diária Sindop (R$)</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>Tarifa Sindop (R$)</strong></StyledTableCell>
+              <StyledTableCell align="center"><strong>Diária Sintermar (R$)</strong></StyledTableCell>              
+              <StyledTableCell align="center"><strong>Tarifa Sintermar (R$)</strong></StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>

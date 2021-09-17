@@ -1,5 +1,5 @@
 import TextInput from '../TextInput';
-import TextArea from '../TextArea';
+//import TextArea from '../TextArea';
 import { useEffect, useState } from 'react';
 import Button from '../Button';
 import Error from '../Error';
@@ -98,28 +98,26 @@ export default function FlashCardForm({
 
   return (
     <form
-      className={`${backgroundClassName} p-4`}
+      className={`${backgroundClassName} p-2`}
       onSubmit={handleFormSubmit}
       onReset={handleFormReset}
     >
-      <h2 className="text-center font-semibold">Calculadora de Remuneração</h2>
+ 
 
-      <TextInput
-        labelDescription="Navio:"
-        inputValue={title}
-        onInputChange={handleTitleChange}
-      />
-      <TextArea
-        labelDescription="Observações:"
-        textAreaValue={description}
-        onTextAreaChange={handleDescriptionChange}
-      />
+<div className="">
+
+<h2 className="text-center font-semibold">Calculadora de Remuneração</h2>
+
+<TextInput
+  labelDescription="Navio:"
+  inputValue={title}
+  onInputChange={handleTitleChange}
+/>
 
 
-<div>
     <div className="border-2 border-red-300 flex flex-row justify-evenly items-center align-middle my-2">
           <span>
-            <div className="border-2 border-red-400 flex flex-col items-center align-middle"> 
+            <div className="flex flex-col items-center align-middle"> 
                 <p>Período:</p>
                 <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">A</RadioButton>
                 <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">B</RadioButton>
@@ -155,7 +153,11 @@ export default function FlashCardForm({
 
 
         </div>
-
+<TextInput
+  labelDescription="Observações:"
+  inputValue={description}
+  onTextAreaChange={handleDescriptionChange}
+/>
 
         <div className="border border-green-400 flex flex-row align-middle justify-items-center my-2">
         <span>

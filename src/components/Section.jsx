@@ -71,6 +71,7 @@ export default function Section() {
         // Front End
         setAllCards(allCards.filter(card => card.id !== cardId));
         setError('');
+        console.log(cardId.title);
         toast.success(`Trabalho "${cardId.title}" excluído com sucesso!`);
       } catch (error) {
         setError(error.message);
@@ -95,7 +96,7 @@ export default function Section() {
       console.log("pdf");
     }
 
-    async function handlePersist(title, description) {
+    async function handlePersist(title, description ) {
       if (createMode) {
         try {
           // Back End
@@ -207,22 +208,22 @@ export default function Section() {
 
                         <TabPanel>
                           <div>
-                            <div className="border border-purple-400 flex flex-row justify-around items-center" >
+                            <div className="flex flex-row justify-around items-center" >
                               <span>
                                 <IconReturn size={18}/>
                               </span>
                               <span className="text-center">
-                                04-21
-                                |
-                                05-21                                
-                                |
-                                06-21
-                                |
-                                07-21
-                                |
-                                08-21
-                                |
-                                09-21
+                                04/21
+                                -
+                                05/21                                
+                                -
+                                06/21
+                                -
+                                07/21
+                                -
+                                08/21
+                                -
+                                09/21
                                 
                                 {/* <MonthDisplay /> */}
                               </span>
@@ -248,7 +249,7 @@ export default function Section() {
                                 })}
                              </div>
 
-                             <div className="border border-gray-600 bg-gray-200 flex flex-col items-center justify-between align-middle p-2 ">
+                             <div className="border border-gray-600 bg-gray-200 flex flex-col items-center justify-between align-middle hover:shadow-lg p-2 ">
                              <div>
                                  Setembro 2021
                               </div>
