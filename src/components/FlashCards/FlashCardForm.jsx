@@ -8,6 +8,8 @@ import { BsPlusCircle as IconPlus } from 'react-icons/bs';
 
 import DateInput from "../DateInput";
 import RadioButton from '../RadioButton';
+import FainaA1t from '../FainaA1t';
+import PorCaminhao from '../PorCaminhao';
 
 
 export default function FlashCardForm({
@@ -108,16 +110,23 @@ export default function FlashCardForm({
 
 <h2 className="text-center font-semibold">Calculadora de Remuneração</h2>
 
+<div className="border-yellow-700 border">
 <TextInput
   labelDescription="Navio:"
   inputValue={title}
   onInputChange={handleTitleChange}
 />
+<TextInput
+  labelDescription="Observações:"
+  inputValue={description}
+  onTextAreaChange={handleDescriptionChange}
+/>
+</div>
 
 
-    <div className="border-2 border-red-300 flex flex-row justify-evenly items-center align-middle my-2">
+    <div className="border-2 border-red-300 flex flex-row justify-evenly items-center">
           <span>
-            <div className="flex flex-col items-center align-middle"> 
+            <div className="flex flex-col"> 
                 <p>Período:</p>
                 <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">A</RadioButton>
                 <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">B</RadioButton>
@@ -153,23 +162,30 @@ export default function FlashCardForm({
 
 
         </div>
-<TextInput
-  labelDescription="Observações:"
-  inputValue={description}
-  onTextAreaChange={handleDescriptionChange}
-/>
 
-        <div className="border border-green-400 flex flex-row align-middle justify-items-center my-2">
+
+
+          <div>
+            <PorCaminhao />
+          </div>
+
+
+        <div className="border border-green-400 flex flex-row align-middle justify-items-center">
         <span>
                 <TextInput
-                  labelDescription='Digite o peso movimentado:' 
+                  labelDescription='Digite o peso movimentado no período:' 
                   inputValue={weightTotal} 
                   onInputChange={handleWeightTotal}
-                  placeHolder='Somente números'
+                  placeHolder='Peso total'
                 />
               </span>  
 
         </div> 
+
+          <div>
+            <FainaA1t />
+          </div>
+
 
      
         <div className="border border-pink-400 flex items-center justify-between">

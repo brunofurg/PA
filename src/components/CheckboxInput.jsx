@@ -12,7 +12,7 @@ export default function CheckboxInput({
   }
 
   return (
-    <div className="flex flex-row items-center space-x-2 my-4">
+    <div className="flex flex-row items-center align-middle space-x-2">
       <input
         autoFocus={autoFocus}
         id={id}
@@ -22,7 +22,7 @@ export default function CheckboxInput({
         onChange={handleInputChange}
       />
 
-      <label className="text-sm mb-1" htmlFor={id}>
+      <label className="text-sm" htmlFor={id}>
         {labelDescription}
       </label>
     </div>
