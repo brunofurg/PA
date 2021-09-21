@@ -19,7 +19,7 @@ class ChartTrabalhosSemana extends Component {
         labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5'],
         datasets:[
           {
-            label:'Agosto2021',
+            label:'08/2021',
             text:'Trabalhos/Semana',
             data:[
               6,
@@ -29,15 +29,50 @@ class ChartTrabalhosSemana extends Component {
               2,
             ],
             backgroundColor:[
-              'rgba(79, 129, 189, 1.0)',
-              'rgba(192, 80, 77, 1.0)',
-              'rgba(155, 187, 89, 1.0)',
-              'rgba(128, 100, 162, 1.0)',
-              'rgba(75, 172, 198, 1.0)',
-              'rgba(171, 102, 46, 1.0)',
-              'rgba(106, 129, 59, 1.0)',
-              'rgba(110, 85, 139, 1.0)',
-              'rgba(49, 118, 137, 1.0)',
+              'rgba(79, 129, 189, 1.0)'
+
+            ]
+          },
+          {
+            label:'07/2021',
+            data:[
+              2,
+              5,
+              6,
+              4,
+              0,
+            ],
+            backgroundColor:[
+              'rgba(192, 80, 77, 1.0)'
+
+            ]
+          },
+          {
+            label:'06/2021',
+            text:'Trabalhos/Semana',
+            data:[
+              5,
+              5,
+              5,
+              5,
+              1,
+            ],
+            backgroundColor:[
+              'rgba(128, 100, 162, 1.0)'
+            ]
+          },
+          {
+            label:'05/2021',
+            data:[
+              5,
+              3,
+              4,
+              3,
+              2,
+            ],
+            backgroundColor:[
+               'rgba(75, 172, 198, 1.0)'
+
             ]
           }
         ]
