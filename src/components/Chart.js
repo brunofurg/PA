@@ -7,9 +7,9 @@ import {Bar, Line, Pie} from 'react-chartjs-2';
 class Chart extends Component{
   constructor(props){
     super(props);
-    this.state = {
+    this.state = ({
       chartData:props.chartData
-    }
+    })
   }
 
   static defaultProps = {

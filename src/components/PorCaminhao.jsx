@@ -15,7 +15,7 @@ export default function PorCaminhao() {
             <div className="border-2 border-yellow-700 flex flex-col">
                 <div>
                     <TextInput 
-                        labelDescription='Movimentação do período'
+                        labelDescription='Total de Caminhões movimentado no período:'
                         inputValue={trucksTotal} 
                         onInputChange={handleTrucksTotal}
                         placeHolder='Número de caminhões'
