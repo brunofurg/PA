@@ -1,13 +1,16 @@
 import ChartBrutoFaina from "./Charts/ChartBrutoFaina";
 import ChartGanhosOperador from "./Charts/ChartGanhosOperador";
 import ChartTrabalhosSemana from "./Charts/ChatTrabalhosSemana";
-//import CallChart from "./CallChart";
 import ChartTopFainas from "./Charts/ChartTopFainas";
 import ChartTurnosTrabalhados from "./Charts/ChartTurnosTrabalhados";
-import ChartSalarioBruto from "./Charts/ChartSalarioBruto";
+import ChartSalario from "./Charts/ChartSalario";
 import ChartTipoFaina from "./Charts/ChartTipoFaina";
 import ChartTrabalhosMes from "./Charts/ChartTrabalhosMes";
 
+import {Chart} from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+
+Chart.register(ChartDataLabels);
 
 export default function Painel() {
     return (
@@ -22,7 +25,7 @@ export default function Painel() {
                     </span>
                 </div>
                 <div>
-                    <ChartSalarioBruto />
+                    <ChartSalario />
                     <ChartBrutoFaina />
                     <ChartGanhosOperador />
                     <ChartTrabalhosSemana />
@@ -30,9 +33,6 @@ export default function Painel() {
                     <ChartTopFainas />
                     <ChartTipoFaina />
                     <ChartTrabalhosMes />
-                
-        
-                    {/* <CallChart /> */}
                 </div>
              </div>
                
