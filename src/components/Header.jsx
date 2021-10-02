@@ -64,7 +64,7 @@ if (temperature === false) { return "..." }
       <div className="mr-2">
        <span className="flex flex-row items-center space-x-4 text-lg">
           <span className="shadow-lg hover:shadow-inner rounded-full p-2 hover:bg-secondary " > 
-             <img src={iconNotifications} alt="Notifications" title="Notificações" width="15" height="15" />
+             <img src={iconNotifications} alt="Notifications" title="Notificações" width="15" height="15" hidden/>
            </span>
            <span className="shadow-lg hover:shadow-inner rounded-full p-2 hover:bg-secondary " > 
              <img src={iconUser} alt="User" title="Configurações de usuário" width="15" height="15" />

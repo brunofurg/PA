@@ -35,12 +35,12 @@ class PieChart extends Component{
                     return "";
                   }
                 },
-                color: "blue"
+                color: "white"
               }
             },
             title:{
-              display:this.props.displayTitle,
-              text:'PolarChart',
+              display:'PieChart',
+              text:'PieChart',
               fontSize:25
             },
             legend:{

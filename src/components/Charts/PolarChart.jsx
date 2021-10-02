@@ -35,7 +35,7 @@ class PolarChart extends Component{
                     return "";
                   }
                 },
-                color: "blue"
+                color: "white"
               }
             },
             title:{

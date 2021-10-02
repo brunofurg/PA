@@ -18,7 +18,7 @@ export default function Painel() {
              <div className="border-2 border-gray-600 p-1">
                 <div className="flex flex-row justify-between p-2">
                     <span>
-                        Demonstrativo
+                        Demonstrativo Agosto/21
                     </span>
                     <span>
                         SelectPeriodo
@@ -26,8 +26,8 @@ export default function Painel() {
                 </div>
                 <div>
                     <ChartSalario />
-                    <ChartBrutoFaina />
                     <ChartGanhosOperador />
+                    <ChartBrutoFaina />
                     <ChartTrabalhosSemana />
                     <ChartTurnosTrabalhados />
                     <ChartTopFainas />
