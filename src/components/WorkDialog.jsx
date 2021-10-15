@@ -24,7 +24,7 @@ export default function WorkDialog() {
  
   return (
     <React.Fragment>
-      <Button size="small" fullWidht="false" variant="contained" onClick={handleClickOpen}>
+      <Button size="small" variant="contained" onClick={handleClickOpen}>
         Importar Analítico
       </Button>
       <Dialog

@@ -1,13 +1,13 @@
 import { RiDeleteBin3Line as DeleteIcon } from 'react-icons/ri';
 //RiEdit2Line as EditIcon,
 import { FaEdit as EditIcon } from 'react-icons/fa';
-import WindowWork from '../WindowWork';
+//import WindowWork from '../WindowWork';
 
 export default function FlashCardItem({
   children: flashCard,
   onDelete = null,
   onEdit = null,
-  onClick = null,
+  //onClick = null,
 }) {
   const { title, description } = flashCard;
 
@@ -24,11 +24,11 @@ export default function FlashCardItem({
       onEdit(flashCard);
     }
   }
-  function handleClickFlashCard() {
-      console.log(flashCard);
-      <WindowWork value={flashCard} />
+  // function handleClickFlashCard() {
+  //     console.log(flashCard);
+  //    // <WindowWork value={flashCard} />
 
-  }
+  // }
   return (
     <div className="border border-gray-500 shadow-lg rounded-lg p-2 mt-2 mb-4 hover:shadow-inline hover:border-opacity-5">
       <ul className="flex flex-col space-y-4">

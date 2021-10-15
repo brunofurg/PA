@@ -12,13 +12,13 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import Switch from '@mui/material/Switch';
-import { useState } from "react";
+//import { useState } from "react";
 
 export default function WindowWork({
-    children: workCard = null
+    // children: workCard = null
 }) {
-  const [title, setTitle] = useState(workCard?.title || '');
-  const [description, setDescription] = useState(workCard?.description || '');
+  //const [title, setTitle] = useState(workCard?.title || '');
+  //const [description, setDescription] = useState(workCard?.description || '');
   const [open, setOpen] = React.useState(false);
   const [fullWidth, setFullWidth] = React.useState(true);
   const [maxWidth, setMaxWidth] = React.useState('sm');
@@ -53,9 +53,9 @@ export default function WindowWork({
         open={open}
         onClose={handleClose}
       >
-        <DialogTitle>{title}</DialogTitle>
+        <DialogTitle>title</DialogTitle>
         <DialogContent>
-          <DialogContentText>{description}</DialogContentText>
+          <DialogContentText>description</DialogContentText>
           <Box
             noValidate
             component="form"
