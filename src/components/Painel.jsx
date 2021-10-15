@@ -7,24 +7,26 @@ import ChartSalario from "./Charts/ChartSalario";
 import ChartTipoFaina from "./Charts/ChartTipoFaina";
 import ChartTrabalhosMes from "./Charts/ChartTrabalhosMes";
 
+
 import {Chart} from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import SelectIntervalo from "./SelectIntervalo";
 
 Chart.register(ChartDataLabels);
 
 export default function Painel() {
     return (
      <>
-             <div className="border-2 border-gray-600 p-1">
-                <div className="flex flex-row justify-between p-2">
+             <div className="border-2 bg-gray-200 p-1">
+                <div className="flex flex-row justify-evenly items-center">
                     <span>
-                        Demonstrativo Agosto/21
+                        {`Demonstrativo ${SelectIntervalo.children}`}
                     </span>
                     <span>
-                        SelectPeriodo
+                        <SelectIntervalo />
                     </span>
                 </div>
-                <div>
+                <div className="p-2 space-y-4">
                     <ChartSalario />
                     <ChartBrutoFaina />
                     <ChartGanhosOperador />

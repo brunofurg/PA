@@ -216,19 +216,21 @@ export default function Section() {
                         </TabPanel>
 
                         <TabPanel>
-                          <div className="bg-gray-100 border-2 border-yellow-400 p-4">
-                            <div className="flex flex-row justify-around items-center p-2" >
-                              <span className="text-center">
-                                <MonthDisplay />
-                              </span>
-                              <span className="button-small">
-                                <WorkDialog />
-                              </span>
-                            </div>
-
-                            <div className="bg-gray-200 border-2 border-gray-800 p-2">
-                              <p className="font-bold text-center p-2">Setembro 2021</p>
-                              {allCards.map(flashCard => {
+                          <div>
+                              <div className="flex place-content-center mb-2">                            
+                                 <MonthDisplay />
+                              </div>            
+                              <div className="bg-gray-200 p-2">
+                                <div className="flex flex-row justify-evenly items-center p-2" >
+                                  <span className="text-center">
+                                      <p className="font-bold text-center p-2">Setembro 2021</p>
+                                  </span>
+                                  <span className="button-small">
+                                      <WorkDialog />
+                                  </span> 
+                                </div>
+                                <div className="p-2">
+                               {allCards.map(flashCard => {
                                 return (
                                     <FlashCardItem
                                         key={flashCard.id}
@@ -240,6 +242,7 @@ export default function Section() {
                                     </FlashCardItem>
                                   );
                                 })}
+                                </div>
                                 <div className="flex flex-row items-center justify-between align-middle">
                                   <div className="border bg-gray-100 hover:bg-white shadow-lg p-2 m-1 rounded-md">
                                     <strong>Bruto:</strong> 7087,09

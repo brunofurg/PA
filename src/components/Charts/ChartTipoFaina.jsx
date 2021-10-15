@@ -50,8 +50,8 @@ class ChartTipoFaina extends Component {
 
   render() {
     return (
-      <div className="border-2 p-1 mb-1 text-center">
-        <span className="border p-1">Ganhos por Tipo de Faina</span>
+      <div className="bg-white text-center">
+        Ganhos por Tipo de Faina
            <PieChart chartData={this.state.chartData} location="Massachusetts" legendPosition="bottom"/>
       </div>
     );

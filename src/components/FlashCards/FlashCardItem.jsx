@@ -30,7 +30,7 @@ export default function FlashCardItem({
 
   // }
   return (
-    <div className="border border-gray-500 shadow-lg rounded-lg p-2 mt-2 mb-4 hover:shadow-inline hover:border-opacity-5">
+    <div className="bg-white border border-gray-500 shadow-lg rounded-lg p-2 mt-2 mb-4 hover:shadow-inline hover:border-opacity-5">
       <ul className="flex flex-col space-y-4">
         <li>
           <span>

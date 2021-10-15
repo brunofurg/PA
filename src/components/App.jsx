@@ -25,7 +25,7 @@ export default function App() {
         <div className="fixed inset-x-0 top-0 w-screen justify-around">
             <Header acao={ativaCor}/>
         </div>
-        <div className="mt-12 inline align-middle justify-center min-h-screen">
+        <div className="mt-12 inline align-middle justify-center">
             <Section/>
         </div>
         <div className="align-middle justify-items-center">

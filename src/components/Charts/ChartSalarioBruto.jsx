@@ -53,7 +53,7 @@ class ChartSalarioBruto extends Component {
 
   render() {
     return (
-      <div className="border-2 p-1 mb-1 text-center">
+      <div className="text-center">
         <span className="border p-1">Salário Bruto</span>
            <PieChart chartData={this.state.chartData} width={50} height={50} />
       </div>
