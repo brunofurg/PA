@@ -1,31 +1,21 @@
-import { Link, MemoryRouter, Route } from 'react-router-dom';
-import Pagination from '@material-ui/core/Pagination';
-import PaginationItem from '@material-ui/core/PaginationItem';
-//import withStyles from '@material-ui/styles/';
+import * as React from 'react';
+import Pagination from '@mui/material/Pagination';
+//import Typography from '@mui/material/Typography';
+import Stack from '@mui/material/Stack';
 
+export default function PaginationControlled() {
+  const [page, setPage] = React.useState(1);
+  const handleChange = (event, value) => {
+    console.log(value);
+    setPage(value);
+  };
 
-export default function MonthDisplay() {
   return (
-    <MemoryRouter initialEntries={['/inbox']} initialIndex={0}>
-      <Route>
-        {({ location }) => {
-          const query = new URLSearchParams(location.search);
-          const page = parseInt(query.get('page') || '1', 10);
-          return (
-            <Pagination
-              page={page}
-              count={10}
-              renderItem={(item) => (
-                <PaginationItem
-                  component={Link}
-                  to={`/inbox${item.page === 1 ? '' : `?page=${item.page}`}`}
-                  {...item}
-                />
-              )}
-            />
-          );
-        }}
-      </Route>
-    </MemoryRouter>
+    <Stack spacing={2}>
+      {/* <Typography>Page: {page}</Typography> */}
+      <Pagination count={5} page={page} onChange={handleChange} />
+    </Stack>
   );
 }
+
+

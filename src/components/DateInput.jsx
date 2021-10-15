@@ -1,3 +1,5 @@
+//import { compareAsc, format } from 'date-fns'
+
 export default function DateInput({
   labelDescription = 'Descrição do label:',
   inputValue = '2021-04-30',
@@ -8,7 +10,9 @@ export default function DateInput({
   function handleInputChange({ currentTarget }) {
     if (onInputChange) {
       const newValue = currentTarget.value;
-      onInputChange(newValue);
+      //console.log(format(newValue, 'dd/mm/yyyy'));
+      onInputChange(newValue)
+      //.toLocaleTimeString();
     }
   }
 

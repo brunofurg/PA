@@ -2,7 +2,8 @@ import Painel from "./Painel";
 import Reports from "./Reports";
 import TabelasCCT from "./TabelasCCT";
 import Links from "./Links";
-//import MonthDisplay from "./MonthDisplay";
+import MonthDisplay from "./MonthDisplay";
+import MaxWidthDialog from "./WorkDialog";
 
 import FlashCardForm from './FlashCards/FlashCardForm';
 import FlashCardItem from './FlashCards/FlashCardItem';
@@ -13,7 +14,7 @@ import 'react-tabs/style/react-tabs.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Button from './Button';
+//import Button from './Button';
 import Error from './Error';
 import Loading from './Loading';
 import Main from './Main';
@@ -33,7 +34,7 @@ import { HiOutlineDocumentReport as IconReport } from 'react-icons/hi';
 import { GiShipBow as IconWorks } from 'react-icons/gi';
 import { MdAttachMoney as IconCCT } from 'react-icons/md';
 import { FiExternalLink as IconLinks } from 'react-icons/fi';
-import { FiChevronsLeft as IconReturn } from 'react-icons/fi';
+//import { FiChevronsLeft as IconReturn } from 'react-icons/fi';
 
 import { useEffect, useState } from "react";
 
@@ -92,9 +93,9 @@ export default function Section() {
     function handleTabSelect(tabIndex) {
       setSelectedTab(tabIndex);
     }
-    function handleImport() {
-      console.log("pdf");
-    }
+    // function handleImport() {
+    //   console.log("pdf");
+    // }
 
     async function handlePersist(title, description ) {
       if (createMode) {
@@ -207,35 +208,18 @@ export default function Section() {
                         </TabPanel>
 
                         <TabPanel>
-                          <div>
+                          <div className="bg-gray-100 p-4">
                             <div className="flex flex-row justify-around items-center" >
-                              <span>
-                                <IconReturn size={18}/>
-                              </span>
                               <span className="text-center">
-                                04/21
-                                -
-                                05/21                                
-                                -
-                                06/21
-                                -
-                                07/21
-                                -
-                                08/21
-                                -
-                                09/21
-                                
-                                {/* <MonthDisplay /> */}
+                                <MonthDisplay />
                               </span>
                               <span>
-                              <Button onButtonClick={handleImport}>
-                                    Importar Analítico
-                                </Button>
+                                <MaxWidthDialog />
                               </span>
                             </div>
 
                             <div>
-
+                              <p className="font-bold bg-gray-200 text-center p-2">Setembro 2021</p>
                               {allCards.map(flashCard => {
                                 return (
                                     <FlashCardItem
@@ -250,9 +234,6 @@ export default function Section() {
                              </div>
 
                              <div className="border border-gray-600 bg-gray-200 flex flex-col items-center justify-between align-middle hover:shadow-lg p-2 ">
-                             <div>
-                                 Setembro 2021
-                              </div>
                               <div className="flex flex-row items-center justify-between align-middle">
                                 <div className="border bg-gray-100 hover:bg-white shadow-lg p-2 m-1 rounded-md">
                                   <strong>Bruto:</strong> 7087,09

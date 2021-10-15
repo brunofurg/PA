@@ -10,7 +10,7 @@ import DateInput from "../DateInput";
 import RadioButton from '../RadioButton';
 import FainaA1t from '../FainaA1t';
 import PorCaminhao from '../PorCaminhao';
-
+import SelectFaina from "../SelectFaina";
 
 export default function FlashCardForm({
   createMode = true,
@@ -65,7 +65,7 @@ export default function FlashCardForm({
       setError('');
 
       if (onPersist) {
-        onPersist(title, description);
+        onPersist(title, description, );
         clearFields();
       }
     } else {
@@ -143,26 +143,28 @@ export default function FlashCardForm({
                   onInputChange={handleDayWork}
               />
             </span>
-            <span>   
-              <TextInput
-                labelDescription='Digite o tipo de faina:' 
-                inputValue={typeFaina} 
-                onInputChange={handleTypeFaina}
-                placeHolder='C6 para adubo'
-              />  
+
+            <span>
+             <SelectFaina
+              labelDescription='Selecione o tipo de faina:' 
+              selectValue={typeFaina} 
+              onSelectChange={handleTypeFaina}
+             />  
             </span>
+
           </div>
-          {/* <span>
-          <SelectFaina
-              labelDescription='Digite o tipo de faina:' 
-              selectValue={faina} 
-              onSelectChange={handleSelectChange}
-            />  
-          </span> */}
+
 
 
         </div>
 
+        <div>
+        <FainaA1t />
+            { typeFaina === "a1t" 
+            ? console.log("teste1")
+            : console.log(typeFaina)
+            }
+          </div>
 
 
           <div>
@@ -182,9 +184,7 @@ export default function FlashCardForm({
 
         </div> 
 
-          <div>
-            <FainaA1t />
-          </div>
+
 
 
      

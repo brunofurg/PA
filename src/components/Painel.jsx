@@ -26,8 +26,8 @@ export default function Painel() {
                 </div>
                 <div>
                     <ChartSalario />
-                    <ChartGanhosOperador />
                     <ChartBrutoFaina />
+                    <ChartGanhosOperador />
                     <ChartTrabalhosSemana />
                     <ChartTurnosTrabalhados />
                     <ChartTopFainas />

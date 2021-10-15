@@ -47,8 +47,6 @@ export default function Header({acao}) {
   getWeather('-32.0425', '-52.1196');
 
 
-if (temperature === false) { return "..." }
-
   return (
     <>
     <header className={ acao ? 'bg-terciary' : 'bg-primary'}>
@@ -58,7 +56,7 @@ if (temperature === false) { return "..." }
        </span>
        <span title={`${cityPort} - ${timeNow} - ${temperature}°C - ${weather}`} className="bg-secondary shadow-lg rounded-full p-2 hover:bg-primary hover:shadow-inner ">
         <strong>
-          {`${temperature}°C - ${timeNow}`}
+          {`${temperature || "..."}°C - ${timeNow}`}
         </strong>
       </span>
       <div className="mr-2">
