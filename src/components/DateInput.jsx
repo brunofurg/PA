@@ -11,8 +11,9 @@ export default function DateInput({
     if (onInputChange) {
       const newValue = currentTarget.value;
       //console.log(format(newValue, 'dd/mm/yyyy'));
-      onInputChange(newValue)
-      //.toLocaleTimeString();
+      onInputChange(newValue);
+      console.log(newValue);
+      //console.log(newValue.toLocaleTimeString());
     }
   }
 

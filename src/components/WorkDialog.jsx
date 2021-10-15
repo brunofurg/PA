@@ -10,7 +10,7 @@ import FormControl from '@mui/material/FormControl';
 import UploadFile from './UploadFile';
 //import Trabalhos from '../components/Trabalhos';
 
-export default function MaxWidthDialog() {
+export default function WorkDialog() {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -24,7 +24,7 @@ export default function MaxWidthDialog() {
  
   return (
     <React.Fragment>
-      <Button variant="contained" onClick={handleClickOpen}>
+      <Button size="small" fullWidht="false" variant="contained" onClick={handleClickOpen}>
         Importar Analítico
       </Button>
       <Dialog

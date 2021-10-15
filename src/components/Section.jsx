@@ -3,7 +3,7 @@ import Reports from "./Reports";
 import TabelasCCT from "./TabelasCCT";
 import Links from "./Links";
 import MonthDisplay from "./MonthDisplay";
-import MaxWidthDialog from "./WorkDialog";
+import WorkDialog from "./WorkDialog";
 
 import FlashCardForm from './FlashCards/FlashCardForm';
 import FlashCardItem from './FlashCards/FlashCardItem';
@@ -14,7 +14,7 @@ import 'react-tabs/style/react-tabs.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-//import Button from './Button';
+import Button from './Button';
 import Error from './Error';
 import Loading from './Loading';
 import Main from './Main';
@@ -37,6 +37,7 @@ import { FiExternalLink as IconLinks } from 'react-icons/fi';
 //import { FiChevronsLeft as IconReturn } from 'react-icons/fi';
 
 import { useEffect, useState } from "react";
+//import WindowWork from "./WindowWork";
 
 export default function Section() {
     const [allCards, setAllCards] = useState([]);
@@ -45,7 +46,8 @@ export default function Section() {
     const [createMode, setCreateMode] = useState(true);
     const [selectedTab, setSelectedTab] = useState(0);
     const [selectedFlashCard, setSelectedFlashCard] = useState(null);
-    
+    const [clickableFlashCard, setClickableFlashCard] = useState(null);
+
     useEffect(() => {
       async function getAllCards() {
         try {
@@ -85,14 +87,20 @@ export default function Section() {
       setSelectedFlashCard(card);
     }
   
-    // function handleNewFlashCard() {
-    //   setCreateMode(true);
-    //   setSelectedFlashCard(null);
-    // }
+    function handleNewFlashCard() {
+      setCreateMode(true);
+      setSelectedFlashCard(null);
+    }
   
     function handleTabSelect(tabIndex) {
       setSelectedTab(tabIndex);
     }
+
+    function handleClickFlashCard(card) {
+      setClickableFlashCard(card);
+      // <WindowWork>{card}</WindowWork>
+    }
+
     // function handleImport() {
     //   console.log("pdf");
     // }
@@ -196,11 +204,11 @@ export default function Section() {
                         </TabPanel>
 
                         <TabPanel>
-                            {/* <div className="border border-pink-400 flex flex-row justify-around my-4">
+                            <div className="border border-pink-400 flex flex-row justify-around my-4">
                                 <Button onButtonClick={handleNewFlashCard}>
                                     Novo Trabalho
                                 </Button>
-                            </div> */}
+                            </div>
 
                             <FlashCardForm createMode={createMode} onPersist={handlePersist}>
                                 {selectedFlashCard}
@@ -208,52 +216,52 @@ export default function Section() {
                         </TabPanel>
 
                         <TabPanel>
-                          <div className="bg-gray-100 p-4">
-                            <div className="flex flex-row justify-around items-center" >
+                          <div className="bg-gray-100 border-2 border-yellow-400 p-4">
+                            <div className="flex flex-row justify-around items-center p-2" >
                               <span className="text-center">
                                 <MonthDisplay />
                               </span>
-                              <span>
-                                <MaxWidthDialog />
+                              <span className="button-small">
+                                <WorkDialog />
                               </span>
                             </div>
 
-                            <div>
-                              <p className="font-bold bg-gray-200 text-center p-2">Setembro 2021</p>
+                            <div className="bg-gray-200 border-2 border-gray-800 p-2">
+                              <p className="font-bold text-center p-2">Setembro 2021</p>
                               {allCards.map(flashCard => {
                                 return (
                                     <FlashCardItem
                                         key={flashCard.id}
                                         onDelete={handleDeleteFlashCard}
                                         onEdit={handleEditFlashCard}
+                                        onClick={handleClickFlashCard}
                                     >
                                         {flashCard}
                                     </FlashCardItem>
                                   );
                                 })}
-                             </div>
-
-                             <div className="border border-gray-600 bg-gray-200 flex flex-col items-center justify-between align-middle hover:shadow-lg p-2 ">
-                              <div className="flex flex-row items-center justify-between align-middle">
-                                <div className="border bg-gray-100 hover:bg-white shadow-lg p-2 m-1 rounded-md">
-                                  <strong>Bruto:</strong> 7087,09
+                                <div className="flex flex-row items-center justify-between align-middle">
+                                  <div className="border bg-gray-100 hover:bg-white shadow-lg p-2 m-1 rounded-md">
+                                    <strong>Bruto:</strong> 7087,09
+                                  </div>
+                                  <div className="border bg-gray-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                    <strong>Líquido:</strong> 5067,89
+                                  </div>
+                                  <div className="border bg-gray-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                    <strong>Férias:</strong> 67,89
+                                  </div>
+                                  <div className="border bg-gray-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                    <strong>13°:</strong> 76,87
+                                  </div>
+                                  <div className="border bg-gray-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                    <strong>FGTS:</strong> 42,22
+                                  </div>
                                 </div>
-                                <div className="border bg-gray-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
-                                  <strong>Líquido:</strong> 5067,89
-                                </div>
-                                <div className="border bg-gray-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
-                                  <strong>Férias:</strong> 67,89
-                                </div>
-                                <div className="border bg-gray-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
-                                  <strong>13°:</strong> 76,87
-                                </div>
-                                <div className="border bg-gray-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
-                                  <strong>FGTS:</strong> 42,22
-                                </div>
-</div>
 
                              </div>
-                          </div>
+                             </div>
+
+                          
                         </TabPanel> 
                         <TabPanel>
                             <Reports/>
