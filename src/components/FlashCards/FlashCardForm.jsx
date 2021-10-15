@@ -105,26 +105,21 @@ export default function FlashCardForm({
       onReset={handleFormReset}
     >
  
-
-<div className="">
-
-<h2 className="text-center font-semibold">Calculadora de Remuneração</h2>
-
-<div className="border-yellow-700 border">
-<TextInput
-  labelDescription="Navio:"
-  inputValue={title}
-  onInputChange={handleTitleChange}
-/>
-<TextInput
-  labelDescription="Observações:"
-  inputValue={description}
-  onTextAreaChange={handleDescriptionChange}
-/>
-</div>
-
-
-    <div className="border-2 border-red-300 flex flex-row justify-evenly items-center">
+    <h2 className="text-center font-semibold mb-2">Calculadora de Remuneração</h2>
+      <div className="border-2 border-yellow-300">
+        <div className="p-2">
+          <TextInput
+            labelDescription="Navio:"
+            inputValue={title}
+            onInputChange={handleTitleChange}
+          />
+          <TextInput
+            labelDescription="Observações:"
+            inputValue={description}
+            onTextAreaChange={handleDescriptionChange}
+          />
+        </div>
+        <div className="flex flex-row justify-evenly items-center">
           <span>
             <div className="flex flex-col"> 
                 <p>Período:</p>
@@ -134,46 +129,38 @@ export default function FlashCardForm({
                 <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">D</RadioButton>
             </div> 
           </span>
-
-          <div>
-            <span>   
+        <div>
+          <span>   
               <DateInput
                   labelDescription='Selecione o dia:' 
                   inputValue={dayWork} 
                   onInputChange={handleDayWork}
               />
-            </span>
-
-            <span>
+          </span>
+          <span>
              <SelectFaina
               labelDescription='Selecione o tipo de faina:' 
               selectValue={typeFaina} 
               onSelectChange={handleTypeFaina}
              />  
-            </span>
-
-          </div>
-
-
-
+          </span>
         </div>
+      </div>
 
         <div>
-        <FainaA1t />
-            { typeFaina === "a1t" 
-            ? console.log("teste1")
-            : console.log(typeFaina)
-            }
-          </div>
-
+          <FainaA1t />
+              { typeFaina === "a1t" 
+              ? console.log("teste1")
+              : console.log("teste2")
+              }
+        </div>
 
           <div>
             <PorCaminhao />
           </div>
-
-
-        <div className="border border-green-400 flex flex-row align-middle justify-items-center">
-        <span>
+    
+          <div className="flex flex-row align-middle justify-items-center p-2">
+              <span>
                 <TextInput
                   labelDescription='Digite o peso movimentado no período:' 
                   inputValue={weightTotal} 
@@ -181,31 +168,25 @@ export default function FlashCardForm({
                   placeHolder='Peso total'
                 />
               </span>  
-
-        </div> 
-
-
-
-
-     
-        <div className="border border-pink-400 flex items-center justify-between">
-        {error.trim() !== '' ? <Error>{error}</Error> : <span>&nbsp;</span>}
-            <div className="flex flex-row items-center space-x-2">
+          </div> 
+          <div className="border border-gray-600 item-center">
+                <IconPlus className="hover:bg-blue-200 rounded-full" size={30}/>
+            </div>
+          </div>  
+          <div className="bg-pink-300 flex items-center justify-between">
+            {error.trim() !== '' ? <Error>{error}</Error> : <span>&nbsp;</span>}
+                <div className="flex flex-row items-center space-x-2">
              {/* <Button colorClass="rounded-lg font-bold p-2 bg-yellow-400" >+</Button> */}
-<span>
-            <IconPlus className="hover:bg-blue-200 rounded-full" size={30}/>
-</span>
-<span>
-
-          <Button colorClass="bg-red-200 hover:bg-red-300" type="reset">
-            Limpar
-          </Button>
-
-          <Button colorClass="bg-green-300 hover:bg-green-400" type="submit">
-            Incluir
-          </Button>
-          </span>
-        </div>
+  
+            <span>
+              <Button colorClass="bg-red-200 hover:bg-red-300" type="reset">
+                Limpar
+              </Button>
+              <Button colorClass="bg-green-300 hover:bg-green-400" type="submit">
+                Incluir
+              </Button>
+            </span>
+     
         </div>
       
       </div>

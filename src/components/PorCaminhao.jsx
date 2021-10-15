@@ -12,7 +12,7 @@ export default function PorCaminhao() {
       }
     return (
         <>
-            <div className="border-2 border-yellow-700 flex flex-col">
+            <div className="flex flex-col p-2">
                 <div>
                     <TextInput 
                         labelDescription='Total de Caminhões movimentado no período:'
