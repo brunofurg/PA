@@ -167,15 +167,16 @@ export default function Section() {
                                 </div>
                             </Tab>
                             <Tab>
-                                <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
-                                    <span align="left"><IconCalc size={16} /></span>
-                                    <span align="right">Calculadora</span>
+                               <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
+                                    <span align="left"><IconWorks size={16} /></span>
+                                    <span align="right">Trabalhos</span>
                                 </div>
+                                
                             </Tab>
                             <Tab>
                                 <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
-                                    <span align="left"><IconWorks size={16} /></span>
-                                    <span align="right">Trabalhos</span>
+                                    <span align="left"><IconCalc size={16} /></span>
+                                    <span align="right">Calculadora</span>
                                 </div>
                             </Tab>
                             <Tab>
@@ -206,24 +207,15 @@ export default function Section() {
                         </TabPanel>
 
                         <TabPanel>
-                            <FlashCardForm
-                               createMode={createMode} 
-                               onPersist={handlePersist}
-                               onButtonClick={handleNewFlashCard}
-                            >
-                                {selectedFlashCard}
-                            </FlashCardForm>
-                        </TabPanel>
 
-                        <TabPanel>
-                          <div>
+                        <div>
                               <div className="bg-gray-50 flex place-content-center mb-1">                            
                                  <MonthDisplay />
                               </div>            
                               <div className="bg-gray-100 border border-gray-300 rounded-lg p-2">
                                 <div className="bg-gray-200 flex flex-row justify-around items-center p-2">
                                   <span>
-                                    <CheckboxInput inputValue="true" labelDescription="Tudo"/>
+                                    <CheckboxInput checkboxValue="true" labelDescription="Tudo"/>
                                   </span>
                                   <span className="text-center">
                                       <p className="font-bold text-center p-2 text-lg">Setembro 2021</p>
@@ -243,7 +235,7 @@ export default function Section() {
                                           </div>
                                           <div>
                                               <CheckboxInput
-                                                inputValue="false"
+                                                checkboxValue="false"
                                                 labelDescription=""
                                               />
                                           </div>
@@ -351,6 +343,21 @@ export default function Section() {
                           </div>
                         </div>
 
+
+
+                        </TabPanel>
+
+                        <TabPanel>
+    
+
+                        <FlashCardForm
+                               createMode={createMode} 
+                               onPersist={handlePersist}
+                               onButtonClick={handleNewFlashCard}
+                            >
+                                {selectedFlashCard}
+                            </FlashCardForm>
+                    
                           
                         </TabPanel> 
                         <TabPanel>

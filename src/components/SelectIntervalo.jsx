@@ -24,15 +24,16 @@ export default function SelectIntervalo() {
           onChange={handleChange}
           label="Período"
         >
-          <MenuItem value={"1a"}>Anual</MenuItem>
-          <MenuItem value={"6m"}>Semestre</MenuItem>
-          <MenuItem value={"4m"}>Quadrimestre</MenuItem>          
-          <MenuItem value={"3m"}>Trimestre</MenuItem>
-          <MenuItem value={""}></MenuItem>
-          <MenuItem value={"07-21"}>07-21</MenuItem>
-          <MenuItem value={"08-21"}>08-21</MenuItem>
-          <MenuItem value={"09-21"}>09-21</MenuItem>          
           <MenuItem value={"10-21"}>10-21</MenuItem>
+          <MenuItem value={"09-21"}>09-21</MenuItem>   
+          <MenuItem value={"08-21"}>08-21</MenuItem>
+          <MenuItem value={"07-21"}>07-21</MenuItem> 
+          <MenuItem value={""}></MenuItem>
+          <MenuItem value={"3m"}>Trimestre</MenuItem>
+          <MenuItem value={"4m"}>Quadrimestre</MenuItem>   
+          <MenuItem value={"6m"}>Semestre</MenuItem>
+          <MenuItem value={"1a"}>Ano</MenuItem>
+          
           </Select>
       </FormControl>
     </div>

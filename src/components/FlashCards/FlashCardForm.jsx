@@ -115,15 +115,15 @@ export default function FlashCardForm({
       onReset={handleFormReset}
       // onButtonClick={handleButtonClick}
     >
-      <div className="">
-        <div className="flex flex-row items-center justify-evenly">
+      <div className="bg-blue-50">
+        <div className="bg-gray-50 flex flex-row place-items-center justify-evenly text-base p-2">
           <p className="text-center font-semibold mb-2">Calculadora de Remuneração</p>
           <div>
              <Button onButtonClick={handleButtonClick}>Novo Trabalho</Button>
           </div>
         </div>
       
-      <div className="border-2 border-yellow-300">
+      <div className="">
         <div className="p-2">
           <TextInput
             labelDescription="Navio:"
@@ -164,7 +164,7 @@ export default function FlashCardForm({
         </div>
       </div>
 
-        <div>
+        <div className="bg-green-100">
           <FainaA1t />
               { typeFaina === "a1t" 
               ? console.log("teste1")
@@ -172,11 +172,11 @@ export default function FlashCardForm({
               }
         </div>
 
-          <div>
+          <div className="bg-yellow-100">
             <PorCaminhao />
           </div>
     
-          <div className="flex flex-row align-middle justify-items-center p-2">
+          <div className="bg-purple-200 flex flex-row align-middle justify-items-center p-2">
               <span>
                 <TextInput
                   labelDescription='Digite o peso movimentado no período:' 
@@ -186,15 +186,14 @@ export default function FlashCardForm({
                 />
               </span>  
           </div> 
-          <div className="border border-gray-600 item-center">
+          <div className="bg-gray-500 place-items-center p-4 m-2 mb-4">
                 <IconPlus className="hover:bg-blue-200 rounded-full" size={30}/>
             </div>
           </div>  
-          <div className="bg-pink-300 flex items-center justify-between">
+          <div className="bg-pink-50 flex items-center justify-between">
             {error.trim() !== '' ? <Error>{error}</Error> : <span>&nbsp;</span>}
                 <div className="flex flex-row items-center space-x-2">
-             {/* <Button colorClass="rounded-lg font-bold p-2 bg-yellow-400" >+</Button> */}
-  
+    
             <span>
               <Button colorClass="bg-red-200 hover:bg-red-300" type="reset">
                 Limpar

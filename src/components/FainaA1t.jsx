@@ -35,7 +35,7 @@ export default function FainaA1t() {
 
     return (
         <>
-          <div className="border border-black flex flex-col m-2">
+          <div className="flex flex-col">
                 <div className="flex flex-row mt-2 place-content-around">
                     <span className="align-bottom">
                         A1T Tecon
