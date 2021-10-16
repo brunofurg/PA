@@ -1,15 +1,11 @@
 import * as React from 'react';
 
-import { getNewId } from '../services/idService';
-
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function SelectIntervalo({
-  id = getNewId(),
-}) {
+export default function SelectIntervalo() {
   const [intervalo, setIntervalo] = React.useState('');
 
   const handleChange = (event) => {
@@ -22,17 +18,16 @@ export default function SelectIntervalo({
 
   return (
     <div>
-      <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id={id}>Intervalo:</InputLabel>
+      <FormControl variant="standard" sx={{ m: 1, minWidth: 150 }}>
+        <InputLabel>Período:</InputLabel>
         <Select
-          id={id}
           value={intervalo}
           onChange={handleChange}
-          label="Faina"
+          label="Período"
         >
           <MenuItem value={"1a"}>Anual</MenuItem>
           <MenuItem value={"6m"}>Semestre</MenuItem>
-          <MenuItem value={"4m"}>Qadrimestre</MenuItem>          
+          <MenuItem value={"4m"}>Quadrimestre</MenuItem>          
           <MenuItem value={"3m"}>Trimestre</MenuItem>
           <MenuItem value={""}></MenuItem>
           <MenuItem value={"07-21"}>07-21</MenuItem>

@@ -109,7 +109,7 @@ export default function TabelaCCT() {
         <div className="bg-gray-300 align-middle justify-items-center font-bold">
           Convenção Coletiva de Trabalho SINDOP (Vigência 2020-2022)
         </div>
-        <Table className={classes.table} aria-label="customized table">
+        <Table className={classes.table}>
           <TableHead>
             <TableRow>
               <StyledTableCell align="center"><strong>Tipo</strong></StyledTableCell>
@@ -133,13 +133,14 @@ export default function TabelaCCT() {
             ))}
           </TableBody>
         </Table>
+        
       </TableContainer>
 <br/>
       <TableContainer component={Paper}>
         <div className="bg-gray-300 align-middle justify-items-center font-bold">
           Acordo Coletivo de Trabalho TECON Rio Grande (Vigência 2020-2022)
         </div>
-        <Table className={classes.table} aria-label="customized table">
+        <Table className={classes.table}>
           <TableHead>                      
             <TableRow>
               <StyledTableCell align="center"><strong>A1T - Tabela TECON</strong></StyledTableCell>
@@ -175,7 +176,7 @@ export default function TabelaCCT() {
       <div className="bg-gray-300 align-middle justify-center font-bold">
           Tabela INSS (Vigência desde 01/01/2021)
         </div>
-        <Table className={classes.table} aria-label="customized table">
+        <Table className={classes.table}>
           <TableHead>                      
             <TableRow>
               <StyledTableCell align="center"><strong>Base de Cálculo (R$)</strong></StyledTableCell>
@@ -200,7 +201,7 @@ export default function TabelaCCT() {
        <div className="bg-gray-300 align-middle justify-center font-bold">
           Tabela Imposto de Renda (Vigência desde 2015 - Lei 13.149/2015)
         </div>
-        <Table className={classes.table} aria-label="customized table">
+        <Table className={classes.table}>
           <TableHead>                      
             <TableRow>
               <StyledTableCell align="center"><strong>Base de Cálculo (R$)</strong></StyledTableCell>

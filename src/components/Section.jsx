@@ -5,6 +5,7 @@ import Links from "./Links";
 import MonthDisplay from "./MonthDisplay";
 import WorkDialog from "./WorkDialog";
 
+
 import FlashCardForm from './FlashCards/FlashCardForm';
 import FlashCardItem from './FlashCards/FlashCardItem';
 
@@ -14,7 +15,6 @@ import 'react-tabs/style/react-tabs.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Button from './Button';
 import Error from './Error';
 import Loading from './Loading';
 import Main from './Main';
@@ -37,6 +37,7 @@ import { FiExternalLink as IconLinks } from 'react-icons/fi';
 //import { FiChevronsLeft as IconReturn } from 'react-icons/fi';
 
 import { useEffect, useState } from "react";
+import CheckboxInput from "./CheckboxInput";
 //import WindowWork from "./WindowWork";
 
 export default function Section() {
@@ -178,10 +179,11 @@ export default function Section() {
                                 </div>
                             </Tab>
                             <Tab>
-                                <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
-                                    <span align="left"><IconReport size={16} /></span>
-                                    <span align="right">Relatórios</span>
+                               <div className="align-middle text-center flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
+                                    <span align="left"><IconLinks size={16} /></span>
+                                    <span align="right">Links</span>
                                 </div>
+                                
                             </Tab>
                             <Tab>
                                 <div className="align-middle text-center flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
@@ -190,9 +192,9 @@ export default function Section() {
                                 </div>
                             </Tab>
                             <Tab>
-                                <div className="align-middle text-center flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
-                                    <span align="left"><IconLinks size={16} /></span>
-                                    <span align="right">Links</span>
+                                <div className="flex flex-row space-x-2 p-2 rounded hover:bg-secondary hover:text-white">
+                                    <span align="left"><IconReport size={16} /></span>
+                                    <span align="right">Relatórios</span>
                                 </div>
                             </Tab> 
                         </TabList>
@@ -204,13 +206,11 @@ export default function Section() {
                         </TabPanel>
 
                         <TabPanel>
-                            <div className="border border-pink-400 flex flex-row justify-around my-4">
-                                <Button onButtonClick={handleNewFlashCard}>
-                                    Novo Trabalho
-                                </Button>
-                            </div>
-
-                            <FlashCardForm createMode={createMode} onPersist={handlePersist}>
+                            <FlashCardForm
+                               createMode={createMode} 
+                               onPersist={handlePersist}
+                               onButtonClick={handleNewFlashCard}
+                            >
                                 {selectedFlashCard}
                             </FlashCardForm>
                         </TabPanel>
@@ -220,8 +220,11 @@ export default function Section() {
                               <div className="flex place-content-center mb-2">                            
                                  <MonthDisplay />
                               </div>            
-                              <div className="bg-gray-200 p-2">
-                                <div className="flex flex-row justify-evenly items-center p-2" >
+                              <div className="bg-gray-100 p-2">
+                                <div className="flex flex-row justify-around items-center p-2">
+                                  <span>
+                                    <CheckboxInput inputValue="true" labelDescription="Tudo"/>
+                                  </span>
                                   <span className="text-center">
                                       <p className="font-bold text-center p-2">Setembro 2021</p>
                                   </span>
@@ -229,51 +232,108 @@ export default function Section() {
                                       <WorkDialog />
                                   </span> 
                                 </div>
-                                <div className="p-2">
+                                <div className="">
+                             
                                {allCards.map(flashCard => {
                                 return (
-                                    <FlashCardItem
-                                        key={flashCard.id}
-                                        onDelete={handleDeleteFlashCard}
-                                        onEdit={handleEditFlashCard}
-                                        //onClick={handleClickFlashCard}
-                                    >
-                                        {flashCard}
-                                    </FlashCardItem>
-                                  );
+                                  <div className="border border-gray-300 place-content-around shadow-lg hover:bg-gray-200 hover:border-gray-600 rounded-lg flex flex-row m-3 p-2">
+                                      <div className="flex flex-col space-y-10">
+                                          <div>
+                                              1
+                                          </div>
+                                          <div>
+                                              <CheckboxInput
+                                                inputValue="false"
+                                                labelDescription=""
+                                              />
+                                          </div>
+                                       </div>
+                                       <div className="place-content-stretch">
+                                           <FlashCardItem
+                                              key={flashCard.id}
+                                              onDelete={handleDeleteFlashCard}
+                                              onEdit={handleEditFlashCard}
+                                              //onClick={handleClickFlashCard}
+                                           >{flashCard}</FlashCardItem>
+                                        </div>
+                                      </div>
+                                    );
                                 })}
                                 </div>
-                                <div className="flex flex-row items-center justify-between align-middle">
-                                  <div className="border bg-gray-100 hover:bg-white shadow-lg p-2 m-1 rounded-md">
-                                    <strong>Bruto:</strong> 7087,09
+                                <div className="bg-gray-200 flex flex-col place-content-stretch align-middle rounded-lg p-2">
+                                  <p className="text-center font-black">Total Mensal</p>
+                                  <div className="bg-green-200 flex flex-col place-content-around p-2">
+                                    <div className="flex flex-row place-content-around">
+                                    <div className="border bg-green-50 hover:bg-white shadow-lg p-2 m-1 rounded-md">
+                                       <strong>Bruto: </strong>10.710,43
+                                    </div>
+                                    <div className="border bg-green-50 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                      <strong>Líquido: </strong>7.701,89
+                                    </div>
+                                    <div className="border bg-green-50 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                      <strong>Férias: </strong> 1.191,00
+                                    </div>
+                                    <div className="border bg-green-50 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                      <strong>13°: </strong>893,25
+                                    </div>
+                                    <div className="border bg-green-50 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                      <strong>FGTS: </strong>1.023,57
+                                    </div>
+                                    </div>
+                                    <div className="flex flex-row place-items-center place-content-around p-2">
+                                      <div>
+                                        +Entradas
+                                      </div>
+                                      <div className="flex flex-row place-items-center space-x-2">
+                                        <div className="text-right font-black">Rendimentos Totais:</div>
+                                        <div className="border border-gray-600 bg-green-50 rounded-md p-2 text-base ">10.809,66</div>
+                                      </div>
+                                    </div>
+                                    
+                                  
                                   </div>
-                                  <div className="border bg-gray-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
-                                    <strong>Líquido:</strong> 5067,89
-                                  </div>
-                                  <div className="border bg-gray-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
-                                    <strong>Férias:</strong> 67,89
-                                  </div>
-                                  <div className="border bg-gray-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
-                                    <strong>13°:</strong> 76,87
-                                  </div>
-                                  <div className="border bg-gray-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
-                                    <strong>FGTS:</strong> 42,22
-                                  </div>
+                                  <div className="bg-red-300 flex flex-col place-content-around p-2">
+                                    <div className="flex flex-row place-content-around p-2">
+                                    <div className="border bg-red-100 hover:bg-white shadow-lg p-2 m-1 rounded-md">
+                                      <strong>INSS: </strong>-752,00
+                                    </div>
+                                    <div className="border bg-red-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                      <strong>IRPF: </strong>-1.764,93
+                                    </div>
+                                    <div className="border bg-red-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                      <strong>DAS: </strong>-491,61
+                                    </div>
+                                    <div className="border bg-red-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                      <strong>Judicial: </strong>-0,00
+                                    </div>
+                                    <div className="border bg-red-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                      <strong>EPI: </strong>-0,00
+                                   </div>
+                               </div>
+                               <div className="flex flex-row place-items-center place-content-around p-2">
+                               <div>
+                                        +Saídas
+                                      </div>
+                                      <div className="flex flex-row place-items-center space-x-2">
+                                        <div className="text-right font-black">Descontos Totais:</div>
+                                        <div className="border border-gray-600 bg-red-50 rounded-md p-2 text-base ">1.504,54</div>
+                                      </div>
                                 </div>
-
+</div>
+</div>
                              </div>
                              </div>
 
                           
                         </TabPanel> 
                         <TabPanel>
-                            <Reports/>
+                            <Links/>
                         </TabPanel>
                         <TabPanel>
                             <TabelasCCT/>
                         </TabPanel>
                         <TabPanel>
-                            <Links/>
+                            <Reports/>
                         </TabPanel> 
                    </div>
                 </Tabs>

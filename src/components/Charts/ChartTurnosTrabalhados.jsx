@@ -46,7 +46,7 @@ class ChartTurnosTrabalhados extends Component {
 
   render() {
     return (
-      <div className="bg-white text-center">
+      <div className="bg-white border border-gray-300 shadow-lg rounded-lg p-2 mt-2 mb-4 text-center">
         Turnos Trabalhados
         <PolarChart chartData={this.state.chartData} location="Massachusetts" legendPosition="bottom"/>
       </div>

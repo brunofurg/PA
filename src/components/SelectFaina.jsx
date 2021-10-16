@@ -1,15 +1,11 @@
 import * as React from 'react';
 
-import { getNewId } from '../services/idService';
-
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function SelectFaina({
-  id = getNewId(),
-}) {
+export default function SelectFaina() {
   const [faina, setFaina] = React.useState('');
 
   const handleChange = (event) => {
@@ -22,10 +18,9 @@ export default function SelectFaina({
 
   return (
     <div>
-      <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id={id}>Faina</InputLabel>
+      <FormControl variant="standard" sx={{ m: 1, minWidth: 150 }}>
+        <InputLabel>Faina</InputLabel>
         <Select
-          id={id}
           value={faina}
           onChange={handleChange}
           label="Faina"

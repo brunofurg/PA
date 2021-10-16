@@ -3,7 +3,7 @@ import ChartGanhosOperador from "./Charts/ChartGanhosOperador";
 import ChartTrabalhosSemana from "./Charts/ChatTrabalhosSemana";
 import ChartTopFainas from "./Charts/ChartTopFainas";
 import ChartTurnosTrabalhados from "./Charts/ChartTurnosTrabalhados";
-import ChartSalario from "./Charts/ChartSalario";
+import ChartSalarioBruto from "./Charts/ChartSalarioBruto";
 import ChartTipoFaina from "./Charts/ChartTipoFaina";
 import ChartTrabalhosMes from "./Charts/ChartTrabalhosMes";
 
@@ -17,17 +17,17 @@ Chart.register(ChartDataLabels);
 export default function Painel() {
     return (
      <>
-             <div className="border-2 bg-gray-200 p-1">
+             <div className="border-2 bg-gray-100 p-1">
                 <div className="flex flex-row justify-evenly items-center">
                     <span>
-                        {`Demonstrativo ${SelectIntervalo.children}`}
+                        {`Rendimentos ${SelectIntervalo.children}`}
                     </span>
                     <span>
                         <SelectIntervalo />
                     </span>
                 </div>
-                <div className="p-2 space-y-4">
-                    <ChartSalario />
+                <div className="p-2 space-y-4 font-bold">
+                    <ChartSalarioBruto />
                     <ChartBrutoFaina />
                     <ChartGanhosOperador />
                     <ChartTrabalhosSemana />

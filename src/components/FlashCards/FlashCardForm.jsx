@@ -15,6 +15,7 @@ import SelectFaina from "../SelectFaina";
 export default function FlashCardForm({
   createMode = true,
   onPersist = null,
+  onButtonClick = null,
   children: flashCard = null,
 }) {
   const [title, setTitle] = useState(flashCard?.title || '');
@@ -65,7 +66,7 @@ export default function FlashCardForm({
       setError('');
 
       if (onPersist) {
-        onPersist(title, description, );
+        onPersist(title, description);
         clearFields();
       }
     } else {
@@ -95,17 +96,33 @@ export default function FlashCardForm({
     setWeightTotal(newTipo);
   }
 
+  function handleButtonClick() {
+    if (onButtonClick) {
+      onButtonClick();
+    }
+  }
 
-  const backgroundClassName = createMode ? 'bg-gray-200' : 'bg-blue-200';
+
+  const backgroundClassName = createMode ? 'bg-gray-200' : 'bg-yellow-100';
+
+
+
 
   return (
     <form
       className={`${backgroundClassName} p-2`}
       onSubmit={handleFormSubmit}
       onReset={handleFormReset}
+      // onButtonClick={handleButtonClick}
     >
- 
-    <h2 className="text-center font-semibold mb-2">Calculadora de Remuneração</h2>
+      <div className="">
+        <div className="flex flex-row items-center justify-evenly">
+          <p className="text-center font-semibold mb-2">Calculadora de Remuneração</p>
+          <div>
+             <Button onButtonClick={handleButtonClick}>Novo Trabalho</Button>
+          </div>
+        </div>
+      
       <div className="border-2 border-yellow-300">
         <div className="p-2">
           <TextInput
@@ -190,8 +207,7 @@ export default function FlashCardForm({
         </div>
       
       </div>
-
-
-    </form>
+     </div>
+  </form>
   );
 }
