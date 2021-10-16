@@ -1,7 +1,4 @@
-import { getNewId } from '../services/idService';
-
 export default function RadioButton({
-  id = getNewId(),
   name = 'radioButtonName',
   children: buttonDescription = 'Descrição do botão',
   buttonChecked = false,
@@ -15,14 +12,14 @@ export default function RadioButton({
 
   return (
     <div >
+      {buttonDescription}
       <input
-        id={id}
         type="radio"
         name={name}
         checked={buttonChecked}
         onChange={handleRadioButtonChange}
       />
-      <label htmlFor={id}>{buttonDescription}</label>
+      
     </div>
   );
 }

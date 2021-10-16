@@ -103,7 +103,7 @@ export default function FlashCardForm({
   }
 
 
-  const backgroundClassName = createMode ? 'bg-gray-200' : 'bg-yellow-100';
+  const backgroundClassName = createMode ? 'bg-gray-100' : 'bg-yellow-50';
 
 
 

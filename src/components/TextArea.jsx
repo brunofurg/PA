@@ -1,4 +1,4 @@
-export default function TextInput({
+export default function TextArea({
   labelDescription = 'Descrição do label:',
   textAreaValue = 'Valor padrão do text area',
   onTextAreaChange = null,
@@ -16,6 +16,7 @@ export default function TextInput({
 
   return (
     <div className="flex flex-col my-4">
+      {labelDescription}
       <textarea
         className="border p-1"
         maxLength={maxLength}

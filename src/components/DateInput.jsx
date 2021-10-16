@@ -17,6 +17,7 @@ export default function DateInput({
 
   return (
     <div className="flex flex-col my-4">
+      {labelDescription}
       <input
         autoFocus={autoFocus}
         className="border p-1"

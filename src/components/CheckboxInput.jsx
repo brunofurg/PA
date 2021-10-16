@@ -1,23 +1,24 @@
 export default function CheckboxInput({
   labelDescription = 'Descrição do checkbox',
-  inputValue = 'Valor padrão do input',
+  checkboxValue = 'Valor padrão do input',
   onCheckboxChange = null,
   autoFocus = false,
 }) {
-  function handleInputChange() {
+  function handleCheckboxChange() {
     if (onCheckboxChange) {
       onCheckboxChange();
     }
   }
 
   return (
-    <div className="flex flex-row items-center align-middle space-x-2">
+    <div className="flex flex-col items-center align-middle space-x-2 cursor-pointer">
+      {labelDescription}
       <input
         autoFocus={autoFocus}
         className="border p-1"
         type="checkbox"
-        value={inputValue}
-        onChange={handleInputChange}
+        value={checkboxValue}
+        onCheckboxChange={handleCheckboxChange}
       />
 
     </div>

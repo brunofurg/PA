@@ -9,11 +9,7 @@ export default function SelectFaina() {
   const [faina, setFaina] = React.useState('');
 
   const handleChange = (event) => {
-    //console.log(faina);
-    setFaina(event.target.value);
-    console.log(event.target.value);
-    //return event.target.value;
-
+     setFaina(event.target.value);
   };
 
   return (

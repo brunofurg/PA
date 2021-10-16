@@ -19,8 +19,9 @@ export default function Painel() {
      <>
              <div className="border-2 bg-gray-100 p-1">
                 <div className="flex flex-row justify-evenly items-center">
-                    <span>
-                        {`Rendimentos ${SelectIntervalo.children}`}
+                    <span className="flex flex-col text-center">
+                        <p className="text-bold text-lg">Demonstrativo:</p>
+                        <p>{`Setembro/21`}</p>
                     </span>
                     <span>
                         <SelectIntervalo />

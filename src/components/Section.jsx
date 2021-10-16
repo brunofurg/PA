@@ -217,16 +217,16 @@ export default function Section() {
 
                         <TabPanel>
                           <div>
-                              <div className="flex place-content-center mb-2">                            
+                              <div className="bg-gray-50 flex place-content-center mb-1">                            
                                  <MonthDisplay />
                               </div>            
-                              <div className="bg-gray-100 p-2">
+                              <div className="bg-gray-100 border border-gray-300 rounded-lg p-2">
                                 <div className="flex flex-row justify-around items-center p-2">
                                   <span>
                                     <CheckboxInput inputValue="true" labelDescription="Tudo"/>
                                   </span>
                                   <span className="text-center">
-                                      <p className="font-bold text-center p-2">Setembro 2021</p>
+                                      <p className="font-bold text-center text-lg">Setembro 2021</p>
                                   </span>
                                   <span className="button-small">
                                       <WorkDialog />
@@ -236,7 +236,7 @@ export default function Section() {
                              
                                {allCards.map(flashCard => {
                                 return (
-                                  <div className="border border-gray-300 place-content-around shadow-lg hover:bg-gray-200 hover:border-gray-600 rounded-lg flex flex-row m-3 p-2">
+                                  <div className="bg-yellow-200 border border-gray-300 shadow-lg hover:bg-gray-200 hover:border-gray-600 rounded-lg flex flex-row m-3 p-2">
                                       <div className="flex flex-col space-y-10">
                                           <div>
                                               1
@@ -248,7 +248,7 @@ export default function Section() {
                                               />
                                           </div>
                                        </div>
-                                       <div className="place-content-stretch">
+                                       <div className="">
                                            <FlashCardItem
                                               key={flashCard.id}
                                               onDelete={handleDeleteFlashCard}
@@ -260,69 +260,96 @@ export default function Section() {
                                     );
                                 })}
                                 </div>
-                                <div className="bg-gray-200 flex flex-col place-content-stretch align-middle rounded-lg p-2">
-                                  <p className="text-center font-black">Total Mensal</p>
-                                  <div className="bg-green-200 flex flex-col place-content-around p-2">
+                                <div className="bg-gray-200 border border-gray-400 flex flex-col place-content-stretch align-middle rounded-lg shadow-lg p-2">
+                                  <p className="text-center font-black p-2">Total Mensal (Selecionado)</p>
+                                  <div className="bg-green-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3">
                                     <div className="flex flex-row place-content-around">
-                                    <div className="border bg-green-50 hover:bg-white shadow-lg p-2 m-1 rounded-md">
+                                    <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
                                        <strong>Bruto: </strong>10.710,43
                                     </div>
-                                    <div className="border bg-green-50 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                    <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
                                       <strong>Líquido: </strong>7.701,89
                                     </div>
-                                    <div className="border bg-green-50 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                    <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
                                       <strong>Férias: </strong> 1.191,00
                                     </div>
-                                    <div className="border bg-green-50 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                    <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
                                       <strong>13°: </strong>893,25
                                     </div>
-                                    <div className="border bg-green-50 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
+                                    <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
                                       <strong>FGTS: </strong>1.023,57
                                     </div>
                                     </div>
                                     <div className="flex flex-row place-items-center place-content-around p-2">
-                                      <div>
+                                      <div className="text-green-600 text-xl">
                                         +Entradas
                                       </div>
                                       <div className="flex flex-row place-items-center space-x-2">
                                         <div className="text-right font-black">Rendimentos Totais:</div>
-                                        <div className="border border-gray-600 bg-green-50 rounded-md p-2 text-base ">10.809,66</div>
+                                        <div className="border border-gray-400 bg-green-200 rounded-md p-2 text-base shadow-lg">10.809,66</div>
                                       </div>
                                     </div>
                                     
                                   
                                   </div>
-                                  <div className="bg-red-300 flex flex-col place-content-around p-2">
+                                  <div className="bg-red-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3">
                                     <div className="flex flex-row place-content-around p-2">
-                                    <div className="border bg-red-100 hover:bg-white shadow-lg p-2 m-1 rounded-md">
-                                      <strong>INSS: </strong>-752,00
+                                    <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md">
+                                      <strong>IRPF: </strong>1.764,93
                                     </div>
-                                    <div className="border bg-red-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
-                                      <strong>IRPF: </strong>-1.764,93
+                                    <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md">
+                                      <strong>INSS: </strong>752,00
                                     </div>
-                                    <div className="border bg-red-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
-                                      <strong>DAS: </strong>-491,61
+                                    <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md">
+                                      <strong>DAS: </strong>491,61
                                     </div>
-                                    <div className="border bg-red-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
-                                      <strong>Judicial: </strong>-0,00
+                                    <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md">
+                                      <strong>Judicial: </strong>0,00
                                     </div>
-                                    <div className="border bg-red-100 hover:bg-white  shadow-lg p-2 m-1 rounded-md">
-                                      <strong>EPI: </strong>-0,00
+                                    <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md">
+                                      <strong>EPI: </strong>0,00
                                    </div>
                                </div>
                                <div className="flex flex-row place-items-center place-content-around p-2">
-                               <div>
-                                        +Saídas
-                                      </div>
+                               <div className="text-red-600 text-xl">-Saídas</div>
                                       <div className="flex flex-row place-items-center space-x-2">
                                         <div className="text-right font-black">Descontos Totais:</div>
-                                        <div className="border border-gray-600 bg-red-50 rounded-md p-2 text-base ">1.504,54</div>
+                                        <div className="border border-gray-400 bg-red-300 rounded-md p-2 shadow-lg text-base ">3.008,54</div>
                                       </div>
                                 </div>
-</div>
-</div>
-                             </div>
-                             </div>
+                              </div>
+                              <div className="bg-blue-50 rounded-lg flex flex-col shadow-lg p-2 mb-2">
+                                    <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
+                                      <p>1</p>
+                                      <strong> Faina(s) realizada(s)</strong>
+                                    </div>
+                                    <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
+                                      <p>4</p>
+                                      <strong> Média Faina(s)/Semana</strong>
+                                    </div>
+                                    <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
+                                      <p>25</p>
+                                      <strong> Dom/Fer Trabalhado(s)</strong>
+                                    </div>
+                                    <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
+                                      <p>360,87</p>
+                                      <strong> Média Bruto/Faina</strong>
+                                    </div>
+                                    <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
+                                      <p>320,63</p>
+                                      <strong> Média Liquido/Faina</strong>
+                                    </div>
+                               
+                                                               
+                                  
+                                  
+                                  
+                                  
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 
                           
                         </TabPanel> 

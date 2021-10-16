@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Pagination from '@mui/material/Pagination';
-//import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 
 export default function PaginationControlled() {
@@ -12,8 +11,7 @@ export default function PaginationControlled() {
 
   return (
     <Stack spacing={2}>
-      {/* <Typography>Page: {page}</Typography> */}
-      <Pagination count={3} page={page} onChange={handleChange} />
+       <Pagination count={3} page={page} onChange={handleChange} />
     </Stack>
   );
 }

@@ -9,10 +9,9 @@ export default function SelectIntervalo() {
   const [intervalo, setIntervalo] = React.useState('');
 
   const handleChange = (event) => {
-    //console.log(faina);
+    console.log(event.target.value); 
     setIntervalo(event.target.value);
-    console.log(event.target.value);
-    //return event.target.value;
+    
 
   };
 
