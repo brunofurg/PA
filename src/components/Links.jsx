@@ -1,7 +1,7 @@
 import * as React from 'react';
 import  { Fragment } from 'react';
 
-import imgPorto from '../images/imgPorto.svg';
+import imgPorto from '../images/portoMap.svg';
 
 import imgOgmo from '../images/imgOgmo.svg';
 import imgTecon from '../images/imgTecon.svg';
@@ -21,22 +21,23 @@ import svgShip1 from '../images/boat.svg';
 
 import relacaoEstiva from '../docs/relacao.pdf'
 import calendarioEstiva from '../docs/calendario.pdf'
-import { IconContext } from "react-icons";
 
 export default function Links() {
     return (
     <Fragment>
-        <div className="bg-gray-100 flex flex-col align-middle justify-items-cemter space-y-8">
+        <div className="bg-gray-100 flex flex-col justify-items-stretch">
             
-            <div className="bg-blue-200 flex flex-row align-middle rounded-lg justify-around m-4">
-               <span className="bg-green-100 place-self-center m-1">
-                <p className="align-top text-center">Cais Virtual</p>
-                    <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/cais-virtual/_action/index/cd_usuario/publico' target="_blank" className="hover:scale-120" rel="noreferrer">
-                     <img className="rounded-full hover:shadow-lg" src={imgPorto} alt="Porto do Rio Grande - Cais Virtual" title="Porto do Rio Grande - Cais Virtual" width="100" height="100"/>
-                    </a>
-                </span>
-                <IconContext.Provider value={{ color:'green', classname:'react-icons', style: { verticalAlign: 'middle' } }}>
-                <div className="flex flex-col align-middle text-center text-xs flex-wrap border-2 rounded-3xl p-2">
+            <div className="bg-white border flex flex-row shadow-lg rounded-3xl justify-evenly m-3">
+            <a href='http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/cais-virtual/_action/index/cd_usuario/publico' target="_blank" className="hover:scale-120" rel="noreferrer">
+               <div className="bg-blue-50 hover:shadow-lg hover:border-gray-500 border shadow-lg rounded-3xl p-10">
+               
+                <p className="text-center">Cais Virtual</p>
+                    
+                     <img className="" src={imgPorto} alt="Porto do Rio Grande - Cais Virtual" title="Porto do Rio Grande - Cais Virtual" width="200" height="200"/>
+                    
+                </div>
+                </a>
+                 <div className="flex flex-col align-middle text-center text-xs flex-wrap rounded-lg  place-content-center p-2">
                     <div className="align-middle text-center">
                         <p>Movimentação Portuária:</p>
                     </div>  
@@ -81,12 +82,11 @@ export default function Links() {
                     </div>
                     
                 </div>  
-                </IconContext.Provider>
-            </div>    
+              </div>    
 
-            <div className="flex flex-col align-middle border-2 p-2 rounded-3xl">
+            <div className="bg-white border shadow-lg flex flex-col align-middle m-3 p-2 rounded-3xl">
             <div>
-                <p className="align-top text-center text-lg">
+                <p className="align-top text-center text-lg mb-3">
                     Habilitação:
                 </p>
             </div>
@@ -106,8 +106,8 @@ export default function Links() {
             </div>
         </div>
 
-            <div className="flex flex-col align-middle border-2 p-2 rounded-3xl">
-                <div><p className="align-center text-center text-lg">Previsão do Tempo:</p></div>
+            <div className="bg-white border shadow-lg flex flex-col align-middle m-3 p-2 rounded-3xl">
+                <div><p className="align-center text-center text-lg mb-3">Previsão do Tempo:</p></div>
                 <div className="flex flex-row  justify-evenly align-middle">
                <a className="rounded-full hover:shadow-lg" href='https://www.accuweather.com/pt/br/rio-grande/35734/weather-forecast/35734' target="_blank" rel="noreferrer">
                     <img src={imgAccuweather} alt="AccuWeather" title="AccuWeather" width="80" height="80"/>
@@ -126,7 +126,7 @@ export default function Links() {
 
 
             </div>
-            <div className="border-2 p-2 flex flex-row justify-around align-middle rounded-3xl">
+            <div className="bg-white border shadow-lg flex flex-row justify-around align-middle m-3 p-2 rounded-3xl">
                     <span className="flex flex-row text-center justify-center" >
                         <a href='https://drive.google.com/drive/folders/1E0WK6rexk5gVxRc3KPYK4ECnc4oBqs0Z' target="_blank" rel="noreferrer" >
                             <img className="rounded-full hover:shadow-lg" src={imgDrive} alt="Pasta compartilhada" title="Pasta Compartilhada" width="80" height="80" />
