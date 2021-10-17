@@ -1,6 +1,6 @@
 export default function RadioButton({
   name = 'radioButtonName',
-  children: buttonDescription = 'Descrição do botão',
+  children: labelDescription = 'Descrição do botão',
   buttonChecked = false,
   onButtonClick = null,
 }) {
@@ -12,7 +12,7 @@ export default function RadioButton({
 
   return (
     <div >
-      {buttonDescription}
+      {labelDescription}
       <input
         type="radio"
         name={name}

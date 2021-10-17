@@ -7,15 +7,18 @@ export default function PesoMovimentado() {
         setWeightTotal(newTipo);
       }
     return (
-        <div className="p-4">
-            <span>
-                <NumberInput
-                    labelDescription='Digite o peso movimentado no período:' 
+        <div className="flex flex-col justify-center p-4">
+            <span className="bg-blue-300 p-1 content-center text-center">Peso Movimentado no Período:</span>
+            <span className="">
+                 <NumberInput
+                    labelDescription='' 
                     inputValue={weightTotal} 
                     onInputChange={handleWeightTotal}
                     placeHolder='Peso total'
                 />
             </span>
+                
+
         </div>
     )
 }

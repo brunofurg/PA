@@ -35,24 +35,23 @@ export default function FainaCotas() {
 
     return (
         <>
-          <div className="flex flex-col">
-                <div className="flex flex-row mt-2 place-content-around">
-                    Insira Quantidade e Tipo de Cotas
-
+          <div className="flex flex-col p-2">
+                <div className="bg-blue-200 text-center p-2 m-1 mb-2">
+                    <p>Insira Quantidade e Tipo de Cotas</p>
                 </div>
 
-                <div  className="flex flex-row place-content-around ">
+                <div  className="flex flex-row justify-around ">
                 <div className="text-xs text-center">
-                <div className="bg-blue-200 flex flex-row place-items-center space-x-2 p-2 m-2">
+                <div className="bg-blue-100 flex flex-row place-items-center space-x-2 p-2 m-1">
                     <CheckboxInput labelDescription=''/>
                     <NumberInput 
-                        labelDescription='Diária'
+                        labelDescription='Diária(x1.0)'
                         inputValue={a1tGlobalCheio}
                         onInputChange={handleA1tGlobalCheio}
                         placeHolder=''
                     />
                 </div>
-                <div className="bg-blue-200 flex flex-row place-items-center space-x-2 p-2 m-2">
+                <div className="bg-blue-100 flex flex-row place-items-center space-x-2 p-2 m-1">
                     <CheckboxInput labelDescription=''/>
                     <NumberInput
                         labelDescription='Motorista(x1.2)'
@@ -61,7 +60,7 @@ export default function FainaCotas() {
                         placeHolder=''
                     />
                 </div>
-                <div className="bg-blue-200 flex flex-row place-items-center space-x-2 p-2 m-2">
+                <div className="bg-blue-100 flex flex-row place-items-center space-x-2 p-2 m-1">
                     <CheckboxInput labelDescription=''/>
                     <NumberInput
                         labelDescription='Operador(x2.0)'
@@ -72,16 +71,16 @@ export default function FainaCotas() {
                 </div>
             </div>
             <div className="text-xs text-center align-middle">
-            <div className="bg-blue-200 flex flex-row place-items-center space-x-2 p-2 m-2">
+            <div className="bg-blue-100 flex flex-row place-items-center space-x-2 p-2 m-1">
                     <CheckboxInput labelDescription=''/> 
                     <NumberInput
-                        labelDescription='Soldado(x1.0)'
+                        labelDescription='Produção(x1.0)'
                         inputValue={a1tGlobalVazio}
                         onInputChange={handleA1tGlobalVazio}
                         placeHolder=''
                     />
                 </div>
-                <div className="bg-blue-200 flex flex-row place-items-center space-x-2 p-2 m-2">
+                <div className="bg-blue-100 flex flex-row place-items-center space-x-2 p-2 m-1">
                     <CheckboxInput labelDescription=''/>
                     <NumberInput
                         labelDescription='Contra-Mestre(x1.5)'
@@ -90,7 +89,7 @@ export default function FainaCotas() {
                         placeHolder=''
                     />
                 </div>
-                <div className="bg-blue-200 flex flex-row place-items-center space-x-2 p-2 m-2">
+                <div className="bg-blue-100 flex flex-row place-items-center space-x-2 p-2 m-1">
                     <CheckboxInput labelDescription=''/>
                     <NumberInput
                         labelDescription='Capataz(x2.25)'

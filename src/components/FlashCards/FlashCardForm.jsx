@@ -137,43 +137,59 @@ export default function FlashCardForm({
             onTextAreaChange={handleDescriptionChange}
           />
         </div>
-        <div className="flex flex-row justify-evenly items-center">
-          <span>
-            <div className="flex flex-col"> 
-                <p>Período:</p>
-                <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">A</RadioButton>
-                <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">B</RadioButton>
-                <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">C</RadioButton>
-                <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">D</RadioButton>
+        <div className="bg-yellow-300 flex flex-row justify-between">
+          <div className="bg-pink-400 p-2">
+            <div className="bg-red-300 flex flex-col justify-evenly p-2"> 
+                <div className="text-center">
+                  <p>Período:</p>
+                </div>
+                <div className="flex flex-row justify-evenly">
+                  <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">A</RadioButton>
+                  <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">B</RadioButton>                  
+                </div>
+                <div className="flex flex-row justify-evenly">
+                  <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">C(25%)</RadioButton>
+                  <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">D(50%)</RadioButton>
+                </div>            
             </div> 
-          </span>
-        <div>
-          <span>   
+            <div className="bg-white flex flex-col place-items-around p-2">
+              <div className="text-center p-1">
+                <p>Selecione como Calcular:</p>
+              </div>
+              <div className="bg-blue-500 flex flex-row place-content-between p-3">
+                <span><RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">Por Peso</RadioButton></span>
+                <span><RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">Por Caminhões</RadioButton></span>
+              </div>
+
+            </div>
+          </div>
+        <div className="bg-green-200 p-2">
+          <div className="bg-gray-300 p-2">   
               <DateInput
                   labelDescription='Selecione o dia:' 
                   inputValue={dayWork} 
                   onInputChange={handleDayWork}
               />
-          </span>
-          <span>
+          </div>
+          <div className="bg-blue-300 p-3">
              <SelectFaina
               labelDescription='Selecione o tipo de faina:' 
               selectValue={typeFaina} 
               onSelectChange={handleTypeFaina}
              />  
-          </span>
+          </div>
         </div>
       </div>
-      <div className="bg-purple-200 flex flex-row align-middle justify-items-center p-2">
+      <div className="bg-purple-200">
               <PesoMovimentado />
           </div> 
-          <div className="bg-yellow-100">
+          <div className="bg-yellow-200">
             <PorCaminhao />
           </div>
-          <div className="bg-red-300">
+          <div className="bg-pink-200">
           <FainaCotas />
         </div> 
-          <div className="bg-green-100">
+          <div className="bg-green-200">
           <FainaA1t />
               { typeFaina === "a1t" 
               ? console.log("teste1")

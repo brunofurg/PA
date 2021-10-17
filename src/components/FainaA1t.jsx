@@ -36,11 +36,11 @@ export default function FainaA1t() {
     return (
         <>
           <div className="flex flex-col">
-                <div className="flex flex-row mt-2 place-content-around">
-                    <span className="align-bottom">
-                        A1T Tecon
-                    </span>
-                <span>
+                <div className="flex flex-row mt-2 justify-around">
+                    <div className="bg-blue-200 p-2">
+                        Insira quantidade de conteineres
+                    </div>
+                    <span className="">
                         <CheckboxInput
                             labelDescription='Contra-Mestre'
                         />
@@ -49,7 +49,7 @@ export default function FainaA1t() {
 
                 <div  className="flex flex-row place-content-around space-x-3">
                 <div className="text-xs text-center">
-               <div className="bg-gray-300">
+               <div className="bg-blue-100">
                     <NumberInput 
                         labelDescription='Longo Curso Cheio'
                         inputValue={a1tGlobalCheio}
@@ -57,7 +57,7 @@ export default function FainaA1t() {
                         placeHolder=''
                     />
                 </div>
-                <div className="bg-gray-300">
+                <div className="bg-blue-100">
                     <NumberInput
                         labelDescription='Cabotagem Cheio'
                         inputValue={a1tCabotagemCheio}
@@ -65,7 +65,7 @@ export default function FainaA1t() {
                         placeHolder=''
                     />
                 </div>
-                <div className="bg-gray-300">
+                <div className="bg-blue-100">
                     <NumberInput
                         labelDescription='Tranship Cheio'
                         inputValue={a1tTranshipCheio}
@@ -75,7 +75,7 @@ export default function FainaA1t() {
                 </div>
             </div>
             <div className="text-xs text-center align-middle">
-               <div className="bg-gray-300">
+               <div className="bg-blue-100">
                     <NumberInput
                         labelDescription='Longo Curso Vazio'
                         inputValue={a1tGlobalVazio}
@@ -83,7 +83,7 @@ export default function FainaA1t() {
                         placeHolder=''
                     />
                 </div>
-                <div className="bg-gray-300">
+                <div className="bg-blue-100">
                     <NumberInput
                         labelDescription='Cabotagem Vazio'
                         inputValue={a1tCabotagemVazio}
@@ -91,7 +91,7 @@ export default function FainaA1t() {
                         placeHolder=''
                     />
                 </div>
-                <div className="bg-gray-300">
+                <div className="bg-blue-100">
                     <NumberInput
                         labelDescription='Tranship Vazio'
                         inputValue={a1tTranshipVazio}
