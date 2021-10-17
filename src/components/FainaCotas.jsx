@@ -2,7 +2,7 @@ import { useState } from 'react';
 import CheckboxInput from './CheckboxInput';
 import NumberInput from "./NumberInput";
 
-export default function FainaA1t() {
+export default function FainaCotas() {
     const [a1tGlobalCheio, setA1tGlobalCheio] = useState('');
     const [a1tGlobalVazio, setA1tGlobalVazio] = useState('');
     const [a1tCabotagemCheio, setA1tCabotagemCheio] = useState('');
@@ -37,37 +37,34 @@ export default function FainaA1t() {
         <>
           <div className="flex flex-col">
                 <div className="flex flex-row mt-2 place-content-around">
-                    <span className="align-bottom">
-                        A1T Tecon
-                    </span>
-                <span>
-                        <CheckboxInput
-                            labelDescription='Contra-Mestre'
-                        />
-                    </span>
+                    Insira Quantidade e Tipo de Cotas
+
                 </div>
 
-                <div  className="flex flex-row place-content-around space-x-3">
+                <div  className="flex flex-row place-content-around ">
                 <div className="text-xs text-center">
-               <div className="bg-gray-300">
+                <div className="bg-blue-200 flex flex-row place-items-center space-x-2 p-2 m-2">
+                    <CheckboxInput labelDescription=''/>
                     <NumberInput 
-                        labelDescription='Longo Curso Cheio'
+                        labelDescription='Diária'
                         inputValue={a1tGlobalCheio}
                         onInputChange={handleA1tGlobalCheio}
                         placeHolder=''
                     />
                 </div>
-                <div className="bg-gray-300">
+                <div className="bg-blue-200 flex flex-row place-items-center space-x-2 p-2 m-2">
+                    <CheckboxInput labelDescription=''/>
                     <NumberInput
-                        labelDescription='Cabotagem Cheio'
+                        labelDescription='Motorista(x1.2)'
                         inputValue={a1tCabotagemCheio}
                         onInputChange={handleA1tCabotagemCheio}
                         placeHolder=''
                     />
                 </div>
-                <div className="bg-gray-300">
+                <div className="bg-blue-200 flex flex-row place-items-center space-x-2 p-2 m-2">
+                    <CheckboxInput labelDescription=''/>
                     <NumberInput
-                        labelDescription='Tranship Cheio'
+                        labelDescription='Operador(x2.0)'
                         inputValue={a1tTranshipCheio}
                         onInputChange={handleA1tTranshipCheio}
                         placeHolder=''
@@ -75,25 +72,28 @@ export default function FainaA1t() {
                 </div>
             </div>
             <div className="text-xs text-center align-middle">
-               <div className="bg-gray-300">
+            <div className="bg-blue-200 flex flex-row place-items-center space-x-2 p-2 m-2">
+                    <CheckboxInput labelDescription=''/> 
                     <NumberInput
-                        labelDescription='Longo Curso Vazio'
+                        labelDescription='Soldado(x1.0)'
                         inputValue={a1tGlobalVazio}
                         onInputChange={handleA1tGlobalVazio}
                         placeHolder=''
                     />
                 </div>
-                <div className="bg-gray-300">
+                <div className="bg-blue-200 flex flex-row place-items-center space-x-2 p-2 m-2">
+                    <CheckboxInput labelDescription=''/>
                     <NumberInput
-                        labelDescription='Cabotagem Vazio'
+                        labelDescription='Contra-Mestre(x1.5)'
                         inputValue={a1tCabotagemVazio}
                         onInputChange={handleA1tCabotagemVazio}
                         placeHolder=''
                     />
                 </div>
-                <div className="bg-gray-300">
+                <div className="bg-blue-200 flex flex-row place-items-center space-x-2 p-2 m-2">
+                    <CheckboxInput labelDescription=''/>
                     <NumberInput
-                        labelDescription='Tranship Vazio'
+                        labelDescription='Capataz(x2.25)'
                         inputValue={a1tTranshipVazio}
                         onInputChange={handleA1tTranshipVazio}
                         placeHolder=''
@@ -107,5 +107,31 @@ export default function FainaA1t() {
         </>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+// export default function FainaCotas() {
+//     return (
+//         <div className="bg-red-300 flex flex-col">
+//             /Soldado(x1)
+//             Motorista(x1,2)
+//             /Contra-Mestre(x1,5)
+//             Operador(x2)
+//             /Capataz(x2,25)
+
+
+
+//         </div>
+//     )
+// }
+
 
 

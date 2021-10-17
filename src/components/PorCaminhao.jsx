@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import TextInput from "./TextInput";
+import NumberInput from "./NumberInput";
 
 export default function PorCaminhao() {
     const [trucksTotal, setTrucksTotal] = useState('');
@@ -12,23 +12,23 @@ export default function PorCaminhao() {
       }
     return (
         <>
-            <div className="flex flex-col p-2">
-                <div>
-                    <TextInput 
+            <div className="flex flex-col place-items-center p-4">
+                <span>
+                    <NumberInput 
                         labelDescription='Total de Caminhões movimentado no período:'
                         inputValue={trucksTotal} 
                         onInputChange={handleTrucksTotal}
                         placeHolder='Número de caminhões'
                     />
-                </div>
-                <div>
-                <TextInput 
+                </span>
+                <span>
+                    <NumberInput 
                         labelDescription='Peso Médio por Caminhão:'
                         inputValue={mediumWeight} 
                         onInputChange={handleMediumWeight}
                         placeHolder='Padrão 30 toneladas'
                     />
-                </div>
+                </span>
 
             </div>
         </>

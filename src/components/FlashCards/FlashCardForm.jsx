@@ -11,6 +11,10 @@ import RadioButton from '../RadioButton';
 import FainaA1t from '../FainaA1t';
 import PorCaminhao from '../PorCaminhao';
 import SelectFaina from "../SelectFaina";
+import PesoMovimentado from '../PesoMovimentado';
+import FainaCalculo from '../FainaCalculo';
+import FainaValor from '../FainaValor';
+import FainaCotas from '../FainaCotas';
 
 export default function FlashCardForm({
   createMode = true,
@@ -24,8 +28,7 @@ export default function FlashCardForm({
   const [dayWork, setDayWork] = useState(flashCard?.infoWork.dia || '');
   const [shiftWork, setShiftWork] = useState(flashCard?.infoWork.turno || '');
   const [typeFaina, setTypeFaina] = useState(flashCard?.inputValues._tipo || '');
-  const [weightTotal, setWeightTotal] = useState(flashCard?.inputValues._pesoMovimentado || '');
-  
+    
   
   const [error, setError] = useState('');
 
@@ -92,9 +95,7 @@ export default function FlashCardForm({
     setShiftWork(newTipo);
   }
 
-  function handleWeightTotal(newTipo) {
-    setWeightTotal(newTipo);
-  }
+
 
   function handleButtonClick() {
     if (onButtonClick) {
@@ -115,15 +116,15 @@ export default function FlashCardForm({
       onReset={handleFormReset}
       // onButtonClick={handleButtonClick}
     >
-      <div className="bg-blue-50">
-        <div className="bg-gray-50 flex flex-row place-items-center justify-evenly text-base p-2">
+      <div className="bg-blue-50 border-2">
+        <div className="bg-gray-200 flex flex-row place-items-center justify-evenly text-base p-2">
           <p className="text-center font-semibold mb-2">Calculadora de Remuneração</p>
           <div>
              <Button onButtonClick={handleButtonClick}>Novo Trabalho</Button>
           </div>
         </div>
       
-      <div className="">
+      <div className="bg-blue-50">
         <div className="p-2">
           <TextInput
             labelDescription="Navio:"
@@ -163,47 +164,42 @@ export default function FlashCardForm({
           </span>
         </div>
       </div>
-
-        <div className="bg-green-100">
+      <div className="bg-purple-200 flex flex-row align-middle justify-items-center p-2">
+              <PesoMovimentado />
+          </div> 
+          <div className="bg-yellow-100">
+            <PorCaminhao />
+          </div>
+          <div className="bg-red-300">
+          <FainaCotas />
+        </div> 
+          <div className="bg-green-100">
           <FainaA1t />
               { typeFaina === "a1t" 
               ? console.log("teste1")
               : console.log("teste2")
               }
         </div>
-
-          <div className="bg-yellow-100">
-            <PorCaminhao />
-          </div>
-    
-          <div className="bg-purple-200 flex flex-row align-middle justify-items-center p-2">
-              <span>
-                <TextInput
-                  labelDescription='Digite o peso movimentado no período:' 
-                  inputValue={weightTotal} 
-                  onInputChange={handleWeightTotal}
-                  placeHolder='Peso total'
-                />
-              </span>  
-          </div> 
-          <div className="bg-gray-500 place-items-center p-4 m-2 mb-4">
+        <div className="bg-red-300">
+          <FainaCalculo />
+        </div> 
+        <div className="bg-pink-300">
+          <FainaValor />
+        </div> 
+          <div className="p-4 flex justify-center">
                 <IconPlus className="hover:bg-blue-200 rounded-full" size={30}/>
             </div>
           </div>  
-          <div className="bg-pink-50 flex items-center justify-between">
-            {error.trim() !== '' ? <Error>{error}</Error> : <span>&nbsp;</span>}
-                <div className="flex flex-row items-center space-x-2">
-    
-            <span>
-              <Button colorClass="bg-red-200 hover:bg-red-300" type="reset">
-                Limpar
-              </Button>
-              <Button colorClass="bg-green-300 hover:bg-green-400" type="submit">
-                Incluir
-              </Button>
-            </span>
-     
-        </div>
+          <div className="bg-pink-50 flex items-center justify-around">
+              {error.trim() !== '' ? <Error>{error}</Error> : <span>&nbsp;</span>}
+                  <div className="flex flex-row items-center p-2 space-x-2">
+                      <Button colorClass="bg-red-500 hover:bg-red-300" type="reset">
+                        Limpar
+                      </Button>
+                      <Button colorClass="bg-terciary hover:bg-green-400" type="submit">
+                        Incluir
+                      </Button>
+           </div>
       
       </div>
      </div>

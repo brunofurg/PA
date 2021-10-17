@@ -84,7 +84,7 @@ export default function Section() {
   
     function handleEditFlashCard(card) {
       setCreateMode(false);
-      setSelectedTab(1);
+      setSelectedTab(2);
       setSelectedFlashCard(card);
     }
   
@@ -209,7 +209,7 @@ export default function Section() {
                         <TabPanel>
 
                         <div>
-                              <div className="bg-gray-50 flex place-content-center mb-1">                            
+                              <div className="bg-gray-100 flex place-content-center mb-1">                            
                                  <MonthDisplay />
                               </div>            
                               <div className="bg-gray-100 border border-gray-300 rounded-lg p-2">
@@ -287,19 +287,19 @@ export default function Section() {
                                   <div className="bg-red-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3">
                                     <div className="flex flex-row place-content-around p-2">
                                     <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md">
-                                      <strong>IRPF: </strong>1.764,93
+                                      <strong>IRPF: </strong>1.764,93 (30,3%)
                                     </div>
                                     <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md">
-                                      <strong>INSS: </strong>752,00
+                                      <strong>INSS: </strong>752,00 (14%)
                                     </div>
                                     <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md">
-                                      <strong>DAS: </strong>491,61
+                                      <strong>DAS: </strong>491,61 (6%)
                                     </div>
                                     <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md">
-                                      <strong>Judicial: </strong>0,00
+                                      <strong>Judicial: </strong>0,00 (0%)
                                     </div>
                                     <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md">
-                                      <strong>EPI: </strong>0,00
+                                      <strong>EPI: </strong>0,00 (0%)
                                    </div>
                                </div>
                                <div className="flex flex-row place-items-center place-content-around p-2">
