@@ -7,13 +7,15 @@ import Error from '../Error';
 import { BsPlusCircle as IconPlus } from 'react-icons/bs';
 
 import DateInput from "../DateInput";
-//import FainaA1t from '../FainaA1t';
+import FainaA1t from '../FainaA1t';
 import PorCaminhao from '../PorCaminhao';
 import SelectFaina from "../SelectFaina";
 import PesoMovimentado from '../PesoMovimentado';
 import FainaCalculo from '../FainaCalculo';
 import FainaValor from '../FainaValor';
 import FainaCotas from '../FainaCotas';
+import FainaComRotator from '../FainaSemRotator';
+import FainaTipoTaxa from '../FainaTipoTaxa';
 
 export default function FlashCardForm({
   createMode = true,
@@ -154,7 +156,7 @@ export default function FlashCardForm({
        
           </div>
         <div className="border border-gray-300 flex flex-row justify-evenly p-2">
-        <div className="border border-gray-500 rounded-lg p-3">
+        <div className="p-3">
             <div className="bg-blue-300 shadow-lg rounded-lg p-2">Selecione tipo de Faina:</div>
              <SelectFaina
               labelDescription='Selecione o tipo de faina' 
@@ -163,7 +165,7 @@ export default function FlashCardForm({
              />  
           </div>
           
-          <div className="bg-purple-300 border border-gray-500 rounded-lg flex flex-col p-2">
+          <div className="flex flex-col p-2">
               <div className="bg-blue-300 shadow-lg rounded-lg text-center mb-2 p-2">
                 <p>Calcular por:</p>
               </div>
@@ -183,10 +185,18 @@ export default function FlashCardForm({
             <PorCaminhao />
           </div>
           <div className="">
-          <FainaCotas />
-        </div> 
+             <FainaCotas />
+          </div>
+
           <div className="">
-          {/* <FainaA1t /> */}
+            <FainaComRotator />
+          </div>
+          <div className="">
+             <FainaTipoTaxa />
+          </div>
+
+          <div className="">
+          <FainaA1t />
               { typeFaina === "a1t" 
               ? console.log("teste1")
               : console.log("teste2")

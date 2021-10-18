@@ -17,7 +17,7 @@ export default function PorCaminhao() {
                 
                 <span className="bg-blue-300 rounded-lg shadow-lg p-1 mb-2">Movimentação de Caminhões:</span>
                 <div className="flex flex-row place-content-around">
-                    <div className="items-center border border-gray-500 place-content-center rounded-lg p-2 mt-3">
+                    <div className="border border-gray-500 place-content-center rounded-lg p-2 mt-3">
                         <RadioButton> </RadioButton>
                         <NumberInput 
                            labelDescription='Todo o Período:'
@@ -26,7 +26,7 @@ export default function PorCaminhao() {
                             placeHolder='Total de caminhões'
                         />
                     </div>
-                    <div className="items-center border border-gray-500 place-content-center rounded-lg p-2 mt-3">
+                    <div className="border border-gray-500 place-content-center rounded-lg p-2 mt-3">
                         <RadioButton> </RadioButton>
                         <NumberInput 
                             labelDescription='Caminhões por Hora:'
@@ -37,15 +37,19 @@ export default function PorCaminhao() {
                     </div>
                     
                 </div>
-                <div className="flex justify-center">
-                    <NumberInput 
-                        labelDescription='Peso Médio por Caminhão:'
-                        inputValue={mediumWeight} 
-                        onInputChange={handleMediumWeight}
-                        placeHolder='Padrão 30 toneladas'
-                    />
+                <div className="flex flex-row place-content-around">
+                    <div className="border border-gray-500 place-content-center rounded-lg p-2 mt-3">
+                         <NumberInput 
+                            labelDescription='Peso Médio por Caminhão:'
+                            inputValue={mediumWeight} 
+                            onInputChange={handleMediumWeight}
+                            placeHolder='Padrão 30 toneladas'
+                        />
+                    </div>
+                    <div>
+                        25 * 30 = 75
+                    </div>
                 </div>
-
 
 
             </div>

@@ -294,6 +294,15 @@ export default function Section() {
                                     <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md flex-wrap ">
                                       <strong>EPI: </strong>0,00 (0%)
                                    </div>
+                                   <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md flex-wrap ">
+                                      <strong>Mensal: </strong>0,00 (0%)
+                                   </div>
+                                   <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md flex-wrap ">
+                                      <strong>Sindical: </strong>0,00 (0%)
+                                   </div>
+                                   <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md flex-wrap ">
+                                      <strong>Encargos13°: </strong>0,00 (0%)
+                                   </div>
                                </div>
                                <div className="flex flex-row place-items-center place-content-around p-2">
                                <div className="text-red-600 text-xl">-Saídas</div>

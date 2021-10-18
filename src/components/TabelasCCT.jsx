@@ -73,12 +73,12 @@ const rows = [
 ];
 
 const rows2 = [
-  createData2("Longo Curso Cheio", 4.2, 5.25, 6.3, 8.4, 10.5, 12.6),
-  createData2("Longo Curso Vazio", 2.67, 3.33, 4, 5.34, 6.67, 8),
-  createData2("Cabotagem Cheio", 3.15, 3.94, 4.73, 6.31, 7.88, 9.46),
-  createData2("Cabotagem Vazio", 2, 2.5, 3.01, 4.01, 5.01, 6.01),
-  createData2("Tranship Cheio", 2.09, 2.62, 3.14, 4.19, 5.23, 6.28),
-  createData2("Tranship Vazio", 1.34, 1.68, 2.01, 2.68, 3.35, 4.02),
+  createData2("Longo Curso CHEIO", 4.2, 5.25, 6.3, 8.4, 10.5, 12.6),
+  createData2("Longo Curso VAZIO", 2.67, 3.33, 4, 5.34, 6.67, 8),
+  createData2("Cabotagem CHEIO", 3.15, 3.94, 4.73, 6.31, 7.88, 9.46),
+  createData2("Cabotagem VAZIO", 2, 2.5, 3.01, 4.01, 5.01, 6.01),
+  createData2("Tranship CHEIO", 2.09, 2.62, 3.14, 4.19, 5.23, 6.28),
+  createData2("Tranship VAZIO", 1.34, 1.68, 2.01, 2.68, 3.35, 4.02),
   createData2("Diária Produção", 43.02, 53.77, 64.52, 86.03, 107.53, 129.05),
   createData2("Diária Conexo", 104.75, 130.93, 157.11, 209.47, 261.85, 314,22),  
 ];

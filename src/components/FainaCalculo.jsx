@@ -1,6 +1,6 @@
 export default function FainaCalculo() {
     return (
-        <div className="border border-gray-300 flex flex-row justify-around p-2">
+        <div className="flex flex-row justify-around p-2">
             <div className="flex flex-col">
                 <div className="bg-blue-300 borderflex flex flex-row space-x-2 justify-around mb-1 p-2">
                     <span>Peso Total</span>

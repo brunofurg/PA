@@ -37,19 +37,19 @@ export default function FainaA1t() {
         <>
           <div className="bg-yellow-200 flex flex-col">
                 <div className="bg-pink-300 flex flex-row mt-2 justify-around">
-                    <div className="bg-blue-300 rounded-lg shadow-lg p-2">
+                    <div className="bg-blue-300 rounded-lg shadow-lg mb-3 p-2">
                         Insira quantidade de conteineres
                     </div>
                 </div>
 
                 <div  className="bg-blue-200 flex flex-row place-content-around space-x-3">
-                    <div className="bg-red-400 flex flex-col">
+                    <div className="bg-red-400 flex flex-col place-content-center">
                         <span className="flex flex-wrap"><CheckboxInput labelDescription='Contra Mestre'/></span>
                     </div>
                     <div className="text-xs text-center">
                         <div className="bg-blue-100">
                             <NumberInput 
-                                labelDescription='Longo Curso Cheio'
+                                labelDescription='Longo Curso CHEIO'
                                 inputValue={a1tGlobalCheio}
                                 onInputChange={handleA1tGlobalCheio}
                                 placeHolder=''
@@ -57,7 +57,7 @@ export default function FainaA1t() {
                         </div>
                         <div className="bg-blue-100">
                             <NumberInput
-                                labelDescription='Cabotagem Cheio'
+                                labelDescription='Cabotagem CHEIO'
                                 inputValue={a1tCabotagemCheio}
                                 onInputChange={handleA1tCabotagemCheio}
                                 placeHolder=''
@@ -65,7 +65,7 @@ export default function FainaA1t() {
                         </div>
                         <div className="bg-blue-100">
                             <NumberInput
-                                labelDescription='Tranship Cheio'
+                                labelDescription='Tranship CHEIO'
                                 inputValue={a1tTranshipCheio}
                                 onInputChange={handleA1tTranshipCheio}
                                 placeHolder=''
@@ -75,7 +75,7 @@ export default function FainaA1t() {
                     <div className="text-xs text-center align-middle">
                         <div className="bg-blue-100">
                             <NumberInput
-                                labelDescription='Longo Curso Vazio'
+                                labelDescription='Longo Curso VAZIO'
                                 inputValue={a1tGlobalVazio}
                                 onInputChange={handleA1tGlobalVazio}
                                 placeHolder=''
@@ -83,7 +83,7 @@ export default function FainaA1t() {
                         </div>
                         <div className="bg-blue-100">
                             <NumberInput
-                                labelDescription='Cabotagem Vazio'
+                                labelDescription='Cabotagem VAZIO'
                                 inputValue={a1tCabotagemVazio}
                                 onInputChange={handleA1tCabotagemVazio}
                                 placeHolder=''
@@ -91,7 +91,7 @@ export default function FainaA1t() {
                         </div>
                         <div className="bg-blue-100">
                             <NumberInput
-                                labelDescription='Tranship Vazio'
+                                labelDescription='Tranship VAZIO'
                                 inputValue={a1tTranshipVazio}
                                 onInputChange={handleA1tTranshipVazio}
                                 placeHolder=''
