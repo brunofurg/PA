@@ -228,12 +228,12 @@ export default function Section() {
                              
                                {allCards.map(flashCard => {
                                 return (
-                                  <div className="border border-gray-300 shadow-lg hover:bg-gray-200 hover:border-gray-600 rounded-lg flex flex-row m-3 p-2">
-                                      <div className="flex flex-col space-y-10 p-2">
+                                  <div className="bg-purple-300 border border-gray-300 shadow-lg hover:bg-gray-200 hover:border-gray-600 rounded-lg flex flex-row m-3 p-2">
+                                      <div className="bg-yellow-300 flex flex-col space-y-10 p-2">
                                           <div className="">1</div>
                                           <div className=""><CheckboxInput checkboxValue="false" labelDescription=""/></div>
                                        </div>
-                                       <div className="">
+                                       <div className="bg-green-400 flex place-content-around mr-1">
                                            <FlashCardItem
                                               key={flashCard.id}
                                               onDelete={handleDeleteFlashCard}

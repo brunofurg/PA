@@ -117,7 +117,7 @@ export default function FlashCardForm({
           </div>
         </div>
       
-      <div className="">
+      <div className="border border-gray-300">
         <div className="p-2">
           <TextInput
             labelDescription="Navio:"
@@ -131,16 +131,16 @@ export default function FlashCardForm({
           />
         </div>
         <div className="flex flex-col">
-          <div className="flex flex-row justify-evenly p-2">
-          <div className="border border-gray-500 rounded-lg p-2"> 
-              <div className="bg-blue-300 shadow-lg rounded-lg p-2 mb-4">Selecione o dia:</div>  
+          <div className="border border-gray-300 flex flex-row justify-evenly p-2">
+          <div className="p-2"> 
+              <div className="bg-blue-300 shadow-lg rounded-lg p-2 mb-4">Selecione o dia</div>  
               <DateInput
                   labelDescription='' 
                   inputValue={dayWork} 
                   onInputChange={handleDayWork}
               />
           </div>
-            <div className="border border-gray-500 rounded-lg flex flex-col p-2"> 
+            <div className="flex flex-col p-2"> 
                 <div className="bg-blue-300 rounded-lg shadow-lg text-center mb-2 p-2">Período</div>
                 <div className="bg-yellow-300 flex flex-row space-x-1">
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`A`}</div>
@@ -153,7 +153,7 @@ export default function FlashCardForm({
 
        
           </div>
-        <div className="flex flex-row justify-evenly p-2">
+        <div className="border border-gray-300 flex flex-row justify-evenly p-2">
         <div className="border border-gray-500 rounded-lg p-3">
             <div className="bg-blue-300 shadow-lg rounded-lg p-2">Selecione tipo de Faina:</div>
              <SelectFaina
@@ -165,7 +165,7 @@ export default function FlashCardForm({
           
           <div className="bg-purple-300 border border-gray-500 rounded-lg flex flex-col p-2">
               <div className="bg-blue-300 shadow-lg rounded-lg text-center mb-2 p-2">
-                <p>Calcular por</p>
+                <p>Calcular por:</p>
               </div>
               <div className="bg-pink-200 flex flex-row justify-evenly space-x-2 p-2">
                 <p className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">{`Peso`}</p>
