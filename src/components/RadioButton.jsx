@@ -11,7 +11,7 @@ export default function RadioButton({
   }
 
   return (
-    <div >
+    <div className="flex flex-col text-center place-content-center place-items-center">
       {labelDescription}
       <input
         type="radio"

@@ -8,7 +8,7 @@ export default function PesoMovimentado() {
       }
     return (
         <div className="flex flex-col justify-center p-4">
-            <span className="bg-blue-300 p-1 content-center text-center">Peso Movimentado no Período:</span>
+            <span className="bg-blue-300 p-1 content-center text-center shadow-lg rounded-lg">Peso Movimentado no Período:</span>
             <span className="">
                  <NumberInput
                     labelDescription='' 

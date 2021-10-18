@@ -37,7 +37,7 @@ export default function FainaA1t() {
         <>
           <div className="flex flex-col">
                 <div className="flex flex-row mt-2 justify-around">
-                    <div className="bg-blue-200 p-2">
+                    <div className="bg-blue-300 rounded-lg shadow-lg p-2">
                         Insira quantidade de conteineres
                     </div>
                     <span className="">

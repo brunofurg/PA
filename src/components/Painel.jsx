@@ -19,8 +19,8 @@ export default function Painel() {
      <>
              <div className="border-2 bg-gray-100 p-1">
                 <div className="flex flex-row justify-evenly items-center">
-                    <span className="flex flex-col text-center">
-                        <p className="text-bold text-lg">Demonstrativo:</p>
+                    <span className="bg-blue-300 shadow-lg flex flex-col rounded-lg text-center p-2">
+                        <p className="text-bold text-lg">Demonstrativo</p>
                         <p>{`Setembro/21`}</p>
                     </span>
                     <span>

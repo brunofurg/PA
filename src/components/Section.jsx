@@ -218,7 +218,7 @@ export default function Section() {
                                     <CheckboxInput checkboxValue="true" labelDescription="Tudo"/>
                                   </span>
                                   <span className="text-center">
-                                      <p className="font-bold text-center p-2 text-lg">Setembro 2021</p>
+                                      <p className="bg-blue-300 shadow-lg rounded-lg text-center text-base p-2">Setembro 2021</p>
                                   </span>
                                   <span className="button-small">
                                       <WorkDialog />
@@ -229,16 +229,9 @@ export default function Section() {
                                {allCards.map(flashCard => {
                                 return (
                                   <div className="border border-gray-300 shadow-lg hover:bg-gray-200 hover:border-gray-600 rounded-lg flex flex-row m-3 p-2">
-                                      <div className="flex flex-col space-y-10">
-                                          <div>
-                                              1
-                                          </div>
-                                          <div>
-                                              <CheckboxInput
-                                                checkboxValue="false"
-                                                labelDescription=""
-                                              />
-                                          </div>
+                                      <div className="flex flex-col space-y-10 p-2">
+                                          <div className="">1</div>
+                                          <div className=""><CheckboxInput checkboxValue="false" labelDescription=""/></div>
                                        </div>
                                        <div className="">
                                            <FlashCardItem
@@ -253,7 +246,7 @@ export default function Section() {
                                 })}
                                 </div>
                                 <div className="bg-gray-200 border border-gray-400 flex flex-col place-content-stretch align-middle rounded-lg shadow-lg p-2">
-                                  <p className="text-center font-black p-2">Total Mensal (Selecionado) [R$]</p>
+                                  <p className="bg-blue-200 text-center font-black rounded-lg mb-2 p-2">Total Mensal (Selecionado) [R$]</p>
                                   <div className="bg-green-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3">
                                     <div className="flex flex-row place-content-around">
                                     <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">

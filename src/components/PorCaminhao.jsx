@@ -15,7 +15,7 @@ export default function PorCaminhao() {
         
             <div className="flex flex-col text-center p-4">
                 
-                <span className="bg-blue-300 p-1">Movimentação de Caminhões:</span>
+                <span className="bg-blue-300 rounded-lg shadow-lg p-1">Movimentação de Caminhões:</span>
                 <div className="flex flex-row place-content-around">
                     <div className="items-center p-2 mt-3">
                         <RadioButton> </RadioButton>
