@@ -1,6 +1,6 @@
 export default function FainaValor() {
     return (
-        <div className="border border-gray-500 rounded-lg p-4">
+        <div className="border border-gray-300 p-4">
             <div className="bg-blue-300 rounded-lg shadow-lg text-center mb-2 p-2">
                 Valor Estimado para Faina
             </div>

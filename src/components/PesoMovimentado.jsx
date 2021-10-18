@@ -7,7 +7,7 @@ export default function PesoMovimentado() {
         setWeightTotal(newTipo);
       }
     return (
-        <div className="flex flex-col justify-center p-4">
+        <div className="flex flex-col border border-gray-300 justify-center p-4">
             <span className="bg-blue-300 p-1 content-center text-center shadow-lg rounded-lg">Peso Movimentado no Período:</span>
             <span className="">
                  <NumberInput

@@ -142,11 +142,11 @@ export default function FlashCardForm({
           </div>
             <div className="border border-gray-500 rounded-lg flex flex-col p-2"> 
                 <div className="bg-blue-300 rounded-lg shadow-lg text-center mb-2 p-2">Período</div>
-                <div className="flex flex-row space-x-2 p-2">
-                  <div className="bg-terciary text-white border hover:bg-primary border-blue-300 rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`A`}</div>
-                  <div className="bg-terciary text-white border hover:bg-primary border-blue-300 rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`B`}</div>
-                  <div className="bg-terciary text-white border hover:bg-primary border-blue-300 rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`C (+25%)`}</div>
-                  <div className="bg-terciary text-white border hover:bg-primary border-blue-300 rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`D (+50%)`}</div>
+                <div className="bg-yellow-300 flex flex-row space-x-1">
+                  <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`A`}</div>
+                  <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`B`}</div>
+                  <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`C (+25%)`}</div>
+                  <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`D (+50%)`}</div>
                 </div>            
             </div> 
 
@@ -163,13 +163,13 @@ export default function FlashCardForm({
              />  
           </div>
           
-          <div className="border border-gray-500 rounded-lg flex flex-col justify-items-stretch p-2">
+          <div className="bg-purple-300 border border-gray-500 rounded-lg flex flex-col p-2">
               <div className="bg-blue-300 shadow-lg rounded-lg text-center mb-2 p-2">
                 <p>Calcular por</p>
               </div>
-              <div className="flex flex-row justify-around space-x-4 p-4">
-                <div className="bg-terciary text-white border hover:bg-primary border-blue-300 rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-3">{`Peso`}</div>
-                <div className="bg-terciary text-white border hover:bg-primary border-blue-300 rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-3">{`Caminhão`}</div>
+              <div className="bg-pink-200 flex flex-row justify-evenly space-x-2 p-2">
+                <p className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">{`Peso`}</p>
+                <p className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">{`Caminhão`}</p>
               </div>
 
             </div>

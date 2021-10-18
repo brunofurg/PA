@@ -35,7 +35,7 @@ export default function FainaCotas() {
 
     return (
         <>
-          <div className="flex flex-col p-2">
+          <div className="flex flex-col border border-gray-300 p-2">
                 <div className="bg-blue-300 text-center shadow-lg rounded-lg p-2 m-1 mb-2">
                     <p>Insira Quantidade e Tipo de Cotas</p>
                 </div>

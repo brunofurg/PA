@@ -13,7 +13,7 @@ export default function PorCaminhao() {
       }
     return (
         
-            <div className="flex flex-col text-center p-4">
+            <div className="flex flex-col border border-gray-300 text-center p-4">
                 
                 <span className="bg-blue-300 rounded-lg shadow-lg p-1 mb-2">Movimentação de Caminhões:</span>
                 <div className="flex flex-row place-content-around">
