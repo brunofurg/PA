@@ -7,7 +7,6 @@ import Error from '../Error';
 import { BsPlusCircle as IconPlus } from 'react-icons/bs';
 
 import DateInput from "../DateInput";
-import RadioButton from '../RadioButton';
 import FainaA1t from '../FainaA1t';
 import PorCaminhao from '../PorCaminhao';
 import SelectFaina from "../SelectFaina";
@@ -26,7 +25,6 @@ export default function FlashCardForm({
   const [description, setDescription] = useState(flashCard?.description || '');
   
   const [dayWork, setDayWork] = useState(flashCard?.infoWork.dia || '');
-  const [shiftWork, setShiftWork] = useState(flashCard?.infoWork.turno || '');
   const [typeFaina, setTypeFaina] = useState(flashCard?.inputValues._tipo || '');
     
   
@@ -84,17 +82,12 @@ export default function FlashCardForm({
 
 
 
-
   function handleTypeFaina(newTipo) {
     setTypeFaina(newTipo);
   }
   function handleDayWork(newTipo) {
     setDayWork(newTipo);
   }
-  function handleSetShift(newTipo) {
-    setShiftWork(newTipo);
-  }
-
 
 
   function handleButtonClick() {
