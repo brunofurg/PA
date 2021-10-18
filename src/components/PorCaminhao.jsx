@@ -15,29 +15,29 @@ export default function PorCaminhao() {
         
             <div className="flex flex-col text-center p-4">
                 
-                <span className="bg-blue-300 rounded-lg shadow-lg p-1">Movimentação de Caminhões:</span>
+                <span className="bg-blue-300 rounded-lg shadow-lg p-1 mb-2">Movimentação de Caminhões:</span>
                 <div className="flex flex-row place-content-around">
-                    <div className="items-center p-2 mt-3">
+                    <div className="items-center border border-gray-500 rounded-lg p-2 mt-3">
                         <RadioButton> </RadioButton>
                         <NumberInput 
-                           labelDescription='Todo o período:'
+                           labelDescription='Todo o Período:'
                             inputValue={trucksTotal} 
                             onInputChange={handleTrucksTotal}
-                            placeHolder='Número de caminhões'
+                            placeHolder='Total de caminhões'
                         />
                     </div>
-                    <div className="items-center p-2 mt-3">
+                    <div className="items-center border border-gray-500 rounded-lg p-2 mt-3">
                         <RadioButton> </RadioButton>
                         <NumberInput 
                             labelDescription='Caminhões por Hora:'
                             inputValue={trucksTotal} 
                             onInputChange={handleTrucksTotal}
-                            placeHolder='Número de caminhões'
+                            placeHolder='Média por Hora'
                         />
                     </div>
                     
                 </div>
-                <div className="flex justify-center text-center p-2">
+                <div className="flex justify-center">
                     <NumberInput 
                         labelDescription='Peso Médio por Caminhão:'
                         inputValue={mediumWeight} 

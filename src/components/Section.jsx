@@ -218,7 +218,7 @@ export default function Section() {
                                     <CheckboxInput checkboxValue="true" labelDescription="Tudo"/>
                                   </span>
                                   <span className="text-center">
-                                      <p className="bg-blue-300 shadow-lg rounded-lg text-center text-base p-2">Setembro 2021</p>
+                                      <p className="bg-blue-400 text-white text-center text-base shadow-lg rounded-lg p-2">Setembro 2021</p>
                                   </span>
                                   <span className="button-small">
                                       <WorkDialog />

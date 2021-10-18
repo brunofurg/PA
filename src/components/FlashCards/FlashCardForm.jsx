@@ -116,15 +116,15 @@ export default function FlashCardForm({
       onReset={handleFormReset}
       // onButtonClick={handleButtonClick}
     >
-      <div className="bg-blue-50 border-2">
+      <div className="bg-pink-60 border-2">
         <div className="bg-gray-200 flex flex-row place-items-center justify-between p-2">
-          <span className="bg-blue-300 text-center rounded-lg shadow-lg font-semibold text-sm mb-2 p-2">Calculadora de Remuneração</span>
+          <span className="bg-blue-400 text-white text-sm text-center rounded-lg shadow-lg font-semibold mb-2 p-2">Calculadora de Remuneração</span>
           <div>
              <Button onButtonClick={handleButtonClick}>Novo Trabalho</Button>
           </div>
         </div>
       
-      <div className="bg-blue-50">
+      <div className="">
         <div className="p-2">
           <TextInput
             labelDescription="Navio:"
@@ -137,9 +137,9 @@ export default function FlashCardForm({
             onTextAreaChange={handleDescriptionChange}
           />
         </div>
-        <div className="bg-green-100 flex flex-col">
+        <div className="flex flex-col">
           <div className="flex flex-row justify-evenly p-2">
-          <div className="p-2"> 
+          <div className="border border-gray-500 rounded-lg p-2"> 
               <div className="bg-blue-300 shadow-lg rounded-lg p-2 mb-4">Selecione o dia:</div>  
               <DateInput
                   labelDescription='' 
@@ -147,29 +147,21 @@ export default function FlashCardForm({
                   onInputChange={handleDayWork}
               />
           </div>
-            <div className="bg-gray-300 flex flex-col p-2"> 
+            <div className="border border-gray-500 rounded-lg flex flex-col p-2"> 
                 <div className="bg-blue-300 rounded-lg shadow-lg text-center mb-2 p-2">Período</div>
-                <div className="bg-purple-300 flex flex-row justify-evenly space-x-6 p-2">
-                  <span className="bg-red-200 p-1">
-                    <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">A</RadioButton>
-                  </span>
-                  <span className="bg-gray-400 p-1">
-                    <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">B</RadioButton>                    
-                  </span>
-                  <span className="bg-yellow-300 p-1">
-                    <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">C(25%)</RadioButton>
-                  </span>
-                  <span className="bg-blue-400 p-1">
-                    <RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">D(50%)</RadioButton>
-                  </span>
+                <div className="flex flex-row space-x-2 p-2">
+                  <div className="bg-terciary text-white border hover:bg-primary border-blue-300 rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`A`}</div>
+                  <div className="bg-terciary text-white border hover:bg-primary border-blue-300 rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`B`}</div>
+                  <div className="bg-terciary text-white border hover:bg-primary border-blue-300 rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`C (+25%)`}</div>
+                  <div className="bg-terciary text-white border hover:bg-primary border-blue-300 rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`D (+50%)`}</div>
                 </div>            
             </div> 
 
 
        
           </div>
-        <div className="bg-pink-300 flex flex-row justify-evenly p-2">
-        <div className="bg-yellow-300 p-3">
+        <div className="flex flex-row justify-evenly p-2">
+        <div className="border border-gray-500 rounded-lg p-3">
             <div className="bg-blue-300 shadow-lg rounded-lg p-2">Selecione tipo de Faina:</div>
              <SelectFaina
               labelDescription='Selecione o tipo de faina' 
@@ -178,29 +170,29 @@ export default function FlashCardForm({
              />  
           </div>
           
-          <div className="bg-white flex flex-col justify-items-stretch p-2">
+          <div className="border border-gray-500 rounded-lg flex flex-col justify-items-stretch p-2">
               <div className="bg-blue-300 shadow-lg rounded-lg text-center mb-2 p-2">
                 <p>Calcular por</p>
               </div>
-              <div className="bg-blue-500 flex flex-row justify-evenly">
-                <span className="text-center p-4"><RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">Peso</RadioButton></span>
-                <span className="text-center p-4"><RadioButton buttonChecked={shiftWork} onButtonClick={handleSetShift} name="shiftChoose">Caminhões</RadioButton></span>
+              <div className="flex flex-row justify-around space-x-4 p-4">
+                <div className="bg-terciary text-white border hover:bg-primary border-blue-300 rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-3">{`Peso`}</div>
+                <div className="bg-terciary text-white border hover:bg-primary border-blue-300 rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-3">{`Caminhão`}</div>
               </div>
 
             </div>
 
         </div>
       </div>
-      <div className="bg-purple-200">
+      <div className="">
               <PesoMovimentado />
           </div> 
-          <div className="bg-yellow-200">
+          <div className="">
             <PorCaminhao />
           </div>
-          <div className="bg-pink-200">
+          <div className="">
           <FainaCotas />
         </div> 
-          <div className="bg-green-200">
+          <div className="">
           <FainaA1t />
               { typeFaina === "a1t" 
               ? console.log("teste1")
