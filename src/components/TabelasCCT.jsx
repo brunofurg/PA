@@ -44,9 +44,9 @@ function createData4(base, aliquota, deduzir) {
 }
 
 const rows = [
-  createData("A1", "Contêneires cheios/vazios, com engate automático e/ou rampa", 100.68, 6.3368, 105.96, 6.6703),
+  createData("A1", "Contêineres cheios/vazios, com engate automático e/ou rampa", 100.68, 6.3368, 105.96, 6.6703),
   createData("A1T", "Tabela de Valores TECON", "", "Tabela A1T", ""),
-  createData("A2", "Contêneires cheios/vazios, com engate automático manual", 100.68, 6.3368, 105.96, 6.6703),
+  createData("A2", "Contêineres cheios/vazios, com engate automático manual", 100.68, 6.3368, 105.96, 6.6703),
   createData("B1", "Carga Avulsas", 100.68, 6.3368, 105.96, 6.6703),
   createData("B2", "Cargas Unitizadas (Incluindo Madeiras Serrada Cintada e Big Bags)", 100.68, 0.7378, 105.96, 0.7766),
   createData("B3", "Cargas Unitizadas com Dimensões Padronizadas, em Navio Especializado", 111.86, 0.2712, 117.97, 0.2855),

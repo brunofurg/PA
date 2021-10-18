@@ -135,7 +135,7 @@ export default function FlashCardForm({
         <div className="flex flex-col">
           <div className="border border-gray-300 flex flex-row justify-evenly p-2">
           <div className="p-2"> 
-              <div className="bg-blue-300 shadow-lg rounded-lg p-2 mb-4">Selecione o dia</div>  
+              <div className="bg-blue-300 shadow-lg rounded-lg p-2 mb-4">Selecione data</div>  
               <DateInput
                   labelDescription='' 
                   inputValue={dayWork} 
@@ -157,7 +157,7 @@ export default function FlashCardForm({
           </div>
         <div className="border border-gray-300 flex flex-row justify-evenly p-2">
         <div className="p-3">
-            <div className="bg-blue-300 shadow-lg rounded-lg p-2">Selecione tipo de Faina:</div>
+            <div className="bg-blue-300 shadow-lg rounded-lg p-2">Selecione tipo de Faina</div>
              <SelectFaina
               labelDescription='Selecione o tipo de faina' 
               selectValue={typeFaina} 
@@ -208,8 +208,9 @@ export default function FlashCardForm({
         <div className="">
           <FainaValor />
         </div> 
-          <div className="p-4 flex justify-center">
-                <IconPlus className="hover:bg-blue-200 rounded-full" size={30}/>
+          <div className="flex justify-center place-items-center space-x-4 p-4">
+                <IconPlus className="" size={30}/>
+                Adcionar Faina
             </div>
           </div>  
           <div className="bg-pink-50 flex items-center justify-around">
