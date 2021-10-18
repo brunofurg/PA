@@ -248,7 +248,7 @@ export default function Section() {
                                 <div className="bg-gray-200 border border-gray-400 flex flex-col place-content-stretch align-middle rounded-lg shadow-lg p-2">
                                   <p className="bg-blue-200 text-center font-black rounded-lg mb-2 p-2">Total Mensal (Selecionado) [R$]</p>
                                   <div className="bg-green-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3">
-                                    <div className="flex flex-row place-content-around">
+                                    <div className="flex flex-row place-content-center flex-wrap ">
                                     <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
                                        <strong>Bruto: </strong>10.710,43
                                     </div>
@@ -278,20 +278,20 @@ export default function Section() {
                                   
                                   </div>
                                   <div className="bg-red-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3">
-                                    <div className="flex flex-row place-content-around p-2">
-                                    <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md">
+                                    <div className="flex flex-row place-content-center flex-wrap p-2">
+                                    <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md flex-wrap ">
                                       <strong>IRPF: </strong>1.764,93 (30,3%)
                                     </div>
-                                    <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md">
+                                    <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md flex-wrap ">
                                       <strong>INSS: </strong>752,00 (14%)
                                     </div>
-                                    <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md">
+                                    <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md flex-wrap ">
                                       <strong>DAS: </strong>491,61 (6%)
                                     </div>
-                                    <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md">
+                                    <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md flex-wrap ">
                                       <strong>Judicial: </strong>0,00 (0%)
                                     </div>
-                                    <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md">
+                                    <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md flex-wrap ">
                                       <strong>EPI: </strong>0,00 (0%)
                                    </div>
                                </div>

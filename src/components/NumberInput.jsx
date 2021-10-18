@@ -13,7 +13,7 @@ export default function NumberInput({
     }
   
     return (
-      <div className="flex flex-col my-4">
+      <div className="flex flex-col">
         {labelDescription}
         <input
           autoFocus={autoFocus}

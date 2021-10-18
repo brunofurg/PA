@@ -37,6 +37,41 @@ export default function Painel() {
                     <ChartTipoFaina />
                     <ChartTrabalhosMes />
                 </div>
+
+
+                <div className="bg-blue-50 rounded-lg flex flex-col shadow-lg p-2 mb-2">
+                                    <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
+                                      <p>1</p>
+                                      <strong> Faina(s) realizada(s)</strong>
+                                    </div>
+                                    <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
+                                      <p>4</p>
+                                      <strong> Média Faina(s)/Semana</strong>
+                                    </div>
+                                    <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
+                                      <p>25</p>
+                                      <strong> Dom/Fer Trabalhado(s)</strong>
+                                    </div>
+                                    <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
+                                      <p>360,87</p>
+                                      <strong> Média Bruto/Faina</strong>
+                                    </div>
+                                    <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
+                                      <p>320,63</p>
+                                      <strong> Média Liquido/Faina</strong>
+                                    </div>
+                               
+                                                               
+                                  
+                                  
+                                  
+                                  
+
+                              </div>
+
+
+
+
              </div>
                
     </>

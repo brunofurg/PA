@@ -1,21 +1,21 @@
 export default function FainaValor() {
     return (
-        <div className="bg-purple-500">
-            <div className="bg-green-200">
+        <div className="border border-gray-500 rounded-lg p-4">
+            <div className="bg-blue-300 rounded-lg shadow-lg text-center mb-2 p-2">
                 Valor Estimado para Faina
             </div>
-            <div className="bg-blue-200 flex flex-row">
-                <div className="bg-pink-200">
-                    Total Bruto
+            <div className="flex flex-row justify-around place-items-center space-x-1">
+                <div className="bg-green-50 border border-gray-500  rounded-lg shadow-lg text-center p-2">
+                    <strong>Total Bruto: </strong>1.320,43
                 </div>
-                <div>
+                <div className="bg-blue-200 border border-gray-500 rounded-lg shadow-lg text-center p-2">
                     +
                 </div>
-                <div>
-                    Férias
+                <div className="bg-green-50 border border-gray-500  rounded-lg shadow-lg text-center p-2">
+                    <strong>Férias: </strong>1.320,43
                 </div>
-                <div>
-                    13°
+                <div className="bg-green-50 border border-gray-500 rounded-lg shadow-lg text-center p-2">
+                <strong>13°: </strong>1.320,43
                 </div>                                
             </div>
         </div>

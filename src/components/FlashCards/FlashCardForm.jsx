@@ -7,7 +7,7 @@ import Error from '../Error';
 import { BsPlusCircle as IconPlus } from 'react-icons/bs';
 
 import DateInput from "../DateInput";
-import FainaA1t from '../FainaA1t';
+//import FainaA1t from '../FainaA1t';
 import PorCaminhao from '../PorCaminhao';
 import SelectFaina from "../SelectFaina";
 import PesoMovimentado from '../PesoMovimentado';
@@ -186,16 +186,16 @@ export default function FlashCardForm({
           <FainaCotas />
         </div> 
           <div className="">
-          <FainaA1t />
+          {/* <FainaA1t /> */}
               { typeFaina === "a1t" 
               ? console.log("teste1")
               : console.log("teste2")
               }
         </div>
-        <div className="bg-red-300">
+        <div className="">
           <FainaCalculo />
         </div> 
-        <div className="bg-pink-300">
+        <div className="">
           <FainaValor />
         </div> 
           <div className="p-4 flex justify-center">
