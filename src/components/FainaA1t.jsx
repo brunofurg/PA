@@ -35,80 +35,58 @@ export default function FainaA1t() {
 
     return (
         <>
-          <div className="flex flex-col p-2">
-                <div className="bg-pink-300 justify-center flex flex-row">
+          <div className="flex flex-col mt-2 p-2">
+                <div className="justify-center flex flex-row">
                     <div className="bg-blue-300 rounded-lg shadow-lg mb-3 p-3">
                         Insira Quantidade de Contêineres
                     </div>
                 </div>
 
-                <div  className="bg-blue-200 flex flex-row place-content-around space-x-3">
-                    <div className="bg-red-400 flex flex-col place-content-center">
-                        <span className="flex flex-wrap"><CheckboxInput labelDescription='Contra Mestre'/></span>
+                <div  className="flex flex-row place-content-around text-xs text-center space-x-3">
+                    <div className="flex flex-col items-center place-content-center p-1">
+                        <span>Contra Mestre (x1.25)</span>
+                        <span><CheckboxInput labelDescription=''/></span>
                     </div>
-                    <div className="flex flex-col text-center">
-                        <span>
-                            Longo Curso
-                        </span>
-                        <span>
-                            Cabotagem
-                        </span>
-                        <span>
-                            Tranship
-                        </span>
-                    </div>
-                    <div className="bg-purple-300 flex flex-col justify-evenly p-2">
- 
-                        <div className="bg-blue-100 ṕlace-items-center">
+
+                    <div className="flex flex-col justify-evenly space-y-1 p-2">
                             <NumberInput 
-                                labelDescription=''
+                                labelDescription='Longo Curso CHEIO'
                                 inputValue={a1tGlobalCheio}
                                 onInputChange={handleA1tGlobalCheio}
                                 placeHolder=''
                             />
-                        </div>
-                        <div className="bg-blue-100 ṕlace-items-center">
                             <NumberInput
-                                labelDescription=''
+                                labelDescription='Cabotagem CHEIO'
                                 inputValue={a1tCabotagemCheio}
                                 onInputChange={handleA1tCabotagemCheio}
                                 placeHolder=''
                             />
-                        </div>
-                        <div className="bg-blue-100 ṕlace-items-center">
                             <NumberInput
-                                labelDescription=''
+                                labelDescription='Tranship CHEIO'
                                 inputValue={a1tTranshipCheio}
                                 onInputChange={handleA1tTranshipCheio}
                                 placeHolder=''
                             />
-                        </div>
                     </div>
-                    <div className="text-xs text-center align-middle">
-                        <div className="bg-blue-100 ṕlace-items-center">
+                    <div className="flex flex-col justify-evenly space-y-1 p-2">
                             <NumberInput
-                                labelDescription=''
+                                labelDescription='Longo Curso VAZIO'
                                 inputValue={a1tGlobalVazio}
                                 onInputChange={handleA1tGlobalVazio}
                                 placeHolder=''
                             />
-                        </div>
-                        <div className="bg-blue-100 ṕlace-items-center">
                             <NumberInput
-                                labelDescription=''
+                                labelDescription='Cabotagem VAZIO'
                                 inputValue={a1tCabotagemVazio}
                                 onInputChange={handleA1tCabotagemVazio}
                                 placeHolder=''
                             />
-                        </div>
-                        <div className="bg-blue-100 ṕlace-items-center">
                             <NumberInput
-                                labelDescription=''
+                                labelDescription='Tranship VAZIO'
                                 inputValue={a1tTranshipVazio}
                                 onInputChange={handleA1tTranshipVazio}
                                 placeHolder=''
                             />
-                        </div>
                     </div>
                 </div>
            

@@ -37,10 +37,10 @@ export default function PorCaminhao() {
                     </div>
                     
                 </div>
-                <div className="flex flex-row flex justify-evenly">
-                    <div className="justify-between p-2 mt-3">
+                <div className="flex flex-row flex place-content-around">
+                    <div className="justify-between mt-5">
                          <NumberInput 
-                            labelDescription='Peso Médio por Caminhão'
+                            labelDescription='Peso Médio Caminhão'
                             inputValue={mediumWeight} 
                             onInputChange={handleMediumWeight}
                             placeHolder='Padrão 30 toneladas'

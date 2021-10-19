@@ -12,9 +12,9 @@ export default function FainaCalculo() {
                     <span>0,2554</span>   
                  </div>
                  <div className="flex flex-col flex-wrap">
+                    <p>B3-Cargas Unitizadas dimensões Padronizadas</p>
                     <p>1 x Contra-mestre(x1.5)</p>
                     <p>2 x Produção(x1)</p>
-                    <p>B3 - Cargas unitizadas Dimensões Padronizadas</p>
                  </div>
             </div>
 

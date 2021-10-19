@@ -208,9 +208,9 @@ export default function FlashCardForm({
         <div className="">
           <FainaValor />
         </div> 
-          <div className="flex justify-center place-items-center space-x-4 p-4">
-                <IconPlus className="" size={30}/>
-                Adcionar Faina
+          <div className="flex hover:bg-blue-300 justify-center place-items-center space-x-2 p-4">
+                <span><IconPlus className=""size={30}/></span>
+                <span>Adcionar Faina</span>
             </div>
           </div>  
           <div className="bg-pink-50 flex items-center justify-around">

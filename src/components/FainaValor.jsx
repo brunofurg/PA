@@ -1,6 +1,6 @@
 export default function FainaValor() {
     return (
-        <div className="border border-gray-300 p-4">
+        <div className="p-4">
             <div className="bg-blue-300 rounded-lg shadow-lg text-center mb-2 p-2">
                 Valor Estimado para Faina
             </div>
@@ -15,9 +15,15 @@ export default function FainaValor() {
                     <strong>Férias: </strong>1.320,43
                 </div>
                 <div className="bg-green-50 border border-gray-500 rounded-lg shadow-lg text-center p-2">
-                <strong>13°: </strong>1.320,43
-                </div>                                
+                    <strong>13°: </strong>1.320,43
+                </div>   
+                <div className="bg-green-50 border border-gray-500 rounded-lg shadow-lg text-center p-2">
+                     <strong>FGTS: </strong>1.320,43
+                </div>                               
             </div>
+            <div className="bg-green-50 border border-gray-500 rounded-lg shadow-lg mt-2 text-center p-2">
+                <strong>Total Liquidez: </strong>1.320,43
+            </div>  
         </div>
     )
 }
