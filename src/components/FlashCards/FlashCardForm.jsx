@@ -114,10 +114,11 @@ export default function FlashCardForm({
       // onButtonClick={handleButtonClick}
     >
       <div className="border border-gray-300">
-        <div className="bg-gray-200 flex flex-row place-items-center justify-between p-2">
-          <span className="bg-blue-400 text-white text-sm text-center rounded-lg shadow-lg font-semibold mb-2 p-2">Calculadora de Remuneração</span>
+        <div className="bg-gray-200 flex flex-row place-items-center justify-around p-2">
+          <span className="bg-blue-400 border border-blue-600 text-white text-center rounded-lg shadow-lg font-semibold p-2">Calculadora de Remuneração</span>
           <div>
              <Button onButtonClick={handleButtonClick}>Novo Trabalho</Button>
+             <Button colorClass="bg-red-500 hover:bg-red-300" type="reset">Limpar</Button>
           </div>
         </div>
       
@@ -172,14 +173,14 @@ export default function FlashCardForm({
                 <p>Calcular Por:</p>
               </div>
               <div className="flex flex-row justify-evenly space-x-2 p-2">
-                <p className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">
+                <span className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">
                   <RadioButton labelDescription='' />
                   {`Peso|Unidade`}
-                </p>
-                <p className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">
+                </span>
+                <span className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">
                   <RadioButton labelDescription=""/>
                   {`Caminhões`}
-                </p>
+                </span>
               </div>
 
             </div>
@@ -217,24 +218,14 @@ export default function FlashCardForm({
         <div className="">
           <FainaValor />
         </div> 
-          <div className="flex hover:bg-blue-300 justify-center place-items-center space-x-2 p-4">
-                <span><IconPlus className="" type="submit" size={30} /></span>
-                <span>Adcionar Faina</span>
+          <div className="flex flex-row hover:bg-blue-300 justify-center p-4">
+                <Button type="submit"><IconPlus className="" type="submit" size={30} />Incluir</Button>
             </div>
           </div>  
-          <div className="bg-pink-50 flex items-center justify-around">
-              {error.trim() !== '' ? <Error>{error}</Error> : <span>&nbsp;</span>}
-                  <div className="flex flex-row items-center p-2 space-x-2">
-                      <Button colorClass="bg-red-500 hover:bg-red-300" type="reset">
-                        Limpar
-                      </Button>
-                      <Button colorClass="bg-terciary hover:bg-green-400" type="submit">
-                        Incluir
-                      </Button>
-           </div>
-      
-      </div>
-     </div>
+          
+              {error.trim() !== '' ? <div className="bg-red-300 text-red-900 flex flex-wrap text-center font-semibold justify-center"><Error>{error}</Error></div> : <span>&nbsp;</span>}
+          
+       </div>
   </form>
   );
 }

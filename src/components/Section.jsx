@@ -218,7 +218,7 @@ export default function Section() {
                                     <CheckboxInput checkboxValue="true" labelDescription="Tudo"/>
                                   </span>
                                   <span className="text-center">
-                                      <p className="bg-blue-400 text-white text-center text-base shadow-lg rounded-lg p-2">Setembro 2021</p>
+                                      <p className="bg-blue-400 border border-blue-600 text-white text-center text-base shadow-lg rounded-lg p-2">Setembro 2021</p>
                                   </span>
                                   <span className="button-small">
                                       <WorkDialog />
@@ -246,9 +246,10 @@ export default function Section() {
                                 })}
                                 </div>
                                 <div className="bg-gray-200 border border-gray-400 flex flex-col place-content-stretch align-middle rounded-lg shadow-lg p-2">
-                                  <p className="bg-gray-300 text-center font-black rounded-lg mb-2 p-2">Total Mensal (Selecionado) [R$]</p>
+                                  <p className="bg-gray-300 text-center font-black rounded-lg mb-2 p-2">Total Mensal (Selecionado)</p>
                                   
-                                  <div className="bg-red-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3">
+                                  <div className="bg-red-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3 p-2">
+                                  <div className="text-red-600 bg-red-200 rounded-lg text-center p-2">Descontos (R$)</div>
                                     <div className="flex flex-row place-content-center flex-wrap p-2">
                                     <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md flex-wrap ">
                                       <strong>IRPF: </strong>1.764,93 (30,3%)
@@ -276,15 +277,18 @@ export default function Section() {
                                    </div>
                                </div>
                                <div className="flex flex-row place-items-center place-content-around p-2">
-                               <div className="text-red-600 text-xl">-Saídas</div>
-                                      <div className="flex flex-row place-items-center space-x-2">
-                                        <div className="text-right font-black">Descontos Totais:</div>
-                                        <div className="border border-gray-400 bg-red-300 rounded-md p-2 shadow-lg text-base ">3.008,54</div>
-                                      </div>
-                                </div>
+                               
+                                    <div className="flex flex-row place-items-center space-x-2">
+                                        <div className="text-right font-black"></div>
+                                          <div className="border border-gray-400 bg-red-300 rounded-md p-2 shadow-lg text-base ">
+                                           Total Descontos: <strong>3.008,54 </strong>                                  
+                                          </div>
+                                       </div>
+                                    </div>
                               </div>
 
-                                  <div className="bg-green-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3">
+                                  <div className="bg-green-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3 p-2">
+                                  <div  className="text-green-700 bg-green-200 rounded-lg text-center p-2">Rendimentos (R$)</div>
                                     <div className="flex flex-row place-content-center flex-wrap ">
                                     <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
                                        <strong>Bruto: </strong>10.710,43
@@ -303,15 +307,6 @@ export default function Section() {
                                     </div>
                                     </div>
 
-                                    <div className="flex flex-row place-items-center place-content-around p-2">
-                                      <div className="text-green-600 text-xl">
-                                        +Entradas
-                                      </div>
-                                      <div className="flex flex-row place-items-center space-x-2">
-                                        <div className="text-right font-black">Rendimentos Totais:</div>
-                                        <div className="border border-gray-400 bg-green-200 rounded-md p-2 text-base shadow-lg">10.809,66</div>
-                                      </div>
-                                    </div>
                                     <div className="flex flex-row flex-wrap justify-evenly p-2">
                                       <div className="bg-green-200 rounded-lg p-2">
                                       <strong>Média Bruto: </strong>10.710,43
@@ -320,7 +315,16 @@ export default function Section() {
                                       <strong>Média Liquidez: </strong>10.710,43
                                         </div>
                                       
-                                    </div>   
+                                    </div>  
+                                    <div className="flex flex-row place-items-center place-content-around p-2">
+
+                                      
+                                      <div className="flex flex-row place-items-center space-x-2">
+                                        <div className="text-right font-black"></div>
+                                        <div className="border border-gray-400 bg-green-300 rounded-md p-2 text-base shadow-lg">Total Liquidez: <strong>1.809,66</strong></div>
+                                      </div>
+                                    </div>
+ 
                                   
                                   </div>
                                   

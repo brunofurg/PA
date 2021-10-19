@@ -2,7 +2,7 @@ export default function FainaValor() {
     return (
         <div className="border border-gray-300 p-4">
             <div className="bg-blue-300 rounded-lg shadow-lg text-center mb-2 p-2">
-                Valor Estimado para Faina
+                Valor Estimado para Faina (R$)
             </div>
             <div className="flex flex-row justify-around place-items-center space-x-1">
                 <div className="bg-blue-50 border border-gray-500  rounded-lg shadow-lg text-center p-2">
