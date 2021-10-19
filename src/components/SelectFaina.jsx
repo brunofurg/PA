@@ -34,7 +34,7 @@ export default function SelectFaina() {
           <MenuItem value={"b1"}>B1-Cargas Avulsas</MenuItem>          
           <MenuItem value={"b2"}>B2-Cargas Unitizadas</MenuItem>
           <MenuItem value={"b4"}>B4-Toras Cintadas/Bobinas</MenuItem>
-          <MenuItem value={"b5"}>B5-Volumes Indivisíveis >1ton</MenuItem>
+          <MenuItem value={"b5"}>{`B5-Volumes Indivisíveis >1ton`}</MenuItem>
           <MenuItem value={"a6"}>B6-Cargas Avulsas Rampa</MenuItem>
           <MenuItem value={"b7"}>B7-Cargas Unitizadas Rampa</MenuItem>          
           <MenuItem value={"b8"}>B8-Veículos em Geral</MenuItem>
