@@ -1,6 +1,6 @@
 export default function RadioButton({
   name = 'radioButtonName',
-  children: labelDescription = 'Descrição do botão',
+  labelDescription = 'Descrição do botão',
   buttonChecked = false,
   onButtonClick = null,
 }) {

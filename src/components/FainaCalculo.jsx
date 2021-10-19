@@ -3,8 +3,8 @@ export default function FainaCalculo() {
         <div className="flex flex-row border border-gray-300 justify-around p-2">
             <div className="flex flex-col">
                 <div className="bg-blue-300 borderflex flex flex-row space-x-2 justify-around mb-1 p-2">
-                    <span>Peso Total</span>
-                    <span>Valor Tonelada</span>
+                    <span>Peso|Qtd Total</span>
+                    <span>Valor Ton|Und</span>
                 </div>
                 <div className="bg-blue-200 flex justify-around mb-2 p-1">
                     <span>1280</span>
@@ -23,8 +23,8 @@ export default function FainaCalculo() {
                     <span>Produção</span>
                     <span>Diária</span>
                 </div>
-                <div>
-                    <div className="bg-green-200 flex flex-row flex-wrap justify-around p-2">
+                <div className="bg-green-200">
+                    <div className="flex flex-row flex-wrap justify-around p-2">
                         <span>
                             1.030,40
                         </span>

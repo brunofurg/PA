@@ -36,11 +36,11 @@ export default function FainaA1t() {
     return (
         <>
           <div className="flex flex-col border border-gray-300 p-2">
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-evenly">
                     <div className="bg-blue-300 rounded-lg shadow-lg mb-3 ml-2 p-3">
                         Insira Quantidade de Contêineres
                     </div>
-                    <div className="flex flex-col flex-wrap hover:bg-gray-300 hover:shadow-lg rounded-lg text-center items-center place-content-center p-1">
+                    <div className="border border-gray-300 rounded-lg flex flex-col flex-wrap bg-gray-200 hover:bg-gray-300 hover:shadow-lg rounded-lg text-center items-center place-content-center p-1">
                         <span>Contra Mestre (x1.25)</span>
                         <span><CheckboxInput labelDescription=''/></span>
                     </div>
@@ -50,44 +50,59 @@ export default function FainaA1t() {
              
 
                     <div className="flex flex-col justify-evenly space-y-1 p-2">
-                            <NumberInput 
-                                labelDescription='Longo Curso CHEIO'
-                                inputValue={a1tGlobalCheio}
-                                onInputChange={handleA1tGlobalCheio}
-                                placeHolder=''
-                            />
-                            <NumberInput
-                                labelDescription='Cabotagem CHEIO'
-                                inputValue={a1tCabotagemCheio}
-                                onInputChange={handleA1tCabotagemCheio}
-                                placeHolder=''
-                            />
-                            <NumberInput
-                                labelDescription='Tranship CHEIO'
-                                inputValue={a1tTranshipCheio}
-                                onInputChange={handleA1tTranshipCheio}
-                                placeHolder=''
-                            />
+                            <div className="border border-gray-300 hover:bg-gray-200 p-2">
+                               <NumberInput 
+                                  labelDescription='Longo Curso CHEIO'
+                                  inputValue={a1tGlobalCheio}
+                                  onInputChange={handleA1tGlobalCheio}
+                                  placeHolder=''
+                              />
+                            </div>
+                            <div className="border border-gray-300 hover:bg-gray-200 p-2">
+                              <NumberInput
+                                  labelDescription='Cabotagem CHEIO'
+                                  inputValue={a1tCabotagemCheio}
+                                  onInputChange={handleA1tCabotagemCheio}
+                                  placeHolder=''
+                              />
+                           </div>
+                           <div className="border border-gray-300 hover:bg-gray-200 p-2">
+                              <NumberInput
+                                  labelDescription='Tranship CHEIO'
+                                  inputValue={a1tTranshipCheio}
+                                  onInputChange={handleA1tTranshipCheio}
+                                  placeHolder=''
+                              />
+                           </div>
                     </div>
                     <div className="flex flex-col justify-evenly space-y-1 p-2">
+                         <div className="border border-gray-300 hover:bg-gray-200 p-2">
                             <NumberInput
                                 labelDescription='Longo Curso VAZIO'
                                 inputValue={a1tGlobalVazio}
                                 onInputChange={handleA1tGlobalVazio}
                                 placeHolder=''
                             />
+                        </div> 
+                        <div className="border border-gray-300 hover:bg-gray-200 p-2">
                             <NumberInput
                                 labelDescription='Cabotagem VAZIO'
                                 inputValue={a1tCabotagemVazio}
                                 onInputChange={handleA1tCabotagemVazio}
                                 placeHolder=''
                             />
+                        </div> 
+                        <div className="border border-gray-300 hover:bg-gray-200 p-2">
                             <NumberInput
                                 labelDescription='Tranship VAZIO'
                                 inputValue={a1tTranshipVazio}
                                 onInputChange={handleA1tTranshipVazio}
                                 placeHolder=''
                             />
+                        </div>      
+                            
+                            
+                            
                     </div>
                 </div>
            

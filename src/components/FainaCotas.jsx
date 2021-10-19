@@ -69,9 +69,18 @@ export default function FainaCotas() {
                         placeHolder=''
                     />
                 </div>
+                <div className="border border-gray-400 hover:bg-gray-200 rounded-lg flex flex-col p-2">
+                    <CheckboxInput labelDescription=''/>
+                    <NumberInput
+                        labelDescription='Conexo(x1.0)'
+                        inputValue={a1tTranshipCheio}
+                        onInputChange={handleA1tTranshipCheio}
+                        placeHolder=''
+                    />
+                </div>
             </div>
             <div className="text-xs text-center space-y-2">
-            <div className="border border-gray-400 hover:bg-gray-200 rounded-lg flex flex-col p-2">
+                <div className="border border-gray-400 hover:bg-gray-200 rounded-lg flex flex-col p-2">
                     <CheckboxInput labelDescription=''/> 
                     <NumberInput
                         labelDescription='Produção(x1.0)'
@@ -93,6 +102,15 @@ export default function FainaCotas() {
                     <CheckboxInput labelDescription=''/>
                     <NumberInput
                         labelDescription='Capataz(x2.25)'
+                        inputValue={a1tTranshipVazio}
+                        onInputChange={handleA1tTranshipVazio}
+                        placeHolder=''
+                    />
+                </div>
+                <div className="border border-gray-400 hover:bg-gray-200 rounded-lg flex flex-col p-2">
+                    <CheckboxInput labelDescription=''/>
+                    <NumberInput
+                        labelDescription='CM Conexo(x1.5cnx)'
                         inputValue={a1tTranshipVazio}
                         onInputChange={handleA1tTranshipVazio}
                         placeHolder=''

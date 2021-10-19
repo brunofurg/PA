@@ -2,7 +2,7 @@ import { useState } from 'react';
 import NumberInput from "./NumberInput";
 import RadioButton from './RadioButton';
 
-export default function PorCaminhao() {
+export default function FainaPorCaminhao() {
     const [trucksTotal, setTrucksTotal] = useState('');
     const [mediumWeight, setMediumWeight] = useState('');
     function handleTrucksTotal(totalTrucks) {
@@ -15,10 +15,10 @@ export default function PorCaminhao() {
         
             <div className="flex flex-col border border-gray-300 text-center p-4">
                 
-                <span className="bg-blue-300 rounded-lg shadow-lg p-1 mb-2">Cálculo Caminhões</span>
+                <span className="bg-blue-300 rounded-lg shadow-lg p-1 mb-2">Calcular Caminhões:</span>
                 <div className="flex flex-row place-content-around text-xs">
                     <div className="border border-gray-400 hover:bg-gray-200 place-content-center rounded-lg p-2">
-                        <RadioButton> </RadioButton>
+                        <RadioButton labelDescription=""/>
                         <NumberInput 
                            labelDescription='Pelo Período'
                             inputValue={trucksTotal} 
@@ -27,12 +27,12 @@ export default function PorCaminhao() {
                         />
                     </div>
                     <div className="border border-gray-400 hover:bg-gray-200  place-content-center rounded-lg p-2">
-                        <RadioButton> </RadioButton>
+                        <RadioButton labelDescription=""/> 
                         <NumberInput 
-                            labelDescription='Caminhões por Hora'
+                            labelDescription='Por Hora'
                             inputValue={trucksTotal} 
                             onInputChange={handleTrucksTotal}
-                            placeHolder='Média por Hora'
+                            placeHolder='Média Caminhões/Hora'
                         />
                     </div>
                     
@@ -40,7 +40,7 @@ export default function PorCaminhao() {
                 <div className="flex flex-row flex place-content-around">
                     <div className="place-self-center">
                          <NumberInput 
-                            labelDescription='Peso Médio Caminhão'
+                            labelDescription='Peso Médio por Caminhão'
                             inputValue={mediumWeight} 
                             onInputChange={handleMediumWeight}
                             placeHolder='Padrão 30 toneladas'
@@ -54,10 +54,10 @@ export default function PorCaminhao() {
                             x
                         </span>
                         <span>
-                            30 toneladas
+                            30 ton|und
                         </span>
                         <span>
-                            =750 toneladas
+                            =750 ton|und
                         </span>
                     </div>
                 </div>

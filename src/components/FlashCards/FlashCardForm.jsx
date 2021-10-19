@@ -8,7 +8,7 @@ import { BsPlusCircle as IconPlus } from 'react-icons/bs';
 
 import DateInput from "../DateInput";
 import FainaA1t from '../FainaA1t';
-import PorCaminhao from '../PorCaminhao';
+import FainaPorCaminhao from '../FainaPorCaminhao';
 import SelectFaina from "../SelectFaina";
 import PesoMovimentado from '../PesoMovimentado';
 import FainaCalculo from '../FainaCalculo';
@@ -16,6 +16,8 @@ import FainaValor from '../FainaValor';
 import FainaCotas from '../FainaCotas';
 import FainaSemRotator from '../FainaSemRotator';
 import FainaTipoTaxa from '../FainaTipoTaxa';
+import RadioButton from '../RadioButton';
+import FainaSelectFuncao from '../FainaSelectFuncao';
 
 export default function FlashCardForm({
   createMode = true,
@@ -170,8 +172,14 @@ export default function FlashCardForm({
                 <p>Calcular Por:</p>
               </div>
               <div className="flex flex-row justify-evenly space-x-2 p-2">
-                <p className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">{`Peso|Unidade`}</p>
-                <p className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">{`Caminhões`}</p>
+                <p className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">
+                  <RadioButton labelDescription='' />
+                  {`Peso|Unidade`}
+                </p>
+                <p className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">
+                  <RadioButton labelDescription=""/>
+                  {`Caminhões`}
+                </p>
               </div>
 
             </div>
@@ -185,10 +193,13 @@ export default function FlashCardForm({
             <FainaSemRotator />
           </div>
           <div className="">
-            <PorCaminhao />
+            <FainaPorCaminhao />
           </div>
           <div className="">
              <FainaCotas />
+          </div>
+          <div className="">
+              <FainaSelectFuncao />
           </div>
           <div className="">
           <FainaA1t />
