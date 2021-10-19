@@ -46,11 +46,11 @@ export default function FainaA1t() {
                     </div>
                 </div>
 
-                <div  className="flex flex-row place-content-around text-xs text-center space-x-3">
+                <div  className="flex flex-row justify-around text-xs text-center space-x-3">
              
 
                     <div className="flex flex-col justify-evenly space-y-1 p-2">
-                            <div className="border border-gray-300 hover:bg-gray-200 p-2">
+                            <div className="border border-gray-300 hover:bg-gray-200 rounded-lg p-2">
                                <NumberInput 
                                   labelDescription='Longo Curso CHEIO'
                                   inputValue={a1tGlobalCheio}
@@ -58,7 +58,7 @@ export default function FainaA1t() {
                                   placeHolder=''
                               />
                             </div>
-                            <div className="border border-gray-300 hover:bg-gray-200 p-2">
+                            <div className="border border-gray-300 hover:bg-gray-200 rounded-lg  p-2">
                               <NumberInput
                                   labelDescription='Cabotagem CHEIO'
                                   inputValue={a1tCabotagemCheio}
@@ -66,7 +66,7 @@ export default function FainaA1t() {
                                   placeHolder=''
                               />
                            </div>
-                           <div className="border border-gray-300 hover:bg-gray-200 p-2">
+                           <div className="border border-gray-300 hover:bg-gray-200 rounded-lg  p-2">
                               <NumberInput
                                   labelDescription='Tranship CHEIO'
                                   inputValue={a1tTranshipCheio}
@@ -76,7 +76,7 @@ export default function FainaA1t() {
                            </div>
                     </div>
                     <div className="flex flex-col justify-evenly space-y-1 p-2">
-                         <div className="border border-gray-300 hover:bg-gray-200 p-2">
+                         <div className="border border-gray-300 hover:bg-gray-200 rounded-lg  p-2">
                             <NumberInput
                                 labelDescription='Longo Curso VAZIO'
                                 inputValue={a1tGlobalVazio}
@@ -84,7 +84,7 @@ export default function FainaA1t() {
                                 placeHolder=''
                             />
                         </div> 
-                        <div className="border border-gray-300 hover:bg-gray-200 p-2">
+                        <div className="border border-gray-300 hover:bg-gray-200 rounded-lg  p-2">
                             <NumberInput
                                 labelDescription='Cabotagem VAZIO'
                                 inputValue={a1tCabotagemVazio}
@@ -92,7 +92,7 @@ export default function FainaA1t() {
                                 placeHolder=''
                             />
                         </div> 
-                        <div className="border border-gray-300 hover:bg-gray-200 p-2">
+                        <div className="border border-gray-300 hover:bg-gray-200 rounded-lg  p-2">
                             <NumberInput
                                 labelDescription='Tranship VAZIO'
                                 inputValue={a1tTranshipVazio}

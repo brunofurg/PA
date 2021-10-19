@@ -15,7 +15,7 @@ export default function FainaPorCaminhao() {
         
             <div className="flex flex-col border border-gray-300 text-center p-4">
                 
-                <span className="bg-blue-300 rounded-lg shadow-lg p-1 mb-2">Calcular Caminhões:</span>
+                <span className="bg-blue-300 rounded-lg shadow-lg p-2 mb-2">Calcular Caminhões:</span>
                 <div className="flex flex-row place-content-around text-xs">
                     <div className="border border-gray-400 hover:bg-gray-200 place-content-center rounded-lg p-2">
                         <RadioButton labelDescription=""/>

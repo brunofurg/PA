@@ -246,37 +246,8 @@ export default function Section() {
                                 })}
                                 </div>
                                 <div className="bg-gray-200 border border-gray-400 flex flex-col place-content-stretch align-middle rounded-lg shadow-lg p-2">
-                                  <p className="bg-blue-200 text-center font-black rounded-lg mb-2 p-2">Total Mensal (Selecionado) [R$]</p>
-                                  <div className="bg-green-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3">
-                                    <div className="flex flex-row place-content-center flex-wrap ">
-                                    <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
-                                       <strong>Bruto: </strong>10.710,43
-                                    </div>
-                                    <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
-                                      <strong>Líquido: </strong>7.701,89
-                                    </div>
-                                    <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
-                                      <strong>Férias: </strong> 1.191,00
-                                    </div>
-                                    <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
-                                      <strong>13°: </strong>893,25
-                                    </div>
-                                    <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
-                                      <strong>FGTS: </strong>1.023,57
-                                    </div>
-                                    </div>
-                                    <div className="flex flex-row place-items-center place-content-around p-2">
-                                      <div className="text-green-600 text-xl">
-                                        +Entradas
-                                      </div>
-                                      <div className="flex flex-row place-items-center space-x-2">
-                                        <div className="text-right font-black">Rendimentos Totais:</div>
-                                        <div className="border border-gray-400 bg-green-200 rounded-md p-2 text-base shadow-lg">10.809,66</div>
-                                      </div>
-                                    </div>
-                                    
+                                  <p className="bg-gray-300 text-center font-black rounded-lg mb-2 p-2">Total Mensal (Selecionado) [R$]</p>
                                   
-                                  </div>
                                   <div className="bg-red-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3">
                                     <div className="flex flex-row place-content-center flex-wrap p-2">
                                     <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md flex-wrap ">
@@ -312,35 +283,48 @@ export default function Section() {
                                       </div>
                                 </div>
                               </div>
-                              <div className="bg-blue-50 rounded-lg flex flex-col shadow-lg p-2 mb-2">
-                                    <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
-                                      <p>1</p>
-                                      <strong> Faina(s) realizada(s)</strong>
-                                    </div>
-                                    <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
-                                      <p>4</p>
-                                      <strong> Média Faina(s)/Semana</strong>
-                                    </div>
-                                    <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
-                                      <p>25</p>
-                                      <strong> Dom/Fer Trabalhado(s)</strong>
-                                    </div>
-                                    <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
-                                      <p>360,87</p>
-                                      <strong> Média Bruto/Faina</strong>
-                                    </div>
-                                    <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
-                                      <p>320,63</p>
-                                      <strong> Média Liquido/Faina</strong>
-                                    </div>
-                               
-                                                               
-                                  
-                                  
-                                  
-                                  
 
-                              </div>
+                                  <div className="bg-green-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3">
+                                    <div className="flex flex-row place-content-center flex-wrap ">
+                                    <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
+                                       <strong>Bruto: </strong>10.710,43
+                                    </div>
+                                    <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
+                                      <strong>Líquido: </strong>7.701,89
+                                    </div>
+                                    <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
+                                      <strong>Férias: </strong> 1.191,00
+                                    </div>
+                                    <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
+                                      <strong>13°: </strong>893,25
+                                    </div>
+                                    <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
+                                      <strong>FGTS: </strong>1.023,57
+                                    </div>
+                                    </div>
+
+                                    <div className="flex flex-row place-items-center place-content-around p-2">
+                                      <div className="text-green-600 text-xl">
+                                        +Entradas
+                                      </div>
+                                      <div className="flex flex-row place-items-center space-x-2">
+                                        <div className="text-right font-black">Rendimentos Totais:</div>
+                                        <div className="border border-gray-400 bg-green-200 rounded-md p-2 text-base shadow-lg">10.809,66</div>
+                                      </div>
+                                    </div>
+                                    <div className="flex flex-row flex-wrap justify-evenly p-2">
+                                      <div className="bg-green-200 rounded-lg p-2">
+                                      <strong>Média Bruto: </strong>10.710,43
+                                      </div>
+                                      <div className="bg-green-200 rounded-lg p-2">
+                                      <strong>Média Liquidez: </strong>10.710,43
+                                        </div>
+                                      
+                                    </div>   
+                                  
+                                  </div>
+                                  
+                              
                             </div>
                           </div>
                         </div>

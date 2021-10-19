@@ -137,7 +137,7 @@ export default function FlashCardForm({
         <div className="flex flex-col">
           <div className="border border-gray-300 flex flex-row justify-evenly p-2">
           <div className="p-2"> 
-              <div className="bg-blue-300 shadow-lg rounded-lg p-2 mb-4">Selecione a Data</div>  
+              <div className="bg-blue-300 shadow-lg rounded-lg p-2 mb-2">Selecione a Data</div>  
               <DateInput
                   labelDescription='' 
                   inputValue={dayWork} 
@@ -168,7 +168,7 @@ export default function FlashCardForm({
           </div>
           
           <div className="flex flex-col p-2">
-              <div className="bg-blue-300 shadow-lg rounded-lg text-center mb-2 p-2">
+              <div className="bg-blue-300 shadow-lg rounded-lg text-center p-2">
                 <p>Calcular Por:</p>
               </div>
               <div className="flex flex-row justify-evenly space-x-2 p-2">
@@ -196,10 +196,13 @@ export default function FlashCardForm({
             <FainaPorCaminhao />
           </div>
           <div className="">
-             <FainaCotas />
+             <FainaTipoTaxa />
           </div>
           <div className="">
               <FainaSelectFuncao />
+          </div>
+          <div className="">
+             <FainaCotas />
           </div>
           <div className="">
           <FainaA1t />
@@ -208,9 +211,6 @@ export default function FlashCardForm({
               : console.log("teste2")
               }
         </div>
-        <div className="">
-             <FainaTipoTaxa />
-          </div>
         <div className="">
           <FainaCalculo />
         </div> 
