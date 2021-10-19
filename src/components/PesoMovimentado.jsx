@@ -8,13 +8,13 @@ export default function PesoMovimentado() {
       }
     return (
         <div className="flex flex-col border border-gray-300 justify-center p-4">
-            <span className="bg-blue-300 content-center text-center shadow-lg rounded-lg p-2 mb-4">Peso Movimentado no Período</span>
+            <span className="bg-blue-300 content-center text-center shadow-lg rounded-lg p-2 mb-4">Peso|Unidade Movimentado</span>
             <span className="">
                  <NumberInput
                     labelDescription='' 
                     inputValue={weightTotal} 
                     onInputChange={handleWeightTotal}
-                    placeHolder='Peso total'
+                    placeHolder='Peso|Quantidade total'
                 />
             </span>
                 

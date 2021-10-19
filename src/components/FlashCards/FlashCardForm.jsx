@@ -135,7 +135,7 @@ export default function FlashCardForm({
         <div className="flex flex-col">
           <div className="border border-gray-300 flex flex-row justify-evenly p-2">
           <div className="p-2"> 
-              <div className="bg-blue-300 shadow-lg rounded-lg p-2 mb-4">Selecione data</div>  
+              <div className="bg-blue-300 shadow-lg rounded-lg p-2 mb-4">Selecione a Data</div>  
               <DateInput
                   labelDescription='' 
                   inputValue={dayWork} 
@@ -157,7 +157,7 @@ export default function FlashCardForm({
           </div>
         <div className="border border-gray-300 flex flex-row flex-wrap justify-evenly p-2">
         <div className="p-3">
-            <div className="bg-blue-300 shadow-lg rounded-lg p-2">Selecione tipo de Faina</div>
+            <div className="bg-blue-300 shadow-lg rounded-lg p-2">Selecione Tipo de Faina</div>
              <SelectFaina
               labelDescription='Selecione o tipo de faina' 
               selectValue={typeFaina} 
@@ -167,11 +167,11 @@ export default function FlashCardForm({
           
           <div className="flex flex-col p-2">
               <div className="bg-blue-300 shadow-lg rounded-lg text-center mb-2 p-2">
-                <p>Calcular por:</p>
+                <p>Calcular Por:</p>
               </div>
               <div className="flex flex-row justify-evenly space-x-2 p-2">
-                <p className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">{`Peso`}</p>
-                <p className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">{`Caminhão`}</p>
+                <p className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">{`Peso|Unidade`}</p>
+                <p className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">{`Caminhões`}</p>
               </div>
 
             </div>
