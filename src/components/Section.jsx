@@ -276,6 +276,16 @@ export default function Section() {
                                       <strong>Encargos13°: </strong>0,00 (0%)
                                    </div>
                                </div>
+
+                               <div className="flex flex-row flex-wrap justify-evenly p-2">
+                                      <div className="bg-red-200 rounded-lg p-2">
+                                      <strong>Total Impostos: </strong>10.710,43
+                                      </div>
+                                      <div className="bg-red-200 rounded-lg p-2">
+                                      <strong>Morto: </strong>45,56%
+                                        </div>
+                                      
+                                    </div> 
                                <div className="flex flex-row place-items-center place-content-around p-2">
                                
                                     <div className="flex flex-row place-items-center space-x-2">
@@ -288,7 +298,7 @@ export default function Section() {
                               </div>
 
                                   <div className="bg-green-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3 p-2">
-                                  <div  className="text-green-700 bg-green-200 rounded-lg text-center p-2">Rendimentos (R$)</div>
+                                  <div  className="text-green-700 bg-green-200 rounded-lg text-center mb-2 p-2">Rendimentos (R$)</div>
                                     <div className="flex flex-row place-content-center flex-wrap ">
                                     <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
                                        <strong>Bruto: </strong>10.710,43
@@ -312,7 +322,7 @@ export default function Section() {
                                       <strong>Média Bruto: </strong>10.710,43
                                       </div>
                                       <div className="bg-green-200 rounded-lg p-2">
-                                      <strong>Média Liquidez: </strong>10.710,43
+                                      <strong>Média Líquido: </strong>10.710,43
                                         </div>
                                       
                                     </div>  

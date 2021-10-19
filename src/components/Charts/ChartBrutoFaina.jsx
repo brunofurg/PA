@@ -19,7 +19,7 @@ class ChartBrutoFaina extends Component {
         labels: ['African Pheasant 26/08-D', 'Esperance Bay 27/08-C', 'Yasa Jupiter 28/08-B', 'Cape Artemisio 29/08-A', 'Esperance Bay 29/08-D', 'Nordtajo 30/08-C', 'Medan Express 31/08-B', 'Marina K 01/09-A', 'Esperance Bay 01/09-D', 'MSC Coruna 02/09-C'],
         datasets:[
           {
-            label:'Bruto/Faina',
+            label:'Bruto/Faina (R$)',
             data:[
               661.58,
               582.52,
@@ -52,7 +52,7 @@ class ChartBrutoFaina extends Component {
   render() {
     return (
       <div className="bg-white border border-gray-300 shadow-lg rounded-lg p-2 mt-2 mb-4 text-center">
-        Valor Bruto por Faina
+        Valor Bruto por Faina (R$)
         <LineChart chartData={this.state.chartData} location="Massachusetts" legendPosition="bottom"/>
       </div>
     );

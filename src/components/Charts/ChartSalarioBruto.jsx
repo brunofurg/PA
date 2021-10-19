@@ -19,7 +19,7 @@ class ChartSalarioBruto extends Component {
         labels: ['Liquido', 'IRPF', 'INSS', 'DAS', 'Sindical', 'Judicial', 'Outros', 'EPI/Cracha', 'Mensalidade'],
         datasets:[
           {
-            label:'Salário Bruto',
+            label:'Salário Bruto (R$)',
              backgroundColor:[
               'rgba(79, 129, 189, 1.0)',
               'rgba(192, 80, 77, 1.0)',
@@ -42,7 +42,7 @@ class ChartSalarioBruto extends Component {
   render() {
     return (
       <div className="bg-white border border-gray-300 shadow-lg rounded-lg p-2 mt-2 mb-4 text-center">
-        Salário Bruto
+        Salário Bruto (R$)
         <PieChart chartData={this.state.chartData} width={50} height={50} />
       </div>
     );

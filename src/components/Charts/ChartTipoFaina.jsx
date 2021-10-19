@@ -19,7 +19,7 @@ class ChartTipoFaina extends Component {
         labels: ['Contra-Mestre Tecon', 'Contra-Mestre Produção', 'Sinaleiro Produção', 'Sinaleiro Adubo', 'Soldado Produção', 'Soldado Adubo', 'Soldado Tecon', 'Sinaleiro Cavaco', 'Contra-Mestre Geral'],
         datasets:[
           {
-            label:'Ganhos/Operador',
+            label:'Ganhos/Tipo Faina (R$)',
             data:[
               950,
               550,
@@ -51,7 +51,7 @@ class ChartTipoFaina extends Component {
   render() {
     return (
       <div className="bg-white border border-gray-300 shadow-lg rounded-lg p-2 mt-2 mb-4 text-center">
-        Ganhos por Tipo de Faina
+        Ganhos por Tipo de Faina (R$)
            <PieChart chartData={this.state.chartData} location="Massachusetts" legendPosition="bottom"/>
       </div>
     );
