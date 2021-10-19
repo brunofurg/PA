@@ -35,18 +35,19 @@ export default function FainaA1t() {
 
     return (
         <>
-          <div className="flex flex-col mt-2 p-2">
-                <div className="justify-center flex flex-row">
-                    <div className="bg-blue-300 rounded-lg shadow-lg mb-3 p-3">
+          <div className="flex flex-col border border-gray-300 rounded-lg mt-2 p-2">
+                <div className="flex flex-row justify-between">
+                    <div className="bg-blue-300 rounded-lg shadow-lg mb-3 ml-2 p-3">
                         Insira Quantidade de Contêineres
+                    </div>
+                    <div className="flex flex-col flex-wrap hover:bg-gray-300 rounded-lg text-center items-center place-content-center p-1">
+                        <span>Contra Mestre (x1.25)</span>
+                        <span><CheckboxInput labelDescription=''/></span>
                     </div>
                 </div>
 
                 <div  className="flex flex-row place-content-around text-xs text-center space-x-3">
-                    <div className="flex flex-col items-center place-content-center p-1">
-                        <span>Contra Mestre (x1.25)</span>
-                        <span><CheckboxInput labelDescription=''/></span>
-                    </div>
+             
 
                     <div className="flex flex-col justify-evenly space-y-1 p-2">
                             <NumberInput 

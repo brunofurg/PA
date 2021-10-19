@@ -14,7 +14,7 @@ import PesoMovimentado from '../PesoMovimentado';
 import FainaCalculo from '../FainaCalculo';
 import FainaValor from '../FainaValor';
 import FainaCotas from '../FainaCotas';
-import FainaComRotator from '../FainaSemRotator';
+import FainaSemRotator from '../FainaSemRotator';
 import FainaTipoTaxa from '../FainaTipoTaxa';
 
 export default function FlashCardForm({
@@ -142,9 +142,9 @@ export default function FlashCardForm({
                   onInputChange={handleDayWork}
               />
           </div>
-            <div className="flex flex-col p-2"> 
+            <div className="flex flex-col flex-wrap p-2"> 
                 <div className="bg-blue-300 rounded-lg shadow-lg text-center mb-2 p-2">Período</div>
-                <div className="bg-yellow-300 flex flex-row space-x-1">
+                <div className="flex flex-row space-x-1">
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`A`}</div>
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`B`}</div>
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`C (+25%)`}</div>
@@ -155,7 +155,7 @@ export default function FlashCardForm({
 
        
           </div>
-        <div className="border border-gray-300 flex flex-row justify-evenly p-2">
+        <div className="border border-gray-300 flex flex-row flex-wrap justify-evenly p-2">
         <div className="p-3">
             <div className="bg-blue-300 shadow-lg rounded-lg p-2">Selecione tipo de Faina</div>
              <SelectFaina
@@ -169,7 +169,7 @@ export default function FlashCardForm({
               <div className="bg-blue-300 shadow-lg rounded-lg text-center mb-2 p-2">
                 <p>Calcular por:</p>
               </div>
-              <div className="bg-pink-200 flex flex-row justify-evenly space-x-2 p-2">
+              <div className="flex flex-row justify-evenly space-x-2 p-2">
                 <p className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">{`Peso`}</p>
                 <p className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">{`Caminhão`}</p>
               </div>
@@ -182,19 +182,14 @@ export default function FlashCardForm({
               <PesoMovimentado />
           </div> 
           <div className="">
+            <FainaSemRotator />
+          </div>
+          <div className="">
             <PorCaminhao />
           </div>
           <div className="">
              <FainaCotas />
           </div>
-
-          <div className="">
-            <FainaComRotator />
-          </div>
-          <div className="">
-             <FainaTipoTaxa />
-          </div>
-
           <div className="">
           <FainaA1t />
               { typeFaina === "a1t" 
@@ -202,6 +197,9 @@ export default function FlashCardForm({
               : console.log("teste2")
               }
         </div>
+        <div className="">
+             <FainaTipoTaxa />
+          </div>
         <div className="">
           <FainaCalculo />
         </div> 
