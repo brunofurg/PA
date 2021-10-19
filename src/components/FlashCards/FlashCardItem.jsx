@@ -34,7 +34,7 @@ export default function FlashCardItem({
 
   // bg-red-200  bg-green-100  bg-yellow-100
   return (
-    <div className={`bg-white border border-gray-400 shadow-lg rounded-lg hover:bg-blue-50 p-2`}>
+    <div className={`bg-white border border-gray-400 flex shadow-lg rounded-lg hover:bg-blue-50 items-stretch p-2`}>
       <ul className="flex flex-col space-y-4">
         <li>
           <span>

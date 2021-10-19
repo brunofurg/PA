@@ -111,7 +111,7 @@ export default function FlashCardForm({
       onReset={handleFormReset}
       // onButtonClick={handleButtonClick}
     >
-      <div className="bg-pink-60 border-2">
+      <div className="border border-gray-300">
         <div className="bg-gray-200 flex flex-row place-items-center justify-between p-2">
           <span className="bg-blue-400 text-white text-sm text-center rounded-lg shadow-lg font-semibold mb-2 p-2">Calculadora de Remuneração</span>
           <div>
@@ -119,8 +119,8 @@ export default function FlashCardForm({
           </div>
         </div>
       
-      <div className="border border-gray-300">
-        <div className="p-2">
+      <div className="">
+        <div className="border border-gray-300 p-2">
           <TextInput
             labelDescription="Navio:"
             inputValue={title}
@@ -207,7 +207,7 @@ export default function FlashCardForm({
           <FainaValor />
         </div> 
           <div className="flex hover:bg-blue-300 justify-center place-items-center space-x-2 p-4">
-                <span><IconPlus className=""size={30}/></span>
+                <span><IconPlus className="" type="submit" size={30} /></span>
                 <span>Adcionar Faina</span>
             </div>
           </div>  
