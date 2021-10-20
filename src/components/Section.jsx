@@ -26,7 +26,8 @@ import {
 } from "../services/apiService";
 
 import { BiCalculator as IconCalc } from "react-icons/bi";
-import { AiOutlineLineChart as IconDash } from "react-icons/ai";
+import { AiOutlineHome as IconDash } from "react-icons/ai";
+//AiOutlineLineChart
 import { HiOutlineDocumentReport as IconReport } from "react-icons/hi";
 //GrWorkshop
 //GiPikeman
@@ -164,7 +165,7 @@ export default function Section() {
                   <span align="left">
                     <IconDash size={16} />
                   </span>
-                  <span align="right">Painel</span>
+                  <span align="right">Home</span>
                 </div>
               </Tab>
               <Tab>
@@ -228,11 +229,6 @@ export default function Section() {
                         labelDescription="Tudo"
                       />
                     </span>
-                    <span className="text-center">
-                      <p className="bg-blue-400 border border-blue-600 text-white text-center text-base shadow-lg rounded-lg p-2">
-                        Setembro 2021
-                      </p>
-                    </span>
                     <span className="button-small">
                       <WorkDialog />
                     </span>
@@ -270,7 +266,7 @@ export default function Section() {
                     </p>
 
                     <div className="bg-red-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3 p-2">
-                      <div className="text-red-600 bg-red-200 rounded-lg text-center p-2">
+                      <div className="text-red-600 bg-red-200 rounded-lg shadow-lg text-center p-2">
                         Descontos (R$)
                       </div>
                       <div className="flex flex-row place-content-center flex-wrap p-2">
@@ -301,17 +297,17 @@ export default function Section() {
                       </div>
 
                       <div className="flex flex-row flex-wrap justify-evenly p-2">
-                        <div className="bg-red-200 rounded-lg p-2">
+                        <div className="bg-red-200 rounded-lg shadow-lg p-2">
                           <strong>Total Impostos: </strong>10.710,43
                         </div>
-                        <div className="bg-red-200 rounded-lg p-2">
+                        <div className="bg-red-200 rounded-lg shadow-lg p-2">
                           <strong>Morto: </strong>45,56%
                         </div>
                       </div>
                       <div className="flex flex-row place-items-center place-content-around p-2">
                         <div className="flex flex-row place-items-center space-x-2">
                           <div className="text-right font-black"></div>
-                          <div className="border border-gray-400 bg-red-300 rounded-md p-2 shadow-lg text-base ">
+                          <div className="border border-gray-400 bg-red-300 rounded-lg p-2 shadow-lg text-base ">
                             Total Descontos: <strong>3.008,54 </strong>
                           </div>
                         </div>
@@ -319,7 +315,7 @@ export default function Section() {
                     </div>
 
                     <div className="bg-green-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3 p-2">
-                      <div className="text-green-700 bg-green-200 rounded-lg text-center mb-2 p-2">
+                      <div className="text-green-700 bg-green-200 rounded-lg shadow-lg text-center mb-2 p-2">
                         Rendimentos (R$)
                       </div>
                       <div className="flex flex-row place-content-center flex-wrap ">
@@ -341,17 +337,17 @@ export default function Section() {
                       </div>
 
                       <div className="flex flex-row flex-wrap justify-evenly p-2">
-                        <div className="bg-green-200 rounded-lg p-2">
+                        <div className="bg-green-200 rounded-lg shadow-lg p-2">
                           <strong>Média Bruto: </strong>10.710,43
                         </div>
-                        <div className="bg-green-200 rounded-lg p-2">
+                        <div className="bg-green-200 rounded-lg shadow-lg p-2">
                           <strong>Média Líquido: </strong>10.710,43
                         </div>
                       </div>
                       <div className="flex flex-row place-items-center place-content-around p-2">
                         <div className="flex flex-row place-items-center space-x-2">
                           <div className="text-right font-black"></div>
-                          <div className="border border-gray-400 bg-green-300 rounded-md p-2 text-base shadow-lg">
+                          <div className="border border-gray-400 bg-green-300 rounded-lg shadow-lg  p-2 text-base shadow-lg">
                             Total Liquidez: <strong>1.809,66</strong>
                           </div>
                         </div>

@@ -18,13 +18,10 @@ export default function Painel() {
     <>
       <div className="border-2 bg-gray-100 p-1">
         <div className="flex flex-row justify-evenly items-center">
-          <span className="bg-blue-400 border border-blue-600 text-white rounded-lg shadow-lg flex flex-col text-center p-2">
-            <p className="text-bold text-base">Demonstrativo</p>
-            <p>{`Setembro/21`}</p>
-          </span>
-          <span>
+          <div className="bg-blue-400 border border-blue-600 text-white rounded-lg shadow-lg flex flex-col justify-center text-center p-2 m-2">
+            Demonstrativo
             <SelectIntervalo />
-          </span>
+          </div>
         </div>
         <div className="space-y-4 font-bold p-4">
           <ChartSalarioBruto />

@@ -71,10 +71,7 @@ export default function Header({ acao }) {
           </span>
           <div className="mr-2">
             <span className="flex flex-row items-center space-x-4 text-lg">
-              <span
-                className="shadow-lg hover:shadow-inner rounded-full p-2 hover:bg-secondary "
-                hidden
-              >
+              <span className="shadow-lg hover:shadow-inner rounded-full p-2 hover:bg-secondary ">
                 <img
                   src={iconNotifications}
                   alt="Notifications"
