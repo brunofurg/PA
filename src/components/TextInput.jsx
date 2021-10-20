@@ -1,6 +1,6 @@
 export default function TextInput({
-  labelDescription = 'Descrição do label:',
-  inputValue = 'Valor padrão do input',
+  labelDescription = "Descrição do label:",
+  inputValue = "Valor padrão do input",
   onInputChange = null,
   autoFocus = false,
   placeHolder,

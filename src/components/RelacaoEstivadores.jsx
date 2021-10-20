@@ -1,18 +1,18 @@
-import React from 'react';
-import { withStyles, makeStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableContainer from '@material-ui/core/TableContainer';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
+import React from "react";
+import { withStyles, makeStyles } from "@material-ui/core/styles";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableContainer from "@material-ui/core/TableContainer";
+import TableHead from "@material-ui/core/TableHead";
+import TableRow from "@material-ui/core/TableRow";
+import Paper from "@material-ui/core/Paper";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
-//  backgroundColor: theme.palette.common.black,
-    backgroundColor:  '#0060a4',
-    color: '#FFFFFF',
+    //  backgroundColor: theme.palette.common.black,
+    backgroundColor: "#0060a4",
+    color: "#FFFFFF",
   },
   body: {
     fontSize: 10,
@@ -21,7 +21,7 @@ const StyledTableCell = withStyles((theme) => ({
 
 const StyledTableRow = withStyles((theme) => ({
   root: {
-    '&:nth-of-type(odd)': {
+    "&:nth-of-type(odd)": {
       backgroundColor: theme.palette.action.hover,
     },
   },
@@ -31,440 +31,548 @@ function createData(type, description, minimum, valuecct, valuepayed) {
   return { type, description, minimum, valuecct, valuepayed };
 }
 
-
 const rows = [
-  createData("A1", "Contêineres Cheios/Vazios, com Engate AUTOMÁTICO e/ou Rampa", 90.00, 5.665, 5.665),
-  createData("A2", "Contêineres Cheios/Vazios, com Engate MANUAL", 90.00, 5.665, 5.665),
+  createData(
+    "A1",
+    "Contêineres Cheios/Vazios, com Engate AUTOMÁTICO e/ou Rampa",
+    90.0,
+    5.665,
+    5.665
+  ),
+  createData(
+    "A2",
+    "Contêineres Cheios/Vazios, com Engate MANUAL",
+    90.0,
+    5.665,
+    5.665
+  ),
   createData("A1T", "Tabela de Valores TECON", "Tabela A1T"),
-  createData("B1", "Cargas Avulsas", 90.00, 1.1669, 1.1737419),
-  createData("B2", "Cargas Unitizadas (Incluindo Madeira Serrada Cintada e Big Bags", 90.00, 0.6595, 0.66338295),
-  createData("B3", "Cargas Unitizadas com Dimensões Padronizadas", 100.00, 0.2551, 0.2424),
-  createData("B4/B13", "Toras de Madeira Cintadas e/ou Bobinas de Aço", 100.00, 0.5448, 0.7197),
-  createData("B5", "Volumes Indivisíveis Acima de 1000Kg", 100.00, 0.9059, 0.9059),
-  createData("B6", "Cargas Avulsas em Navio com Rampa", 90.00, 1.1669, 0.849296401),
-  createData("B7", "Cargas Unitizadas em Navio com Rampa", 90.00, 0.6595, 0.66338295),
-  createData("B8", "Veículos em Geral, em Navio com Rampa", 90.00, 2.9427, 2.960058),
-  createData("B9", "Veículos de Passeio e Utilitários, em Navio com Rampa", 128.64, 1.6771, 1.6868505),
+  createData("B1", "Cargas Avulsas", 90.0, 1.1669, 1.1737419),
+  createData(
+    "B2",
+    "Cargas Unitizadas (Incluindo Madeira Serrada Cintada e Big Bags",
+    90.0,
+    0.6595,
+    0.66338295
+  ),
+  createData(
+    "B3",
+    "Cargas Unitizadas com Dimensões Padronizadas",
+    100.0,
+    0.2551,
+    0.2424
+  ),
+  createData(
+    "B4/B13",
+    "Toras de Madeira Cintadas e/ou Bobinas de Aço",
+    100.0,
+    0.5448,
+    0.7197
+  ),
+  createData(
+    "B5",
+    "Volumes Indivisíveis Acima de 1000Kg",
+    100.0,
+    0.9059,
+    0.9059
+  ),
+  createData(
+    "B6",
+    "Cargas Avulsas em Navio com Rampa",
+    90.0,
+    1.1669,
+    0.849296401
+  ),
+  createData(
+    "B7",
+    "Cargas Unitizadas em Navio com Rampa",
+    90.0,
+    0.6595,
+    0.66338295
+  ),
+  createData(
+    "B8",
+    "Veículos em Geral, em Navio com Rampa",
+    90.0,
+    2.9427,
+    2.960058
+  ),
+  createData(
+    "B9",
+    "Veículos de Passeio e Utilitários, em Navio com Rampa",
+    128.64,
+    1.6771,
+    1.6868505
+  ),
   createData("B10", "Cargas Frigoríficas", 101.84, 1.0036, 1.0562),
-  createData("B11", "Cargas Vivas", 90.00, 0.208, 0.2092125),
-  createData("B90", "Conexo", 122.22),			
-  createData("C1", "Produtos Agrícolas e Derivados, em Equipamento Manual", 90.00, 0.4241, 0.4265544),
-  createData("C2", "Produtos Agrícolas e Derivados, em Equipamento Mecânico ou Semi-automático", 90.00, 0.0978, 0.9838965),
-  createData("C3", "Produtos Agrícolas e Derivados, em Equipamento Automático", 90.00, 0.075, 0.849296401),
-  createData("C4", "Produtos Minerais/Químicos, em Equipamento Manual", 96.76, 0.4155, 0.4179468),
-  createData("C5", "Produtos Minerais/Químicos, em Equipamento Semi-automático", 96.76, 0.1877, 0.18876945),
-  createData("C6", "Produtos Minerais/Químicos, em Equipamento Automático e/ou Grab", 96.76, 0.1872, 0.262626593),
+  createData("B11", "Cargas Vivas", 90.0, 0.208, 0.2092125),
+  createData("B90", "Conexo", 122.22),
+  createData(
+    "C1",
+    "Produtos Agrícolas e Derivados, em Equipamento Manual",
+    90.0,
+    0.4241,
+    0.4265544
+  ),
+  createData(
+    "C2",
+    "Produtos Agrícolas e Derivados, em Equipamento Mecânico ou Semi-automático",
+    90.0,
+    0.0978,
+    0.9838965
+  ),
+  createData(
+    "C3",
+    "Produtos Agrícolas e Derivados, em Equipamento Automático",
+    90.0,
+    0.075,
+    0.849296401
+  ),
+  createData(
+    "C4",
+    "Produtos Minerais/Químicos, em Equipamento Manual",
+    96.76,
+    0.4155,
+    0.4179468
+  ),
+  createData(
+    "C5",
+    "Produtos Minerais/Químicos, em Equipamento Semi-automático",
+    96.76,
+    0.1877,
+    0.18876945
+  ),
+  createData(
+    "C6",
+    "Produtos Minerais/Químicos, em Equipamento Automático e/ou Grab",
+    96.76,
+    0.1872,
+    0.262626593
+  ),
   createData("C7", "Cavaco de Madeira", 96.76, 0.1872, 0.0573000989),
-  
 ];
 
+const useStyles = makeStyles({ table: { minWidth: 50 } });
 
-
-const useStyles = makeStyles({ table: { minWidth: 50, }, });
-
-
-export default function RelacaoEstivadores()  {
+export default function RelacaoEstivadores() {
   const classes = useStyles();
   return (
     <>
       <h1>
         <strong>
-          Porto do Rio Grande - Convenção Coletiva de Trabalho (Vigência 2020-2022)
+          Porto do Rio Grande - Convenção Coletiva de Trabalho (Vigência
+          2020-2022)
         </strong>
       </h1>
       <TableContainer component={Paper}>
         <Table className={classes.table} aria-label="customized table">
           <TableHead>
             <TableRow>
-              <StyledTableCell align="right"><strong>Tipo</strong></StyledTableCell>
-              <StyledTableCell align="center"><strong>Descrição Faina</strong></StyledTableCell>
-              <StyledTableCell align="center"><strong>Diária&nbsp;(R$)</strong></StyledTableCell>
-              <StyledTableCell align="center"><strong>Valor CCT&nbsp;(R$)</strong></StyledTableCell>
-              <StyledTableCell align="center"><strong>Valor Pago&nbsp;(R$)</strong></StyledTableCell>
+              <StyledTableCell align="right">
+                <strong>Tipo</strong>
+              </StyledTableCell>
+              <StyledTableCell align="center">
+                <strong>Descrição Faina</strong>
+              </StyledTableCell>
+              <StyledTableCell align="center">
+                <strong>Diária (R$)</strong>
+              </StyledTableCell>
+              <StyledTableCell align="center">
+                <strong>Valor CCT (R$)</strong>
+              </StyledTableCell>
+              <StyledTableCell align="center">
+                <strong>Valor Pago (R$)</strong>
+              </StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.map((row) => (
               <StyledTableRow key={row.type}>
-                <StyledTableCell align="right" component="th" scope="row"><strong>{row.type}</strong></StyledTableCell>
-                <StyledTableCell align="left">{row.description}</StyledTableCell>
+                <StyledTableCell align="right" component="th" scope="row">
+                  <strong>{row.type}</strong>
+                </StyledTableCell>
+                <StyledTableCell align="left">
+                  {row.description}
+                </StyledTableCell>
                 <StyledTableCell align="center">{row.minimum}</StyledTableCell>
                 <StyledTableCell align="center">{row.valuecct}</StyledTableCell>
-                <StyledTableCell align="center">{row.valuepayed}</StyledTableCell>
+                <StyledTableCell align="center">
+                  {row.valuepayed}
+                </StyledTableCell>
               </StyledTableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer>
-
-
     </>
   );
 }
 
-
-
-"001-9", "Geovani dos Santos Vaz"
-"002-7		André Luiz Fernandes Amarilho (Corsan)
-"003-5		Gabriel Beneri Claro
-"004-3		Adalberto Ortiz de Aragão
-"005-1		Jeferson Vasconcellos Gomes (Caibiga Filho)
-"006-0		Jose Imar da Silveira
-"007-8		Tiago da Silva Froes (Fonfon)
-"008-6		Dalmiro Lucas da Costa
-"009-4		Gustavo Ubal Hafele (Guanabara)
-"010-8		Luiz André Cardoso Martins
-"011-6		Maicon Gauterio Bengert (Ninja)
-"012-4		Frank Iram Rocha dos Santos (Lula Molusco)
-"013-2		Yan Rocha de Lima
-"014-0		Paulo Cesar Rodrigues Leiria (Pá Furada)
-"015-9		Luiz Francisco Mariano de Araujo (Lua)
-"016-7		Jorge Alberto da Silva Soulue Filho
-"017-5		Bruno Costa dos Santos (Banrisul)
-"018-3		Luiz Alberto Chagas Camargo (Pico)
-"019-1		Antonio Olavo Campos
-'020-5		Cleide Alaor Piva Casartelli
-021-3		Jader Cardoso Nunes (Varal)
-022-1		Francisco de Assis da Rosa Florindo (Chico)
-023-0		Gilmar Gondran Franco Nigro
-024-8		Jean Ricardo Barbosa Maciel
-025-6		João Fábio Padilha Nunes
-026-4		Luiz Paulo Duarte Silveira (Sarará)
-027-2		Cristiano Saraiva Siebre (Bolachinha)
-028-0		Paulo Cesar Amaral
-029-9		Daner Almeida de Mattos (DJ)
-030-2		Adriano Urquia Paiva (Cazuza)
-031-0		Jose Analio Cougo Morales
-032-9		Valdinei Amaral Alves
-033-7		Marco Antonio Pereira Xavier
-034-5		Cristian Carvalho da Silva
-035-3		Everton Rodrigues Rosa (Fome Zero)
-036-1		Dyaimis dos Santos Lilja
-037-0		Blair Moreira Saraiva (Boy)
-038-8		Amadeu Rey Jesus
-039-6		Alex Sandro Bazarelli Leal
-040-0		Eder Oliveira da Costa
-041-8		Geder dos Santos Cardoso (Fiscal)
-042-6		Fábio de Melo Tarouco
-043-4		Claudio de Almeida (Quietinho)
-044-2		Alexsandro Martins Cunha (Xuxa)
-045-0		Eliane Gomes Neris (Cinzinha)
-046-9		João David de Ávila Oliveira
-047-7		Ruy Camargo Gomes (Caibiga Pai)
-048-5		Cleber Domingues Heidemann (Salsicha/Alemão)
-049-3		Enildo de Oliveira Bastos
-050-7		Dino Rodrigues Nunes
-051-5		Roberson Nobrega Garcia (Robinho)
-052-3		Alexandre Costa Dias (Prof Girafales)
-053-1		Vanderlei Lemos da Conceição
-054-0		Vinicius Chaves Simões (PM)
-055-8		Pedro Roberto D'Avila Silveira (Bebeto)
-056-6		Rafael Corrêa de Souza (Boneco)
-057-4		Antonio Feliciano Pinto (Toninho)
-058-2		Wilson Jorge Gomes
-059-0		Alisson Correa Ballester
-060-4		Jorge Alberto Pereira Machado
-061-2		Toni Anderson Machado da Rocha
-062-0		Marco Aurelio Medeiros Santos (Marquinhos)
-063-9		Cláudio Adão Mackmillan Medeiros (Dinho)
-064-7		Everton Luiz Mattos Dias (Vaqueiro)
-065-5		Eduardo Suanes Dutra (Cassineiro)
-066-3		Vany Clay Pires Costa (Caveira)
-067-1		João Ferreira Ferraz
-068-0		Vanderlei Batista da Silveira
-069-8		Guilherme Santos Costa (Linguinha)
-070-1		Marcelo Oliveira Farias (IGP)
-071-0		Saimon Rijo Santos
-072-8		Ademar Fernandes Salles (Indio Louco)
-073-6		Edison Fernandes Fonseca (Bigode)
-074-4		Cristiano Domingues dos Santos (Soneca)
-075-2		Márcio Eli de Oliveira Campelo
-076-0		Alex Sander Gonçalves Sayão (Sayão)
-077-9		Francisco Carlos da Silva Amaral Junior (Chiquinho)
-078-7		Sérgio Luiz Duarte
-079-5		Rodrigo de Lima Garcia (Bombeiro)
-080-9		Nuno Uander Simões Goulart
-081-7		Paulo Renato Pires Nunes (Renatinho)
-082-5		Shampark Zorzolli Assumpção
-083-3		Sérgio Roberto Dias Costa (Dentista)
-084-1		Thiago Soares Silveira (Corsan)
-085-0		Leandro Silva de Freitas (Viola)
-086-8		Paulo Augusto Borges Souza (É eu)
-087-6		Jorge Leandro Chaubet de Souza
-088-4		Luiz Alberto Moreira Saraiva
-089-2		Paulo Mariano de Araujo
-090-6		Diego Andrade Ferreira (Iluminati)
-091-4		Jorge Marcelo Avila Gonçalves (Shrek)
-092-2		Alexandre Sodre Escobar (Bitoca)
-093-0		Jesus Chaves de Xavier
-094-9		Gladimir de Vargas (Beterraba)
-095-7		Iris Laco
-096-5		Leôncio de Aguiar Pereira
-097-3		Gilnei Lopes Freire
-098-1		Sidnei Cardozo Lopes (Sid Careca)
-099-0		Diego Nobrega Munhoz (SMCSU)
-100-7		José Felicio Salazart da Conceição (Michael Jackson)
-101-5		Paulo Roberto da Silva Rosa (Paulinho Mangueira/Assobio)
-102-3		Charles dos Santos da Silva
-103-1		Paulo Ronald Oliveira Bom Reis
-104-0		Marlom Paulo Trindade Bom Reis
-105-8		Claudio Fernando Frasco Lopes
-106-6		Edison Bastos Camargo
-107-4		José Carlos de Oliveira Silveira
-108-2		Antonio Marcos da Silva Teixeira (Porquinho)
-109-0		Vilson de Almeida (Vilssão)
-110-4		Elsio João Louzada Miranda
-111-2		Cristiano de Melo Oliveira (Polêmica/Touca do Chaves)
-112-0		Luis Carlos Garcia dos Santos
-113-9		Rodrigo Mendes Oleiro (Sapinho Novo)
-114-7		Maciel Meyer Rodrigues
-115-5		Henrique Jorge Weymer
-116-3		Paulo Roberto Insaurriaga Cabral (Paulinho Ex-Presidente)
-117-1		Adão Santos Silva
-118-0		Armando Ismerio Nunes
-119-8		Alex Sandro Machado de Vargas
-120-1		
-121-0		Cleiton Pires Briese (Fred)
-122-8		Adão Luiz Diogo Monteiro (Ronaldinho)
-123-6		Leonardo de Oliveira Peres (Beraba)
-124-4		Max Dutra Franco
-125-2		Wagner da Cunha Borba (Bozó)
-126-0		Ademar Rodrigues Soares
-127-9		Milton Cesar Anchieta Briese
-128-7		Wilson Dias Barbosa Filho (Carioca)
-129-5		Luiz Roberto Dias da Silva (Sapinho antigo)
-130-9		Alessandro Peres Garcia (Click)
-131-7		Márcio Roberto Goulart de Souza (VigilanteSanitário)
-132-5		Alexander Pires Borges (4 Coxa)
-133-3		Paulo Ricardo Rodrigues de Quadros
-134-1		Cleber Cristiano Oliveira Urquia
-135-0		José Pedro Lopes (Pastor Novo)
-136-8		Jullian Velho Barbosa
-137-6		Ederson Luis Santos Silveira (Edinho)
-138-4		Zenir Silveira Lopez (Pastor)
-139-2		Carlos Alberto Fortes Anastacio (Tininho)
-140-6		Peterson da Silva Pinto (Corredor)
-141-4		Elson Gondran Franco (Turco)
-142-2		Antonio Carlos Rodrigues (Tuca)
-143-0		Cristiano Souza Campos
-144-9		Cristiano Sérgio de Souza (Cadum)
-145-7		José Carlos dos Santos Batista (Zé Gordo)
-146-5		Sérgio Luiz Góis de Souza (Simpático)
-147-3		Francisco de Assis Feiteiro Florindo (Chicão)
-148-1		Charles de Mello Costa
-149-0		Mario Silva Domingues
-150-3		Thiago dos Santos Sá (Dançarino)
-151-1		Joel Araujo de Sá (Filho Pepeu)
-152-0		Osmar da Rosa Gonçalves
-153-8		Thomaz Souza Rodrigues (Perdigão)
-154-6		Vanderlei Rodrigues dos Santos
-155-4		Eduardo Nunes Nunes (Capincho)
-156-2		Vicente Mendes da Silva
-157-0		Wagner Algacaburo Freitas (Cinzinha)
-158-9		Volmer Veleda Maciel (Irmão Flávio Vigilante)
-159-7		Luiz Fernando Arruda Cardozo (Batatinha)
-160-0		Jorge Dinarte Chaves de Xavier (Nati)
-161-9		Michel Wachholz
-162-7		Paulo Roberto de Oliveira Nunes
-163-5		Neri Braga Soares
-164-3		Valdic Amaral Pereira
-165-1		Ubirajara Alves Lobo (Mancha)
-166-0		Jorge Antonio Ferreira da Silva
-167-8		José Carlos Marques de Souza
-168-6		Marco Aurélio de Oliveira Mendes (Quinho)
-169-4		Matheus Obiedo Garcia
-170-8		Paulo Edson da Rosa Garcia
-171-6		Miguel Fonseca Negreira
-172-4		Atiliano Prates de Vargas Junior (Ninho)
-173-2		Ronaldo Gutierrez Campello (Churrasquinho)
-174-0		Leandro Valente de Aragão (Negativo)
-175-9		Thiago Nunes Ramos (da Barra)
-176-7		Diego da Conceição Dutra (Tomate Filho)
-177-5		Jorge Dias Ferreira
-178-3		Joel Pires da Silveira
-179-1		Josias da Silva Porto (Bicudo)
-180-5		Claudio Luiz Lafontainhe
-181-3		Levi Ribeiro Vasconcellos
-182-1		Wagner Machado Duarte
-183-0		Claudiomiro Chaves
-184-8		Renato Correa Mirapalheta (CPATP)
-185-6		Otavio Carlos da Conceição
-186-4		William da Silva Macedo
-187-2		Gelson Leal de Carvalho (Marinheiro)
-188-0		Marco Antonio Macedo Furtado (Marcão)
-189-9		Nataniel Lemos Soares
-190-2		Abengair Pimentel Santejano
-191-0		Reginaldo Pinto Ferreira
-192-9		Francisco Carlos Ferreira de Barros (Meia Tala)
-193-7		Roberto Brião Paiva (Beto Gatão)
-194-5		Adelar Dutra (Tomate Pai)
-195-3		Cristiano Silva de Oliveira (Corsan)
-196-1		Francisco Nilmar Almeida
-197-0		Everton Luiz Rodrigues da Conceição (Ecovix)
-198-8		Alessandro Correa Tavares (Marreta)
-199-6		Rodrigo Olmedo Silveira (Roquinho)
-200-3		Hector Mario Vasques de Almeida (Burusqueta)
-201-1		Alex Sandro Furtado Madruga (Shee-ra)
-202-0		José Carlos de Moura Domingues (Boludo)
-203-8		Kátia Caroline Olsson Perinazzo
-204-6		José Mario Govea Cavalheiro
-205-4		Dilio Alberto Baldez
-206-2		Diomar Antonio Baldez Pinho
-207-0		Mário Menger da Silva Junior
-208-9		Arany Garcia Vieira
-209-7		Marcos Rogério dos Santos Lima
-210-0		Rudnei Cardozo da Silva (Mais Velho)
-211-9		Hélio Gautério de Sá Júnior (Helinho)
-212-7		Diego Saggiomo Canez (Gnomo)
-213-5		Edinelle Gautério Tavares (Cenourão Filho)
-214-3		Roberto Dutra de Melo (Pirulito)
-215-1		Márcio Messias Moreira (Moreira)
-216-0		Dilvanir Silva Domingues (Castelhano)
-217-8		Jorge Luiz da Silva Borda
-218-6		João Carlos Bastos Leal (Bagé) 
-219-4		Maicon Amaral do Amaral
-220-8		Michael Nunes da Luz (CPATP)
-221-6		Roner Luiz Duarte Domingues (Tigrilo)
-222-4		Thiago Lima Torres (CPATP)
-223-2		Emerson Vianna Pereira
-224-0		Rudnei Toral Lima (Baixote)
-225-9		Oildo Amaral
-226-7		William Bastos Ferreira (Babão)
-227-5		Arceni da Cunha Moreira
-228-3		Sandro Gastuci Nunes
-229-1		Gildoberto de Souza Martins (Betinho)
-230-5		Edimar Hilario Jose de Mattos (Baiano)
-231-3		João Carlos Leite de Oliveira (Televisão)
-232-1		Luiz Oliveira Soulue
-233-0		João Hilário Souza Lopes
-234-8		Valcir Dias Almeida
-235-6		Ibrahim Silveira Caetano
-236-4		Admilson de Souza Santos (ADM)
-237-2		Daniel dos Santos Moreira (DetonaRalph)
-238-0		Mosart Amaro dos Santos
-239-9		Gilierdi Moura de Moraes (Bombeiro)
-240-2		Claudinei Marini Caramez Jr (Brutus)
-241-0		Hugo Fortes Anastacio (Magrão)
-242-9		Bruno Souza Duarte
-243-7		Felipe Andres Blanco (Guarda Portuario)
-244-5		Paulo Ricardo Serra dos Santos (Sargento PM)
-245-3		Jair Francisco Soares (Carroça)
-246-1		Getúlio Colvara de Vargas (Porra)
-247-0		Suedi Mariano da Costa
-248-8		Ronaldo Pinto Vieira
-249-6		Antonio Carlos de Castro Assumpção (Tonico)
-250-0		José Carlos Quevedo Tavares (Cenourão Pai)
-251-8		Renan Lima Bock
-252-6		Deivid Cardoso Oliveira
-253-4		Luis Claudio Gonçalves Vaz (Claudinho)
-254-2		João Batista Machado de Lima (Bacia)
-255-0		Rodrigo dos Santos Batista (Bodão)
-256-9		Adão Pinto de Oliveira (Para Pedro)
-257-7		Carlos Fernando Garcia Bastos (Garrafinha)
-258-5		Bairo Grevi Barcelos Soares
-259-3		Rodrigo Bandeira da Silva (Xaropinho)
-260-7		Luciano Oliveira Soulue (Lulu)
-261-5		Faustino Agarralua do Prado (Agarra Lua)
-262-3		Felipe Soares Nascimento (Arte Educador)
-263-1		Fernando Rocha Farias (Nego Boy)
-264-0		Márcio Simões Lopes Saraiva (Filho Boy)
-265-8		Francisco de Assis Madrugra Pedra (Pastor Antigo)
-266-6		Guilherme Wendlant (Dentista)
-267-4		Solismar Vaz
-268-2		Pedro Ricardo Zanini Fernandes
-269-0		Jorge Luis Melo Rodrigues (Mourão)
-270-4		Dione da Silva Domingues (Pânico)
-271-2		Mario Luis Nascimento dos Santos (Tipiu)
-272-0		Edmilson Xavier Pinheiro
-273-9		José Roberto Sanches Gonçalves
-274-7		André Dias dos Santos (Surdinho)
-275-5		Júlio César de Oliveira Soares (Som Assembléia)
-276-3		Valdir Rodrigues da Costa
-277-1		Carlos Alberto Lopes da Costa (Tatu Peludo)
-278-0		Leandro Custódio da Rosa
-279-8		Anderson Machado Rodrigues (Maninho)
-280-1		Daniel Oliveira Costa (Teta)
-281-0		Alex Sandro Pires dos Santos (Xai Xang)
-282-8		Silvio Roberto Munhoz de Menezes (CPATP)
-283-6		Evaldo Borges Moreira (Carequinha)
-284-4		Esequiel Kisner de Carvalho
-285-2		Alcindo Solla
-286-0		Alan de Almeida Leão (Nhonho)
-287-9		Waldemar Aguiar Corpes
-288-7		Pedro Fortes Anastacio (Pedrinho)
-289-5		Dirceu Neri de Sá (Pepeu)
-290-9		Jorge Carlos Costa Rodrigues
-291-7		Ademar Antonio Barbosa
-292-5		Anderson Claiton Soares Casartelli (Primata)
-293-3		Tiago da Silva Machado (Ongaratto)
-294-1		Xisto Costa Filho
-295-0		José Luiz da Silva
-296-8		Nelson Miranda (Tarouco)
-297-6		Arnoldo Almeida Nunes
-298-4		Adão Lopes Sayão (Adãozinho)
-299-2		Ilceu Ferreira Machado
-300-0		Vitor Bastos Leal (Vitinho)
-301-8		Edison Lopes Dias
-302-6		Anderson José Lopes Retzlaff
-303-4		Diego da Costa Schuller
-304-2		Lori Silveira Junior
-305-0		Luiz Fernando Pinho Michaello (Sagres)
-306-9		Richer da Silva Aguiar (Prefeitura)
-307-7		Sergio Luis Goulart Miranda (Naval)
-308-5		Vagner Ferreira Benitez
-309-3		Weslley Wailla Veleda
-310-7		Arnaldo Rosa da Silva
-311-5		Patrick Alves Kruger (CPATP)
-312-3		Vagner Carrir de Lemos (Corsan)
-313-1		Alex Fonseca de Souza
-314-0		Oswaldo da Conceição Pinheiro (Valdic)
-315-8		Silto Heleno Vaz (Tocinha)
-316-6		Altamir Gonçalves Freitas (Miro)
-317-4		Carlos Silva Domingues Junior (Torê)
-318-2		Luiz Eduardo Almeida da Costa (Duda)
-319-0		Claudinei Pereira da Silva (Macau)
-320-4		Oroci Ferreira
-321-2		Marcelo Costa Salum (Policia Civil)
-322-0		Pedro Otto Campelo (Balãozinho)
-323-9		Marcelo Machado Moreira (Bandido)
-324-7		Matheus Francisco Medeiros Petry
-325-5		Ricardo Alves de Oliveira Junior (PM)
-326-3		Beverlly Soria Alves Peres (Marinheiro)
-327-1		Bruno dos Santos Martins (Dilminha)
-328-0		André Luiz Ferreira Ferraz
-329-8		Jorge Luis Sousa da Silva (Cojack)
-330-1		Dennyan Cavalheiro dos Santos
-331-0		Jover da Costa Furtado
-332-8		Leandro da Silva de Castro
-333-6		Adão Moraes Ferreira
-334-4		Lyncoln Jesus da Costa Zorzolli
-335-2		Adalberto Carvalho de Souza (Dançarino)
-336-0		Bryan Timm Branco
-337-9		Elton Tiago de Oliveira Vergara (Tetê)
-338-7		Paulo Victor Crizel Gonçalves (Paulão Novo)
-339-5		Rômulo Madruga Furtado (Guarda Portuário)
-340-9		Frantiesco Porto Coelho (SexShop)
-341-7		Vanderlei Bezerra Nunes
-342-5		Valter Nelo Nobre Nunes
-343-3		José Ildefonso Pereira da Silva
-344-1		Andrew Mendes Schmitz (BandanaMan)
-345-0		Eduardo Gonçalves Sousa (Bombeiro)
-346-8		Fernando Farias da Rosa (Samu)
-347-6		Régis Moreira Andrade
-348-4		Edson Claro Rodrigues (Blanka)
-349-2		John Michel Sanchez Dias (Ex Tecon)
-350-6		Pablo Briese Martins (Surfista)
-351-4		Henrique Vaz Lorea
-352-2		Carlos Roberto Vianna de Vianna
-353-0		Acelino Candido Xavier Rodrigues (Xaropinho Bloco)
-354-9		Luiz Carlos Gallo
-355-7		Luiz Carlos Nunes Arruda (Arruda)
-356-6		Paulo Renato Silva Silveira
-357-3		Paulo Roberto Silva Freitas (Paulão)
-358-1		Julio Cesar Berchon Des Essarts (Vigilante Jt)
-359-0		Claudio Reginaldo Saraiva da Rosa (Bolinho)
-360-3		Helio Artur Silveira
-361-1		Zelimar da Cunha Lopes (Marmitex)
-362-0		Kauã Wailla de Almeida
-363-8		Rudimar Mendes Silva
-364-6		Luiz Antonio Silva Rocha
+// 001-9 GEOVANI DOS SANTOS VAZ" -
+// 002-7 ANDRÉ LUIZ FERNANDES AMARILHO HABILITADO
+// 003-5	GABRIEL BENERI CLARO	HABILITADO
+// 004-3	ADALBERTO ORTIZ DE ARAGÃO	HABILITADO
+// 005-1	JEFERSON VASCONCELLOS GOMES	-
+// 006-0	JOSE IMAR DA SILVEIRA	HABILITADO
+// 007-8	TIAGO DA SILVA FROES	HABILITADO
+// 008-6	DALMIRO DA COSTA LUCAS	-
+// 009-4	GUSTAVO UBAL HAFELE	HABILITADO
+// 010-8	LUIZ ANDRÉ CARDOSO MARTINS	HABILITADO
+// 011-6	MAICON GAUTÉRIO BENGERT	HABILITADO
+// 012-4	FRANK IRAM ROCHA DOS SANTOS	HABILITADO
+// 013-2	YAN ROCHA DE LIMA	HABILITADO
+// 014-0	PAULO CESAR RODRIGUES LEIRIA	-
+// 015-9	LUIZ FRANCISCO MARIANO DE ARAUJO	HABILITADO
+// 016-7	JORGE ALBERTO DA SILVA SOULUE FILHO	HABILITADO
+// 017-5	BRUNO COSTA DOS SANTOS	HABILITADO
+// 018-3	LUIZ ALBERTO CHAGAS CAMARGO	HABILITADO
+// 019-1	ANTONIO OLAVO CAMPOS	-
+// 020-5	CLEIDE ALAOR PIVA CASARTELLI	HABILITADO
+// 021-3	JADER CARDOSO NUNES	-
+// 022-1	FRANCISCO DE ASSIS DA ROSA FLORINDO	HABILITADO
+// 023-0	GILMAR GONDRAN FRANCO NIGRO	HABILITADO
+// 024-8	JEAN RICARDO BARBOSA MACIEL	HABILITADO
+// 025-6	JOÃO FÁBIO PADILHA NUNES	HABILITADO
+// 026-4	LUIZ PAULO DUARTE SILVEIRA	HABILITADO
+// 027-2	CRISTIANO SARAIVA SIEBRE	HABILITADO
+// 028-0	PAULO CESAR AMARAL	HABILITADO
+// 029-9	DANER ALMEIDA DE MATTOS	-
+// 030-2	ADRIANO URQUIA PAIVA	-
+// 031-0	JOSE ANALIO COUGO MORALES	HABILITADO
+// 032-9	VALDINEI AMARAL ALVES	HABILITADO
+// 033-7	MARCO ANTONIO PEREIRA XAVIER	HABILITADO
+// 034-5	CRISTIAN CARVALHO DA SILVA	HABILITADO
+// 035-3	EVERTON RODRIGUES ROSA	HABILITADO
+// 036-1	DYAIMIS DOS SANTOS LILJA	HABILITADO
+// 037-0	BLAIR MOREIRA SARAIVA	HABILITADO
+// 038-8	AMADEU REY JESUS	HABILITADO
+// 039-6	ALEX SANDRO BAZARELLI LEAL	-
+// 040-0	EDER OLIVEIRA DA COSTA	HABILITADO
+// 041-8	GEDER DOS SANTOS CARDOSO	-
+// 042-6	FÁBIO DE MELO TAROUCO	HABILITADO
+// 043-4	CLAUDIO DE ALMEIDA	HABILITADO
+// 044-2	ALEXSANDRO MARTINS CUNHA	HABILITADO
+// 045-0	ELIANE GOMES NERIS	HABILITADO
+// 046-9	JOÃO DAVID DE ÁVILA OLIVEIRA	HABILITADO
+// 047-7	RUY CAMARGO GOMES	HABILITADO
+// 048-5	CLEBER DOMINGUES HEIDEMANN	HABILITADO
+// 049-3	ENILDO DE OLIVEIRA BASTOS	HABILITADO
+// 050-7	DINO RODRIGUES NUNES	-
+// 051-5	ROBERSON NOBREGA GARCIA	HABILITADO
+// 052-3	ALEXANDRE COSTA DIAS	HABILITADO
+// 053-1	VANDERLEI LEMOS DA CONCEIÇÃO	HABILITADO
+// 054-0	VINICIUS CHAVES SIMÕES	HABILITADO
+// 055-8	PEDRO ROBERTO D AVILA SILVEIRA	HABILITADO
+// 056-6	RAFAEL CORRÊA DE SOUZA	HABILITADO
+// 057-4	ANTONIO FELICIANO PINTO	HABILITADO
+// 058-2	WILSON JORGE GOMES	-
+// 059-0	ALISSON CORREA BALLESTER	HABILITADO
+// 060-4	JORGE ALBERTO PEREIRA MACHADO	HABILITADO
+// 061-2	TONI ANDERSON MACHADO DA ROCHA	HABILITADO
+// 062-0	MARCO AURELIO MEDEIROS SANTOS	HABILITADO
+// 063-9	CLÁUDIO ADÃO MACKMILLAN MEDEIROS	HABILITADO
+// 064-7	EVERTON LUIZ MATTOS DIAS	HABILITADO
+// 065-5	EDUARDO SUANES DUTRA	HABILITADO
+// 066-3	VANY CLAY PIRES COSTA	HABILITADO
+// 067-1	JOAO FERREIRA FERRAZ	HABILITADO
+// 068-0	VANDERLEI BATISTA DA SILVEIRA	HABILITADO
+// 069-8	GUILHERME SANTOS COSTA	-
+// 070-1	MARCELO OLIVEIRA FARIAS	HABILITADO
+// 071-0	SAIMON RIJO SANTOS	HABILITADO
+// 072-8	ADEMAR FERNANDES SALLES	HABILITADO
+// 073-6	EDISON FERNANDES FONSECA	HABILITADO
+// 074-4	CRISTIANO DOMINGUES DOS SANTOS	HABILITADO
+// 075-2	MARCIO ELI DE OLIVEIRA CAMPELO	HABILITADO
+// 076-0	ALEX SANDER GONÇALVES SAYÃO	HABILITADO
+// 077-9	FRANCISCO CARLOS DA SILVA AMARAL JUNIOR	HABILITADO
+// 078-7	SERGIO LUIZ DUARTE	HABILITADO
+// 079-5	RODRIGO DE LIMA GARCIA	HABILITADO
+// 080-9	NUNO UANDER SIMÕES GOULART	HABILITADO
+// 081-7	PAULO RENATO PIRES NUNES	HABILITADO
+// 082-5	SHAMPARK ZORZOLLI ASSUMPÇÃO	HABILITADO
+// 083-3	SÉRGIO ROBERTO DIAS COSTA	HABILITADO
+// 084-1	THIAGO SOARES SILVEIRA	HABILITADO
+// 085-0	LEANDRO SILVA DE FREITAS	HABILITADO
+// 086-8	PAULO AUGUSTO BORGES SOUZA	HABILITADO
+// 087-6	JORGE LEANDRO CHAUBET DE SOUZA	HABILITADO
+// 088-4	LUIZ ALBERTO MOREIRA SARAIVA	HABILITADO
+// 089-2	PAULO MARIANO DE ARAUJO	HABILITADO
+// 090-6	DIEGO ANDRADE FERREIRA	HABILITADO
+// 091-4	JORGE MARCELO AVILA GONÇALVES	HABILITADO
+// 092-2	ALEXANDRE SODRE ESCOBAR	HABILITADO
+// 093-0	JESUS CHAVES DE XAVIER	-
+// 094-9	GLADIMIR DE VARGAS	HABILITADO
+// 095-7	IRIS LACO	-
+// 096-5	LEÔNCIO DE AGUIAR PEREIRA	HABILITADO
+// 097-3	GILNEI LOPES FREIRE	HABILITADO
+// 098-1	SIDNEI CARDOZO LOPES	HABILITADO
+// 099-0	DIEGO NOBREGA MUNHOZ	HABILITADO
+// 100-7	JOSE FELICIO SALAZART DA CONCEICAO	HABILITADO
+// 101-5	PAULO ROBERTO DA SILVA ROSA	HABILITADO
+// 102-3	CHARLES DOS SANTOS DA SILVA	HABILITADO
+// 103-1	PAULO RONALDO OLIVEIRA BOM REIS	HABILITADO
+// 104-0	MARLOM PAULO TRINDADE BOM REIS	HABILITADO
+// 105-8	CLAUDIO FERNANDO FRASCO LOPES	HABILITADO
+// 106-6	EDISON BASTOS CAMARGO	HABILITADO
+// 107-4	JOSE CARLOS DE OLIVEIRA SILVEIRA	HABILITADO
+// 108-2	ANTONIO MARCOS DA SILVA TEIXEIRA	HABILITADO
+// 109-0	VILSON DE ALMEIDA	HABILITADO
+// 110-4	ELSIO JOÃO LOUZADA MIRANDA	HABILITADO
+// 111-2	CRISTIANO DE MELO OLIVEIRA	HABILITADO
+// 112-0	LUIS CARLOS GARCIA DOS SANTOS	HABILITADO
+// 113-9	RODRIGO MENDES OLEIRO	HABILITADO
+// 114-7	MACIEL MEYER RODRIGUES	HABILITADO
+// 115-5	HENRIQUE JORGE WEYMER	HABILITADO
+// 116-3	PAULO ROBERTO INSAURRIAGA CABRAL	HABILITADO
+// 117-1	ADAO SANTOS SILVA	HABILITADO
+// 118-0	ARMANDO ISMERIO NUNES	HABILITADO
+// 119-8	ALEX SANDRO MACHADO DE VARGAS	HABILITADO
+// 120-1	ANTONIO UBIRATAN MENDES PERES	HABILITADO
+// 121-0	CLEITON PIRES BRIESE	HABILITADO
+// 122-8	ADÃO LUIZ DIOGO MONTEIRO	HABILITADO
+// 123-6	LEONARDO DE OLIVEIRA PERES	HABILITADO
+// 124-4	MAX DUTRA FRANCO	HABILITADO
+// 125-2	WAGNER DA CUNHA BORBA	HABILITADO
+// 126-0	ADEMAR RODRIGUES SOARES	HABILITADO
+// 127-9	MILTON CESAR ANCHIETA BRIESE	HABILITADO
+// 128-7	WILSON DIAS BARBOSA FILHO	HABILITADO
+// 129-5	LUIZ ROBERTO DIAS DA SILVA	HABILITADO
+// 130-9	ALESSANDRO PERES GARCIA	HABILITADO
+// 131-7	MÁRCIO ROBERTO GOULART DE SOUZA	HABILITADO
+// 132-5	ALEXANDER PIRES BORGES	HABILITADO
+// 133-3	PAULO RICARDO RODRIGUES DE QUADROS	HABILITADO
+// 134-1	CLEBER CRISTIANO OLIVEIRA URQUIA	-
+// 135-0	JOSÉ PEDRO LOPES	HABILITADO
+// 136-8	JULLIAN VELHO BARBOSA	HABILITADO
+// 137-6	EDERSON LUIS SANTOS SILVEIRA	HABILITADO
+// 138-4	ZENIR SILVEIRA LOPEZ	HABILITADO
+// 139-2	CARLOS ALBERTO FORTES ANASTACIO	HABILITADO
+// 140-6	PETERSON DA SILVA PINTO	HABILITADO
+// 141-4	ELSON GONDRAN FRANCO	HABILITADO
+// 142-2	ANTONIO CARLOS RODRIGUES	-
+// 143-0	CRISTIANO SOUZA CAMPOS	HABILITADO
+// 144-9	CRISTIANO SERGIO DE SOUZA	HABILITADO
+// 145-7	JOSE CARLOS DOS SANTOS BATISTA	HABILITADO
+// 146-5	SERGIO LUIS GOIS DE SOUZA	HABILITADO
+// 147-3	FRANCISCO DE ASSIS FEITEIRO FLORINDO	HABILITADO
+// 148-1	CHARLES DE MELLO COSTA	HABILITADO
+// 149-0	MARIO SILVA DOMINGUES	HABILITADO
+// 150-3	THIAGO DOS SANTOS SÁ	HABILITADO
+// 151-1	JOEL ARAUJO DE SÁ	HABILITADO
+// 152-0	OSMAR DA ROSA GONCALVES	HABILITADO
+// 153-8	THOMAZ SOUZA RODRIGUES	HABILITADO
+// 154-6	VANDERLEI RODRIGUES DOS SANTOS	-
+// 155-4	EDUARDO NUNES NUNES	HABILITADO
+// 156-2	VICENTE MENDES DA SILVA	HABILITADO
+// 157-0	WAGNER ALGACABURO FREITAS	HABILITADO
+// 158-9	VOLMER VELEDA MACIEL	HABILITADO
+// 159-7	LUIZ FERNANDO ARRUDA CARDOZO	HABILITADO
+// 160-0	JORGE DINARTE CHAVES DE XAVIER	HABILITADO
+// 161-9	MICHEL WACHHOLZ	HABILITADO
+// 162-7	PAULO ROBERTO DE OLIVEIRA NUNES	HABILITADO
+// 163-5	NERI BRAGA SOARES	HABILITADO
+// 164-3	VALDIC AMARAL PEREIRA	HABILITADO
+// 165-1	UBIRAJARA ALVES LOBO	HABILITADO
+// 166-0	JORGE ANTONIO FERREIRA DA SILVA	HABILITADO
+// 167-8	JOSE CARLOS MARQUES DE SOUZA	HABILITADO
+// 168-6	MARCO AURÉLIO DE OLIVEIRA MENDES	-
+// 169-4	MATHEUS OBIEDO GARCIA	HABILITADO
+// 170-8	PAULO EDSON DA ROSA GARCIA	-
+// 171-6	MIGUEL FONSECA NEGREIRA	HABILITADO
+// 172-4	ATILIANO PRATES DE VARGAS JUNIOR	HABILITADO
+// 173-2	RONALDO GUTIERREZ CAMPELLO	-
+// 174-0	LEANDRO VALENTE DE ARAGÃO	HABILITADO
+// 175-9	THIAGO NUNES RAMOS	HABILITADO
+// 176-7	DIEGO DA CONCEIÇÃO DUTRA	HABILITADO
+// 177-5	JORGE DIAS FERREIRA	HABILITADO
+// 178-3	JOEL PIRES DA SILVEIRA	HABILITADO
+// 179-1	JOSIAS DA SILVA PORTO	-
+// 180-5	CLAUDIO LUIZ LAFONTAINHE	HABILITADO
+// 181-3	LEVI RIBEIRO VASCONCELLOS	HABILITADO
+// 182-1	WAGNER MACHADO DUARTE	HABILITADO
+// 183-0	CLAUDIOMIRO CHAVES	-
+// 184-8	RENATO CORREA MIRAPALHETA	-
+// 185-6	OTAVIO CARLOS DA CONCEIÇÃO	HABILITADO
+// 186-4	WILLIAM DA SILVA MACEDO	-
+// 187-2	GELSON LEAL DE CARVALHO	HABILITADO
+// 188-0	MARCO ANTONIO MACEDO FURTADO	HABILITADO
+// 189-9	NATANIEL LEMOS SOARES	HABILITADO
+// 190-2	ABENGAIR PIMENTEL SANTEJANO	HABILITADO
+// 191-0	REGINALDO PINTO FERREIRA	HABILITADO
+// 192-9	FRANCISCO CARLOS FERREIRA DE BARROS	HABILITADO
+// 193-7	ROBERTO BRIAO PAIVA	HABILITADO
+// 194-5	ADELAR DUTRA	-
+// 195-3	CRISTIANO SILVA DE OLIVEIRA	HABILITADO
+// 196-1	FRANCISCO NILMAR ALMEIDA	HABILITADO
+// 197-0	EVERTON LUIZ RODRIGUES DA CONCEIÇÃO	HABILITADO
+// 198-8	ALESSANDRO CORREA TAVARES	HABILITADO
+// 199-6	RODRIGO OLMEDO SILVEIRA	HABILITADO
+// 200-3	HECTOR MARIO VASQUES DE ALMEIDA	HABILITADO
+// 201-1	ALEX SANDRO FURTADO MADRUGA	HABILITADO
+// 202-0	JOSE CARLOS DE MOURA DOMINGUES	HABILITADO
+// 203-8	KÁTIA CAROLINE OLSSON PERINAZZO	HABILITADO
+// 204-6	JOSE MARIO GOVEA CAVALHEIRO	HABILITADO
+// 205-4	CARLOS FERREIRA ROLDÃO	HABILITADO
+// 206-2	DIOMAR ANTONIO BALDEZ PINHO	HABILITADO
+// 207-0	MÁRIO MENGER DA SILVA JUNIOR	HABILITADO
+// 208-9	ARANY GARCIA VIEIRA	HABILITADO
+// 209-7	MARCOS ROGERIO DOS SANTOS LIMA	HABILITADO
+// 210-0	RUDNEI CARDOZO DA SILVA	HABILITADO
+// 211-9	HÉLIO GAUTÉRIO DE SÁ JUNIOR	HABILITADO
+// 212-7	DIEGO SAGGIOMO CANEZ	HABILITADO
+// 213-5	EDINELLE GAUTERIO TAVARES	HABILITADO
+// 214-3	ROBERTO DUTRA DE MELO	HABILITADO
+// 215-1	MÁRCIO MESSIAS MOREIRA	-
+// 216-0	DILVANIR SILVA DOMINGUES	HABILITADO
+// 217-8	JORGE LUIZ DA SILVA BORDA	-
+// 218-6	JOÃO CARLOS BASTOS LEAL	-
+// 219-4	MAICON AMARAL DO AMARAL	-
+// 220-8	MICHAEL NUNES DA LUZ	-
+// 221-6	RONER LUIZ DUARTE DOMINGUES	HABILITADO
+// 222-4	THIAGO LIMA TORRES	HABILITADO
+// 223-2	EMERSON VIANNA PEREIRA	HABILITADO
+// 224-0	RUDNEI TORAL LIMA	HABILITADO
+// 225-9	OILDO AMARAL	-
+// 226-7	WILLIAM BASTOS FERREIRA	HABILITADO
+// 227-5	ARCENI DA CUNHA MOREIRA	HABILITADO
+// 228-3	SANDRO GUASTUCI NUNES	HABILITADO
+// 229-1	GILDOBERTO DE SOUZA MARTINS	HABILITADO
+// 230-5	EDIMAR HILARIO JOSE DE MATTOS	HABILITADO
+// 231-3	JOAO CARLOS LEITE DE OLIVEIRA	HABILITADO
+// 232-1	LUIZ OLIVEIRA SOULUE	HABILITADO
+// 233-0	JOAO HILARIO SOUZA LOPES	HABILITADO
+// 234-8	VALCIR DIAS ALMEIDA	HABILITADO
+// 235-6	IBRAHIM SILVEIRA CAETANO	HABILITADO
+// 236-4	ADMILSON DE SOUZA SANTOS	HABILITADO
+// 237-2	DANIEL DOS SANTOS MOREIRA	HABILITADO
+// 238-0	PAULO 	-
+// 239-9	GILIERDI MOURA DE MORAES	HABILITADO
+// 240-2	CLAUDINEI MARINI CARAMEZ JUNIOR	HABILITADO
+// 241-0	HUGO FORTES ANASTACIO	HABILITADO
+// 242-9	BRUNO SOUZA DUARTE	HABILITADO
+// 243-7	FELIPE ANDRES BLANCO	HABILITADO
+// 244-5	PAULO RICARDO SERRA DOS SANTOS	HABILITADO
+// 245-3	JAIR FRANCISCO SOARES	HABILITADO
+// 246-1	GETULIO COLVARA DE VARGAS	HABILITADO
+// 247-0	SUEDI MARIANO DA COSTA	HABILITADO
+// 248-8	RONALDO PINTO VIEIRA	HABILITADO
+// 249-6	ANTONIO CARLOS DE CASTRO ASSUMPÇÃO	HABILITADO
+// 250-0	JOSE CARLOS QUEVEDO TAVARES	HABILITADO
+// 251-8	RENAN LIMA BOCK	HABILITADO
+// 252-6	DEIVID CARDOSO OLIVEIRA	HABILITADO
+// 253-4	LUIS CLAUDIO GONCALVES VAZ	HABILITADO
+// 254-2	JOAO BATISTA MACHADO DE LIMA	HABILITADO
+// 255-0	RODRIGO DOS SANTOS BATISTA	HABILITADO
+// 256-9	ADAO PINTO DE OLIVEIRA	HABILITADO
+// 257-7	CARLOS FERNANDO GARCIA BASTOS	HABILITADO
+// 258-5	BAIRO GREVI BARCELOS SOARES	HABILITADO
+// 259-3	RODRIGO BANDEIRA DA SILVA	-
+// 260-7	LUCIANO OLIVEIRA SOULUE	HABILITADO
+// 261-5	FAUSTINO AGARRALUA DO PRADO	HABILITADO
+// 262-3	FELIPE SOARES NASCIMENTO	HABILITADO
+// 263-1	FERNANDO ROCHA FARIAS	HABILITADO
+// 264-0	MARCIO SIMÕES LOPES SARAIVA	HABILITADO
+// 265-8	FRANCISCO DE ASSIS MADRUGA PEDRA	HABILITADO
+// 266-6	GUILHERME WENDLANT	HABILITADO
+// 267-4	SOLISMAR VAZ	HABILITADO
+// 268-2	PEDRO RICARDO ZANINI FERNANDES	HABILITADO
+// 269-0	JORGE LUIS MELO RODRIGUES	HABILITADO
+// 270-4	DIONE DA SILVA DOMINGUES	HABILITADO
+// 271-2	MARIO LUIS NASCIMENTO DOS SANTOS	HABILITADO
+// 272-0	EDMILSON XAVIER PINHEIRO	-
+// 273-9	JOSÉ ROBERTO SANCHES GONÇALVES	-
+// 274-7	ANDRE DIAS DOS SANTOS	HABILITADO
+// 275-5	JULIO CESAR DE OLIVEIRA SOARES	HABILITADO
+// 276-3	VALDIR RODRIGUES DA COSTA	-
+// 277-1	CARLOS ALBERTO LOPES DA COSTA	HABILITADO
+// 278-0	LEANDRO CUSTÓDIO DA ROSA	HABILITADO
+// 279-8	ANDERSON MACHADO RODRIGUES	HABILITADO
+// 280-1	DANIEL OLIVEIRA COSTA	HABILITADO
+// 281-0	ALEX SANDRO PIRES DOS SANTOS	-
+// 282-8	SILVIO ROBERTO MUNHÓS DE MENEZES	HABILITADO
+// 283-6	EVALDO BORGES MOREIRA	HABILITADO
+// 284-4	ESEQUIEL KISNER DE CARVALHO	-
+// 285-2	ALCINDO SOLLA	HABILITADO
+// 286-0	ALAN DE ALMEIDA LEÃO	-
+// 287-9	WALDEMAR AGUIAR CORPES	HABILITADO
+// 288-7	PEDRO FORTES ANASTACIO	HABILITADO
+// 289-5	DIRCEU NERI DE SA	HABILITADO
+// 290-9	JORGE CARLOS COSTA RODRIGUES	HABILITADO
+// 291-7	ADEMAR ANTONIO BARBOSA	HABILITADO
+// 292-5	ANDERSON CLAITON SOARES CASARTELLI	HABILITADO
+// 293-3	TIAGO DA SILVA MACHADO	HABILITADO
+// 294-1	XISTO COSTA FILHO	HABILITADO
+// 295-0	JOSE LUIZ DA SILVA	HABILITADO
+// 296-8	NELSON MIRANDA	HABILITADO
+// 297-6	ARNOLDO ALMEIDA NUNES	HABILITADO
+// 298-4	ADAO LOPES SAYAO	HABILITADO
+// 299-2	ILCEU FERREIRA MACHADO	HABILITADO
+// 300-0	VITOR BASTOS LEAL	HABILITADO
+// 301-8	EDISON LOPES DIAS	HABILITADO
+// 302-6	ANDERSON JOSE LOPES RETZLAFF	HABILITADO
+// 303-4	DIEGO DA COSTA SCHÜLLER	HABILITADO
+// 304-2	LORI SILVEIRA JUNIOR	HABILITADO
+// 305-0	LUIZ FERNANDO PINHO MICHAELLO	HABILITADO
+// 306-9	RICHER DA SILVA AGUIAR	HABILITADO
+// 307-7	SERGIO LUIS GOULART MIRANDA	HABILITADO
+// 308-5	VAGNER FERREIRA BENITEZ	HABILITADO
+// 309-3	WESLLEY WAILLA VELEDA	HABILITADO
+// 310-7	ARNALDO ROSA DA SILVA	HABILITADO
+// 311-5	PATRICK ALVES KRUGER	HABILITADO
+// 312-3	VAGNER CARRIR DE LEMOS	HABILITADO
+// 313-1	ALEX FONSECA DE SOUZA	HABILITADO
+// 314-0	OSWALDO DA CONCEICAO PINHEIRO	HABILITADO
+// 315-8	SILTO HELENO VAZ	HABILITADO
+// 316-6	ALTAMIR GONÇALVES FREITAS	HABILITADO
+// 317-4	CARLOS SILVA DOMINGUES JUNIOR	HABILITADO
+// 318-2	LUIZ EDUARDO ALMEIDA DA COSTA	HABILITADO
+// 319-0	CLAUDINEI PEREIRA DA SILVA	HABILITADO
+// 320-4	OROCI FERREIRA	HABILITADO
+// 321-2	MARCELO COSTA SALUM	HABILITADO
+// 322-0	PEDRO OTTO CAMPELO	HABILITADO
+// 323-9	MARCELO MACHADO MOREIRA	HABILITADO
+// 324-7	MATEUS FRANCISCO MEDEIROS PETRY	HABILITADO
+// 325-5	RICARDO ALVES DE OLIVEIRA JUNIOR	HABILITADO
+// 326-3	BEVERLLY SORIA ALVES PERES	HABILITADO
+// 327-1	BRUNO DOS SANTOS MARTINS	HABILITADO
+// 328-0	ANDRE LUIZ FERREIRA FERRAZ	HABILITADO
+// 329-8	JORGE LUIS SOUSA DA SILVA	HABILITADO
+// 330-1	DENNYAN CAVALHEIRO DOS SANTOS	HABILITADO
+// 331-0	JOVER DA COSTA FURTADO	HABILITADO
+// 332-8	LEANDRO DA SILVA DE CASTRO	HABILITADO
+// 333-6	ADÃO MORAES MOREIRA	-
+// 334-4	LYNCOL JESUS DA COSTA ZORZOLLI	HABILITADO
+// 335-2	ADALBERTO CARVALHO DE SOUZA	HABILITADO
+// 336-0	BRYAN TIMM BRANCO	HABILITADO
+// 337-9	ELTON TIAGO DE OLIVEIRA VERGARA	HABILITADO
+// 338-7	PAULO VICTOR CRIZEL GONÇALVES	HABILITADO
+// 339-5	ROMULO MADRUGA FURTADO	HABILITADO
+// 340-9	FRANTIESCO PORTO COELHO	HABILITADO
+// 341-7	VANDERLEI BEZERRA NUNES	HABILITADO
+// 342-5	VALTER NELO NOBRE NUNES	-
+// 343-3	JOSE ILDEFONSO PEREIRA DA SILVA	HABILITADO
+// 344-1	ANDREW MENDES SCHMITZ	HABILITADO
+// 345-0	EDUARDO GONÇALVES SOUSA	HABILITADO
+// 346-8	FERNANDO FARIAS DA ROSA	HABILITADO
+// 347-6	RÉGIS MOREIRA ANDRADE	HABILITADO
+// 348-4	EDSON CLARO RODRIGUES	HABILITADO
+// 349-2	JOHN MICHEL SANCHEZ DIAS	HABILITADO
+// 350-6	PABLO BRIESE MARTINS	HABILITADO
+// 351-4	HENRIQUE VAZ LOREA	-
+// 352-2	CARLOS ROBERTO VIANNA DE VIANNA	-
+// 353-0	ACELINO CANDIDO XAVIER RODRIGUES	HABILITADO
+// 354-9	LUIZ CARLOS GALLO	-
+// 355-7	LUIZ CARLOS NUNES ARRUDA	HABILITADO
+// 356-6	PAULO RENATO SILVA SILVEIRA	-
+// 357-3	PAULO ROBERTO SILVA FREITAS	-
+// 358-1	JULIO CESAR SOUZA BERCHON DES ESSARTS	HABILITADO
+// 359-0	CLAUDIO REGINALDO SARAIVA DA ROSA	HABILITADO
+// 360-3	HELIO ARTUR SILVEIRA	HABILITADO
+// 361-1	ZELIMAR DA CUNHA LOPES	HABILITADO
+// 362-0	KAUA WAILLA DE ALMEIDA	HABILITADO
+// 363-8	RUDIMAR MENDES SILVA	-
+// 364-6	LUIUZ ANTONIO SILVA ROCHA	-
+// 365-4	AIRTON DE OLIVEIRA MENDES	HABILITADO
+// 366-2	LUIZ CARLOS QUEIROZ	HABILITADO
+// 367-0	ADILAR ALCANTARA PARADEDA	HABILITADO
+// 368-9	ADAO MENDES NUNES	HABILITADO

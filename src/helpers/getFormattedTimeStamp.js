@@ -2,7 +2,7 @@
  * Formatação de data/hora
  */
 export default function getFormattedTimeStamp() {
-  function leftPad(value, count = 2, char = '0') {
+  function leftPad(value, count = 2, char = "0") {
     let leftPad = value;
 
     if (value.length < count) {

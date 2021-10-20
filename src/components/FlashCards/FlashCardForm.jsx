@@ -1,23 +1,23 @@
-import TextInput from '../TextInput';
+import TextInput from "../TextInput";
 //import TextArea from '../TextArea';
-import { useEffect, useState } from 'react';
-import Button from '../Button';
-import Error from '../Error';
+import { useEffect, useState } from "react";
+import Button from "../Button";
+import Error from "../Error";
 
-import { BsPlusCircle as IconPlus } from 'react-icons/bs';
+import { BsPlusCircle as IconPlus } from "react-icons/bs";
 
 import DateInput from "../DateInput";
-import FainaA1t from '../FainaA1t';
-import FainaPorCaminhao from '../FainaPorCaminhao';
+import FainaA1t from "../FainaA1t";
+import FainaPorCaminhao from "../FainaPorCaminhao";
 import SelectFaina from "../SelectFaina";
-import PesoMovimentado from '../PesoMovimentado';
-import FainaCalculo from '../FainaCalculo';
-import FainaValor from '../FainaValor';
-import FainaCotas from '../FainaCotas';
-import FainaSemRotator from '../FainaSemRotator';
-import FainaTipoTaxa from '../FainaTipoTaxa';
-import RadioButton from '../RadioButton';
-import FainaSelectFuncao from '../FainaSelectFuncao';
+import PesoMovimentado from "../PesoMovimentado";
+import FainaCalculo from "../FainaCalculo";
+import FainaValor from "../FainaValor";
+import FainaCotas from "../FainaCotas";
+import FainaSemRotator from "../FainaSemRotator";
+import FainaTipoTaxa from "../FainaTipoTaxa";
+import RadioButton from "../RadioButton";
+import FainaSelectFuncao from "../FainaSelectFuncao";
 
 export default function FlashCardForm({
   createMode = true,
@@ -25,25 +25,24 @@ export default function FlashCardForm({
   onButtonClick = null,
   children: flashCard = null,
 }) {
-  const [title, setTitle] = useState(flashCard?.title || '');
-  const [description, setDescription] = useState(flashCard?.description || '');
-  
-  const [dayWork, setDayWork] = useState(flashCard?.infoWork.dia || '');
-  const [typeFaina, setTypeFaina] = useState(flashCard?.inputValues._tipo || '');
-    
-  
-  const [error, setError] = useState('');
+  const [title, setTitle] = useState(flashCard?.title || "");
+  const [description, setDescription] = useState(flashCard?.description || "");
 
+  const [dayWork, setDayWork] = useState(flashCard?.infoWork.dia || "");
+  const [typeFaina, setTypeFaina] = useState(
+    flashCard?.inputValues._tipo || ""
+  );
+
+  const [error, setError] = useState("");
 
   //const [typeFaina, setTypeFaina] = useState('');
   //const [dayFaina, setDayFaina] = useState('');
   //const [shiftWork, setShiftWork] = useState(false);
 
-
   useEffect(() => {
     if (createMode) {
-      setTitle('');
-      setDescription('');
+      setTitle("");
+      setDescription("");
     }
   }, [createMode]);
 
@@ -56,35 +55,32 @@ export default function FlashCardForm({
   }
 
   function clearFields() {
-    setTitle('');
-    setDescription('');
+    setTitle("");
+    setDescription("");
   }
 
   function validateForm() {
-    return title.trim() !== '' && description.trim() !== '';
+    return title.trim() !== "" && description.trim() !== "";
   }
 
   function handleFormSubmit(event) {
     event.preventDefault();
 
     if (validateForm()) {
-      setError('');
+      setError("");
 
       if (onPersist) {
         onPersist(title, description);
         clearFields();
       }
     } else {
-      setError('Título e Descrição são obrigatórios.');
+      setError("Título e Descrição são obrigatórios.");
     }
   }
 
   function handleFormReset() {
     clearFields();
   }
-
-
-
 
   function handleTypeFaina(newTipo) {
     setTypeFaina(newTipo);
@@ -93,18 +89,13 @@ export default function FlashCardForm({
     setDayWork(newTipo);
   }
 
-
   function handleButtonClick() {
     if (onButtonClick) {
       onButtonClick();
     }
   }
 
-
-  const backgroundClassName = createMode ? 'bg-gray-100' : 'bg-yellow-50';
-
-
-
+  const backgroundClassName = createMode ? "bg-gray-100" : "bg-yellow-50";
 
   return (
     <form
@@ -115,81 +106,86 @@ export default function FlashCardForm({
     >
       <div className="border border-gray-300">
         <div className="bg-gray-200 flex flex-row place-items-center justify-around p-2">
-          <span className="bg-blue-400 border border-blue-600 text-white text-center rounded-lg shadow-lg font-semibold p-2">Calculadora de Remuneração</span>
+          <span className="bg-blue-400 border border-blue-600 text-white text-center rounded-lg shadow-lg font-semibold p-2">
+            Calculadora de Remuneração
+          </span>
           <div>
-             <Button onButtonClick={handleButtonClick}>Novo Trabalho</Button>
-             <Button colorClass="bg-red-500 hover:bg-red-300" type="reset">Limpar</Button>
+            <Button onButtonClick={handleButtonClick}>Novo Trabalho</Button>
+            <Button colorClass="bg-red-500 hover:bg-red-300" type="reset">
+              Limpar
+            </Button>
           </div>
         </div>
-      
-      <div className="">
-        <div className="border border-gray-300 p-2">
-          <TextInput
-            labelDescription="Navio:"
-            inputValue={title}
-            onInputChange={handleTitleChange}
-          />
-          <TextInput
-            labelDescription="Observações:"
-            inputValue={description}
-            onTextAreaChange={handleDescriptionChange}
-          />
-        </div>
-        <div className="flex flex-col">
-          <div className="border border-gray-300 flex flex-row justify-evenly p-2">
-          <div className="p-2"> 
-              <div className="bg-blue-300 shadow-lg rounded-lg p-2 mb-2">Selecione a Data</div>  
-              <DateInput
-                  labelDescription='' 
-                  inputValue={dayWork} 
+
+        <div className="">
+          <div className="border border-gray-300 p-2">
+            <TextInput
+              labelDescription="Navio:"
+              inputValue={title}
+              onInputChange={handleTitleChange}
+            />
+            <TextInput
+              labelDescription="Observações:"
+              inputValue={description}
+              onTextAreaChange={handleDescriptionChange}
+            />
+          </div>
+          <div className="flex flex-col">
+            <div className="border border-gray-300 flex flex-row justify-evenly p-2">
+              <div className="p-2">
+                <div className="bg-blue-300 shadow-lg rounded-lg p-2 mb-2">
+                  Selecione a Data
+                </div>
+                <DateInput
+                  labelDescription=""
+                  inputValue={dayWork}
                   onInputChange={handleDayWork}
-              />
-          </div>
-            <div className="flex flex-col flex-wrap p-2"> 
-                <div className="bg-blue-300 rounded-lg shadow-lg text-center mb-2 p-2">Período</div>
+                />
+              </div>
+              <div className="flex flex-col flex-wrap p-2">
+                <div className="bg-blue-300 rounded-lg shadow-lg text-center mb-2 p-2">
+                  Período
+                </div>
                 <div className="flex flex-row space-x-1">
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`A`}</div>
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`B`}</div>
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`C (+25%)`}</div>
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`D (+50%)`}</div>
-                </div>            
-            </div> 
-
-
-       
-          </div>
-        <div className="border border-gray-300 flex flex-row flex-wrap justify-evenly p-2">
-        <div className="p-3">
-            <div className="bg-blue-300 shadow-lg rounded-lg p-2">Selecione Tipo de Faina</div>
-             <SelectFaina
-              labelDescription='Selecione o tipo de faina' 
-              selectValue={typeFaina} 
-              onSelectChange={handleTypeFaina}
-             />  
-          </div>
-          
-          <div className="flex flex-col p-2">
-              <div className="bg-blue-300 shadow-lg rounded-lg text-center p-2">
-                <p>Calcular Por:</p>
+                </div>
               </div>
-              <div className="flex flex-row justify-evenly space-x-2 p-2">
-                <span className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">
-                  <RadioButton labelDescription='' />
-                  {`Peso|Unidade`}
-                </span>
-                <span className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">
-                  <RadioButton labelDescription=""/>
-                  {`Caminhões`}
-                </span>
-              </div>
-
             </div>
+            <div className="border border-gray-300 flex flex-row flex-wrap justify-evenly p-2">
+              <div className="p-3">
+                <div className="bg-blue-300 shadow-lg rounded-lg p-2">
+                  Selecione Tipo de Faina
+                </div>
+                <SelectFaina
+                  labelDescription="Selecione o tipo de faina"
+                  selectValue={typeFaina}
+                  onSelectChange={handleTypeFaina}
+                />
+              </div>
 
-        </div>
-      </div>
-      <div className="">
-              <PesoMovimentado />
-          </div> 
+              <div className="flex flex-col p-2">
+                <div className="bg-blue-300 shadow-lg rounded-lg text-center p-2">
+                  <p>Calcular Por:</p>
+                </div>
+                <div className="flex flex-row justify-evenly space-x-2 p-2">
+                  <span className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">
+                    <RadioButton labelDescription="" />
+                    {`Peso|Unidade`}
+                  </span>
+                  <span className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">
+                    <RadioButton labelDescription="" />
+                    {`Caminhões`}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="">
+            <PesoMovimentado />
+          </div>
           <div className="">
             <FainaSemRotator />
           </div>
@@ -197,35 +193,42 @@ export default function FlashCardForm({
             <FainaPorCaminhao />
           </div>
           <div className="">
-             <FainaTipoTaxa />
+            <FainaTipoTaxa />
           </div>
           <div className="">
-              <FainaSelectFuncao />
+            <FainaSelectFuncao />
           </div>
           <div className="">
-             <FainaCotas />
+            <FainaCotas />
           </div>
           <div className="">
-          <FainaA1t />
-              { typeFaina === "a1t" 
+            <FainaA1t />
+            {typeFaina === "a1t"
               ? console.log("teste1")
-              : console.log("teste2")
-              }
-        </div>
-        <div className="">
-          <FainaCalculo />
-        </div> 
-        <div className="">
-          <FainaValor />
-        </div> 
+              : console.log("teste2")}
+          </div>
+          <div className="">
+            <FainaCalculo />
+          </div>
+          <div className="">
+            <FainaValor />
+          </div>
           <div className="flex flex-row hover:bg-blue-300 justify-center p-4">
-                <Button type="submit"><IconPlus className="" type="submit" size={30} />Incluir</Button>
-            </div>
-          </div>  
-          
-              {error.trim() !== '' ? <div className="bg-red-300 text-red-900 flex flex-wrap text-center font-semibold justify-center"><Error>{error}</Error></div> : <span>&nbsp;</span>}
-          
-       </div>
-  </form>
+            <Button type="submit">
+              <IconPlus className="" type="submit" size={30} />
+              Incluir
+            </Button>
+          </div>
+        </div>
+
+        {error.trim() !== "" ? (
+          <div className="bg-red-300 text-red-900 flex flex-wrap text-center font-semibold justify-center">
+            <Error>{error}</Error>
+          </div>
+        ) : (
+          <span>&nbsp;</span>
+        )}
+      </div>
+    </form>
   );
 }

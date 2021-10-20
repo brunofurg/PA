@@ -14,7 +14,7 @@ export default function UploadButton() {
   const buttonSx = {
     ...(success && {
       bgcolor: green[500],
-      '&:hover': {
+      "&:hover": {
         bgcolor: green[700],
       },
     }),
@@ -38,29 +38,27 @@ export default function UploadButton() {
   };
 
   return (
-   
-      <Box sx={{ m: 1, position: 'relative' }}>
-        <Fab
-          aria-label="save"
-          color="primary"
-          sx={buttonSx}
-          onClick={handleButtonClick}
-        >
-          {success ? <CheckIcon /> : <SaveIcon />}
-        </Fab>
-        {loading && (
-          <CircularProgress
-            size={68}
-            sx={{
-              color: green[500],
-              position: 'absolute',
-              top: -6,
-              left: -6,
-              zIndex: 1,
-            }}
-          />
-        )}
-      </Box>
-      
-      );
+    <Box sx={{ m: 1, position: "relative" }}>
+      <Fab
+        aria-label="save"
+        color="primary"
+        sx={buttonSx}
+        onClick={handleButtonClick}
+      >
+        {success ? <CheckIcon /> : <SaveIcon />}
+      </Fab>
+      {loading && (
+        <CircularProgress
+          size={68}
+          sx={{
+            color: green[500],
+            position: "absolute",
+            top: -6,
+            left: -6,
+            zIndex: 1,
+          }}
+        />
+      )}
+    </Box>
+  );
 }

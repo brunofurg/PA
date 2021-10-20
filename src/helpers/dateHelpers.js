@@ -1,9 +1,9 @@
 export function getAgeFrom(birthDate) {
   if (!birthDate) {
-    return '?';
+    return "?";
   }
 
-  const [birthYear, birthMonth, birthDay] = birthDate.split('-');
+  const [birthYear, birthMonth, birthDay] = birthDate.split("-");
 
   const today = new Date();
   const todayYear = today.getFullYear();

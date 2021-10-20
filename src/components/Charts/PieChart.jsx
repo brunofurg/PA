@@ -1,17 +1,16 @@
 // https://www.youtube.com/watch?v=Ly-9VTXJlnA
 // Using Chart.js With React
 
-import React, { Component } from 'react';
-import { Pie } from 'react-chartjs-2';
-class PieChart extends Component{
-  constructor(props){
+import React, { Component } from "react";
+import { Pie } from "react-chartjs-2";
+class PieChart extends Component {
+  constructor(props) {
     super(props);
-    this.state = ({ chartData:props.chartData })
+    this.state = { chartData: props.chartData };
   }
-  render(){
+  render() {
     return (
       <>
-      
         <Pie
           data={this.state.chartData}
           options={{
@@ -27,14 +26,13 @@ class PieChart extends Component{
                     return "";
                   }
                 },
-                color: "white"
-              }
-            }
+                color: "white",
+              },
+            },
           }}
         />
-
       </>
-    )
+    );
   }
 }
 export default PieChart;

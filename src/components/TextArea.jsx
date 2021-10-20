@@ -1,6 +1,6 @@
 export default function TextArea({
-  labelDescription = 'Descrição do label:',
-  textAreaValue = 'Valor padrão do text area',
+  labelDescription = "Descrição do label:",
+  textAreaValue = "Valor padrão do text area",
   onTextAreaChange = null,
   maxLength = 230,
   rows = 4,

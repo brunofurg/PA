@@ -1,6 +1,6 @@
 export default function CheckboxInput({
-  labelDescription = 'Descrição do checkbox',
-  checkboxValue = 'Valor padrão do input',
+  labelDescription = "Descrição do checkbox",
+  checkboxValue = "Valor padrão do input",
   onCheckboxChange = null,
   autoFocus = false,
 }) {
@@ -20,7 +20,6 @@ export default function CheckboxInput({
         value={checkboxValue}
         onCheckboxChange={handleCheckboxChange}
       />
-
     </div>
   );
 }

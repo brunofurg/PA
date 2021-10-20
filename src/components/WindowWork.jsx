@@ -1,27 +1,29 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-import FormControl from '@mui/material/FormControl';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import Select from '@mui/material/Select';
-import Switch from '@mui/material/Switch';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import FormControl from "@mui/material/FormControl";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import Select from "@mui/material/Select";
+import Switch from "@mui/material/Switch";
 //import { useState } from "react";
 
-export default function WindowWork({
+export default function WindowWork(
+  {
     // children: workCard = null
-}) {
+  }
+) {
   //const [title, setTitle] = useState(workCard?.title || '');
   //const [description, setDescription] = useState(workCard?.description || '');
   const [open, setOpen] = React.useState(false);
   const [fullWidth, setFullWidth] = React.useState(true);
-  const [maxWidth, setMaxWidth] = React.useState('sm');
+  const [maxWidth, setMaxWidth] = React.useState("sm");
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -34,7 +36,7 @@ export default function WindowWork({
   const handleMaxWidthChange = (event) => {
     setMaxWidth(
       // @ts-expect-error autofill of arbitrary value is not handled.
-      event.target.value,
+      event.target.value
     );
   };
 
@@ -60,10 +62,10 @@ export default function WindowWork({
             noValidate
             component="form"
             sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              m: 'auto',
-              width: 'fit-content',
+              display: "flex",
+              flexDirection: "column",
+              m: "auto",
+              width: "fit-content",
             }}
           >
             <FormControl sx={{ mt: 2, minWidth: 120 }}>
@@ -74,8 +76,8 @@ export default function WindowWork({
                 onChange={handleMaxWidthChange}
                 label="maxWidth"
                 inputProps={{
-                  name: 'max-width',
-                  id: 'max-width',
+                  name: "max-width",
+                  id: "max-width",
                 }}
               >
                 <MenuItem value={false}>false</MenuItem>

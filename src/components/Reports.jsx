@@ -3,15 +3,12 @@
 import { Fragment } from "react";
 
 export default function Reports() {
-    return (
-      <Fragment>
-        <div>
-            Em construção
-        </div>
-        </Fragment>
-    )
+  return (
+    <Fragment>
+      <div>Em construção</div>
+    </Fragment>
+  );
 }
-
 
 // yarn add jspdf
 
@@ -22,8 +19,6 @@ export default function Reports() {
 
 // doc.text("Hello world!", 10, 10);
 // doc.save("a4.pdf");
-
-
 
 // var doc = new jsPDF();
 

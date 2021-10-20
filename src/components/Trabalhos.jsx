@@ -1,15 +1,6 @@
 export default function Trabalhos() {
-  return (
-    <div>
-      
- 
-    </div>
-  )
+  return <div></div>;
 }
-
-
-
-
 
 // https://app.pdf.co/dashboard
 

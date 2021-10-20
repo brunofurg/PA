@@ -1,6 +1,6 @@
 export default function RadioButton({
-  name = 'radioButtonName',
-  labelDescription = 'Descrição do botão',
+  name = "radioButtonName",
+  labelDescription = "Descrição do botão",
   buttonChecked = false,
   onButtonClick = null,
 }) {
@@ -19,7 +19,6 @@ export default function RadioButton({
         checked={buttonChecked}
         onChange={handleRadioButtonChange}
       />
-      
     </div>
   );
 }

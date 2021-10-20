@@ -6,30 +6,27 @@ import { Fragment, useEffect, useState } from "react";
 
 export default function App() {
   const [ativaCor, setAtivaCor] = useState(true);
-  useEffect(function() {
-    
+  useEffect(function () {
     function posicaoScroll() {
-  
       if (window.scrollY > 10) {
         setAtivaCor(true);
-      }
-      else {
+      } else {
         setAtivaCor(false);
       }
     }
-    window.addEventListener('scroll', posicaoScroll);
+    window.addEventListener("scroll", posicaoScroll);
   }, []);
   return (
     <Fragment>
       <div className="text-sm flex flex-col">
         <div className="fixed inset-x-0 top-0 w-screen justify-around">
-            <Header acao={ativaCor}/>
+          <Header acao={ativaCor} />
         </div>
         <div className="mt-12 inline align-middle justify-center">
-            <Section/>
+          <Section />
         </div>
         <div className="align-middle justify-items-center">
-            <Footer/>
+          <Footer />
         </div>
       </div>
     </Fragment>

@@ -1,10 +1,10 @@
 export default function Button({
-  children: description = 'Descrição do botão',
+  children: description = "Descrição do botão",
   onButtonClick = null,
-  colorClass = 'bg-terciary',
-  textClass = 'text-white',
-  hoverColor = 'bg-secondary',
-  type = 'button',
+  colorClass = "bg-terciary",
+  textClass = "text-white",
+  hoverColor = "bg-secondary",
+  type = "button",
 }) {
   function handleButtonClick() {
     if (onButtonClick) {

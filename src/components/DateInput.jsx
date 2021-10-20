@@ -1,7 +1,7 @@
 //import { compareAsc, format } from 'date-fns'
 export default function DateInput({
-  labelDescription = 'Descrição do label:',
-  inputValue = '2021-04-30',
+  labelDescription = "Descrição do label:",
+  inputValue = "2021-04-30",
   onInputChange = null,
   autoFocus = false,
 }) {
