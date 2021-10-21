@@ -27,27 +27,33 @@ export default function Links() {
     <Fragment>
       <div className="bg-gray-100 flex flex-col justify-items-stretch">
         <div className="bg-white border flex flex-row shadow-lg rounded-3xl justify-evenly m-3">
-          <a
-            href="http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/cais-virtual/_action/index/cd_usuario/publico"
-            target="_blank"
-            className="hover:scale-120"
-            rel="noreferrer"
-          >
-            <div className="bg-blue-50 hover:shadow-lg hover:border-gray-500 border shadow-lg rounded-3xl p-10">
-              <p className="text-center">Cais Virtual</p>
-
-              <img
-                className=""
-                src={imgPorto}
-                alt="Porto do Rio Grande - Cais Virtual"
-                title="Porto do Rio Grande - Cais Virtual"
-                width="200"
-                height="200"
-              />
+          <div className="p-4 justify-center">
+            <div className="bg-blue-300 border border-blue-500 rounded-lg shadow-lg justify-center flex p-2 m-2">
+              Porto do Rio Grande
             </div>
-          </a>
+            <a
+              href="http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/cais-virtual/_action/index/cd_usuario/publico"
+              target="_blank"
+              className="hover:scale-120"
+              rel="noreferrer"
+            >
+              <div className="bg-blue-50 hover:shadow-lg hover:border-gray-500 border shadow-lg rounded-3xl p-10">
+                <p className="text-center">Cais Virtual</p>
+
+                <img
+                  className=""
+                  src={imgPorto}
+                  alt="Porto do Rio Grande - Cais Virtual"
+                  title="Porto do Rio Grande - Cais Virtual"
+                  width="200"
+                  height="200"
+                />
+              </div>
+            </a>
+          </div>
+
           <div className="flex flex-col align-middle text-center text-xs flex-wrap rounded-lg  place-content-center p-2">
-            <div className="align-middle text-center">
+            <div className="align-middle text-center bg-blue-300 border-blue-500 shadow-lg rounded-lg p-2 m-2">
               <p>Movimentação Portuária:</p>
             </div>
 
@@ -149,8 +155,8 @@ export default function Links() {
         </div>
 
         <div className="bg-white border shadow-lg flex flex-col align-middle m-3 p-2 rounded-3xl">
-          <div>
-            <p className="align-top text-center text-lg mb-3">Habilitação:</p>
+          <div className="bg-blue-300 border border-blue-500 rounded-lg shadow-lg p-2 m-2">
+            <p className="align-top text-center">Habilitação:</p>
           </div>
           <div className="flex flex-row  justify-evenly align-middle">
             <a
@@ -213,10 +219,8 @@ export default function Links() {
         </div>
 
         <div className="bg-white border shadow-lg flex flex-col align-middle m-3 p-2 rounded-3xl">
-          <div>
-            <p className="align-center text-center text-lg mb-3">
-              Previsão do Tempo:
-            </p>
+          <div className="bg-blue-300 border border-blue-500 rounded-lg shadow-lg p-2 m-2">
+            <p className="align-center text-center">Previsão do Tempo:</p>
           </div>
           <div className="flex flex-row  justify-evenly align-middle">
             <a
@@ -277,7 +281,7 @@ export default function Links() {
             </a>
           </div>
         </div>
-        <div className="bg-white border shadow-lg flex flex-row justify-around align-middle m-3 p-2 rounded-3xl">
+        <div className="bg-white border shadow-lg flex flex-row justify-around align-middle m-3 p-2 text-xs rounded-3xl">
           <span className="flex flex-row text-center justify-center">
             <a
               href="https://drive.google.com/drive/folders/1E0WK6rexk5gVxRc3KPYK4ECnc4oBqs0Z"

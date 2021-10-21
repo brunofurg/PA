@@ -1,4 +1,4 @@
-import React from "react";
+import { Fragment } from "react";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -7,9 +7,11 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+//import NumberInput from "./NumberInput";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
+    //  backgroundColor: theme.palette.common.black,
     backgroundColor: "#0060a4",
     color: "#FFFFFF",
   },
@@ -26,260 +28,685 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow);
 
-function createData(type, description, minimum, valuecct, valuepayed) {
-  return { type, description, minimum, valuecct, valuepayed };
+function createData(number, name, actitve) {
+  return {
+    number,
+    name,
+    actitve,
+  };
 }
 
 const rows = [
-  createData(
-    "A1",
-    "Contêineres Cheios/Vazios, com Engate AUTOMÁTICO e/ou Rampa",
-    90.0,
-    5.665,
-    5.665
-  ),
-  createData(
-    "A2",
-    "Contêineres Cheios/Vazios, com Engate MANUAL",
-    90.0,
-    5.665,
-    5.665
-  ),
-  createData("A1T", "Tabela de Valores TECON", "Tabela A1T"),
-  createData("B1", "Cargas Avulsas", 90.0, 1.1669, 1.1737419),
-  createData(
-    "B2",
-    "Cargas Unitizadas (Incluindo Madeira Serrada Cintada e Big Bags",
-    90.0,
-    0.6595,
-    0.66338295
-  ),
-  createData(
-    "B3",
-    "Cargas Unitizadas com Dimensões Padronizadas",
-    100.0,
-    0.2551,
-    0.2424
-  ),
-  createData(
-    "B4/B13",
-    "Toras de Madeira Cintadas e/ou Bobinas de Aço",
-    100.0,
-    0.5448,
-    0.7197
-  ),
-  createData(
-    "B5",
-    "Volumes Indivisíveis Acima de 1000Kg",
-    100.0,
-    0.9059,
-    0.9059
-  ),
-  createData(
-    "B6",
-    "Cargas Avulsas em Navio com Rampa",
-    90.0,
-    1.1669,
-    0.849296401
-  ),
-  createData(
-    "B7",
-    "Cargas Unitizadas em Navio com Rampa",
-    90.0,
-    0.6595,
-    0.66338295
-  ),
-  createData(
-    "B8",
-    "Veículos em Geral, em Navio com Rampa",
-    90.0,
-    2.9427,
-    2.960058
-  ),
-  createData(
-    "B9",
-    "Veículos de Passeio e Utilitários, em Navio com Rampa",
-    128.64,
-    1.6771,
-    1.6868505
-  ),
-  createData("B10", "Cargas Frigoríficas", 101.84, 1.0036, 1.0562),
-  createData("B11", "Cargas Vivas", 90.0, 0.208, 0.2092125),
-  createData("B90", "Conexo", 122.22),
-  createData(
-    "C1",
-    "Produtos Agrícolas e Derivados, em Equipamento Manual",
-    90.0,
-    0.4241,
-    0.4265544
-  ),
-  createData(
-    "C2",
-    "Produtos Agrícolas e Derivados, em Equipamento Mecânico ou Semi-automático",
-    90.0,
-    0.0978,
-    0.9838965
-  ),
-  createData(
-    "C3",
-    "Produtos Agrícolas e Derivados, em Equipamento Automático",
-    90.0,
-    0.075,
-    0.849296401
-  ),
-  createData(
-    "C4",
-    "Produtos Minerais/Químicos, em Equipamento Manual",
-    96.76,
-    0.4155,
-    0.4179468
-  ),
-  createData(
-    "C5",
-    "Produtos Minerais/Químicos, em Equipamento Semi-automático",
-    96.76,
-    0.1877,
-    0.18876945
-  ),
-  createData(
-    "C6",
-    "Produtos Minerais/Químicos, em Equipamento Automático e/ou Grab",
-    96.76,
-    0.1872,
-    0.262626593
-  ),
-  createData("C7", "Cavaco de Madeira", 96.76, 0.1872, 0.0573000989),
+  createData("001-9 GEOVANI DOS SANTOS VAZ -"),
+  createData("002-7 ANDRÉ LUIZ FERNANDES AMARILHO HABILITADO"),
+  createData("003-5	GABRIEL BENERI CLARO	HABILITADO"),
+  createData("004-3	ADALBERTO ORTIZ DE ARAGÃO	HABILITADO"),
+  createData("005-1	JEFERSON VASCONCELLOS GOMES	-"),
+  createData("006-0	JOSE IMAR DA SILVEIRA	HABILITADO"),
+  createData("007-8	TIAGO DA SILVA FROES	HABILITADO"),
+  createData("008-6	DALMIRO DA COSTA LUCAS	-"),
+  createData("009-4	GUSTAVO UBAL HAFELE	HABILITADO"),
+  createData("010-8	LUIZ ANDRÉ CARDOSO MARTINS	HABILITADO"),
+  createData("011-6	MAICON GAUTÉRIO BENGERT	HABILITADO"),
+  createData("012-4	FRANK IRAM ROCHA DOS SANTOS	HABILITADO"),
+  createData("013-2	YAN ROCHA DE LIMA	HABILITADO"),
+  createData("014-0	PAULO CESAR RODRIGUES LEIRIA	-"),
+  createData("015-9	LUIZ FRANCISCO MARIANO DE ARAUJO	HABILITADO"),
+  createData("016-7	JORGE ALBERTO DA SILVA SOULUE FILHO	HABILITADO"),
+  createData("017-5	BRUNO COSTA DOS SANTOS	HABILITADO"),
+  createData("018-3	LUIZ ALBERTO CHAGAS CAMARGO	HABILITADO"),
+  createData("019-1	ANTONIO OLAVO CAMPOS	-"),
+  createData("020-5	CLEIDE ALAOR PIVA CASARTELLI	HABILITADO"),
+  createData("021-3	JADER CARDOSO NUNES	-"),
+  createData("022-1	FRANCISCO DE ASSIS DA ROSA FLORINDO	HABILITADO"),
+  createData("023-0	GILMAR GONDRAN FRANCO NIGRO	HABILITADO"),
+  createData("024-8	JEAN RICARDO BARBOSA MACIEL	HABILITADO"),
+  createData("025-6	JOÃO FÁBIO PADILHA NUNES	HABILITADO"),
+  createData("026-4	LUIZ PAULO DUARTE SILVEIRA	HABILITADO"),
+  createData("027-2	CRISTIANO SARAIVA SIEBRE	HABILITADO"),
+  createData("028-0	PAULO CESAR AMARAL	HABILITADO"),
+  createData("029-9	DANER ALMEIDA DE MATTOS	-"),
+  createData("030-2	ADRIANO URQUIA PAIVA	-"),
+  createData("031-0	JOSE ANALIO COUGO MORALES	HABILITADO"),
+  createData("032-9	VALDINEI AMARAL ALVES	HABILITADO"),
+  createData("033-7	MARCO ANTONIO PEREIRA XAVIER	HABILITADO"),
+  createData("034-5	CRISTIAN CARVALHO DA SILVA	HABILITADO"),
+  createData("035-3	EVERTON RODRIGUES ROSA	HABILITADO"),
+  createData("036-1	DYAIMIS DOS SANTOS LILJA	HABILITADO"),
+  createData("037-0	BLAIR MOREIRA SARAIVA	HABILITADO"),
+  createData("038-8	AMADEU REY JESUS	HABILITADO"),
+  createData("039-6	ALEX SANDRO BAZARELLI LEAL	-"),
+  createData("040-0	EDER OLIVEIRA DA COSTA	HABILITADO"),
+  createData("041-8	GEDER DOS SANTOS CARDOSO	-"),
+  createData("042-6	FÁBIO DE MELO TAROUCO	HABILITADO"),
+  createData("043-4	CLAUDIO DE ALMEIDA	HABILITADO"),
+  createData("044-2	ALEXSANDRO MARTINS CUNHA	HABILITADO"),
+  createData("045-0	ELIANE GOMES NERIS	HABILITADO"),
+  createData("046-9	JOÃO DAVID DE ÁVILA OLIVEIRA	HABILITADO"),
+  createData("047-7	RUY CAMARGO GOMES	HABILITADO"),
+  createData("048-5	CLEBER DOMINGUES HEIDEMANN	HABILITADO"),
+  createData("049-3	ENILDO DE OLIVEIRA BASTOS	HABILITADO"),
+  createData("050-7	DINO RODRIGUES NUNES	-"),
+  createData("051-5	ROBERSON NOBREGA GARCIA	HABILITADO"),
+  createData("052-3	ALEXANDRE COSTA DIAS	HABILITADO"),
+  createData("053-1	VANDERLEI LEMOS DA CONCEIÇÃO	HABILITADO"),
+  createData("054-0	VINICIUS CHAVES SIMÕES	HABILITADO"),
+  createData("055-8	PEDRO ROBERTO D AVILA SILVEIRA	HABILITADO"),
+  createData("056-6	RAFAEL CORRÊA DE SOUZA	HABILITADO"),
+  createData("057-4	ANTONIO FELICIANO PINTO	HABILITADO"),
+  createData("058-2	WILSON JORGE GOMES	-"),
+  createData("059-0	ALISSON CORREA BALLESTER	HABILITADO"),
+  createData("060-4	JORGE ALBERTO PEREIRA MACHADO	HABILITADO"),
+  createData("061-2	TONI ANDERSON MACHADO DA ROCHA	HABILITADO"),
+  createData("062-0	MARCO AURELIO MEDEIROS SANTOS	HABILITADO"),
+  createData("063-9	CLÁUDIO ADÃO MACKMILLAN MEDEIROS	HABILITADO"),
+  createData("064-7	EVERTON LUIZ MATTOS DIAS	HABILITADO"),
+  createData("065-5	EDUARDO SUANES DUTRA	HABILITADO"),
+  createData("066-3	VANY CLAY PIRES COSTA	HABILITADO"),
+  createData("067-1	JOAO FERREIRA FERRAZ	HABILITADO"),
+  createData("068-0	VANDERLEI BATISTA DA SILVEIRA	HABILITADO"),
+  createData("069-8	GUILHERME SANTOS COSTA	-"),
+  createData("070-1	MARCELO OLIVEIRA FARIAS	HABILITADO"),
+  createData("071-0	SAIMON RIJO SANTOS	HABILITADO"),
+  createData("072-8	ADEMAR FERNANDES SALLES	HABILITADO"),
+  createData("073-6	EDISON FERNANDES FONSECA	HABILITADO"),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
+  createData(""),
 ];
 
 const useStyles = makeStyles({ table: { minWidth: 50 } });
 
-export default function RelacaoEstivadores() {
+export default function TabelaCCT() {
   const classes = useStyles();
   return (
-    <>
-      <h1>
-        <strong>
-          Porto do Rio Grande - Convenção Coletiva de Trabalho (Vigência
-          2020-2022)
-        </strong>
-      </h1>
-      <TableContainer component={Paper}>
-        <Table className={classes.table} aria-label="customized table">
-          <TableHead>
-            <TableRow>
-              <StyledTableCell align="right">
-                <strong>Tipo</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>Descrição Faina</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>Diária (R$)</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>Valor CCT (R$)</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>Valor Pago (R$)</strong>
-              </StyledTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((row) => (
-              <StyledTableRow key={row.type}>
-                <StyledTableCell align="right" component="th" scope="row">
-                  <strong>{row.type}</strong>
-                </StyledTableCell>
-                <StyledTableCell align="left">
-                  {row.description}
-                </StyledTableCell>
-                <StyledTableCell align="center">{row.minimum}</StyledTableCell>
-                <StyledTableCell align="center">{row.valuecct}</StyledTableCell>
+    <Fragment>
+      <div className="bg-blue-400 border border-blue-500 text-center text-white justify-center rounded-lg shadow-lg p-2 mb-4 m-4">
+        Tabelas de Taxas e Tarifas
+      </div>
+      <div>
+        <TableContainer component={Paper}>
+          <div className="bg-gray-300 align-middle justify-items-center font-bold">
+            Convenção Coletiva de Trabalho SINDOP (Vigência 2020-2022)
+          </div>
+          <Table className={classes.table}>
+            <TableHead>
+              <TableRow>
                 <StyledTableCell align="center">
-                  {row.valuepayed}
+                  <strong>Tipo</strong>
                 </StyledTableCell>
-              </StyledTableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </>
+                <StyledTableCell align="center">
+                  <strong>Descrição Faina</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>Tarifa Sindop (R$)</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>Tarifa Sintermar (R$)</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>Tarifa Não-Sócio (R$)</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>Tarifa Personalizado (R$)</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>Diária Sindop (R$)</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>Diária Sintermar (R$)</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>Diária Não-Sócio (R$)</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>Diária Personalizado (R$)</strong>
+                </StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <StyledTableRow key={row.type}>
+                  <StyledTableCell align="center" component="th" scope="row">
+                    <strong>{row.type}</strong>
+                  </StyledTableCell>
+                  <StyledTableCell align="left">
+                    {row.description}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.valueSindop}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.valueSintermar}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.valueNaoSocio}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.valuePersonalizado}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.minSindop}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.minSintermar}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.minNaoSocio}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.minPersonalizado}
+                  </StyledTableCell>
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
+    </Fragment>
   );
 }
 
-// 001-9 GEOVANI DOS SANTOS VAZ" -
-// 002-7 ANDRÉ LUIZ FERNANDES AMARILHO HABILITADO
-// 003-5	GABRIEL BENERI CLARO	HABILITADO
-// 004-3	ADALBERTO ORTIZ DE ARAGÃO	HABILITADO
-// 005-1	JEFERSON VASCONCELLOS GOMES	-
-// 006-0	JOSE IMAR DA SILVEIRA	HABILITADO
-// 007-8	TIAGO DA SILVA FROES	HABILITADO
-// 008-6	DALMIRO DA COSTA LUCAS	-
-// 009-4	GUSTAVO UBAL HAFELE	HABILITADO
-// 010-8	LUIZ ANDRÉ CARDOSO MARTINS	HABILITADO
-// 011-6	MAICON GAUTÉRIO BENGERT	HABILITADO
-// 012-4	FRANK IRAM ROCHA DOS SANTOS	HABILITADO
-// 013-2	YAN ROCHA DE LIMA	HABILITADO
-// 014-0	PAULO CESAR RODRIGUES LEIRIA	-
-// 015-9	LUIZ FRANCISCO MARIANO DE ARAUJO	HABILITADO
-// 016-7	JORGE ALBERTO DA SILVA SOULUE FILHO	HABILITADO
-// 017-5	BRUNO COSTA DOS SANTOS	HABILITADO
-// 018-3	LUIZ ALBERTO CHAGAS CAMARGO	HABILITADO
-// 019-1	ANTONIO OLAVO CAMPOS	-
-// 020-5	CLEIDE ALAOR PIVA CASARTELLI	HABILITADO
-// 021-3	JADER CARDOSO NUNES	-
-// 022-1	FRANCISCO DE ASSIS DA ROSA FLORINDO	HABILITADO
-// 023-0	GILMAR GONDRAN FRANCO NIGRO	HABILITADO
-// 024-8	JEAN RICARDO BARBOSA MACIEL	HABILITADO
-// 025-6	JOÃO FÁBIO PADILHA NUNES	HABILITADO
-// 026-4	LUIZ PAULO DUARTE SILVEIRA	HABILITADO
-// 027-2	CRISTIANO SARAIVA SIEBRE	HABILITADO
-// 028-0	PAULO CESAR AMARAL	HABILITADO
-// 029-9	DANER ALMEIDA DE MATTOS	-
-// 030-2	ADRIANO URQUIA PAIVA	-
-// 031-0	JOSE ANALIO COUGO MORALES	HABILITADO
-// 032-9	VALDINEI AMARAL ALVES	HABILITADO
-// 033-7	MARCO ANTONIO PEREIRA XAVIER	HABILITADO
-// 034-5	CRISTIAN CARVALHO DA SILVA	HABILITADO
-// 035-3	EVERTON RODRIGUES ROSA	HABILITADO
-// 036-1	DYAIMIS DOS SANTOS LILJA	HABILITADO
-// 037-0	BLAIR MOREIRA SARAIVA	HABILITADO
-// 038-8	AMADEU REY JESUS	HABILITADO
-// 039-6	ALEX SANDRO BAZARELLI LEAL	-
-// 040-0	EDER OLIVEIRA DA COSTA	HABILITADO
-// 041-8	GEDER DOS SANTOS CARDOSO	-
-// 042-6	FÁBIO DE MELO TAROUCO	HABILITADO
-// 043-4	CLAUDIO DE ALMEIDA	HABILITADO
-// 044-2	ALEXSANDRO MARTINS CUNHA	HABILITADO
-// 045-0	ELIANE GOMES NERIS	HABILITADO
-// 046-9	JOÃO DAVID DE ÁVILA OLIVEIRA	HABILITADO
-// 047-7	RUY CAMARGO GOMES	HABILITADO
-// 048-5	CLEBER DOMINGUES HEIDEMANN	HABILITADO
-// 049-3	ENILDO DE OLIVEIRA BASTOS	HABILITADO
-// 050-7	DINO RODRIGUES NUNES	-
-// 051-5	ROBERSON NOBREGA GARCIA	HABILITADO
-// 052-3	ALEXANDRE COSTA DIAS	HABILITADO
-// 053-1	VANDERLEI LEMOS DA CONCEIÇÃO	HABILITADO
-// 054-0	VINICIUS CHAVES SIMÕES	HABILITADO
-// 055-8	PEDRO ROBERTO D AVILA SILVEIRA	HABILITADO
-// 056-6	RAFAEL CORRÊA DE SOUZA	HABILITADO
-// 057-4	ANTONIO FELICIANO PINTO	HABILITADO
-// 058-2	WILSON JORGE GOMES	-
-// 059-0	ALISSON CORREA BALLESTER	HABILITADO
-// 060-4	JORGE ALBERTO PEREIRA MACHADO	HABILITADO
-// 061-2	TONI ANDERSON MACHADO DA ROCHA	HABILITADO
-// 062-0	MARCO AURELIO MEDEIROS SANTOS	HABILITADO
-// 063-9	CLÁUDIO ADÃO MACKMILLAN MEDEIROS	HABILITADO
-// 064-7	EVERTON LUIZ MATTOS DIAS	HABILITADO
-// 065-5	EDUARDO SUANES DUTRA	HABILITADO
-// 066-3	VANY CLAY PIRES COSTA	HABILITADO
-// 067-1	JOAO FERREIRA FERRAZ	HABILITADO
-// 068-0	VANDERLEI BATISTA DA SILVEIRA	HABILITADO
-// 069-8	GUILHERME SANTOS COSTA	-
-// 070-1	MARCELO OLIVEIRA FARIAS	HABILITADO
-// 071-0	SAIMON RIJO SANTOS	HABILITADO
-// 072-8	ADEMAR FERNANDES SALLES	HABILITADO
-// 073-6	EDISON FERNANDES FONSECA	HABILITADO
 // 074-4	CRISTIANO DOMINGUES DOS SANTOS	HABILITADO
 // 075-2	MARCIO ELI DE OLIVEIRA CAMPELO	HABILITADO
 // 076-0	ALEX SANDER GONÇALVES SAYÃO	HABILITADO

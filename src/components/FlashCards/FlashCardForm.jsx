@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import Button from "../Button";
 import Error from "../Error";
 
-import { BsPlusCircle as IconPlus } from "react-icons/bs";
+import { VscNewFile as IconNew } from "react-icons/vsc";
+import { FiSave as IconSave } from "react-icons/fi";
 
 import DateInput from "../DateInput";
 import FainaA1t from "../FainaA1t";
@@ -110,7 +111,10 @@ export default function FlashCardForm({
             Calculadora de Remuneração
           </span>
           <div>
-            <Button onButtonClick={handleFormReset}>Novo Trabalho</Button>
+            <Button onButtonClick={handleFormReset}>
+              <IconNew />
+              Novo Trabalho
+            </Button>
           </div>
         </div>
 
@@ -229,7 +233,7 @@ export default function FlashCardForm({
           </div>
           <div className="flex flex-row hover:bg-blue-300 justify-center p-4">
             <Button type="submit">
-              <IconPlus className="" type="submit" size={30} />
+              <IconSave className="" type="submit" size={30} />
               Incluir
             </Button>
           </div>
