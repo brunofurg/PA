@@ -89,11 +89,11 @@ export default function FlashCardForm({
     setDayWork(newTipo);
   }
 
-  function handleButtonClick() {
-    if (onButtonClick) {
-      onButtonClick();
-    }
-  }
+  // function handleButtonClick() {
+  //   if (onButtonClick) {
+  //     onButtonClick();
+  //   }
+  // }
 
   const backgroundClassName = createMode ? "bg-gray-100" : "bg-yellow-50";
 
