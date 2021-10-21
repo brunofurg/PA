@@ -49,3 +49,28 @@ export default function SelectFaina() {
     </div>
   );
 }
+
+// A1-Contêneires cheios/vazios, com engate automático e/ou rampa
+// A2-Contêneires cheios/vazios, com engate automático
+// B1-Carga Avulsas
+// B2-Cargas Unitizadas (Incluindo Madeiras Serrada Cintada e Big Bags)
+// B3-Cargas Unitizadas com Dimensões Padronizadas em Navio especializados
+// B4-Toras de Madeira Cintadas e/ou Bobinas de Aço
+// B5-Volume Indivisiveis Acima de 1000 Kg
+// B6-Cargas Avulsas em Navio com Rampa
+// B7-Cargas Unitizadas em Navio com Rampa
+// B8- Veículos em Geral, em Navio com Rampa
+// B9-Veículos de Passeio E Utilitários, em Navio com Rampa
+// B10-Cargas Frigoríficas
+// B11-Cargas Vivas
+// B12-Toras de Madeira Longa com Spreader Manual
+// B13-Toras de Madeira Longa com Spreader Automático
+// B14-Mercadorias Diversas em Estaleiro - Break Bulk
+// B15-Mercadorias Diversas em Estaleiro - Projetos
+// C1-Produtos Agrícolas e Derivados em Equipamento Manual
+// C2-Produtos Agrícolas e Derivados em Equipamento Mecânico
+// C3-Produtos Agrícolas e Derivados em Equipamento Automático
+// C4-Produtos Minerais/Químicos em Equipamento Manual
+// C5-Produtos Minerais/Químicos em Equipamento Semi-Automático
+// C6-Produtos Minerais/Químicos em Equipamento Automático e/ou Grab
+// C7-Cavaco Madeira

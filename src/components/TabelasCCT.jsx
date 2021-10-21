@@ -7,6 +7,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+//import NumberInput from "./NumberInput";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -30,18 +31,26 @@ const StyledTableRow = withStyles((theme) => ({
 function createData(
   type,
   description,
-  minSindop,
   valueSindop,
+  valueSintermar,
+  valueNaoSocio,
+  valuePersonalizado,
+  minSindop,
   minSintermar,
-  valueSintermar
+  minNaoSocio,
+  minPersonalizado
 ) {
   return {
     type,
     description,
-    minSindop,
     valueSindop,
-    minSintermar,
     valueSintermar,
+    valueNaoSocio,
+    valuePersonalizado,
+    minSindop,
+    minSintermar,
+    minNaoSocio,
+    minPersonalizado,
   };
 }
 function createData2(type, ab0, c25, d50, ab100, c125, d150) {
@@ -60,179 +69,307 @@ const rows = [
   createData(
     "A1",
     "Contêineres cheios/vazios, com engate automático e/ou rampa",
-    100.68,
     6.3368,
+    6.6703,
+    7.0,
+    `NumberInput`,
+    100.68,
     105.96,
-    6.6703
+    120.0,
+    `NumberInput`
   ),
   createData("A1T", "Tabela de Valores TECON", "", "Tabela A1T", ""),
   createData(
     "A2",
     "Contêineres cheios/vazios, com engate automático manual",
-    100.68,
     6.3368,
+    6.6703,
+    7.0,
+    `NumberInput`,
+    100.68,
     105.96,
-    6.6703
+    120,
+    0,
+    `NumberInput`
   ),
-  createData("B1", "Carga Avulsas", 100.68, 6.3368, 105.96, 6.6703),
+  createData(
+    "B1",
+    "Carga Avulsas",
+    6.3368,
+    6.6703,
+    7.0,
+    `NumberInput`,
+    100.68,
+    105.96,
+    120.0,
+    `NumberInput`
+  ),
   createData(
     "B2",
     "Cargas Unitizadas (Incluindo Madeiras Serrada Cintada e Big Bags)",
-    100.68,
     0.7378,
+    0.7766,
+    1.0,
+    `NumberInput`,
+    100.68,
     105.96,
-    0.7766
+    120.0,
+    `NumberInput`
   ),
   createData(
     "B3",
     "Cargas Unitizadas com Dimensões Padronizadas, em Navio Especializado",
-    111.86,
     0.2712,
+    0.2855,
+    1.0,
+    `NumberInput`,
+    111.86,
     117.97,
-    0.2855
+    120.0,
+    `NumberInput`
   ),
   createData(
     "B4",
     "Toras de Madeira Cintadas e/ou Bobinas de Aço",
-    100.68,
     0.6094,
+    0.6416,
+    1.0,
+    `NumberInput`,
+    100.68,
     105.96,
-    0.6416
+    120.0,
+    `NumberInput`
   ),
   createData(
     "B5",
     "Volume Indivisiveis Acima de 1000 Kg - Navio Convencional ",
-    111.86,
     1.0133,
+    1.0666,
+    2.0,
+    `NumberInput`,
+    111.86,
     117.97,
-    1.0666
+    120.0,
+    `NumberInput`
   ),
   createData(
     "B6",
     "cargas Avulsas em Navio com Rampa",
     100.68,
+    105.96,
+    120.0,
+    `NumberInput`,
     1.3054,
-    105,
-    96,
-    1.3741
+    1.3741,
+    2.0,
+    `NumberInput`
   ),
   createData(
     "B7",
     "Cargas Unitizadas em Navio com Rampa",
     100.68,
-    0.7378,
     105.96,
-    0.7766
+    120.0,
+    `NumberInput`,
+    0.7378,
+    0.7766,
+    1.0,
+    `NumberInput`
   ),
   createData(
     "B8",
     "Veículos em Geral, em Navio com Rampa",
     136.71,
-    3.2915,
     143.9,
-    3.4652
+    200.0,
+    `NumberInput`,
+    3.2915,
+    3.4652,
+    5.0,
+    `NumberInput`
   ),
   createData(
     "B9",
     "Veículos de Passeio E Utilitários, em Navio com Rampa",
     108.24,
-    1.876,
     113.92,
-    1.9636
+    120.0,
+    `NumberInput`,
+    1.876,
+    1.9636,
+    2.0,
+    `NumberInput`
   ),
   createData(
     "B10",
     "Cargas Frigoríficas - Unitizadas",
     100.68,
-    1.1228,
     105.96,
-    1.1815
+    120.0,
+    `NumberInput`,
+    1.1228,
+    1.1815,
+    2.0,
+    `NumberInput`
   ),
-  createData("B11", "Cargas Vivas", 100.68, 0.2327, 105.96, 0.2447),
+  createData(
+    "B11",
+    "Cargas Vivas",
+    100.68,
+    105.96,
+    120.0,
+    `NumberInput`,
+    0.2327,
+    0.2447,
+    1.0,
+    `NumberInput`
+  ),
   createData(
     "B12",
     "Toras de Madeira Longa com Spreader Manual",
     167.79,
-    0.617,
     177.47,
-    0.6548
+    200.0,
+    `NumberInput`,
+    0.617,
+    0.6548,
+    1.0,
+    `NumberInput`
   ),
   createData(
     "B13",
     "Toras de Madeira Longa com Spreader Automático",
     167.79,
-    0.8051,
     177.47,
-    0.8452
+    200.0,
+    `NumberInput`,
+    0.8051,
+    0.8452,
+    1.0,
+    `NumberInput`
   ),
   createData(
     "B14",
     "Mercadorias Diversas em Estaleiro - Break Bulk",
     111.86,
-    0.2094,
     117.97,
-    0.7957
+    120.0,
+    `NumberInput`,
+    0.2094,
+    0.7957,
+    1.0,
+    `NumberInput`
   ),
   createData(
     "B15",
     "Mercadorias Diversas em Estaleiro - Projetos",
     111.86,
-    0.2852,
     117.97,
-    0.3005
+    120.0,
+    `NumberInput`,
+    0.2852,
+    0.3005,
+    1.0,
+    `NumberInput`
   ),
-  createData("B90", "Conexo", 136.71, "", 143.9, ""),
+  createData(
+    "B90",
+    "Conexo",
+    136.71,
+    143.9,
+    200.9,
+    `NumberInput`,
+    "",
+    "",
+    "",
+    ""
+  ),
   createData(
     "C1",
     "Produtos Agrícolas e Derivados, em Equipamento Manual",
     100.68,
-    0.4744,
     105.96,
-    0.4993
+    120.0,
+    `NumberInput`,
+    0.4744,
+    0.4993,
+    1.0,
+    `NumberInput`
   ),
   createData(
     "C2",
     "Produtos Agrícolas e Derivados, em Equipamento Mecânico",
     100.68,
-    0.7579,
     105.96,
-    0.114
+    120.0,
+    `NumberInput`,
+    0.7579,
+    0.114,
+    1.0,
+    `NumberInput`
   ),
   createData(
     "C3",
     "Produtos Agrícolas e Derivados, em Equipamento Automático",
     100.68,
-    0.0839,
     105,
-    96,
-    0.0883
+    9,
+    120.0,
+    `NumberInput`,
+    0.0839,
+    0.0883,
+    1.0,
+    `NumberInput`
   ),
   createData(
     "C4",
     "Produtos Minerais/Químicos, em Equipamento Manual",
     100.68,
-    0.4648,
     105.96,
-    0.4886
+    120.0,
+    `NumberInput`,
+    0.4648,
+    0.4886,
+    1.0,
+    `NumberInput`
   ),
   createData(
     "C5",
     "Produtos Minerais/Químicos, em Equipamento Semi-Automático",
     100.68,
-    0.21,
     105,
     96,
-    0.221
+    120.0,
+    `NumberInput`,
+    0.21,
+    0.221,
+    1.0,
+    `NumberInput`
   ),
   createData(
     "C6",
     "Produtos Minerais/Químicos, em Equipamento Automático e/ou Grab",
     100.68,
-    0.2094,
     105.96,
-    0.2206
+    120.0,
+    `NumberInput`,
+    0.2094,
+    0.2206,
+    1.0,
+    `NumberInput`
   ),
-  createData("C7", "Cavaco Madeira", 100.68, 0.0611, 105, 96, 0.0641),
+  createData(
+    "C7",
+    "Cavaco Madeira",
+    100.68,
+    105.96,
+    120.0,
+    `NumberInput`,
+    0.0611,
+    0.0641,
+    1.0,
+    `NumberInput`
+  ),
 ];
 
 const rows2 = [
@@ -283,16 +420,28 @@ export default function TabelaCCT() {
                   <strong>Descrição Faina</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <strong>Diária Sindop (R$)</strong>
+                  <strong>Tarifa Sindop (R$)</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <strong>Tarifa Sindop (R$)</strong>
+                  <strong>Tarifa Sintermar (R$)</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>Tarifa Não-Sócio (R$)</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>Tarifa Personalizado (R$)</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>Diária Sindop (R$)</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
                   <strong>Diária Sintermar (R$)</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <strong>Tarifa Sintermar (R$)</strong>
+                  <strong>Diária Não-Sócio (R$)</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>Diária Personalizado (R$)</strong>
                 </StyledTableCell>
               </TableRow>
             </TableHead>
@@ -306,16 +455,28 @@ export default function TabelaCCT() {
                     {row.description}
                   </StyledTableCell>
                   <StyledTableCell align="center">
-                    {row.minSindop}
+                    {row.valueSindop}
                   </StyledTableCell>
                   <StyledTableCell align="center">
-                    {row.valueSindop}
+                    {row.valueSintermar}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.valueNaoSocio}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.valuePersonalizado}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.minSindop}
                   </StyledTableCell>
                   <StyledTableCell align="center">
                     {row.minSintermar}
                   </StyledTableCell>
                   <StyledTableCell align="center">
-                    {row.valueSintermar}
+                    {row.minNaoSocio}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.minPersonalizado}
                   </StyledTableCell>
                 </StyledTableRow>
               ))}

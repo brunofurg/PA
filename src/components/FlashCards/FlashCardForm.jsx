@@ -14,10 +14,10 @@ import PesoMovimentado from "../PesoMovimentado";
 import FainaCalculo from "../FainaCalculo";
 import FainaValor from "../FainaValor";
 import FainaCotas from "../FainaCotas";
-import FainaSemRotator from "../FainaSemRotator";
 import FainaTipoTaxa from "../FainaTipoTaxa";
 import RadioButton from "../RadioButton";
 import FainaSelectFuncao from "../FainaSelectFuncao";
+import CheckboxInput from "../CheckboxInput";
 
 export default function FlashCardForm({
   createMode = true,
@@ -110,10 +110,7 @@ export default function FlashCardForm({
             Calculadora de Remuneração
           </span>
           <div>
-            <Button onButtonClick={handleButtonClick}>Novo Trabalho</Button>
-            <Button colorClass="bg-red-500 hover:bg-red-300" type="reset">
-              Limpar
-            </Button>
+            <Button onButtonClick={handleFormReset}>Novo Trabalho</Button>
           </div>
         </div>
 
@@ -154,8 +151,8 @@ export default function FlashCardForm({
                 </div>
               </div>
             </div>
-            <div className="border border-gray-300 flex flex-row flex-wrap justify-evenly p-2">
-              <div className="p-3">
+            <div className="bg-purple-300 border border-gray-300 flex flex-row flex-wrap justify-evenly p-2">
+              <div className="bg-green-200 p-3">
                 <div className="bg-blue-300 shadow-lg rounded-lg p-2">
                   Selecione Tipo de Faina
                 </div>
@@ -165,12 +162,23 @@ export default function FlashCardForm({
                   onSelectChange={handleTypeFaina}
                 />
               </div>
+              <div>
+                <span className="bg-terciary hover:bg-primary text-white rounded-lg p-2">
+                  <CheckboxInput
+                    labelDescription=""
+                    value={`checkboxValue`}
+                    readOnly
+                    onCheckboxChange={`handleCheckboxChange`}
+                  />
+                  Sem Rotator (x1,75)
+                </span>
+              </div>
 
-              <div className="flex flex-col p-2">
+              <div className="bg-yellow-300 flex flex-col p-2">
                 <div className="bg-blue-300 shadow-lg rounded-lg text-center p-2">
                   <p>Calcular Por:</p>
                 </div>
-                <div className="flex flex-row justify-evenly space-x-2 p-2">
+                <div className="bg-pink-200 flex flex-row justify-evenly space-x-2 p-2">
                   <span className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">
                     <RadioButton labelDescription="" />
                     {`Peso|Unidade`}
@@ -179,15 +187,21 @@ export default function FlashCardForm({
                     <RadioButton labelDescription="" />
                     {`Caminhões`}
                   </span>
+                  <span className="bg-terciary hover:bg-primary text-white rounded-lg p-2">
+                    <CheckboxInput
+                      labelDescription=""
+                      value={`checkboxValue`}
+                      readOnly
+                      onCheckboxChange={`handleCheckboxChange`}
+                    />
+                    Calcular Por Fardo
+                  </span>
                 </div>
               </div>
             </div>
           </div>
           <div className="">
             <PesoMovimentado />
-          </div>
-          <div className="">
-            <FainaSemRotator />
           </div>
           <div className="">
             <FainaPorCaminhao />
@@ -232,3 +246,39 @@ export default function FlashCardForm({
     </form>
   );
 }
+
+// Check if Date is Valid
+//
+// const isDateValid = (...val) => !Number.isNaN(new Date( ...val ).valueOf());
+// isDateValid("October 17, 2021 03:24:00")
+
+//Find the Day of Year
+//
+// const dayOfYear = (date) =>
+//   Math.floor((date - new Date(date.getFullYear(),
+//   0, 0)) / 1000 / 60 / 60 / 24);
+//   dayOfYear(new Date());
+
+// Check if A Number is Even or Odd
+
+// const isEven = num => num % 2 === 0;
+// console.log(isEven(2));
+// //result: true
+
+// Array.from
+// ----
+// const length = 3;
+// const filledArray = Array.from(Array(length), () => {
+//   return { value: 0 };
+// });
+// filledArray; // [{ value: 0 }, { value: 0 }, { value: 0 }]
+// filledArray[1].value = 3;
+// filledArray; // [{ value: 0 }, { value: 3 }, { value: 0 }]
+
+// Array.map
+// ----
+// const length = 3;
+// const filledArray = [...Array(length)].map(() => {
+//   return { value: 0 };
+// });
+// filledArray; // [{ value: 0 }, { value: 0 }, { value: 0 }]

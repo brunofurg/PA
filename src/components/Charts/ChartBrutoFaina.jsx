@@ -56,11 +56,7 @@ class ChartBrutoFaina extends Component {
     return (
       <div className="bg-white border border-gray-300 shadow-lg rounded-lg p-2 mt-2 mb-4 text-center">
         Valor Bruto por Faina (R$)
-        <LineChart
-          chartData={this.state.chartData}
-          location="Massachusetts"
-          legendPosition="bottom"
-        />
+        <LineChart chartData={this.state.chartData} />
       </div>
     );
   }

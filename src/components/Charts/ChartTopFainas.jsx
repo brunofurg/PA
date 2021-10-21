@@ -45,11 +45,7 @@ class ChartTopFainas extends Component {
     return (
       <div className="bg-white border border-gray-300 shadow-lg rounded-lg p-2 mt-2 mb-4 text-center">
         Top Fainas (R$)
-        <BarChartY
-          chartData={this.state.chartData}
-          location="Massachusetts"
-          legendPosition="bottom"
-        />
+        <BarChartY chartData={this.state.chartData} />
       </div>
     );
   }

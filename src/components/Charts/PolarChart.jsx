@@ -10,12 +10,6 @@ class PolarChart extends Component {
     this.state = { chartData: props.chartData };
   }
 
-  static defaultProps = {
-    displayTitle: true,
-    displayLegend: true,
-    legendPosition: "bottom",
-  };
-
   render() {
     return (
       <div>
@@ -37,15 +31,6 @@ class PolarChart extends Component {
                 },
                 color: "white",
               },
-            },
-            title: {
-              display: this.props.displayTitle,
-              text: "PolarChart",
-              fontSize: 25,
-            },
-            legend: {
-              display: this.props.displayLegend,
-              position: this.props.legendPosition,
             },
           }}
         />

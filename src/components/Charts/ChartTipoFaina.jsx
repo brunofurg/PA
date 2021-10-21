@@ -52,11 +52,7 @@ class ChartTipoFaina extends Component {
     return (
       <div className="bg-white border border-gray-300 shadow-lg rounded-lg p-2 mt-2 mb-4 text-center">
         Ganhos por Tipo de Faina (R$)
-        <PieChart
-          chartData={this.state.chartData}
-          location="Massachusetts"
-          legendPosition="bottom"
-        />
+        <PieChart chartData={this.state.chartData} />
       </div>
     );
   }
