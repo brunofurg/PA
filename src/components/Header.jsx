@@ -1,5 +1,5 @@
 import imgLogo from "../images/logo.svg";
-import iconNotifications from "../images/iconNotifications.svg";
+import iconHome from "../images/iconHome.svg";
 import iconUser from "../images/iconUser.svg";
 import iconMenu from "../images/iconMenu.svg";
 import axios from "axios";
@@ -69,27 +69,30 @@ export default function Header({ acao }) {
           >
             <strong>{`${temperature || "..."}°C - ${timeNow}`}</strong>
           </span>
-          <div className="mr-2">
+          <div className="mr-4">
             <span className="flex flex-row items-center space-x-4 text-lg">
               <span className="shadow-lg hover:shadow-inner rounded-full p-2 hover:bg-secondary ">
                 <img
-                  src={iconNotifications}
-                  alt="Notifications"
-                  title="Notificações"
-                  width="15"
-                  height="15"
+                  src={iconHome}
+                  alt="Home"
+                  title="Home"
+                  width="25"
+                  height="25"
                 />
               </span>
-              <span className="shadow-lg hover:shadow-inner rounded-full p-2 hover:bg-secondary ">
+              <span className="shadow-lg hover:shadow-inner rounded-full hover:bg-secondary p-2">
                 <img
                   src={iconUser}
                   alt="User"
                   title="Configurações de usuário"
-                  width="15"
-                  height="15"
+                  width="25"
+                  height="25"
                 />
               </span>
-              <span className="shadow-lg hover:shadow-inner rounded-full p-2 hover:bg-secondary ">
+              <span
+                hidden
+                className="shadow-lg hover:shadow-inner rounded-full hover:bg-secondary p-2"
+              >
                 <img
                   src={iconMenu}
                   alt="Menu"

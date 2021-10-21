@@ -10,6 +10,7 @@ import ChartTrabalhosMes from "./Charts/ChartTrabalhosMes";
 import { Chart } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import SelectIntervalo from "./SelectIntervalo";
+import ChartRetornosTotais from "./Charts/ChartRetornosTotais";
 
 Chart.register(ChartDataLabels);
 
@@ -32,6 +33,7 @@ export default function Painel() {
           <ChartTopFainas />
           <ChartTipoFaina />
           <ChartTrabalhosMes />
+          <ChartRetornosTotais />
         </div>
 
         <div className="bg-blue-50 rounded-lg flex flex-col shadow-lg p-4 m-4">

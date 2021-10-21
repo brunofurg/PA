@@ -10,12 +10,6 @@ class LineChart extends Component {
     this.state = { chartData: props.chartData };
   }
 
-  static defaultProps = {
-    displayTitle: true,
-    displayLegend: true,
-    legendPosition: "bottom",
-  };
-
   render() {
     return (
       <div>
@@ -23,14 +17,12 @@ class LineChart extends Component {
           data={this.state.chartData}
           options={{
             title: {
-              display: this.props.displayTitle,
-              text: "LineChart",
-              fontSize: 25,
+              color: "white",
             },
             legend: {
-              display: this.props.displayLegend,
-              position: this.props.legendPosition,
+              color: "white",
             },
+            color: "white",
           }}
         />
       </div>

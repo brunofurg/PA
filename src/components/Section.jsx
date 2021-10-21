@@ -297,10 +297,7 @@ export default function Section() {
                       </div>
 
                       <div className="flex flex-row flex-wrap justify-evenly p-2">
-                        <div className="bg-red-200 rounded-lg shadow-lg p-2">
-                          <strong>Total Impostos: </strong>10.710,43
-                        </div>
-                        <div className="bg-red-200 rounded-lg shadow-lg p-2">
+                        <div className="bg-red-200 justify-evenly rounded-lg shadow-lg p-2">
                           <strong>Morto: </strong>45,56%
                         </div>
                       </div>
@@ -344,8 +341,8 @@ export default function Section() {
                           <strong>Média Líquido: </strong>10.710,43
                         </div>
                       </div>
-                      <div className="flex flex-row place-items-center place-content-around p-2">
-                        <div className="flex flex-row place-items-center space-x-2">
+                      <div className="flex flex-row justify-center place-content-around p-2">
+                        <div className="flex flex-row justify-center">
                           <div className="text-right font-black"></div>
                           <div className="border border-gray-400 bg-green-300 rounded-lg shadow-lg  p-2 text-base shadow-lg">
                             Total Liquidez: <strong>1.809,66</strong>

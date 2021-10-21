@@ -265,173 +265,184 @@ export default function TabelaCCT() {
   const classes = useStyles();
   return (
     <Fragment>
-      <TableContainer component={Paper}>
-        <div className="bg-gray-300 align-middle justify-items-center font-bold">
-          Convenção Coletiva de Trabalho SINDOP (Vigência 2020-2022)
-        </div>
-        <Table className={classes.table}>
-          <TableHead>
-            <TableRow>
-              <StyledTableCell align="center">
-                <strong>Tipo</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>Descrição Faina</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>Diária Sindop (R$)</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>Tarifa Sindop (R$)</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>Diária Sintermar (R$)</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>Tarifa Sintermar (R$)</strong>
-              </StyledTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((row) => (
-              <StyledTableRow key={row.type}>
-                <StyledTableCell align="center" component="th" scope="row">
-                  <strong>{row.type}</strong>
-                </StyledTableCell>
-                <StyledTableCell align="left">
-                  {row.description}
+      <div className="bg-blue-400 border border-blue-500 text-center text-white justify-center rounded-lg shadow-lg p-2 mb-4 m-4">
+        Tabelas de Taxas e Tarifas
+      </div>
+      <div>
+        <TableContainer component={Paper}>
+          <div className="bg-gray-300 align-middle justify-items-center font-bold">
+            Convenção Coletiva de Trabalho SINDOP (Vigência 2020-2022)
+          </div>
+          <Table className={classes.table}>
+            <TableHead>
+              <TableRow>
+                <StyledTableCell align="center">
+                  <strong>Tipo</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  {row.minSindop}
+                  <strong>Descrição Faina</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  {row.valueSindop}
+                  <strong>Diária Sindop (R$)</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  {row.minSintermar}
+                  <strong>Tarifa Sindop (R$)</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  {row.valueSintermar}
+                  <strong>Diária Sintermar (R$)</strong>
                 </StyledTableCell>
-              </StyledTableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-      <br />
-      <TableContainer component={Paper}>
-        <div className="bg-gray-300 align-middle justify-items-center font-bold">
-          Acordo Coletivo de Trabalho TECON Rio Grande (Vigência 2020-2022)
-        </div>
-        <Table className={classes.table}>
-          <TableHead>
-            <TableRow>
-              <StyledTableCell align="center">
-                <strong>A1T - Tabela TECON</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>A/B</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>C+25%</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>D+50%</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>A/B+100%</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>C+125%</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>D+150%</strong>
-              </StyledTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows2.map((row) => (
-              <StyledTableRow key={row.type}>
-                <StyledTableCell align="right" component="th" scope="row">
-                  {row.type}
+                <StyledTableCell align="center">
+                  <strong>Tarifa Sintermar (R$)</strong>
                 </StyledTableCell>
-                <StyledTableCell align="center">{row.ab0}</StyledTableCell>
-                <StyledTableCell align="center">{row.c25}</StyledTableCell>
-                <StyledTableCell align="center">{row.d50}</StyledTableCell>
-                <StyledTableCell align="center">{row.ab100}</StyledTableCell>
-                <StyledTableCell align="center">{row.c125}</StyledTableCell>
-                <StyledTableCell align="center">{row.d150}</StyledTableCell>
-              </StyledTableRow>
-            ))}
-          </TableBody>
-        </Table>
-        <p className="text-xs">
-          *OBS: Nesta tabela os Valores estão com RSR incluso (18,18%)
-        </p>
-      </TableContainer>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <StyledTableRow key={row.type}>
+                  <StyledTableCell align="center" component="th" scope="row">
+                    <strong>{row.type}</strong>
+                  </StyledTableCell>
+                  <StyledTableCell align="left">
+                    {row.description}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.minSindop}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.valueSindop}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.minSintermar}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.valueSintermar}
+                  </StyledTableCell>
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+        <br />
+        <TableContainer component={Paper}>
+          <div className="bg-gray-300 align-middle justify-items-center font-bold">
+            Acordo Coletivo de Trabalho TECON Rio Grande (Vigência 2020-2022)
+          </div>
+          <Table className={classes.table}>
+            <TableHead>
+              <TableRow>
+                <StyledTableCell align="center">
+                  <strong>A1T - Tabela TECON</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>A/B</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>C+25%</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>D+50%</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>A/B+100%</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>C+125%</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>D+150%</strong>
+                </StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows2.map((row) => (
+                <StyledTableRow key={row.type}>
+                  <StyledTableCell align="right" component="th" scope="row">
+                    {row.type}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">{row.ab0}</StyledTableCell>
+                  <StyledTableCell align="center">{row.c25}</StyledTableCell>
+                  <StyledTableCell align="center">{row.d50}</StyledTableCell>
+                  <StyledTableCell align="center">{row.ab100}</StyledTableCell>
+                  <StyledTableCell align="center">{row.c125}</StyledTableCell>
+                  <StyledTableCell align="center">{row.d150}</StyledTableCell>
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+          <p className="text-xs">
+            *OBS: Nesta tabela os Valores estão com RSR incluso (18,18%)
+          </p>
+        </TableContainer>
 
-      <br />
-      <TableContainer component={Paper}>
-        <div className="bg-gray-300 align-middle justify-center font-bold">
-          Tabela INSS (Vigência desde 01/01/2021)
-        </div>
-        <Table className={classes.table}>
-          <TableHead>
-            <TableRow>
-              <StyledTableCell align="center">
-                <strong>Base de Cálculo (R$)</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>Alíquota (%)</strong>
-              </StyledTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows3.map((row) => (
-              <StyledTableRow key={row.base}>
-                <StyledTableCell align="center" component="th" scope="row">
-                  {row.base}
+        <br />
+        <TableContainer component={Paper}>
+          <div className="bg-gray-300 align-middle justify-center font-bold">
+            Tabela INSS (Vigência desde 01/01/2021)
+          </div>
+          <Table className={classes.table}>
+            <TableHead>
+              <TableRow>
+                <StyledTableCell align="center">
+                  <strong>Base de Cálculo (R$)</strong>
                 </StyledTableCell>
-                <StyledTableCell align="center">{row.aliquota}</StyledTableCell>
-              </StyledTableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-
-      <br />
-
-      <TableContainer component={Paper}>
-        <div className="bg-gray-300 align-middle justify-center font-bold">
-          Tabela Imposto de Renda (Vigência desde 2015 - Lei 13.149/2015)
-        </div>
-        <Table className={classes.table}>
-          <TableHead>
-            <TableRow>
-              <StyledTableCell align="center">
-                <strong>Base de Cálculo (R$)</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>Alíquota (%)</strong>
-              </StyledTableCell>
-              <StyledTableCell align="center">
-                <strong>Parcela a deduzir do IR (R$)</strong>
-              </StyledTableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows4.map((row) => (
-              <StyledTableRow key={row.base}>
-                <StyledTableCell align="center" component="th" scope="row">
-                  {row.base}
+                <StyledTableCell align="center">
+                  <strong>Alíquota (%)</strong>
                 </StyledTableCell>
-                <StyledTableCell align="center">{row.aliquota}</StyledTableCell>
-                <StyledTableCell align="center">{row.deduzir}</StyledTableCell>
-              </StyledTableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows3.map((row) => (
+                <StyledTableRow key={row.base}>
+                  <StyledTableCell align="center" component="th" scope="row">
+                    {row.base}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.aliquota}
+                  </StyledTableCell>
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+
+        <br />
+
+        <TableContainer component={Paper}>
+          <div className="bg-gray-300 align-middle justify-center font-bold">
+            Tabela Imposto de Renda (Vigência desde 2015 - Lei 13.149/2015)
+          </div>
+          <Table className={classes.table}>
+            <TableHead>
+              <TableRow>
+                <StyledTableCell align="center">
+                  <strong>Base de Cálculo (R$)</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>Alíquota (%)</strong>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>Parcela a deduzir do IR (R$)</strong>
+                </StyledTableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows4.map((row) => (
+                <StyledTableRow key={row.base}>
+                  <StyledTableCell align="center" component="th" scope="row">
+                    {row.base}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.aliquota}
+                  </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.deduzir}
+                  </StyledTableCell>
+                </StyledTableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
     </Fragment>
   );
 }

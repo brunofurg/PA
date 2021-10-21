@@ -106,7 +106,7 @@ export default function FlashCardForm({
     >
       <div className="border border-gray-300">
         <div className="bg-gray-200 flex flex-row place-items-center justify-around p-2">
-          <span className="bg-blue-400 border border-blue-600 text-white text-center rounded-lg shadow-lg font-semibold p-2">
+          <span className="bg-blue-400 border border-blue-500 text-white text-center rounded-lg shadow-lg p-2">
             Calculadora de Remuneração
           </span>
           <div>
