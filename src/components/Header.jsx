@@ -5,7 +5,7 @@ import iconMenu from "../images/iconMenu.svg";
 import axios from "axios";
 import { useState } from "react";
 
-export default function Header({ acao }) {
+export default function Header({ colorHeader }) {
   const [temperature, setTemperature] = useState(false);
   const [weather, setWeather] = useState(false);
 
@@ -51,7 +51,8 @@ export default function Header({ acao }) {
 
   return (
     <>
-      <header className={acao ? "bg-terciary" : "bg-primary"}>
+      {/* <header className={colorHeader ? "bg-terciary" : "bg-primary"}> */}
+      <header className="bg-terciary">
         <div className="text-white items-center flex flex-row justify-between p-2">
           <span>
             <img

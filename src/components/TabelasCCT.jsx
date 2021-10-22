@@ -400,7 +400,7 @@ export default function TabelaCCT() {
   return (
     <Fragment>
       <div className="bg-blue-400 border border-blue-500 text-center text-white justify-center rounded-lg shadow-lg p-2 mb-4 m-4">
-        Tabelas de Taxas e Tarifas
+        Tabelas Taxas e Tarifas
       </div>
       <div>
         <TableContainer component={Paper}>
@@ -417,16 +417,16 @@ export default function TabelaCCT() {
                   <strong>Descrição Faina</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <strong>Tarifa Sindop (R$)</strong>
+                  <strong>Taxa Sindop (R$)</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <strong>Tarifa Sintermar (R$)</strong>
+                  <strong>Taxa Sintermar (R$)</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <strong>Tarifa Não-Sócio (R$)</strong>
+                  <strong>Taxa Não-Sócio (R$)</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <strong>Tarifa Personalizado (R$)</strong>
+                  <strong>Taxa Personalizado (R$)</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
                   <strong>Diária Sindop (R$)</strong>

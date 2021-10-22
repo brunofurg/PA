@@ -1,4 +1,7 @@
+import { getNewId } from "../services/idService";
+
 export default function CheckboxInput({
+  id = getNewId(),
   labelDescription = "Descrição do checkbox",
   checkboxValue = "Valor padrão do input",
   onCheckboxChange = null,
@@ -14,11 +17,11 @@ export default function CheckboxInput({
     <div className="flex flex-col items-center align-middle space-x-2 cursor-pointer">
       {labelDescription}
       <input
+        id={id}
         autoFocus={autoFocus}
-        className="border p-1"
         type="checkbox"
         value={checkboxValue}
-        onCheckboxChange={handleCheckboxChange}
+        onChange={handleCheckboxChange}
       />
     </div>
   );

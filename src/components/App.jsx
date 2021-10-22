@@ -20,7 +20,7 @@ export default function App() {
     <Fragment>
       <div className="text-sm flex flex-col">
         <div className="fixed inset-x-0 top-0 w-screen justify-around">
-          <Header acao={ativaCor} />
+          <Header colorHeader={ativaCor} />
         </div>
         <div className="mt-12 inline align-middle justify-center">
           <Section />

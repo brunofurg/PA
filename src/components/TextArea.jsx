@@ -1,4 +1,7 @@
+import { getNewId } from "../services/idService";
+
 export default function TextArea({
+  id = getNewId(),
   labelDescription = "Descrição do label:",
   textAreaValue = "Valor padrão do text area",
   onTextAreaChange = null,
@@ -18,6 +21,7 @@ export default function TextArea({
     <div className="flex flex-col my-4">
       {labelDescription}
       <textarea
+        id={id}
         className="border p-1"
         maxLength={maxLength}
         rows={rows}

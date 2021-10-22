@@ -5,7 +5,9 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-export default function SelectIntervalo() {
+import { getNewId } from "../services/idService";
+
+export default function SelectIntervalo({ id = getNewId() }) {
   const [intervalo, setIntervalo] = React.useState("");
 
   const handleChange = (event) => {
@@ -17,7 +19,12 @@ export default function SelectIntervalo() {
     <div>
       <FormControl variant="standard" sx={{ m: 1, minWidth: 150 }}>
         <InputLabel>Período:</InputLabel>
-        <Select value={intervalo} onChange={handleChange} label="Período">
+        <Select
+          id={id}
+          value={intervalo}
+          onChange={handleChange}
+          label="Período"
+        >
           <MenuItem value={"10-21"}>10-21</MenuItem>
           <MenuItem value={"09-21"}>09-21</MenuItem>
           <MenuItem value={"08-21"}>08-21</MenuItem>

@@ -26,130 +26,126 @@ export default function Links() {
   return (
     <Fragment>
       <div className="bg-gray-100 flex flex-col justify-items-stretch">
-        <div className="bg-white border flex flex-row shadow-lg rounded-3xl justify-evenly m-3">
-          <div className="p-4 justify-center">
-            <div className="bg-blue-300 border border-blue-500 rounded-lg shadow-lg justify-center flex p-2 m-2">
-              Porto do Rio Grande
-            </div>
-            <a
-              href="http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/cais-virtual/_action/index/cd_usuario/publico"
-              target="_blank"
-              className="hover:scale-120"
-              rel="noreferrer"
-            >
-              <div className="bg-blue-50 hover:shadow-lg hover:border-gray-500 border shadow-lg rounded-3xl p-10">
-                <p className="text-center">Cais Virtual</p>
-
-                <img
-                  className=""
-                  src={imgPorto}
-                  alt="Porto do Rio Grande - Cais Virtual"
-                  title="Porto do Rio Grande - Cais Virtual"
-                  width="200"
-                  height="200"
-                />
-              </div>
-            </a>
+        <div className="bg-white border flex flex-col shadow-lg rounded-3xl justify-evenly m-3">
+          <div className="bg-blue-300 border border-blue-500 rounded-lg shadow-lg justify-center flex p-2 mt-4 m-2">
+            Porto do Rio Grande
           </div>
-
-          <div className="flex flex-col align-middle text-center text-xs flex-wrap rounded-lg  place-content-center p-2">
-            <div className="align-middle text-center bg-blue-300 border-blue-500 shadow-lg rounded-lg p-2 m-2">
-              <p>Movimentação Portuária:</p>
+          <div className="flex flex-row justify-evenly">
+            <div className="p-4 justify-center">
+              <a
+                href="http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/cais-virtual/_action/index/cd_usuario/publico"
+                target="_blank"
+                className="hover:scale-120"
+                rel="noreferrer"
+              >
+                <div className="bg-blue-50 hover:shadow-lg hover:border-gray-500 border shadow-lg rounded-3xl p-10">
+                  <p className="text-center">Cais Virtual</p>
+                  <img
+                    className=""
+                    src={imgPorto}
+                    alt="Porto do Rio Grande - Cais Virtual"
+                    title="Porto do Rio Grande - Cais Virtual"
+                    width="200"
+                    height="200"
+                  />
+                </div>
+              </a>
             </div>
 
-            <div className="flex flex-col flex-wrap">
-              <a
-                title="Movimentação Portuária - Esperado"
-                href="http://www.portosrs.com.br/portoweb/zf/login/logar/_module/porto-gerencial/_controller/navios-situacao/_action/relatorio/cd_usuario/publico/param_situacao/3/param__rel_metodo/pdf"
-                label="Esperado"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="rounded-full hover:shadow-lg hover:bg-yellow-300 bg-yellow-400 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
-                  <img
-                    src={svgShip1}
-                    alt="Movimentação Portuária - Esperado"
-                    width="30"
-                    height="30"
-                  />
-                  <p className="self-center">Esperado</p>
-                </span>
-              </a>
-
-              <a
-                title="Movimentação Portuária - Programado"
-                href="http://www.portosrs.com.br/portoweb/zf/login/logar/_module/porto-gerencial/_controller/navios-situacao/_action/relatorio/cd_usuario/publico/param_situacao/4/param__rel_metodo/pdf"
-                label="Programado"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="rounded-full hover:shadow-lg hover:bg-red-500 bg-red-600 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
-                  <img
-                    src={svgShip1}
-                    alt="Movimentação Portuária - Programado"
-                    width="30"
-                    height="30"
-                  />
-                  <p className="self-center">Programado</p>
-                </span>
-              </a>
-
-              <a
-                title="Movimentação Portuária - Operação"
-                href="http://www.portosrs.com.br/portoweb/zf/login/logar/_module/porto-gerencial/_controller/navios-situacao/_action/relatorio/cd_usuario/publico/param_situacao/0/param__rel_metodo/pdf"
-                label="Operação"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="rounded-full hover:shadow-lg hover:bg-blue-400 bg-blue-500 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
-                  <img
-                    src={svgShip1}
-                    alt="Movimentação Portuária - Operação"
-                    title="Movimentação Portuária - Operação"
-                    width="30"
-                    height="30"
-                  />
-                  <p className="self-center">Operação</p>
-                </span>
-              </a>
-
-              <a
-                title="Movimentação Portuária - Fundeado"
-                href="http://www.portosrs.com.br/portoweb/zf/login/logar/_module/porto-gerencial/_controller/navios-situacao/_action/relatorio/cd_usuario/publico/param_situacao/2/param__rel_metodo/pdf"
-                label="Fundeado"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="rounded-full hover:shadow-lg hover:bg-green-500 bg-green-600 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
-                  <img
-                    src={svgShip1}
-                    alt="Movimentação Portuária - Fundeado"
-                    title="Movimentação Portuária - Fundeado"
-                    width="30"
-                    height="30"
-                  />
-                  <p className="self-center">Fundeado</p>
-                </span>
-              </a>
-
-              <a
-                title="Movimentação Portuária - LineUp"
-                href="http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/rel-lineup/_action/index/cd_usuario/publico/"
-                label="LineUp"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span className="rounded-full hover:shadow-lg hover:bg-pink-300 bg-pink-400 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
-                  <img
-                    src={svgShip1}
-                    alt="Movimentação Portuária - LineUp"
-                    title="Movimentação Portuária - LineUp"
-                    width="30"
-                    height="30"
-                  />
-                  <p className="self-center">LineUp</p>
-                </span>
-              </a>
+            <div className="flex flex-col align-middle text-center text-xs flex-wrap rounded-lg  place-content-center p-2">
+              <div className="align-middle text-center bg-blue-300 border-blue-500 shadow-lg rounded-lg p-2 m-2">
+                <p>Movimentação Portuária:</p>
+              </div>
+              <div className="flex flex-col flex-wrap">
+                <a
+                  title="Movimentação Portuária - Esperado"
+                  href="http://www.portosrs.com.br/portoweb/zf/login/logar/_module/porto-gerencial/_controller/navios-situacao/_action/relatorio/cd_usuario/publico/param_situacao/3/param__rel_metodo/pdf"
+                  label="Esperado"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="rounded-full hover:shadow-lg hover:bg-yellow-300 bg-yellow-400 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
+                    <img
+                      src={svgShip1}
+                      alt="Movimentação Portuária - Esperado"
+                      width="30"
+                      height="30"
+                    />
+                    <p className="self-center">Esperado</p>
+                  </span>
+                </a>
+                <a
+                  title="Movimentação Portuária - Programado"
+                  href="http://www.portosrs.com.br/portoweb/zf/login/logar/_module/porto-gerencial/_controller/navios-situacao/_action/relatorio/cd_usuario/publico/param_situacao/4/param__rel_metodo/pdf"
+                  label="Programado"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="rounded-full hover:shadow-lg hover:bg-red-500 bg-red-600 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
+                    <img
+                      src={svgShip1}
+                      alt="Movimentação Portuária - Programado"
+                      width="30"
+                      height="30"
+                    />
+                    <p className="self-center">Programado</p>
+                  </span>
+                </a>
+                <a
+                  title="Movimentação Portuária - Operação"
+                  href="http://www.portosrs.com.br/portoweb/zf/login/logar/_module/porto-gerencial/_controller/navios-situacao/_action/relatorio/cd_usuario/publico/param_situacao/0/param__rel_metodo/pdf"
+                  label="Operação"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="rounded-full hover:shadow-lg hover:bg-blue-400 bg-blue-500 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
+                    <img
+                      src={svgShip1}
+                      alt="Movimentação Portuária - Operação"
+                      title="Movimentação Portuária - Operação"
+                      width="30"
+                      height="30"
+                    />
+                    <p className="self-center">Operação</p>
+                  </span>
+                </a>
+                <a
+                  title="Movimentação Portuária - Fundeado"
+                  href="http://www.portosrs.com.br/portoweb/zf/login/logar/_module/porto-gerencial/_controller/navios-situacao/_action/relatorio/cd_usuario/publico/param_situacao/2/param__rel_metodo/pdf"
+                  label="Fundeado"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="rounded-full hover:shadow-lg hover:bg-green-500 bg-green-600 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
+                    <img
+                      src={svgShip1}
+                      alt="Movimentação Portuária - Fundeado"
+                      title="Movimentação Portuária - Fundeado"
+                      width="30"
+                      height="30"
+                    />
+                    <p className="self-center">Fundeado</p>
+                  </span>
+                </a>
+                <a
+                  title="Movimentação Portuária - LineUp"
+                  href="http://www.portosrs.com.br/portoweb/zf/login/logar/_module/atracacao/_controller/rel-lineup/_action/index/cd_usuario/publico/"
+                  label="LineUp"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="rounded-full hover:shadow-lg hover:bg-pink-300 bg-pink-400 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
+                    <img
+                      src={svgShip1}
+                      alt="Movimentação Portuária - LineUp"
+                      title="Movimentação Portuária - LineUp"
+                      width="30"
+                      height="30"
+                    />
+                    <p className="self-center">LineUp</p>
+                  </span>
+                </a>
+              </div>
             </div>
           </div>
         </div>

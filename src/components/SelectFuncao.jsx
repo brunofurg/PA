@@ -5,7 +5,9 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-export default function SelectFuncao() {
+import { getNewId } from "../services/idService";
+
+export default function SelectFuncao({ id = getNewId() }) {
   const [faina, setFaina] = React.useState("");
 
   const handleChange = (event) => {
@@ -16,7 +18,7 @@ export default function SelectFuncao() {
     <div>
       <FormControl variant="standard" sx={{ m: 1, minWidth: 150 }}>
         <InputLabel>Função</InputLabel>
-        <Select value={faina} onChange={handleChange} label="Função">
+        <Select id={id} value={faina} onChange={handleChange} label="Função">
           <MenuItem value=""></MenuItem>
           <MenuItem value={"101"}>CONTRAMESTRE GERAL</MenuItem>
           <MenuItem value={"150"}>CONTRAMESTRE GERAL (B)</MenuItem>

@@ -172,7 +172,7 @@ export default function FlashCardForm({
                     labelDescription=""
                     value={`checkboxValue`}
                     readOnly
-                    onCheckboxChange={`handleCheckboxChange`}
+                    onChange={`handleCheckboxChange`}
                   />
                   Sem Rotator (x1,75)
                 </span>
@@ -196,7 +196,7 @@ export default function FlashCardForm({
                       labelDescription=""
                       value={`checkboxValue`}
                       readOnly
-                      onCheckboxChange={`handleCheckboxChange`}
+                      onChange={`handleCheckboxChange`}
                     />
                     Calcular Por Fardo
                   </span>

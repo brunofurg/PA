@@ -38,9 +38,12 @@ import { FiExternalLink as IconLinks } from "react-icons/fi";
 
 import { useEffect, useState } from "react";
 import CheckboxInput from "./CheckboxInput";
+
+import { getNewId } from "../services/idService";
+
 //import WindowWork from "./WindowWork";
 
-export default function Section() {
+export default function Section({ id = getNewId() }) {
   const [allCards, setAllCards] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -241,6 +244,7 @@ export default function Section() {
                             <div className="">1</div>
                             <div className="">
                               <CheckboxInput
+                                key={id}
                                 checkboxValue="false"
                                 labelDescription=""
                               />

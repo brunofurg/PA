@@ -1,4 +1,7 @@
+import { getNewId } from "../services/idService";
+
 export default function NumberInput({
+  id = getNewId(),
   labelDescription = "Descrição do label:",
   inputValue = "Valor padrão do input",
   onInputChange = null,
@@ -16,6 +19,7 @@ export default function NumberInput({
     <div className="flex flex-col">
       {labelDescription}
       <input
+        id={id}
         autoFocus={autoFocus}
         className="border p-2"
         type="number"

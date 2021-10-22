@@ -1,4 +1,7 @@
+import { getNewId } from "../services/idService";
+
 export default function Button({
+  id = getNewId(),
   children: description = "Descrição do botão",
   onButtonClick = null,
   colorClass = "bg-terciary",
@@ -14,6 +17,7 @@ export default function Button({
 
   return (
     <button
+      id={id}
       className={`p-2 m-1 rounded-md ${colorClass} hover:${hoverColor} ${textClass}`}
       onClick={handleButtonClick}
       type={type}

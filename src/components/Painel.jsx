@@ -17,14 +17,14 @@ Chart.register(ChartDataLabels);
 export default function Painel() {
   return (
     <>
-      <div className="border-2 bg-gray-100 p-1">
-        <div className="flex flex-row justify-evenly items-center">
-          <div className="bg-blue-400 border border-blue-600 text-white rounded-lg shadow-lg flex flex-col justify-center text-center p-2 m-2">
+      <div className="border-2 bg-gray-100 p-3">
+        <div className="">
+          <div className="bg-blue-400 border border-blue-600 text-white text-center rounded-lg shadow-lg flex flex-col p-2">
             Demonstrativo
             <SelectIntervalo />
           </div>
         </div>
-        <div className="space-y-4 font-bold p-4">
+        <div className="space-y-4 font-bold p-2">
           <ChartSalarioBruto />
           <ChartBrutoFaina />
           <ChartGanhosOperador />

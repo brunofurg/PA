@@ -1,5 +1,8 @@
 //import { compareAsc, format } from 'date-fns'
+import { getNewId } from "../services/idService";
+
 export default function DateInput({
+  id = getNewId(),
   labelDescription = "Descrição do label:",
   inputValue = "2021-04-30",
   onInputChange = null,
@@ -19,6 +22,7 @@ export default function DateInput({
     <div className="flex flex-col my-4">
       {labelDescription}
       <input
+        id={id}
         autoFocus={autoFocus}
         className="border p-1"
         type="date"
