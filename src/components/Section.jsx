@@ -241,14 +241,14 @@ export default function Section({ id = getNewId() }) {
                       return (
                         <div className="bg-gray-300 border border-gray-300 shadow-lg hover:bg-gray-200 hover:border-gray-600 rounded-lg flex flex-row justify-evenly place-items-stretch m-3 p-2">
                           <div className="flex flex-col space-y-10 p-2">
-                            <div className="">1</div>
-                            <div className="">
+                            <span className="">1</span>
+                            <span className="">
                               <CheckboxInput
-                                key={id}
+                                key={flashCard.key}
                                 checkboxValue="false"
                                 labelDescription=""
                               />
-                            </div>
+                            </span>
                           </div>
                           <div className="flex self-stretch mr-1">
                             <FlashCardItem

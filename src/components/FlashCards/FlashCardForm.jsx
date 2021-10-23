@@ -16,9 +16,10 @@ import FainaCalculo from "../FainaCalculo";
 import FainaValor from "../FainaValor";
 import FainaCotas from "../FainaCotas";
 import FainaTipoTaxa from "../FainaTipoTaxa";
-import RadioButton from "../RadioButton";
 import FainaSelectFuncao from "../FainaSelectFuncao";
 import CheckboxInput from "../CheckboxInput";
+import FainaSelectOptions from "../FainaSelectOptions";
+import FainaValoresFaina from "../FainaValoresFaina";
 
 export default function FlashCardForm({
   createMode = true,
@@ -166,44 +167,24 @@ export default function FlashCardForm({
                   onSelectChange={handleTypeFaina}
                 />
               </div>
-              <div>
-                <span className="bg-terciary hover:bg-primary text-white rounded-lg p-2">
+              <div className="flex place-items-center">
+                <div className="bg-terciary hover:bg-primary text-white rounded-lg shadow-lg p-2">
                   <CheckboxInput
                     labelDescription=""
                     value={`checkboxValue`}
                     readOnly
                     onChange={`handleCheckboxChange`}
                   />
-                  Sem Rotator (x1,75)
-                </span>
-              </div>
-
-              <div className="bg-yellow-300 flex flex-col p-2">
-                <div className="bg-blue-300 shadow-lg rounded-lg text-center p-2">
-                  <p>Calcular Por:</p>
-                </div>
-                <div className="bg-pink-200 flex flex-row justify-evenly space-x-2 p-2">
-                  <span className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">
-                    <RadioButton labelDescription="" />
-                    {`Peso|Unidade`}
-                  </span>
-                  <span className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">
-                    <RadioButton labelDescription="" />
-                    {`Caminhões`}
-                  </span>
-                  <span className="bg-terciary hover:bg-primary text-white rounded-lg p-2">
-                    <CheckboxInput
-                      labelDescription=""
-                      value={`checkboxValue`}
-                      readOnly
-                      onChange={`handleCheckboxChange`}
-                    />
-                    Calcular Por Fardo
-                  </span>
+                  Sem Rotator (x1.75)
                 </div>
               </div>
             </div>
           </div>
+
+          <div className="">
+            <FainaSelectOptions />
+          </div>
+
           <div className="">
             <PesoMovimentado />
           </div>
@@ -224,6 +205,9 @@ export default function FlashCardForm({
             {typeFaina === "a1t"
               ? console.log("teste1")
               : console.log("teste2")}
+          </div>
+          <div className="">
+            <FainaValoresFaina />
           </div>
           <div className="">
             <FainaCalculo />
