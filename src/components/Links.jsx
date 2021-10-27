@@ -54,7 +54,7 @@ export default function Links() {
 
             <div className="flex flex-col align-middle text-center text-xs flex-wrap rounded-lg  place-content-center p-2">
               <div className="align-middle text-center bg-blue-300 border-blue-500 shadow-lg rounded-lg p-2 m-2">
-                <p>Movimentação Portuária:</p>
+                <p>Movimentação:</p>
               </div>
               <div className="flex flex-col flex-wrap">
                 <a

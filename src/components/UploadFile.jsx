@@ -6,12 +6,14 @@ export default function UploadFile() {
       <input
         type="file"
         id="file"
-        label="Escolha o arquivo para importar"
+        label="Escolha Demonstrativo em .pdf para importar"
         accept="*.pdf"
       />
-      <button variant="contained" type="submit">
-        Enviar
-      </button>
+      <span className="bg-blue-300 border border-blue-500 place-content-center text-center rounded-lg shadow-lg p-2 m-2">
+        <button variant="contained" color="bg-terciary" type="submit">
+          Enviar
+        </button>
+      </span>
     </div>
   );
 }

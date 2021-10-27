@@ -35,8 +35,7 @@ export default function WorkDialog() {
         <DialogTitle>Importação Analítico em PDF</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            Selecione um arquivo em .pdf com demonstrativo analítico para
-            realizar importação de dados.
+            Selecione um arquivo em .pdf com demonstrativo analítico.
           </DialogContentText>
           <Box
             noValidate
