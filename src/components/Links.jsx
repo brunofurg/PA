@@ -278,68 +278,73 @@ export default function Links() {
           </div>
         </div>
         <div className="bg-white border shadow-lg flex flex-row justify-around align-middle m-3 p-2 text-xs rounded-3xl">
-          <span className="flex flex-row text-center justify-center">
-            <a
-              href="https://drive.google.com/drive/folders/1E0WK6rexk5gVxRc3KPYK4ECnc4oBqs0Z"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                className="rounded-full hover:shadow-lg"
-                src={imgDrive}
-                alt="Pasta compartilhada"
-                title="Pasta Compartilhada"
-                width="80"
-                height="80"
-              />
-              <p>Pasta</p>
-              <p>Compartilhada</p>
-            </a>
-          </span>
-          <span className="flex flex-row text-center justify-center">
-            <a href={calendarioEstiva} target="_blank" rel="noreferrer">
-              <img
-                className="rounded-full hover:shadow-lg"
-                src={imgCalendario}
-                alt="Calendário"
-                title="Calendário"
-                width="80"
-                height="80"
-              />
-              <p>Calendário</p>
-            </a>
-          </span>
-          <span className="flex flex-row text-center justify-center">
-            <a href={relacaoEstiva} target="_blank" rel="noreferrer">
-              <img
-                className="rounded-full hover:shadow-lg"
-                src={imgRelacao}
-                alt="Quadro Estivadores"
-                title="Quadro Estivadores"
-                width="80"
-                height="80"
-              />
-              <p>Lista</p>
-            </a>
-          </span>
-          <span className="flex flex-row text-center justify-center flex-wrap">
-            <a
-              href="https://drive.google.com/drive/folders/1N8ZQn7UVmZWGQ2K1q2FuntKPGyIksyfB"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                className="rounded-full hover:shadow-lg"
-                src={imgSindestiva}
-                alt="Acordos e Convenções"
-                title="Acordos e Convenções"
-                width="80"
-                height="80"
-              />
-              <p>Acordos</p>
-              <p> Convenções</p>
-            </a>
-          </span>
+          <div className="bg-blue-300 border border-blue-500 rounded-lg shadow-lg p-2 m-2">
+            <p className="align-center text-center">Previsão do Tempo:</p>
+          </div>
+          <div>
+            <span className="flex flex-row text-center justify-center">
+              <a
+                href="https://drive.google.com/drive/folders/1E0WK6rexk5gVxRc3KPYK4ECnc4oBqs0Z"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="rounded-full hover:shadow-lg"
+                  src={imgDrive}
+                  alt="Pasta compartilhada"
+                  title="Pasta Compartilhada"
+                  width="80"
+                  height="80"
+                />
+                <p>Pasta</p>
+                <p>Compartilhada</p>
+              </a>
+            </span>
+            <span className="flex flex-row text-center justify-center">
+              <a href={calendarioEstiva} target="_blank" rel="noreferrer">
+                <img
+                  className="rounded-full hover:shadow-lg"
+                  src={imgCalendario}
+                  alt="Calendário"
+                  title="Calendário"
+                  width="80"
+                  height="80"
+                />
+                <p>Calendário</p>
+              </a>
+            </span>
+            <span className="flex flex-row text-center justify-center">
+              <a href={relacaoEstiva} target="_blank" rel="noreferrer">
+                <img
+                  className="rounded-full hover:shadow-lg"
+                  src={imgRelacao}
+                  alt="Quadro Estivadores"
+                  title="Quadro Estivadores"
+                  width="80"
+                  height="80"
+                />
+                <p>Lista</p>
+              </a>
+            </span>
+            <span className="flex flex-row text-center justify-center flex-wrap">
+              <a
+                href="https://drive.google.com/drive/folders/1N8ZQn7UVmZWGQ2K1q2FuntKPGyIksyfB"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="rounded-full hover:shadow-lg"
+                  src={imgSindestiva}
+                  alt="Acordos e Convenções"
+                  title="Acordos e Convenções"
+                  width="80"
+                  height="80"
+                />
+                <p>Acordos</p>
+                <p> Convenções</p>
+              </a>
+            </span>
+          </div>
         </div>
       </div>
     </Fragment>
