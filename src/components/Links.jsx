@@ -27,7 +27,7 @@ export default function Links() {
     <Fragment>
       <div className="bg-gray-100 flex flex-col justify-items-stretch">
         <div className="bg-white border flex flex-col shadow-lg rounded-3xl justify-evenly m-3">
-          <div className="bg-blue-300 border border-blue-500 rounded-lg shadow-lg justify-center flex p-2 mt-4 m-2">
+          <div className="bg-blue-400 text-white border border-blue-500 rounded-lg shadow-lg justify-center flex p-2 mt-4 m-2">
             Porto do Rio Grande
           </div>
           <div className="flex flex-row justify-evenly">
@@ -152,7 +152,7 @@ export default function Links() {
 
         <div className="bg-white border shadow-lg flex flex-col align-middle m-3 p-2 rounded-3xl">
           <div className="bg-blue-300 border border-blue-500 rounded-lg shadow-lg p-2 m-2">
-            <p className="align-top text-center">Habilitação:</p>
+            <p className="align-top text-center">Habilitação</p>
           </div>
           <div className="flex flex-row  justify-evenly align-middle">
             <a
@@ -216,7 +216,7 @@ export default function Links() {
 
         <div className="bg-white border shadow-lg flex flex-col align-middle m-3 p-2 rounded-3xl">
           <div className="bg-blue-300 border border-blue-500 rounded-lg shadow-lg p-2 m-2">
-            <p className="align-center text-center">Previsão do Tempo:</p>
+            <p className="align-center text-center">Previsão do Tempo</p>
           </div>
           <div className="flex flex-row  justify-evenly align-middle">
             <a
@@ -277,11 +277,11 @@ export default function Links() {
             </a>
           </div>
         </div>
-        <div className="bg-white border shadow-lg flex flex-row justify-around align-middle m-3 p-2 text-xs rounded-3xl">
+        <div className="bg-white border shadow-lg flex flex-col justify-around align-middle m-3 p-2 rounded-3xl">
           <div className="bg-blue-300 border border-blue-500 rounded-lg shadow-lg p-2 m-2">
-            <p className="align-center text-center">Previsão do Tempo:</p>
+            <p className="align-center text-center">Estiva</p>
           </div>
-          <div>
+          <div className="flex flex-row justify-around text-xs">
             <span className="flex flex-row text-center justify-center">
               <a
                 href="https://drive.google.com/drive/folders/1E0WK6rexk5gVxRc3KPYK4ECnc4oBqs0Z"

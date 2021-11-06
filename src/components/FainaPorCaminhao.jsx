@@ -17,7 +17,7 @@ export default function FainaPorCaminhao() {
         Calcular Caminhões:
       </span>
       <div className="flex flex-row place-content-around text-xs">
-        <div className="border border-gray-400 hover:bg-gray-200 place-content-center rounded-lg p-2">
+        <div className="border border-gray-400 hover:bg-gray-200 content-center rounded-lg p-2">
           <RadioButton labelDescription="" />
           <NumberInput
             labelDescription="Pelo Período"
@@ -26,7 +26,7 @@ export default function FainaPorCaminhao() {
             placeHolder="Total movimentado"
           />
         </div>
-        <div className="border border-gray-400 hover:bg-gray-200  place-content-center rounded-lg p-2">
+        <div className="border border-gray-400 hover:bg-gray-200 place-content-center rounded-lg p-2">
           <RadioButton labelDescription="" />
           <NumberInput
             labelDescription="Por Hora"

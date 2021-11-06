@@ -11,7 +11,7 @@ export default function PesoMovimentado() {
       <span className="bg-blue-300 content-center text-center shadow-lg rounded-lg p-2 mb-2">
         {`Peso|Unidade Movimentado`}
       </span>
-      <span className="">
+      <span className="place-self-center">
         <NumberInput
           labelDescription=""
           inputValue={weightTotal}

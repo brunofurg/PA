@@ -7,6 +7,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import NumberInput from "./NumberInput";
 //import NumberInput from "./NumberInput";
 
 const StyledTableCell = withStyles((theme) => ({
@@ -57,8 +58,8 @@ function createData2(type, ab0, c25, d50, ab100, c125, d150) {
   return { type, ab0, c25, d50, ab100, c125, d150 };
 }
 
-function createData3(base, aliquota) {
-  return { base, aliquota };
+function createData3(base, aliquota, deduzir) {
+  return { base, aliquota, deduzir };
 }
 
 function createData4(base, aliquota, deduzir) {
@@ -72,11 +73,11 @@ const rows = [
     6.3368,
     6.6703,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     100.68,
     105.96,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData("A1T", "Tabela de Valores TECON", "", "Tabela A1T", ""),
   createData(
@@ -85,11 +86,11 @@ const rows = [
     6.3368,
     6.6703,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     100.68,
     105.96,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "B1",
@@ -97,11 +98,11 @@ const rows = [
     6.3368,
     6.6703,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     100.68,
     105.96,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "B2",
@@ -109,11 +110,11 @@ const rows = [
     0.7378,
     0.7766,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     100.68,
     105.96,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "B3",
@@ -121,11 +122,11 @@ const rows = [
     0.2712,
     0.2855,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     111.86,
     117.97,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "B4",
@@ -133,11 +134,11 @@ const rows = [
     0.6094,
     0.6416,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     100.68,
     105.96,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "B5",
@@ -145,11 +146,11 @@ const rows = [
     1.0133,
     1.0666,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     111.86,
     117.97,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "B6",
@@ -157,11 +158,11 @@ const rows = [
     1.3054,
     1.3741,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     100.68,
     105.96,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "B7",
@@ -169,11 +170,11 @@ const rows = [
     0.7378,
     0.7766,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     100.68,
     105.96,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "B8",
@@ -181,11 +182,11 @@ const rows = [
     3.2915,
     3.4652,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     136.71,
     143.9,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "B9",
@@ -193,11 +194,11 @@ const rows = [
     1.876,
     1.9636,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     108.24,
     113.92,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "B10",
@@ -205,11 +206,11 @@ const rows = [
     1.1228,
     1.1815,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     100.68,
     105.96,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "B11",
@@ -217,11 +218,11 @@ const rows = [
     0.2327,
     0.2447,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     100.68,
     105.96,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "B12",
@@ -229,11 +230,11 @@ const rows = [
     0.617,
     0.6548,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     167.79,
     177.47,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "B13",
@@ -241,11 +242,11 @@ const rows = [
     0.8051,
     0.8452,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     167.79,
     177.47,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "B14",
@@ -253,11 +254,11 @@ const rows = [
     0.2094,
     0.7957,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     111.86,
     117.97,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "B15",
@@ -265,11 +266,11 @@ const rows = [
     0.2852,
     0.3005,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     111.86,
     117.97,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "B90",
@@ -277,11 +278,11 @@ const rows = [
     "",
     "",
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     136.71,
     143.9,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "C1",
@@ -289,11 +290,11 @@ const rows = [
     0.4744,
     0.4993,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     100.68,
     105.96,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "C2",
@@ -301,11 +302,11 @@ const rows = [
     0.7579,
     0.114,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     100.68,
     105.96,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "C3",
@@ -313,11 +314,11 @@ const rows = [
     0.0839,
     0.0883,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     100.68,
     105.96,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "C4",
@@ -325,11 +326,11 @@ const rows = [
     0.4648,
     0.4886,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     100.68,
     105.96,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "C5",
@@ -337,11 +338,11 @@ const rows = [
     0.21,
     0.221,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     100.68,
     105.96,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "C6",
@@ -349,11 +350,11 @@ const rows = [
     0.2094,
     0.2206,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     100.68,
     105.96,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
   createData(
     "C7",
@@ -361,11 +362,11 @@ const rows = [
     0.0611,
     0.0641,
     10.0,
-    `NumberInput`,
+    <NumberInput labelDescription="" size="w-3/4" />,
     100.68,
     105.96,
     200.0,
-    `NumberInput`
+    <NumberInput labelDescription="" size="w-3/4" />
   ),
 ];
 
@@ -380,10 +381,10 @@ const rows2 = [
   createData2("Diária Conexo", 104.75, 130.93, 157.11, 209.47, 261.85, 314, 22),
 ];
 const rows3 = [
-  createData3("Até R$1.100", 7.5),
-  createData3("De R$1.100 a R$2.203,48", 9),
-  createData3("De R$2.203,49 a R$3.305,22", 12),
-  createData3("De R$3.305,22 até R$6.433,57", 14),
+  createData3("Até R$1.100", 7.5, "-"),
+  createData3("De R$1.100 a R$2.203,48", 9, 16.5),
+  createData3("De R$2.203,49 a R$3.305,22", 12, 82.6),
+  createData3("De R$3.305,22 até R$6.433,57", 14, 148.7),
 ];
 const rows4 = [
   createData4("Até R$1.903,98", "-", "-"),
@@ -400,7 +401,7 @@ export default function TabelaCCT() {
   return (
     <Fragment>
       <div className="bg-blue-400 border border-blue-500 text-center text-white justify-center rounded-lg shadow-lg p-2 mb-4 m-4">
-        Tabelas Taxas e Tarifas
+        Estiva - Tabelas de Tarifas e Alíquotas
       </div>
       <div>
         <TableContainer component={Paper}>
@@ -417,16 +418,16 @@ export default function TabelaCCT() {
                   <strong>Descrição Faina</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <strong>Taxa Sindop (R$)</strong>
+                  <strong>Tarifa Sindop (R$)</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <strong>Taxa Sintermar (R$)</strong>
+                  <strong>Tarifa Sintermar (R$)</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <strong>Taxa Não-Sócio (R$)</strong>
+                  <strong>Tarifa Não-Sócio (R$)</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
-                  <strong>Taxa Personalizado (R$)</strong>
+                  <strong>Tarifa Personalizado (R$)</strong>
                 </StyledTableCell>
                 <StyledTableCell align="center">
                   <strong>Diária Sindop (R$)</strong>
@@ -528,7 +529,7 @@ export default function TabelaCCT() {
             </TableBody>
           </Table>
           <p className="text-xs">
-            *OBS: Nesta tabela os Valores estão com RSR incluso (18,18%)
+            *OBS: Nesta tabela os valores estão com RSR incluso (18,18%)
           </p>
         </TableContainer>
 
@@ -546,6 +547,9 @@ export default function TabelaCCT() {
                 <StyledTableCell align="center">
                   <strong>Alíquota (%)</strong>
                 </StyledTableCell>
+                <StyledTableCell align="center">
+                  <strong>Parcela a deduzir (R$)</strong>
+                </StyledTableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -557,10 +561,16 @@ export default function TabelaCCT() {
                   <StyledTableCell align="center">
                     {row.aliquota}
                   </StyledTableCell>
+                  <StyledTableCell align="center">
+                    {row.deduzir}
+                  </StyledTableCell>
                 </StyledTableRow>
               ))}
             </TableBody>
           </Table>
+          <p className="text-xs">
+            Valor limite de contribuição "Teto" (R$ 751,97)
+          </p>
         </TableContainer>
 
         <br />
@@ -599,6 +609,7 @@ export default function TabelaCCT() {
               ))}
             </TableBody>
           </Table>
+          <p className="text-xs">Parcela por dependente (R$ 189,59)</p>
         </TableContainer>
       </div>
     </Fragment>

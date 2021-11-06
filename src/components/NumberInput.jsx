@@ -7,6 +7,7 @@ export default function NumberInput({
   onInputChange = null,
   autoFocus = false,
   placeHolder,
+  size = null,
 }) {
   function handleInputChange({ currentTarget }) {
     if (onInputChange) {
@@ -21,11 +22,12 @@ export default function NumberInput({
       <input
         id={id}
         autoFocus={autoFocus}
-        className="border p-2"
+        className={`border p-2 place-self-center ${size}`}
         type="number"
         value={inputValue}
         onChange={handleInputChange}
         placeholder={placeHolder}
+        fullWidth="false"
       />
     </div>
   );

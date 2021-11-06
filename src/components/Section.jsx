@@ -156,7 +156,7 @@ export default function Section({ id = getNewId() }) {
   if (error) {
     mainJsx = <Error>{error}</Error>;
   }
-
+  let numberWorks = 1;
   if (!loading && !error) {
     mainJsx = (
       <>
@@ -241,7 +241,7 @@ export default function Section({ id = getNewId() }) {
                       return (
                         <div className="bg-gray-300 border border-gray-300 shadow-lg hover:bg-gray-200 hover:border-gray-600 rounded-lg flex flex-row justify-evenly place-items-stretch m-3 p-2">
                           <div className="flex flex-col space-y-10 p-2">
-                            <span className="">1</span>
+                            <span className="">{numberWorks++}</span>
                             <span className="">
                               <CheckboxInput
                                 key={flashCard.key}
@@ -275,13 +275,13 @@ export default function Section({ id = getNewId() }) {
                       </div>
                       <div className="flex flex-row place-content-center flex-wrap p-2">
                         <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md flex-wrap ">
-                          <strong>IRPF: </strong>1.764,93 (30,3%)
+                          <strong>IRPF: </strong>863,11 (13,15%)
                         </div>
                         <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md flex-wrap ">
-                          <strong>INSS: </strong>752,00 (14%)
+                          <strong>INSS: </strong>642,34 (9,78%)
                         </div>
                         <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md flex-wrap ">
-                          <strong>DAS: </strong>491,61 (6%)
+                          <strong>DAS: </strong>393,70 (6%)
                         </div>
                         <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md flex-wrap ">
                           <strong>Judicial: </strong>0,00 (0%)
@@ -296,60 +296,60 @@ export default function Section({ id = getNewId() }) {
                           <strong>Sindical: </strong>0,00 (0%)
                         </div>
                         <div className="border bg-red-100 shadow-lg p-2 m-1 rounded-md flex-wrap ">
-                          <strong>Encargos13°: </strong>0,00 (0%)
+                          <strong>Encargos13°: </strong>150,48 (2,29%)
                         </div>
                       </div>
 
                       <div className="flex flex-row flex-wrap justify-evenly p-2">
                         <div className="bg-red-200 justify-evenly rounded-lg shadow-lg p-2">
-                          <strong>Morto: </strong>45,56%
+                          <strong>Morto: </strong>31,22%
                         </div>
                       </div>
                       <div className="flex flex-row place-items-center place-content-around p-2">
                         <div className="flex flex-row place-items-center space-x-2">
                           <div className="text-right font-black"></div>
                           <div className="border border-gray-400 bg-red-300 rounded-lg p-2 shadow-lg text-base ">
-                            Total Descontos: <strong>3.008,54 </strong>
+                            Total Descontos: <strong>2.049,63</strong>
                           </div>
                         </div>
                       </div>
                     </div>
 
                     <div className="bg-green-50 rounded-lg flex flex-col place-content-around shadow-lg mb-3 p-2">
-                      <div className="text-green-700 bg-green-200 rounded-lg shadow-lg text-center mb-2 p-2">
+                      <div className="text-green-900 bg-green-200 rounded-lg shadow-lg text-center mb-2 p-2">
                         Rendimentos (R$)
                       </div>
                       <div className="flex flex-row place-content-center flex-wrap ">
                         <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
-                          <strong>Bruto: </strong>10.710,43
+                          <strong>Bruto: </strong>6.561,51
                         </div>
                         <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
-                          <strong>Líquido: </strong>7.701,89
+                          <strong>Líquido: </strong>4.662,36
                         </div>
                         <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
-                          <strong>Férias: </strong> 1.191,00
+                          <strong>Férias: </strong>729,66
                         </div>
                         <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
-                          <strong>13°: </strong>893,25
+                          <strong>13°: </strong>547,21
                         </div>
                         <div className="border bg-green-100 shadow-lg p-2 m-1 rounded-md">
-                          <strong>FGTS: </strong>1.023,57
+                          <strong>FGTS: </strong>627,07
                         </div>
                       </div>
 
                       <div className="flex flex-row flex-wrap justify-evenly p-2">
                         <div className="bg-green-200 rounded-lg shadow-lg p-2">
-                          <strong>Média Bruto: </strong>10.710,43
+                          <strong>Média Bruto: </strong>410,09
                         </div>
                         <div className="bg-green-200 rounded-lg shadow-lg p-2">
-                          <strong>Média Líquido: </strong>10.710,43
+                          <strong>Média Líquido: </strong>291,39
                         </div>
                       </div>
                       <div className="flex flex-row justify-center place-content-around p-2">
                         <div className="flex flex-row justify-center">
                           <div className="text-right font-black"></div>
                           <div className="border border-gray-400 bg-green-300 rounded-lg shadow-lg  p-2 text-base shadow-lg">
-                            Total Liquidez: <strong>1.809,66</strong>
+                            Total Liquidez: <strong>6.566,30</strong>
                           </div>
                         </div>
                       </div>

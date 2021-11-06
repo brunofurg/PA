@@ -50,7 +50,7 @@ export default function FainaA1t() {
           <div className="flex flex-col justify-evenly space-y-1 p-2">
             <div className="border border-gray-300 hover:bg-gray-200 rounded-lg p-2">
               <NumberInput
-                labelDescription="Longo Curso CHEIO"
+                labelDescription="CHEIO Longo Curso"
                 inputValue={a1tGlobalCheio}
                 onInputChange={handleA1tGlobalCheio}
                 placeHolder=""
@@ -58,7 +58,7 @@ export default function FainaA1t() {
             </div>
             <div className="border border-gray-300 hover:bg-gray-200 rounded-lg  p-2">
               <NumberInput
-                labelDescription="Cabotagem CHEIO"
+                labelDescription="CHEIO Cabotagem"
                 inputValue={a1tCabotagemCheio}
                 onInputChange={handleA1tCabotagemCheio}
                 placeHolder=""
@@ -66,7 +66,7 @@ export default function FainaA1t() {
             </div>
             <div className="border border-gray-300 hover:bg-gray-200 rounded-lg  p-2">
               <NumberInput
-                labelDescription="Tranship CHEIO"
+                labelDescription="CHEIO Tranship"
                 inputValue={a1tTranshipCheio}
                 onInputChange={handleA1tTranshipCheio}
                 placeHolder=""
@@ -76,7 +76,7 @@ export default function FainaA1t() {
           <div className="flex flex-col justify-evenly space-y-1 p-2">
             <div className="border border-gray-300 hover:bg-gray-200 rounded-lg  p-2">
               <NumberInput
-                labelDescription="Longo Curso VAZIO"
+                labelDescription="VAZIO Longo Curso"
                 inputValue={a1tGlobalVazio}
                 onInputChange={handleA1tGlobalVazio}
                 placeHolder=""
@@ -84,7 +84,7 @@ export default function FainaA1t() {
             </div>
             <div className="border border-gray-300 hover:bg-gray-200 rounded-lg  p-2">
               <NumberInput
-                labelDescription="Cabotagem VAZIO"
+                labelDescription="VAZIO Cabotagem"
                 inputValue={a1tCabotagemVazio}
                 onInputChange={handleA1tCabotagemVazio}
                 placeHolder=""
@@ -92,7 +92,7 @@ export default function FainaA1t() {
             </div>
             <div className="border border-gray-300 hover:bg-gray-200 rounded-lg  p-2">
               <NumberInput
-                labelDescription="Tranship VAZIO"
+                labelDescription="VAZIO Tranship"
                 inputValue={a1tTranshipVazio}
                 onInputChange={handleA1tTranshipVazio}
                 placeHolder=""

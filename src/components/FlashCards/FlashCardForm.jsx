@@ -20,6 +20,7 @@ import FainaSelectFuncao from "../FainaSelectFuncao";
 import CheckboxInput from "../CheckboxInput";
 import FainaSelectOptions from "../FainaSelectOptions";
 import FainaValoresFaina from "../FainaValoresFaina";
+import RadioButton from "../RadioButton";
 
 export default function FlashCardForm({
   createMode = true,
@@ -29,6 +30,7 @@ export default function FlashCardForm({
 }) {
   const [title, setTitle] = useState(flashCard?.title || "");
   const [description, setDescription] = useState(flashCard?.description || "");
+  const [cardColor, setCardColor] = useState(flashCard?.situaoEstorno || "");
 
   const [dayWork, setDayWork] = useState(flashCard?.infoWork.dia || "");
   const [typeFaina, setTypeFaina] = useState(
@@ -107,15 +109,9 @@ export default function FlashCardForm({
       // onButtonClick={handleButtonClick}
     >
       <div className="border border-gray-300">
-        <div className="bg-gray-200 flex flex-row place-items-center justify-around p-2">
-          <span className="bg-blue-400 border border-blue-500 text-white text-center rounded-lg shadow-lg p-2">
+        <div className="bg-gray-200 flex flex-row justify-center p-2">
+          <div className="bg-blue-400 border border-blue-500 text-white rounded-lg shadow-lg p-2">
             Calculadora de Remuneração
-          </span>
-          <div>
-            <Button onButtonClick={handleFormReset}>
-              <IconNew />
-              Novo Trabalho
-            </Button>
           </div>
         </div>
 
@@ -149,15 +145,27 @@ export default function FlashCardForm({
                   Período
                 </div>
                 <div className="flex flex-row space-x-1">
-                  <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`A`}</div>
-                  <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`B`}</div>
-                  <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`C (+25%)`}</div>
-                  <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">{`D (+50%)`}</div>
+                  <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
+                    <RadioButton labelDescription="" />
+                    {`A`}
+                  </div>
+                  <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
+                    <RadioButton labelDescription="" />
+                    {`B`}
+                  </div>
+                  <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
+                    <RadioButton labelDescription="" />
+                    {`C (+25%)`}
+                  </div>
+                  <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
+                    <RadioButton labelDescription="" />
+                    {`D (+50%)`}
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="bg-purple-300 border border-gray-300 flex flex-row flex-wrap justify-evenly p-2">
-              <div className="bg-green-200 p-3">
+            <div className="border border-gray-300 flex flex-row flex-wrap justify-evenly p-2">
+              <div className="p-3">
                 <div className="bg-blue-300 shadow-lg rounded-lg p-2">
                   Selecione Tipo de Faina
                 </div>
@@ -216,10 +224,18 @@ export default function FlashCardForm({
             <FainaValor />
           </div>
           <div className="flex flex-row hover:bg-blue-300 justify-center p-4">
-            <Button type="submit">
-              <IconSave className="" type="submit" size={30} />
-              Incluir
-            </Button>
+            <div>
+              <Button type="submit">
+                <IconSave className="" type="submit" size={30} />
+                Incluir
+              </Button>
+            </div>
+            <div>
+              <Button onButtonClick={handleFormReset}>
+                <IconNew />
+                Novo Trabalho
+              </Button>
+            </div>
           </div>
         </div>
 
