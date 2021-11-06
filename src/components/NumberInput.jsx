@@ -27,7 +27,6 @@ export default function NumberInput({
         value={inputValue}
         onChange={handleInputChange}
         placeholder={placeHolder}
-        fullWidth="false"
       />
     </div>
   );

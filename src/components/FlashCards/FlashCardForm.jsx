@@ -30,7 +30,7 @@ export default function FlashCardForm({
 }) {
   const [title, setTitle] = useState(flashCard?.title || "");
   const [description, setDescription] = useState(flashCard?.description || "");
-  const [cardColor, setCardColor] = useState(flashCard?.situaoEstorno || "");
+  // const [cardColor, setCardColor] = useState(flashCard?.situaoEstorno || "");
 
   const [dayWork, setDayWork] = useState(flashCard?.infoWork.dia || "");
   const [typeFaina, setTypeFaina] = useState(
