@@ -17,23 +17,29 @@ class ChartBrutoFaina extends Component {
     this.setState({
       chartData: {
         labels: [
-          "African Pheasant 26/08-D",
-          "Esperance Bay 27/08-C",
-          "Yasa Jupiter 28/08-B",
-          "Cape Artemisio 29/08-A",
-          "Esperance Bay 29/08-D",
-          "Nordtajo 30/08-C",
-          "Medan Express 31/08-B",
-          "Marina K 01/09-A",
-          "Esperance Bay 01/09-D",
-          "MSC Coruna 02/09-C",
+          "OCEAN SHEARER 01/09B",
+          "JAPIN ARROW 05/09B",
+          "UASC AL KHOR 06/09C",
+          "JAPIN ARROW 07/09B",
+          "PLOVER ARROW 08/09C",
+          "ADELINA 09/09D",
+          "LOVELY KLARA 12/09C",
+          "EXPLORER ASIA 14/09C",
+          "MARIA THEO I 18/09D",
+          "LOG IN JACARANDA 19C",
+          "ALINDA 21/09A",
+          "STAR AMBER 24/09C",
+          "BOMAR RESOLVE 26/09D",
+          "CHARISMA 27/09D",
+          "CROATIA 28/09D",
+          "SAGA PIONEER 30/09D",
         ],
         datasets: [
           {
             label: "Bruto/Faina (R$)",
             data: [
-              661.58, 582.52, 267.71, 344.74, 768.44, 653.04, 653.04, 339.19,
-              297.45, 152.38,
+              507.35, 836.67, 459.65, 756.87, 313.18, 169.12, 464.68, 260.62,
+              169.12, 471.11, 703.41, 298.94, 235.15, 270.37, 185.96, 459.31,
             ],
             backgroundColor: [
               "rgba(79, 129, 189, 1.0)",

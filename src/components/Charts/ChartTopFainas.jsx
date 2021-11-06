@@ -34,7 +34,7 @@ class ChartTopFainas extends Component {
               836.67, 756.87, 703.41, 507.35, 471.11, 464.68, 459.65, 459.31,
               313.18, 298.94,
             ],
-            backgroundColor: ["rgba(79, 129, 189, 1.0)"],
+            backgroundColor: ["rgba(75, 172, 198, 1.0)"],
           },
         ],
       },

@@ -50,7 +50,7 @@ export default function Section({ id = getNewId() }) {
   const [createMode, setCreateMode] = useState(true);
   const [selectedTab, setSelectedTab] = useState(0);
   const [selectedFlashCard, setSelectedFlashCard] = useState(null);
-  //const [clickableFlashCard, setClickableFlashCard] = useState(null);
+  const [clickableFlashCard, setClickableFlashCard] = useState();
 
   useEffect(() => {
     async function getAllCards() {
@@ -100,10 +100,12 @@ export default function Section({ id = getNewId() }) {
     setSelectedTab(tabIndex);
   }
 
-  // function handleClickFlashCard(card) {
-  //   setClickableFlashCard(card);
-  //   // <WindowWork>{card}</WindowWork>
-  // }
+  function handleClickFlashCard(card) {
+    console.log("testandio");
+    setClickableFlashCard(card);
+
+    // <WindowWork>{card}</WindowWork>
+  }
 
   // function handleImport() {
   //   console.log("pdf");
@@ -239,23 +241,23 @@ export default function Section({ id = getNewId() }) {
                   <div className="">
                     {allCards.map((flashCard) => {
                       return (
-                        <div className="bg-gray-300 border border-gray-300 shadow-lg hover:bg-gray-200 hover:border-gray-600 rounded-lg flex flex-row justify-evenly place-items-stretch m-3 p-2">
+                        <div className="bg-gray-300 border border-gray-300 shadow-lg hover:bg-gray-200 hover:border-gray-600 rounded-lg flex flex-row m-3 p-2">
                           <div className="flex flex-col space-y-10 p-2">
                             <span className="">{numberWorks++}</span>
                             <span className="">
                               <CheckboxInput
                                 key={flashCard.key}
-                                checkboxValue="false"
+                                checkboxValue="true"
                                 labelDescription=""
                               />
                             </span>
                           </div>
-                          <div className="flex self-stretch mr-1">
+                          <div className="flex justify-center ml-1 mr-1">
                             <FlashCardItem
                               key={flashCard.id}
                               onDelete={handleDeleteFlashCard}
                               onEdit={handleEditFlashCard}
-                              //onClick={handleClickFlashCard}
+                              onClick={handleClickFlashCard}
                             >
                               {flashCard}
                             </FlashCardItem>

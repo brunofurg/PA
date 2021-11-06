@@ -16,7 +16,7 @@ export default function SelectIntervalo({ id = getNewId() }) {
   };
 
   return (
-    <div>
+    <div className="text-white">
       <FormControl variant="standard" sx={{ m: 1, minWidth: 150 }}>
         <InputLabel>Período:</InputLabel>
         <Select
