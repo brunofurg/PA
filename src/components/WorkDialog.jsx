@@ -35,13 +35,17 @@ export default function WorkDialog() {
         <DialogTitle>26/09D - 543807 - BOMAR RESOLVE</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            Dados cadastrados e importados divergentes. Verifique situação e
-            caso esteja errado pagamento clicar em "Solicitar ESTORNO" para
-            enviar email ao OGMO/RG solicitando pagamento correto.
+            <span className="text-red-400 flex p-2 mt-2">
+              *** Dados cadastrados e importados divergentes.
+            </span>
+            Verifique situação e caso esteja errado pagamento clicar em
+            "Solicitar ESTORNO" para enviar email ao OGMO/RG solicitando
+            pagamento correto.
             <span className="text-red-400 flex p-2 mt-2">
               <li>
                 {" "}
-                BrutoINPUT: 750,25 <strong>{`<`}</strong> BrutoIMPORT: 459,31
+                BrutoINSERIDO: 750,25 <strong>{`<`}</strong> BrutoIMPORTADO:
+                459,31
               </li>
             </span>
           </DialogContentText>
