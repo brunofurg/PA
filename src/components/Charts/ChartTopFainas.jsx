@@ -16,23 +16,23 @@ class ChartTopFainas extends Component {
     this.setState({
       chartData: {
         labels: [
-          "Esperance Bay 29/08-D",
-          "African Pheasant 26/08-D",
-          "Nordtajo 30/08-C",
-          "Medan Express 31/08-B",
-          "Cape Artemisio 29/08-A",
-          "Marina K 01/09-A",
-          "Esperance Bay 27/08-C",
-          "Esperance Bay 01/09-D",
-          "Yasa Jupiter 28/08-B",
-          "MSC Coruna 02/09-C",
+          "JAPIN ARROW 05/09-B",
+          "JAPIN ARROW 07/09-B",
+          "ALINDA 21/09-A",
+          "OCEAN SHEARER 01/09-B",
+          "LOGIN JACARANDA 19/09-C",
+          "LOVELY KLARA 12/09-C",
+          "UASC AL KHOR 06/09-C",
+          "SAGA PIONEER 30/09-D",
+          "PLOVER ARROW 08/09-C",
+          "STAR AMBER 24/09-C",
         ],
         datasets: [
           {
             label: "Top Fainas (R$)",
             data: [
-              768.44, 661.58, 653.04, 653.04, 582.52, 344.74, 339.19, 297.45,
-              267.71, 152.38,
+              836.67, 756.87, 703.41, 507.35, 471.11, 464.68, 459.65, 459.31,
+              313.18, 298.94,
             ],
             backgroundColor: ["rgba(79, 129, 189, 1.0)"],
           },

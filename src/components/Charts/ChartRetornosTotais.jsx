@@ -28,7 +28,7 @@ class ChartRetornosTotais extends Component {
               "rgba(110, 85, 139, 1.0)",
               "rgba(49, 118, 137, 1.0)",
             ],
-            data: [6082, 1992, 764],
+            data: [729.66, 547.21, 627.07],
           },
         ],
       },

@@ -26,7 +26,7 @@ export default function SelectIntervalo({ id = getNewId() }) {
           label="Período"
         >
           <MenuItem value={"10-21"}>10-21</MenuItem>
-          <MenuItem value={"09-21"}>09-21</MenuItem>
+          <MenuItem value={"09-21"}>Setembro/21</MenuItem>
           <MenuItem value={"08-21"}>08-21</MenuItem>
           <MenuItem value={"07-21"}>07-21</MenuItem>
           <MenuItem value={""}></MenuItem>

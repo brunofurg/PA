@@ -51,8 +51,8 @@ export default function Header({ colorHeader }) {
 
   return (
     <>
-      {/* <header className={colorHeader ? "bg-terciary" : "bg-primary"}> */}
-      <header className="bg-terciary">
+      <header className={colorHeader ? "bg-terciary" : "bg-primary"}>
+        {/* <header className="bg-terciary"> */}
         <div className="text-white items-center flex flex-row justify-between p-2">
           <span>
             <img

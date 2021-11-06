@@ -17,11 +17,11 @@ class ChartGanhosOperador extends Component {
     this.setState({
       chartData: {
         labels: [
-          "Tecon",
           "Sagres",
+          "Tecon",
           "Vanzin",
-          "AGM",
           "Termasa",
+          "AGM",
           "CTIL",
           "Livenport",
           "Bianchini",
@@ -30,7 +30,7 @@ class ChartGanhosOperador extends Component {
         datasets: [
           {
             label: "Ganhos/Operador (R$)",
-            data: [950, 600, 1250, 3200, 1550, 100, 450, 850, 2000],
+            data: [3338.06, 1351.87, 1312.02, 559.56, 0, 0, 0, 0, 0],
             backgroundColor: [
               "rgba(79, 129, 189, 1.0)",
               "rgba(192, 80, 77, 1.0)",

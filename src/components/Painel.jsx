@@ -38,33 +38,52 @@ export default function Painel() {
 
         <div className="bg-blue-50 rounded-lg flex flex-col shadow-lg p-4 m-4">
           <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
-            <p>1</p>
+            <p>16</p>
             <strong>Faina(s) realizada(s)</strong>
           </div>
           <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
-            <p>4</p>
+            <p>5</p>
             <strong>Média Faina(s)/Semana</strong>
           </div>
           <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
-            <p>25</p>
+            <p>2</p>
             <strong>Dom/Fer Trabalhado(s)</strong>
           </div>
           <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
-            <p>360,87</p>
+            <p>410,09</p>
             <strong>Média Bruto/Faina</strong>
           </div>
           <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
-            <p>320,63</p>
+            <p>291,39</p>
             <strong>Média Liquido/Faina</strong>
           </div>
         </div>
 
         <div className="bg-blue-50 rounded-lg flex flex-col place-content-around shadow-lg m-4 p-2">
-          <div className="bg-blue-200 rounded-lg shadow-lg text-center mb-2 p-2">
+          <div className="bg-blue-300 rounded-lg shadow-lg text-center mb-2 p-2">
             Rendimentos por Operador (R$)
           </div>
-          <div className="flex flex-col place-content-center flex-wrap ">
-            <div className="bg-blue-300 rounded-lg text-center p-2 m-2">
+          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+            <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
+              Sagres
+            </div>
+            <div className="flex flex-row text-center p-2">
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Fainas: </strong>6
+              </div>
+              <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Média: </strong>556,34
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Maior Bruto: </strong> 836,67
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>% do Total: </strong>50,87
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+            <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Tecon
             </div>
             <div className="flex flex-row text-center p-2">
@@ -72,24 +91,124 @@ export default function Painel() {
                 <strong>Fainas: </strong>4
               </div>
               <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
-                <strong>Média: </strong>7.701,89
+                <strong>Média: </strong>337,96
               </div>
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
-                <strong>Maior Bruto: </strong> 1.191,00
+                <strong>Maior Bruto: </strong>471,11
               </div>
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
-                <strong>% do Total: </strong>893,25
+                <strong>% do Total: </strong>20,60
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+            <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
+              Vanzin
+            </div>
+            <div className="flex flex-row text-center p-2">
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Fainas: </strong>4
+              </div>
+              <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Média: </strong>328,00
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Maior Bruto: </strong>703,41
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>% do Total: </strong>19,99
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+            <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
+              Termasa
+            </div>
+            <div className="flex flex-row text-center p-2">
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Fainas: </strong>2
+              </div>
+              <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Média: </strong>279,78
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Maior Bruto: </strong>298,94
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>% do Total: </strong>8,52
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+            <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
+              AGM
+            </div>
+            <div className="flex flex-row text-center p-2">
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Fainas: </strong>0
+              </div>
+              <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Média: </strong>0
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Maior Bruto: </strong>0
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>% do Total: </strong>0
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+            <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
+              Livenport
+            </div>
+            <div className="flex flex-row text-center p-2">
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Fainas: </strong>0
+              </div>
+              <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Média: </strong>0
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Maior Bruto: </strong>0
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>% do Total: </strong>0
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+            <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
+              Serra Morena
+            </div>
+            <div className="flex flex-row text-center p-2">
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Fainas: </strong>0
+              </div>
+              <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Média: </strong>0
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Maior Bruto: </strong>0
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>% do Total: </strong>0
               </div>
             </div>
           </div>
         </div>
 
         <div className="bg-blue-50 rounded-lg flex flex-col place-content-around shadow-lg m-4 p-2">
-          <div className="bg-blue-200 rounded-lg shadow-lg text-center mb-2 p-2">
+          <div className="bg-blue-300 rounded-lg shadow-lg text-center mb-2 p-2">
             Rendimentos por Faina (R$)
           </div>
-          <div className="flex flex-col place-content-center flex-wrap ">
-            <div className="bg-blue-300 rounded-lg text-center p-2 m-2">
+          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+            <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Adubo
             </div>
             <div className="flex flex-row text-center p-2">
@@ -97,36 +216,155 @@ export default function Painel() {
                 <strong>Fainas: </strong>4
               </div>
               <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
-                <strong>Média: </strong>7.701,89
+                <strong>Média: </strong>328,00
               </div>
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
-                <strong>Maior Bruto: </strong> 1.191,00
+                <strong>Maior Bruto: </strong>703,41
               </div>
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
-                <strong>% do Total: </strong>893,25
+                <strong>% do Total: </strong>19,99
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="bg-blue-50 rounded-lg flex flex-col shadow-lg p-4 m-4">
-          <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
-            <strong>Rendimentos por Operador:</strong>
+          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+            <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
+              Agrícola
+            </div>
+            <div className="flex flex-row text-center p-2">
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Fainas: </strong>0
+              </div>
+              <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Média: </strong>0
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Maior Bruto: </strong>0
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>% do Total: </strong>0
+              </div>
+            </div>
           </div>
-          <div className="border bg-blue-100 shadow-lg p-2 m-3 rounded-md flex flex-row justify-evenly">
-            <strong>AGM</strong>
+
+          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+            <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
+              Celulose
+            </div>
+            <div className="flex flex-row text-center p-2">
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Fainas: </strong>3
+              </div>
+              <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Média: </strong>412,39
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Maior Bruto: </strong>459,31
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>% do Total: </strong>18,85
+              </div>
+            </div>
           </div>
-          <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
-            <p>25</p>
-            <strong>Dom/Fer Trabalhado(s)</strong>
+
+          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+            <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
+              Contêiner
+            </div>
+            <div className="flex flex-row text-center p-2">
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Fainas: </strong>4
+              </div>
+              <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Média: </strong>337,96
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Maior Bruto: </strong>459,65
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>% do Total: </strong>20,60
+              </div>
+            </div>
           </div>
-          <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
-            <p>360,87</p>
-            <strong>Média Bruto/Faina</strong>
+
+          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+            <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
+              Granéis
+            </div>
+            <div className="flex flex-row text-center p-2">
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Fainas: </strong>2
+              </div>
+              <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Média: </strong>279,78
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Maior Bruto: </strong>298,94
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>% do Total: </strong>8,52
+              </div>
+            </div>
           </div>
-          <div className="border bg-blue-100 shadow-lg p-2 m-1 rounded-md flex flex-row justify-evenly">
-            <p>320,63</p>
-            <strong>Média Liquido/Faina</strong>
+
+          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+            <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
+              Toras de Madeira
+            </div>
+            <div className="flex flex-row text-center p-2">
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Fainas: </strong>3
+              </div>
+              <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Média: </strong>700,29
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Maior Bruto: </strong>836,67
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>% do Total: </strong>32,01
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+            <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
+              Sacaria
+            </div>
+            <div className="flex flex-row text-center p-2">
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Fainas: </strong>0
+              </div>
+              <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Média: </strong>0
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Maior Bruto: </strong>0
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>% do Total: </strong>0
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+            <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
+              Veículos
+            </div>
+            <div className="flex flex-row text-center p-2">
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Fainas: </strong>0
+              </div>
+              <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Média: </strong>0
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>Maior Bruto: </strong>0
+              </div>
+              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+                <strong>% do Total: </strong>0
+              </div>
+            </div>
           </div>
         </div>
       </div>

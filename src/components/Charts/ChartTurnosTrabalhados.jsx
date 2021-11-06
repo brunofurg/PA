@@ -21,7 +21,7 @@ class ChartTurnosTrabalhados extends Component {
           {
             label: "Agosto2021",
             text: "Turnos Trabalhados",
-            data: [4, 3, 7, 12],
+            data: [1, 3, 7, 5],
             backgroundColor: [
               "rgba(79, 129, 189, 1.0)",
               "rgba(192, 80, 77, 1.0)",
