@@ -50,7 +50,7 @@ export default function Section({ id = getNewId() }) {
   const [createMode, setCreateMode] = useState(true);
   const [selectedTab, setSelectedTab] = useState(0);
   const [selectedFlashCard, setSelectedFlashCard] = useState(null);
-  const [clickableFlashCard, setClickableFlashCard] = useState();
+  // const [clickableFlashCard, setClickableFlashCard] = useState();
 
   useEffect(() => {
     async function getAllCards() {
@@ -100,12 +100,12 @@ export default function Section({ id = getNewId() }) {
     setSelectedTab(tabIndex);
   }
 
-  function handleClickFlashCard(card) {
-    console.log("testandio");
-    setClickableFlashCard(card);
+  // function handleClickFlashCard(card) {
+  //   console.log("testandio");
+  //   setClickableFlashCard(card);
 
-    // <WindowWork>{card}</WindowWork>
-  }
+  //   // <WindowWork>{card}</WindowWork>
+  // }
 
   // function handleImport() {
   //   console.log("pdf");
@@ -257,7 +257,7 @@ export default function Section({ id = getNewId() }) {
                               key={flashCard.id}
                               onDelete={handleDeleteFlashCard}
                               onEdit={handleEditFlashCard}
-                              onClick={handleClickFlashCard}
+                              // onClick={handleClickFlashCard}
                             >
                               {flashCard}
                             </FlashCardItem>

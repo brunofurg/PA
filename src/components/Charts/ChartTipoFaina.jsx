@@ -18,11 +18,11 @@ class ChartTipoFaina extends Component {
       chartData: {
         labels: [
           "Contra-Mestre Geral",
-          "CM TECON",
+          "Contra-Mestre Tecon",
           "Sinaleiro Produção",
           "Sinaleiro Adubo",
           "Soldado Produção",
-          "Soldado TECON",
+          "Soldado Tecon",
           "Soldado Adubo",
         ],
         datasets: [
@@ -38,7 +38,6 @@ class ChartTipoFaina extends Component {
               "rgba(192, 80, 77, 1.0)",
               "rgba(155, 187, 89, 1.0)",
               "rgba(79, 129, 189, 1.0)",
-
               "rgba(110, 85, 139, 1.0)",
             ],
           },
