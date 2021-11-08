@@ -3,6 +3,7 @@ import Section from "./Section";
 import Footer from "./Footer";
 
 import { Fragment, useEffect, useState } from "react";
+//import Login from "./Login";
 
 export default function App() {
   const [ativaCor, setAtivaCor] = useState(true);
@@ -24,6 +25,7 @@ export default function App() {
         </div>
         <div className="mt-12 inline align-middle justify-center">
           <Section />
+          {/* <Login /> */}
         </div>
         <div className="align-middle justify-items-center">
           <Footer />

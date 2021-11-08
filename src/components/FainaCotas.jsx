@@ -3,32 +3,39 @@ import CheckboxInput from "./CheckboxInput";
 import NumberInput from "./NumberInput";
 
 export default function FainaCotas() {
-  const [a1tGlobalCheio, setA1tGlobalCheio] = useState("");
-  const [a1tGlobalVazio, setA1tGlobalVazio] = useState("");
-  const [a1tCabotagemCheio, setA1tCabotagemCheio] = useState("");
-  const [a1tCabotagemVazio, setA1tCabotagemVazio] = useState("");
-  const [a1tTranshipCheio, setA1tTranshipCheio] = useState("");
-  const [a1tTranshipVazio, setA1tTranshipVazio] = useState("");
+  const [diaria, setDiaria] = useState("");
+  const [motorista, setMotorista] = useState("");
+  const [operador, setOperador] = useState("");
+  const [conexo, setConexo] = useState("");
+  const [producao, setProducao] = useState("");
+  const [contramestre, setContramestre] = useState("");
+  const [capataz, setCapataz] = useState("");
+  const [cmConexo, setCmConexo] = useState("");
 
-  function handleA1tGlobalCheio(quantity) {
-    console.log(a1tGlobalCheio);
-    setA1tGlobalCheio(quantity);
+  function handleDiaria(quantity) {
+    console.log(diaria);
+    setDiaria(quantity);
   }
-  function handleA1tGlobalVazio(quantity) {
-    setA1tGlobalVazio(quantity);
+  function handleMotorista(quantity) {
+    setMotorista(quantity);
   }
-  function handleA1tCabotagemCheio(quantity) {
-    setA1tCabotagemCheio(quantity);
+  function handleOperador(quantity) {
+    setOperador(quantity);
   }
-  function handleA1tCabotagemVazio(quantity) {
-    setA1tCabotagemVazio(quantity);
+  function handleConexo(quantity) {
+    setConexo(quantity);
   }
-  function handleA1tTranshipCheio(quantity) {
-    setA1tTranshipCheio(quantity);
+  function handleProducao(quantity) {
+    setProducao(quantity);
   }
-
-  function handleA1tTranshipVazio(quantity) {
-    setA1tTranshipVazio(quantity);
+  function handleContramestre(quantity) {
+    setContramestre(quantity);
+  }
+  function handleCapataz(quantity) {
+    setCapataz(quantity);
+  }
+  function handleCmConexo(quantity) {
+    setCmConexo(quantity);
   }
 
   return (
@@ -44,8 +51,8 @@ export default function FainaCotas() {
               <CheckboxInput labelDescription="" />
               <NumberInput
                 labelDescription="Diária(x1.0)"
-                inputValue={a1tGlobalCheio}
-                onInputChange={handleA1tGlobalCheio}
+                inputValue={diaria}
+                onInputChange={handleDiaria}
                 placeHolder=""
               />
             </div>
@@ -53,8 +60,8 @@ export default function FainaCotas() {
               <CheckboxInput labelDescription="" />
               <NumberInput
                 labelDescription="Motorista(x1.2)"
-                inputValue={a1tCabotagemCheio}
-                onInputChange={handleA1tCabotagemCheio}
+                inputValue={motorista}
+                onInputChange={handleMotorista}
                 placeHolder=""
               />
             </div>
@@ -62,8 +69,8 @@ export default function FainaCotas() {
               <CheckboxInput labelDescription="" />
               <NumberInput
                 labelDescription="Operador(x2.0)"
-                inputValue={a1tTranshipCheio}
-                onInputChange={handleA1tTranshipCheio}
+                inputValue={operador}
+                onInputChange={handleOperador}
                 placeHolder=""
               />
             </div>
@@ -71,8 +78,8 @@ export default function FainaCotas() {
               <CheckboxInput labelDescription="" />
               <NumberInput
                 labelDescription="Conexo(x1.0)"
-                inputValue={a1tTranshipCheio}
-                onInputChange={handleA1tTranshipCheio}
+                inputValue={conexo}
+                onInputChange={handleConexo}
                 placeHolder=""
               />
             </div>
@@ -82,8 +89,8 @@ export default function FainaCotas() {
               <CheckboxInput labelDescription="" />
               <NumberInput
                 labelDescription="Produção(x1.0)"
-                inputValue={a1tGlobalVazio}
-                onInputChange={handleA1tGlobalVazio}
+                inputValue={producao}
+                onInputChange={handleProducao}
                 placeHolder=""
               />
             </div>
@@ -91,8 +98,8 @@ export default function FainaCotas() {
               <CheckboxInput labelDescription="" />
               <NumberInput
                 labelDescription="Contra-Mestre(x1.5)"
-                inputValue={a1tCabotagemVazio}
-                onInputChange={handleA1tCabotagemVazio}
+                inputValue={contramestre}
+                onInputChange={handleContramestre}
                 placeHolder=""
               />
             </div>
@@ -100,8 +107,8 @@ export default function FainaCotas() {
               <CheckboxInput labelDescription="" />
               <NumberInput
                 labelDescription="Capataz(x2.25)"
-                inputValue={a1tTranshipVazio}
-                onInputChange={handleA1tTranshipVazio}
+                inputValue={capataz}
+                onInputChange={handleCapataz}
                 placeHolder=""
               />
             </div>
@@ -109,8 +116,8 @@ export default function FainaCotas() {
               <CheckboxInput labelDescription="" />
               <NumberInput
                 labelDescription="CM Conexo(x1.5cnx)"
-                inputValue={a1tTranshipVazio}
-                onInputChange={handleA1tTranshipVazio}
+                inputValue={cmConexo}
+                onInputChange={handleCmConexo}
                 placeHolder=""
               />
             </div>

@@ -8,18 +8,18 @@ export default function FainaSelectOptions() {
       </div>
       <div className="flex flex-row justify-evenly space-x-1 p-2">
         <span className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">
-          <RadioButton labelDescription="" />
+          <RadioButton labelDescription="" name="calculaPor" />
           {`Peso|Unidades`}
         </span>
         <span className="bg-terciary hover:bg-primary text-center text-white rounded-lg shadow-lg p-2">
-          <RadioButton labelDescription="" />
+          <RadioButton labelDescription="" name="calculaPor" buttonChecked />
           {`Caminhões`}
         </span>
         <span className="bg-terciary hover:bg-primary text-white rounded-lg p-2">
           <RadioButton
             labelDescription=""
+            name="calculaPor"
             value={`checkboxValue`}
-            readOnly
             onChange={`handleCheckboxChange`}
           />
           Fardos|Bobinas

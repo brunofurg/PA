@@ -63,30 +63,30 @@ export default function Painel() {
           <div className="bg-blue-300 rounded-lg shadow-lg text-center mb-2 p-2">
             Rendimentos por Operador (R$)
           </div>
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Sagres
             </div>
-            <div className="flex flex-row text-center p-2">
-              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+            <div className="flex flex-row text-center justify-evenly p-2">
+              <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>6
               </div>
               <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Média: </strong>556,34
               </div>
-              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+              <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Maior Bruto: </strong> 836,67
               </div>
-              <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
+              <div className="border border-blue-300 bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>% do Total: </strong>50,87
               </div>
             </div>
           </div>
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg  justify-evenly  flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Tecon
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center  justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>4
               </div>
@@ -102,11 +102,11 @@ export default function Painel() {
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg  justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Vanzin
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center  justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>4
               </div>
@@ -117,16 +117,16 @@ export default function Painel() {
                 <strong>Maior Bruto: </strong>703,41
               </div>
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
-                <strong>% do Total: </strong>19,99
+                <strong>% do Total: </strong>20,01
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg  justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Termasa
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center  justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>2
               </div>
@@ -142,11 +142,11 @@ export default function Painel() {
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               AGM
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>0
               </div>
@@ -162,11 +162,11 @@ export default function Painel() {
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Bianchini
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center  justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>0
               </div>
@@ -182,11 +182,11 @@ export default function Painel() {
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               CTIL
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>0
               </div>
@@ -202,11 +202,11 @@ export default function Painel() {
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Livenport
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>0
               </div>
@@ -222,11 +222,11 @@ export default function Painel() {
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Serra Morena
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>0
               </div>
@@ -248,11 +248,11 @@ export default function Painel() {
             Rendimentos por Tipo de Carga (R$)
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Toras de Madeira
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>3
               </div>
@@ -268,11 +268,11 @@ export default function Painel() {
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Contêiner
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center  justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>4
               </div>
@@ -288,11 +288,11 @@ export default function Painel() {
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg  justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Adubo
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center justify-evenly  p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>4
               </div>
@@ -303,16 +303,16 @@ export default function Painel() {
                 <strong>Maior Bruto: </strong>703,41
               </div>
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
-                <strong>% do Total: </strong>19,99
+                <strong>% do Total: </strong>20,01
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Celulose
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>3
               </div>
@@ -323,16 +323,16 @@ export default function Painel() {
                 <strong>Maior Bruto: </strong>459,31
               </div>
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
-                <strong>% do Total: </strong>18,85
+                <strong>% do Total: </strong>18,86
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Granéis
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>2
               </div>
@@ -348,11 +348,11 @@ export default function Painel() {
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Agrícola
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>0
               </div>
@@ -368,11 +368,11 @@ export default function Painel() {
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Carga Geral
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>0
               </div>
@@ -388,11 +388,11 @@ export default function Painel() {
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Cargas Vivas
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>0
               </div>
@@ -408,11 +408,11 @@ export default function Painel() {
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Cavaco de Madeira
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>0
               </div>
@@ -428,11 +428,11 @@ export default function Painel() {
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Sacaria
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>0
               </div>
@@ -448,11 +448,11 @@ export default function Painel() {
             </div>
           </div>
 
-          <div className="flex flex-col border border-blue-200 rounded-lg place-content-center flex-wrap ">
+          <div className="flex flex-col border border-blue-200 rounded-lg justify-evenly flex-wrap ">
             <div className="bg-blue-200 rounded-lg text-center p-2 m-2">
               Veículos
             </div>
-            <div className="flex flex-row text-center p-2">
+            <div className="flex flex-row text-center justify-evenly p-2">
               <div className="border border-blue-300  bg-blue-100 shadow-lg p-1 rounded-md">
                 <strong>Fainas: </strong>0
               </div>

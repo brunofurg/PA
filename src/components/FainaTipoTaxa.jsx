@@ -8,19 +8,19 @@ export default function FainaTipoTaxa() {
       </div>
       <div className="flex flew-row text-white justify-around">
         <div className="bg-terciary hover:bg-primary rounded-lg p-2">
-          <RadioButton labelDescription="" />
+          <RadioButton labelDescription="" name="valorTaxa" buttonChecked />
           Sindop
         </div>
         <div className="bg-terciary hover:bg-primary rounded-lg p-2">
-          <RadioButton labelDescription="" />
+          <RadioButton labelDescription="" name="valorTaxa" />
           Sintermar
         </div>
         <div className="bg-terciary hover:bg-primary rounded-lg p-2">
-          <RadioButton labelDescription="" />
+          <RadioButton labelDescription="" name="valorTaxa" />
           Não-Sócio
         </div>
         <div className="bg-terciary hover:bg-primary rounded-lg p-2">
-          <RadioButton labelDescription="" />
+          <RadioButton labelDescription="" name="valorTaxa" />
           Personalizada
         </div>
       </div>

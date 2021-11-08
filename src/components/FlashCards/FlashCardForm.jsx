@@ -146,19 +146,23 @@ export default function FlashCardForm({
                 </div>
                 <div className="flex flex-row space-x-1">
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
-                    <RadioButton labelDescription="" />
+                    <RadioButton labelDescription="" name="selecionaPeriodo" />
                     {`A`}
                   </div>
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
-                    <RadioButton labelDescription="" />
+                    <RadioButton labelDescription="" name="selecionaPeriodo" />
                     {`B`}
                   </div>
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
-                    <RadioButton labelDescription="" />
+                    <RadioButton labelDescription="" name="selecionaPeriodo" />
                     {`C (+25%)`}
                   </div>
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
-                    <RadioButton labelDescription="" />
+                    <RadioButton
+                      labelDescription=""
+                      name="selecionaPeriodo"
+                      buttonChecked
+                    />
                     {`D (+50%)`}
                   </div>
                 </div>

@@ -34,7 +34,7 @@ export default function FlashCardItem({
 
   // bg-red-200  bg-green-100  bg-yellow-100
   //prettier-ignore
-  const workCardColor = (cardColor === 0) ? "bg-yellow-100" : (cardColor === 1) ? "bg-green-100" : (cardColor === 2) ? "bg-red-100" : "bg-red-100"
+  const workCardColor = (cardColor === 0) ? "bg-yellow-100" : (cardColor === 1) ? "bg-green-100" : (cardColor === 2) ? "bg-red-100" : "bg-green-100"
   return (
     <div
       className={`${workCardColor} border border-gray-400 flex shadow-lg rounded-lg hover:bg-blue-50 items-stretch p-2`}

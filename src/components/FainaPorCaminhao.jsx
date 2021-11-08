@@ -4,9 +4,13 @@ import RadioButton from "./RadioButton";
 
 export default function FainaPorCaminhao() {
   const [trucksTotal, setTrucksTotal] = useState("");
+  const [byHour, setByHour] = useState("");
   const [mediumWeight, setMediumWeight] = useState("");
   function handleTrucksTotal(totalTrucks) {
     setTrucksTotal(totalTrucks);
+  }
+  function handleByHour(byHour) {
+    setByHour(byHour);
   }
   function handleMediumWeight(mediumWight) {
     setMediumWeight(mediumWight);
@@ -18,7 +22,11 @@ export default function FainaPorCaminhao() {
       </span>
       <div className="flex flex-row place-content-around text-xs">
         <div className="border border-gray-400 hover:bg-gray-200 content-center rounded-lg p-2">
-          <RadioButton labelDescription="" />
+          <RadioButton
+            labelDescription=""
+            name="calculaCaminhoes"
+            buttonChecked
+          />
           <NumberInput
             labelDescription="Pelo Período"
             inputValue={trucksTotal}
@@ -27,11 +35,11 @@ export default function FainaPorCaminhao() {
           />
         </div>
         <div className="border border-gray-400 hover:bg-gray-200 place-content-center rounded-lg p-2">
-          <RadioButton labelDescription="" />
+          <RadioButton labelDescription="" name="calculaCaminhoes" />
           <NumberInput
             labelDescription="Por Hora"
-            inputValue={trucksTotal}
-            onInputChange={handleTrucksTotal}
+            inputValue={byHour}
+            onInputChange={handleByHour}
             placeHolder="Média Caminhões/Hora"
           />
         </div>

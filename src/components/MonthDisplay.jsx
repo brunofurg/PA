@@ -1,6 +1,8 @@
+//import { Button } from "@mui/material";
 import * as React from "react";
 import { FiChevronsLeft as IconReturn } from "react-icons/fi";
 import { FiChevronsRight as IconAdvance } from "react-icons/fi";
+import WorkDialog from "./WorkDialog";
 
 export default function PaginationControlled() {
   // const [page, setPage] = React.useState(1);
@@ -19,6 +21,9 @@ export default function PaginationControlled() {
       </div>
       <div className="bg-gray-300 hover:bg-gray-200 flex place-items-center rounded-full p-2 ">
         <IconAdvance />
+      </div>
+      <div className="flex button-small">
+        <WorkDialog />
       </div>
     </div>
   );

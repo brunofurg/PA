@@ -3,7 +3,6 @@ import Reports from "./Reports";
 import TabelasCCT from "./TabelasCCT";
 import Links from "./Links";
 import MonthDisplay from "./MonthDisplay";
-import WorkDialog from "./WorkDialog";
 
 import FlashCardForm from "./FlashCards/FlashCardForm";
 import FlashCardItem from "./FlashCards/FlashCardItem";
@@ -34,7 +33,8 @@ import { HiOutlineDocumentReport as IconReport } from "react-icons/hi";
 import { GiShipBow as IconWorks } from "react-icons/gi";
 import { MdAttachMoney as IconCCT } from "react-icons/md";
 import { FiExternalLink as IconLinks } from "react-icons/fi";
-//import { FiChevronsLeft as IconReturn } from 'react-icons/fi';
+//import { FiChevronsLeft as IconReturn } from 'react-icons/fi'
+import { MdDoneAll as DoubleCheck } from "react-icons/md";
 
 import { useEffect, useState } from "react";
 import CheckboxInput from "./CheckboxInput";
@@ -231,11 +231,12 @@ export default function Section({ id = getNewId() }) {
                     <span>
                       <CheckboxInput
                         checkboxValue="true"
-                        labelDescription="Tudo"
+                        labelDescription="Seleciona Tudo"
                       />
                     </span>
-                    <span className="button-small">
-                      <WorkDialog />
+                    <span className="flex flex-row text-bold text-md place-items-center text-green-600 space-y-4">
+                      <DoubleCheck />
+                      Demonstrativo Importado
                     </span>
                   </div>
                   <div className="">

@@ -53,8 +53,8 @@ export default function Links() {
             </div>
 
             <div className="flex flex-col align-middle text-center text-xs flex-wrap rounded-lg  place-content-center p-2">
-              <div className="align-middle text-center bg-blue-300 border-blue-500 shadow-lg rounded-lg p-2 m-2">
-                <p>Movimentação:</p>
+              <div className="align-middle text-center m-2">
+                <strong>Movimentação:</strong>
               </div>
               <div className="flex flex-col flex-wrap">
                 <a
@@ -64,7 +64,7 @@ export default function Links() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span className="rounded-full hover:shadow-lg hover:bg-yellow-300 bg-yellow-400 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
+                  <span className="rounded-md hover:shadow-lg hover:bg-yellow-300 bg-yellow-400 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
                     <img
                       src={svgShip1}
                       alt="Movimentação Portuária - Esperado"
@@ -81,7 +81,7 @@ export default function Links() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span className="rounded-full hover:shadow-lg hover:bg-red-500 bg-red-600 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
+                  <span className="rounded-md hover:shadow-lg hover:bg-red-500 bg-red-600 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
                     <img
                       src={svgShip1}
                       alt="Movimentação Portuária - Programado"
@@ -98,7 +98,7 @@ export default function Links() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span className="rounded-full hover:shadow-lg hover:bg-blue-400 bg-blue-500 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
+                  <span className="rounded-md hover:shadow-lg hover:bg-blue-400 bg-blue-500 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
                     <img
                       src={svgShip1}
                       alt="Movimentação Portuária - Operação"
@@ -116,7 +116,7 @@ export default function Links() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span className="rounded-full hover:shadow-lg hover:bg-green-500 bg-green-600 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
+                  <span className="rounded-md hover:shadow-lg hover:bg-green-500 bg-green-600 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
                     <img
                       src={svgShip1}
                       alt="Movimentação Portuária - Fundeado"
@@ -134,7 +134,7 @@ export default function Links() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span className="rounded-full hover:shadow-lg hover:bg-pink-300 bg-pink-400 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
+                  <span className="rounded-md hover:shadow-lg hover:bg-pink-300 bg-pink-400 align-middle flex flex-row justify-between space-x-2 p-1 m-1">
                     <img
                       src={svgShip1}
                       alt="Movimentação Portuária - LineUp"
