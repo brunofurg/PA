@@ -32,16 +32,14 @@ export default function FlashCardForm({
   const [description, setDescription] = useState(flashCard?.description || "");
   // const [cardColor, setCardColor] = useState(flashCard?.situaoEstorno || "");
 
-  const [dayWork, setDayWork] = useState(flashCard?.infoWork.dia || "");
+  const [dayWork, setDayWork] = useState(flashCard?.inputedValues.data || "");
   const [typeFaina, setTypeFaina] = useState(
-    flashCard?.inputValues._tipo || ""
+    flashCard?.inputedValues.tipo || ""
   );
-
+  const [shiftWork, setShiftWork] = useState(
+    flashCard?.inputedValues.periodo || ""
+  );
   const [error, setError] = useState("");
-
-  //const [typeFaina, setTypeFaina] = useState('');
-  //const [dayFaina, setDayFaina] = useState('');
-  //const [shiftWork, setShiftWork] = useState(false);
 
   useEffect(() => {
     if (createMode) {
@@ -56,6 +54,15 @@ export default function FlashCardForm({
 
   function handleDescriptionChange(newDescription) {
     setDescription(newDescription);
+  }
+  function handleDayWork(newDescription) {
+    setDayWork(newDescription);
+  }
+  function handleTypeFaina(newTipo) {
+    setTypeFaina(newTipo);
+  }
+  function handleShiftWork(newDescription) {
+    setShiftWork(newDescription);
   }
 
   function clearFields() {
@@ -86,13 +93,6 @@ export default function FlashCardForm({
     clearFields();
   }
 
-  function handleTypeFaina(newTipo) {
-    setTypeFaina(newTipo);
-  }
-  function handleDayWork(newTipo) {
-    setDayWork(newTipo);
-  }
-
   // function handleButtonClick() {
   //   if (onButtonClick) {
   //     onButtonClick();
@@ -110,7 +110,7 @@ export default function FlashCardForm({
     >
       <div className="border border-gray-300">
         <div className="bg-gray-200 flex flex-row justify-center p-2">
-          <div className="bg-blue-400 border border-blue-500 text-white rounded-lg shadow-lg p-2">
+          <div className="bg-topic1 border border-border1 text-white rounded-lg shadow-lg p-2">
             Calculadora de Remuneração
           </div>
         </div>
@@ -146,22 +146,38 @@ export default function FlashCardForm({
                 </div>
                 <div className="flex flex-row space-x-1">
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
-                    <RadioButton labelDescription="" name="selecionaPeriodo" />
+                    <RadioButton
+                      labelDescription=""
+                      name="selecionaPeriodo"
+                      onInputChange={handleShiftWork}
+                      onButtonClick={shiftWork}
+                    />
                     {`A`}
                   </div>
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
-                    <RadioButton labelDescription="" name="selecionaPeriodo" />
+                    <RadioButton
+                      labelDescription=""
+                      name="selecionaPeriodo"
+                      onInputChange={handleShiftWork}
+                      onButtonClick={shiftWork}
+                    />
                     {`B`}
                   </div>
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
-                    <RadioButton labelDescription="" name="selecionaPeriodo" />
+                    <RadioButton
+                      labelDescription=""
+                      name="selecionaPeriodo"
+                      onInputChange={handleShiftWork}
+                      onButtonClick={shiftWork}
+                    />
                     {`C (+25%)`}
                   </div>
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
                     <RadioButton
                       labelDescription=""
                       name="selecionaPeriodo"
-                      buttonChecked
+                      onInputChange={handleShiftWork}
+                      onButtonClick={shiftWork}
                     />
                     {`D (+50%)`}
                   </div>
@@ -177,6 +193,7 @@ export default function FlashCardForm({
                   labelDescription="Selecione o tipo de faina"
                   selectValue={typeFaina}
                   onSelectChange={handleTypeFaina}
+                  inputValue={typeFaina}
                 />
               </div>
               <div className="flex place-items-center">

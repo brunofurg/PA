@@ -19,7 +19,7 @@ export default function Painel() {
     <>
       <div className="border-2 bg-gray-100 p-3">
         <div className="">
-          <div className="bg-blue-400 border border-blue-600 text-white text-center rounded-lg shadow-lg flex flex-col p-2">
+          <div className="bg-topic1 border border-border1 text-white text-center rounded-lg shadow-lg flex flex-col p-2">
             Demonstrativo
             <SelectIntervalo />
           </div>

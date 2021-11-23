@@ -27,7 +27,7 @@ export default function Links() {
     <Fragment>
       <div className="bg-gray-100 flex flex-col justify-items-stretch">
         <div className="bg-white border flex flex-col shadow-lg rounded-3xl justify-evenly m-3">
-          <div className="bg-blue-400 text-white border border-blue-500 rounded-lg shadow-lg justify-center flex p-2 mt-4 m-2">
+          <div className="bg-topic1 text-white border border-border1 rounded-lg shadow-lg justify-center flex p-2 mt-4 m-2">
             Porto do Rio Grande
           </div>
           <div className="flex flex-row justify-evenly">

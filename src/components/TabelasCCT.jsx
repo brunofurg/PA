@@ -400,7 +400,7 @@ export default function TabelaCCT() {
   const classes = useStyles();
   return (
     <Fragment>
-      <div className="bg-blue-400 border border-blue-500 text-center text-white justify-center rounded-lg shadow-lg p-2 mb-4 m-4">
+      <div className="bg-topic1 border border-border1 text-center text-white justify-center rounded-lg shadow-lg p-2 mb-4 m-4">
         Estiva - Tabelas de Tarifas e Alíquotas
       </div>
       <div>
