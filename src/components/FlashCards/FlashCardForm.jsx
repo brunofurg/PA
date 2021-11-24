@@ -211,29 +211,22 @@ export default function FlashCardForm({
           </div>
 
           <div className="">
-            <FainaSelectOptions />
+            {typeFaina === "A1T" ? "" : <FainaSelectOptions />}
           </div>
 
           <div className="">
-            <PesoMovimentado />
+            {typeFaina === "A1T" ? "" : <PesoMovimentado />}
           </div>
           <div className="">
-            <FainaPorCaminhao />
+            {typeFaina === "A1T" ? "" : <FainaPorCaminhao />}
           </div>
-          <div className="">
-            <FainaTipoTaxa />
-          </div>
+          <div className="">{typeFaina === "A1T" ? "" : <FainaTipoTaxa />}</div>
           <div className="">
             <FainaSelectFuncao />
           </div>
+          <div className="">{typeFaina === "A1T" ? "" : <FainaCotas />}</div>
           <div className="">
-            <FainaCotas />
-          </div>
-          <div className="">
-            <FainaA1t />
-            {typeFaina === "a1t"
-              ? console.log("teste1")
-              : console.log("teste2")}
+            {typeFaina === "A1T" ? <FainaA1t /> : console.log({ typeFaina })}
           </div>
           <div className="">
             <FainaValoresFaina />
@@ -271,39 +264,3 @@ export default function FlashCardForm({
     </form>
   );
 }
-
-// Check if Date is Valid
-//
-// const isDateValid = (...val) => !Number.isNaN(new Date( ...val ).valueOf());
-// isDateValid("October 17, 2021 03:24:00")
-
-//Find the Day of Year
-//
-// const dayOfYear = (date) =>
-//   Math.floor((date - new Date(date.getFullYear(),
-//   0, 0)) / 1000 / 60 / 60 / 24);
-//   dayOfYear(new Date());
-
-// Check if A Number is Even or Odd
-
-// const isEven = num => num % 2 === 0;
-// console.log(isEven(2));
-// //result: true
-
-// Array.from
-// ----
-// const length = 3;
-// const filledArray = Array.from(Array(length), () => {
-//   return { value: 0 };
-// });
-// filledArray; // [{ value: 0 }, { value: 0 }, { value: 0 }]
-// filledArray[1].value = 3;
-// filledArray; // [{ value: 0 }, { value: 3 }, { value: 0 }]
-
-// Array.map
-// ----
-// const length = 3;
-// const filledArray = [...Array(length)].map(() => {
-//   return { value: 0 };
-// });
-// filledArray; // [{ value: 0 }, { value: 0 }, { value: 0 }]
