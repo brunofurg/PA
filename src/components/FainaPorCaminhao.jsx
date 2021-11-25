@@ -2,18 +2,31 @@ import { useState } from "react";
 import NumberInput from "./NumberInput";
 import RadioButton from "./RadioButton";
 
-export default function FainaPorCaminhao() {
+export default function FainaPorCaminhao({ childOptions = "teste" }) {
   const [trucksTotal, setTrucksTotal] = useState("");
   const [byHour, setByHour] = useState("");
   const [mediumWeight, setMediumWeight] = useState("");
+
+  const [radioValue, setRadioValue] = useState("");
+  //   childOptions?.inputedValues.periodo || ""
+  // );
+  function handleTrucks(trucks) {
+    console.log(trucks);
+    setRadioValue(trucks);
+  }
+  function handleHour(hour) {
+    console.log(hour);
+    setRadioValue(hour);
+  }
+
   function handleTrucksTotal(totalTrucks) {
     setTrucksTotal(totalTrucks);
   }
   function handleByHour(byHour) {
     setByHour(byHour);
   }
-  function handleMediumWeight(mediumWight) {
-    setMediumWeight(mediumWight);
+  function handleMediumWeight(mediumWeight) {
+    setMediumWeight(mediumWeight);
   }
   return (
     <div className="flex flex-col border border-gray-300 text-center p-4">
@@ -24,8 +37,8 @@ export default function FainaPorCaminhao() {
         <div className="border border-gray-400 hover:bg-gray-200 content-center rounded-lg p-2">
           <RadioButton
             labelDescription=""
-            name="calculaCaminhoes"
-            buttonChecked
+            radioValue={radioValue === "Pelo Período"}
+            onRadioChange={handleTrucks}
           />
           <NumberInput
             labelDescription="Pelo Período"
@@ -35,7 +48,11 @@ export default function FainaPorCaminhao() {
           />
         </div>
         <div className="border border-gray-400 hover:bg-gray-200 place-content-center rounded-lg p-2">
-          <RadioButton labelDescription="" name="calculaCaminhoes" />
+          <RadioButton
+            labelDescription=""
+            radioValue={radioValue === "Por Hora"}
+            onRadioChange={handleHour}
+          />
           <NumberInput
             labelDescription="Por Hora"
             inputValue={byHour}

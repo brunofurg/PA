@@ -2,27 +2,20 @@ import { getNewId } from "../services/idService";
 
 export default function RadioButton({
   id = getNewId(),
-  name = "radioButtonName",
   labelDescription = "Descrição do botão",
-  buttonChecked = false,
-  onButtonClick = null,
+  radioValue = false,
+  onRadioChange = null,
 }) {
-  function handleRadioButtonChange() {
-    if (onButtonClick) {
-      onButtonClick();
-    }
-  }
-
   return (
-    <div className="flex flex-col text-center place-content-center place-items-center">
-      {labelDescription}
+    // <div className="flex flex-col text-center place-content-center place-items-center">
+    <label>
       <input
         id={id}
         type="radio"
-        name={name}
-        checked={buttonChecked}
-        onChange={handleRadioButtonChange}
+        checked={radioValue}
+        onChange={onRadioChange}
       />
-    </div>
+      {labelDescription}
+    </label>
   );
 }

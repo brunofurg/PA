@@ -36,9 +36,10 @@ export default function FlashCardForm({
   const [typeFaina, setTypeFaina] = useState(
     flashCard?.inputedValues.tipo || ""
   );
-  const [shiftWork, setShiftWork] = useState(
+  const [radioValue, setRadioValue] = useState(
     flashCard?.inputedValues.periodo || ""
   );
+
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -61,8 +62,21 @@ export default function FlashCardForm({
   function handleTypeFaina(newTipo) {
     setTypeFaina(newTipo);
   }
-  function handleShiftWork(newDescription) {
-    setShiftWork(newDescription);
+  function handleAChange(AChange) {
+    console.log(AChange);
+    setRadioValue(AChange);
+  }
+  function handleBChange(BChange) {
+    console.log(BChange);
+    setRadioValue(BChange);
+  }
+  function handleCChange(CChange) {
+    console.log(CChange);
+    setRadioValue(CChange);
+  }
+  function handleDChange(DChange) {
+    console.log(DChange);
+    setRadioValue(DChange);
   }
 
   function clearFields() {
@@ -147,39 +161,31 @@ export default function FlashCardForm({
                 <div className="flex flex-row space-x-1">
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
                     <RadioButton
-                      labelDescription=""
-                      name="selecionaPeriodo"
-                      onInputChange={handleShiftWork}
-                      onButtonClick={shiftWork}
+                      labelDescription="A"
+                      radioValue={radioValue === "A"}
+                      onRadioChange={handleAChange}
                     />
-                    {`A`}
                   </div>
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
                     <RadioButton
-                      labelDescription=""
-                      name="selecionaPeriodo"
-                      onInputChange={handleShiftWork}
-                      onButtonClick={shiftWork}
+                      labelDescription="B"
+                      radioValue={radioValue === "B"}
+                      onRadioChange={handleBChange}
                     />
-                    {`B`}
                   </div>
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
                     <RadioButton
-                      labelDescription=""
-                      name="selecionaPeriodo"
-                      onInputChange={handleShiftWork}
-                      onButtonClick={shiftWork}
+                      labelDescription="C"
+                      radioValue={radioValue === "C"}
+                      onRadioChange={handleCChange}
                     />
-                    {`C (+25%)`}
                   </div>
                   <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
                     <RadioButton
-                      labelDescription=""
-                      name="selecionaPeriodo"
-                      onInputChange={handleShiftWork}
-                      onButtonClick={shiftWork}
+                      labelDescription="D"
+                      radioValue={radioValue === "D"}
+                      onRadioChange={handleDChange}
                     />
-                    {`D (+50%)`}
                   </div>
                 </div>
               </div>
@@ -211,23 +217,35 @@ export default function FlashCardForm({
           </div>
 
           <div className="">
-            {typeFaina === "A1T" ? "" : <FainaSelectOptions />}
+            {typeFaina === "A1T" ? (
+              ""
+            ) : (
+              <FainaSelectOptions childOptions={flashCard} />
+            )}
           </div>
 
           <div className="">
             {typeFaina === "A1T" ? "" : <PesoMovimentado />}
           </div>
           <div className="">
-            {typeFaina === "A1T" ? "" : <FainaPorCaminhao />}
+            {typeFaina === "A1T" ? (
+              ""
+            ) : (
+              <FainaPorCaminhao childOptions={flashCard} />
+            )}
           </div>
-          <div className="">{typeFaina === "A1T" ? "" : <FainaTipoTaxa />}</div>
+          <div className="">
+            {typeFaina === "A1T" ? (
+              ""
+            ) : (
+              <FainaTipoTaxa childOptions={flashCard} />
+            )}
+          </div>
           <div className="">
             <FainaSelectFuncao />
           </div>
           <div className="">{typeFaina === "A1T" ? "" : <FainaCotas />}</div>
-          <div className="">
-            {typeFaina === "A1T" ? <FainaA1t /> : console.log({ typeFaina })}
-          </div>
+          <div className="">{typeFaina === "A1T" ? <FainaA1t /> : ""}</div>
           <div className="">
             <FainaValoresFaina />
           </div>
