@@ -10,9 +10,8 @@ export default function UploadFile() {
         accept="*.pdf"
       />
       <span className="bg-blue-300 border border-blue-500 place-content-center text-center rounded-lg shadow-lg p-2 m-2">
-        <button variant="contained" color="bg-terciary" type="submit">
-          Enviar
-        </button>
+        <button variant="contained" color="bg-terciary" type="submit" />
+        Enviar
       </span>
     </div>
   );
