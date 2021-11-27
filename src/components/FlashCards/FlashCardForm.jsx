@@ -62,21 +62,17 @@ export default function FlashCardForm({
   function handleTypeFaina(newTipo) {
     setTypeFaina(newTipo);
   }
-  function handleAChange(AChange) {
-    console.log(AChange);
-    setRadioValue(AChange);
+  function handleAChange() {
+    setRadioValue("A");
   }
-  function handleBChange(BChange) {
-    console.log(BChange);
-    setRadioValue(BChange);
+  function handleBChange() {
+    setRadioValue("B");
   }
-  function handleCChange(CChange) {
-    console.log(CChange);
-    setRadioValue(CChange);
+  function handleCChange() {
+    setRadioValue("C");
   }
-  function handleDChange(DChange) {
-    console.log(DChange);
-    setRadioValue(DChange);
+  function handleDChange() {
+    setRadioValue("D");
   }
 
   function clearFields() {
@@ -95,7 +91,7 @@ export default function FlashCardForm({
       setError("");
 
       if (onPersist) {
-        onPersist(title, description);
+        onPersist(title, description, radioValue);
         clearFields();
       }
     } else {
@@ -159,34 +155,30 @@ export default function FlashCardForm({
                   Período
                 </div>
                 <div className="flex flex-row space-x-1">
-                  <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
-                    <RadioButton
-                      labelDescription="A"
-                      radioValue={radioValue === "A"}
-                      onRadioChange={handleAChange}
-                    />
-                  </div>
-                  <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
-                    <RadioButton
-                      labelDescription="B"
-                      radioValue={radioValue === "B"}
-                      onRadioChange={handleBChange}
-                    />
-                  </div>
-                  <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
-                    <RadioButton
-                      labelDescription="C"
-                      radioValue={radioValue === "C"}
-                      onRadioChange={handleCChange}
-                    />
-                  </div>
-                  <div className="bg-terciary text-white border hover:bg-primary rounded-lg text-center place-content-center flex flex-wrap shadow-lg p-2">
-                    <RadioButton
-                      labelDescription="D"
-                      radioValue={radioValue === "D"}
-                      onRadioChange={handleDChange}
-                    />
-                  </div>
+                  <RadioButton
+                    labelDescription="A"
+                    radioGroupName="selectShift"
+                    buttonChecked={radioValue === "A"}
+                    onRadioChange={handleAChange}
+                  />
+                  <RadioButton
+                    labelDescription="B"
+                    radioGroupName="selectShift"
+                    buttonChecked={radioValue === "B"}
+                    onRadioChange={handleBChange}
+                  />
+                  <RadioButton
+                    labelDescription="C"
+                    radioGroupName="selectShift"
+                    buttonChecked={radioValue === "C"}
+                    onRadioChange={handleCChange}
+                  />
+                  <RadioButton
+                    labelDescription="D"
+                    radioGroupName="selectShift"
+                    buttonChecked={radioValue === "D"}
+                    onRadioChange={handleDChange}
+                  />
                 </div>
               </div>
             </div>
@@ -205,12 +197,11 @@ export default function FlashCardForm({
               <div className="flex place-items-center">
                 <div className="bg-terciary hover:bg-primary text-white rounded-lg shadow-lg p-2">
                   <CheckboxInput
-                    labelDescription=""
+                    labelDescription="Sem Rotator (x1.75)"
                     value={`checkboxValue`}
                     readOnly
                     onChange={`handleCheckboxChange`}
                   />
-                  Sem Rotator (x1.75)
                 </div>
               </div>
             </div>

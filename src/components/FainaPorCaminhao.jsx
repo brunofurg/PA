@@ -7,16 +7,14 @@ export default function FainaPorCaminhao({ childOptions = "teste" }) {
   const [byHour, setByHour] = useState("");
   const [mediumWeight, setMediumWeight] = useState("");
 
-  const [radioValue, setRadioValue] = useState("");
+  const [buttonRadioValue, setButtonRadioValue] = useState("");
   //   childOptions?.inputedValues.periodo || ""
   // );
   function handleTrucks(trucks) {
-    console.log(trucks);
-    setRadioValue(trucks);
+    setButtonRadioValue("Pelo Período");
   }
   function handleHour(hour) {
-    console.log(hour);
-    setRadioValue(hour);
+    setButtonRadioValue("Por Hora");
   }
 
   function handleTrucksTotal(totalTrucks) {
@@ -36,12 +34,13 @@ export default function FainaPorCaminhao({ childOptions = "teste" }) {
       <div className="flex flex-row place-content-around text-xs">
         <div className="border border-gray-400 hover:bg-gray-200 content-center rounded-lg p-2">
           <RadioButton
-            labelDescription=""
-            radioValue={radioValue === "Pelo Período"}
+            labelDescription="Pelo Período"
+            radioGroupName="selectTruck"
+            buttonChecked={buttonRadioValue === "Pelo Período"}
             onRadioChange={handleTrucks}
           />
           <NumberInput
-            labelDescription="Pelo Período"
+            labelDescription=""
             inputValue={trucksTotal}
             onInputChange={handleTrucksTotal}
             placeHolder="Total movimentado"
@@ -49,12 +48,13 @@ export default function FainaPorCaminhao({ childOptions = "teste" }) {
         </div>
         <div className="border border-gray-400 hover:bg-gray-200 place-content-center rounded-lg p-2">
           <RadioButton
-            labelDescription=""
-            radioValue={radioValue === "Por Hora"}
+            labelDescription="Por Hora"
+            radioGroupName="selectTruck"
+            buttonChecked={buttonRadioValue === "Por Hora"}
             onRadioChange={handleHour}
           />
           <NumberInput
-            labelDescription="Por Hora"
+            labelDescription=""
             inputValue={byHour}
             onInputChange={handleByHour}
             placeHolder="Média Caminhões/Hora"

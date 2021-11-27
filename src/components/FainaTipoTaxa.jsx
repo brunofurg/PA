@@ -6,20 +6,16 @@ export default function FainaTipoTaxa({ childOptions = "teste" }) {
     childOptions?.inputedValues.periodo || ""
   );
   function handleSindop(sindop) {
-    console.log(sindop);
-    setRadioValue(sindop);
+    setRadioValue("Sindop");
   }
   function handleSintermar(sintermar) {
-    console.log(sintermar);
-    setRadioValue(sintermar);
+    setRadioValue("Sintermar");
   }
   function handleNaoSocio(naoSocio) {
-    console.log(naoSocio);
-    setRadioValue(naoSocio);
+    setRadioValue("Não-Sócio");
   }
   function handlePersonalizada(personalizada) {
-    console.log(personalizada);
-    setRadioValue(personalizada);
+    setRadioValue("Personalizada");
   }
 
   return (
@@ -28,34 +24,30 @@ export default function FainaTipoTaxa({ childOptions = "teste" }) {
         Valor de Tarifa
       </div>
       <div className="flex flew-row text-white justify-around">
-        <div className="bg-terciary hover:bg-primary rounded-lg p-2">
-          <RadioButton
-            labelDescription="Sindop"
-            radioValue={radioValue === "Sindop"}
-            onRadioChange={handleSindop}
-          />
-        </div>
-        <div className="bg-terciary hover:bg-primary rounded-lg p-2">
-          <RadioButton
-            labelDescription="Sintermar"
-            radioValue={radioValue === "Sintermar"}
-            onRadioChange={handleSintermar}
-          />
-        </div>
-        <div className="bg-terciary hover:bg-primary rounded-lg p-2">
-          <RadioButton
-            labelDescription="Não-Sócio"
-            radioValue={radioValue === "Não-Sócio"}
-            onRadioChange={handleNaoSocio}
-          />
-        </div>
-        <div className="bg-terciary hover:bg-primary rounded-lg p-2">
-          <RadioButton
-            labelDescription="Personalizada"
-            radioValue={radioValue === "Personalizada"}
-            onRadioChange={handlePersonalizada}
-          />
-        </div>
+        <RadioButton
+          labelDescription="Sindop"
+          radioGroupName="selectTarifa"
+          buttonChecked={radioValue === "Sindop"}
+          onRadioChange={handleSindop}
+        />
+        <RadioButton
+          labelDescription="Sintermar"
+          radioGroupName="selectTarifa"
+          buttonChecked={radioValue === "Sintermar"}
+          onRadioChange={handleSintermar}
+        />
+        <RadioButton
+          labelDescription="Não-Sócio"
+          radioGroupName="selectTarifa"
+          buttonChecked={radioValue === "Não-Sócio"}
+          onRadioChange={handleNaoSocio}
+        />
+        <RadioButton
+          labelDescription="Personalizada"
+          radioGroupName="selectTarifa"
+          buttonChecked={radioValue === "Personalizada"}
+          onRadioChange={handlePersonalizada}
+        />
       </div>
     </div>
   );

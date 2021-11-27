@@ -14,15 +14,17 @@ export default function CheckboxInput({
   }
 
   return (
-    <div className="flex flex-col items-center align-middle space-x-2 cursor-pointer">
+    <label>
+      <div className="flex flex-col items-center align-middle space-x-2 cursor-pointer">
+        <input
+          id={id}
+          autoFocus={autoFocus}
+          type="checkbox"
+          value={checkboxValue}
+          onChange={handleCheckboxChange}
+        />
+      </div>
       {labelDescription}
-      <input
-        id={id}
-        autoFocus={autoFocus}
-        type="checkbox"
-        value={checkboxValue}
-        onChange={handleCheckboxChange}
-      />
-    </div>
+    </label>
   );
 }
